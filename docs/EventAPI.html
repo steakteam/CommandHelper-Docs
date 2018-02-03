@@ -6,8 +6,8 @@
 -->
 <html>
 	<head>
-		<title>이벤트 API - MethodScript Korean Docs</title>
-		<meta charset="utf-8" />
+		<title>&#xc774;&#xbca4;&#xd2b8; API - MethodScript Korean Docs</title>
+		<meta charset="ascii" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,16 +19,16 @@
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
 				<h1><a href="index.html">MethodScript Korean Docs</a></h1>
-				<a href="#nav">메뉴</a>
+				<a href="#nav">&#xba54;&#xb274;</a>
 			</header>
 
 		<!-- Nav -->
 			<nav id="nav">
 				<ul class="links">
-					<li><a href="index.html">메인</a></li>
-					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">초보자 가이드</a></li>
+					<li><a href="index.html">&#xba54;&#xc778;</a></li>
+					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">&#xcd08;&#xbcf4;&#xc790; &#xac00;&#xc774;&#xb4dc;</a></li>
 					<li><a href="API.html">API</a></li>
-					<li><a href="EventAPI.html">이벤트 API</a></li>
+					<li><a href="EventAPI.html">&#xc774;&#xbca4;&#xd2b8; API</a></li>
 				</ul>
 			</nav>
 
@@ -36,22 +36,22 @@
 			<section id="main" class="wrapper">
 				<div class="container">
 					<header class="major special">
-						<h2>이벤트 API 문서</h2>
-						<p>Events allow you to trigger scripts not just on commands, but also on other actions, such as a player logging in, or a player breaking a block. See the documentation on events for more information</p>
+						<h2>&#xc774;&#xbca4;&#xd2b8; API &#xbb38;&#xc11c;</h2>
+						<p>&#xc774;&#xbca4;&#xd2b8;&#xb294; &#xc2a4;&#xd06c;&#xb9bd;&#xd2b8;&#xb97c; &#xba85;&#xb839;&#xc5b4;&#xb97c; &#xce58;&#xc9c0; &#xc54a;&#xc544;&#xb3c4; &#xc2e4;&#xd589;&#xd560; &#xc218; &#xc788;&#xac8c; &#xd574;&#xc90d;&#xb2c8;&#xb2e4;. &#xc608;&#xb97c; &#xb4e4;&#xc5b4; &#xd50c;&#xb808;&#xc774;&#xc5b4; &#xb85c;&#xadf8;&#xc778;, &#xbe14;&#xb85d; &#xbd80;&#xc218;&#xae30; &#xb4f1;&#xc774; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;. &#xcd08;&#xbcf4;&#xc790; &#xac00;&#xc774;&#xb4dc;&#xc758; &#xc774;&#xbca4;&#xd2b8; &#xd56d;&#xbaa9;&#xc744; &#xd1b5;&#xd574; &#xb354; &#xb9ce;&#xc740; &#xc815;&#xbcf4;&#xb97c; &#xc5bb;&#xc73c;&#xc138;&#xc694;.</p>
 					</header>
 <table>
 <tr>
-<th  width="7%"> Event Name
+<th  width="7%"> &#xc774;&#xbca4;&#xd2b8; &#xc774;&#xb984;
 </th>
-<th  width="36%"> Description
+<th  width="36%"> &#xc124;&#xba85;
 </th>
-<th  width="18%"> Prefilters
+<th  width="18%"> &#xc0ac;&#xc804; &#xd544;&#xd130;
 </th>
-<th  width="18%"> Event Data
+<th  width="18%"> &#xc774;&#xbca4;&#xd2b8; &#xb370;&#xc774;&#xd130;
 </th>
-<th  width="18%"> Mutable Fields
+<th  width="18%"> &#xc218;&#xc815; &#xac00;&#xb2a5;&#xd55c; &#xd544;&#xb4dc;
 </th>
-<th  width="3%"> Since
+<th  width="3%"> &#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;
 </th></tr>
 <tr>
 <th > async_player_chat
@@ -62,7 +62,7 @@
 </td>
 <td> <b>message</b>: The message to be sent<br /><b> recipients </b>: <br /><b> format</b>:
 </td>
-<td> <b>message</b><br /><b>recipients</b>:&#160;: An array of players that will recieve the chat message. If a player doesn't exist or is offline, and is in the array, it is simply ignored, no exceptions will be thrown.<br /><b>format</b>:&#160;: The "printf" format string, by default: "&lt;%1$s&gt;&#160;%2$s". The first parameter is the player's display name, and the second one is the message.
+<td> <b>message</b><br /><b>recipients</b>:&#x00a0;: An array of players that will recieve the chat message. If a player doesn&#39;t exist or is offline, and is in the array, it is simply ignored, no exceptions will be thrown.<br /><b>format</b>:&#x00a0;: The &quot;printf&quot; format string, by default: &quot;&lt;%1$s>&#x00a0;%2$s&quot;. The first parameter is the player&#39;s display name, and the second one is the message.
 </td>
 <td> 3.3.1
 </td></tr>
@@ -73,9 +73,9 @@
 </td>
 <td> <b>player</b>: String Match<br /><b>type</b>: String Match<br /><b>data</b>: String Match
 </td>
-<td> <b>player</b>: The player's name<br /><b>block</b>: An array with keys 'type' (int), 'data' (int), 'X' (int), 'Y' (int), 'Z' (int) and 'world' (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b> drops </b>: <br /><b> xp</b>:
+<td> <b>player</b>: The player&#39;s name<br /><b>block</b>: An array with keys &#39;type&#39; (int), &#39;data&#39; (int), &#39;X&#39; (int), &#39;Y&#39; (int), &#39;Z&#39; (int) and &#39;world&#39; (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b> drops </b>: <br /><b> xp</b>:
 </td>
-<td> <b>drops</b>:&#160;: an array of arrays (with keys 'type' (string), 'qty' (int), 'data' (int), 'enchants' (array)) of items the block will drop<br /><b>xp</b>:&#160;: the xp that this block will drop, if any
+<td> <b>drops</b>:&#x00a0;: an array of arrays (with keys &#39;type&#39; (string), &#39;qty&#39; (int), &#39;data&#39; (int), &#39;enchants&#39; (array)) of items the block will drop<br /><b>xp</b>:&#x00a0;: the xp that this block will drop, if any
 </td>
 <td> 3.3.1
 </td></tr>
@@ -86,7 +86,7 @@
 </td>
 <td> <b>type</b>: String Match<br /><b>data</b>: String Match
 </td>
-<td> <b>block</b>: An array with keys 'type' (int), 'data' (int), 'X' (int), 'Y' (int), 'Z' (int) and 'world' (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block
+<td> <b>block</b>: An array with keys &#39;type&#39; (int), &#39;data&#39; (int), &#39;X&#39; (int), &#39;Y&#39; (int), &#39;Z&#39; (int) and &#39;world&#39; (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block
 </td>
 <td> <b>block</b>
 </td>
@@ -110,9 +110,9 @@
 </th>
 <td> This event is called when a water or lava is flowed and ender dragon egg is teleportedCancelling the event cancels the flow or teleport
 </td>
-<td> <b>type</b>: String Match<br /><b>data</b>: String Match<br /><b> world &lt;string match&gt; </b>: <br /><b> totype &lt;string match&gt; </b>: <br /><b> todata &lt;string match&gt; </b>: <br /><b> toworld &lt;string match&gt; </b>: <br /><b> face &lt;string match&gt;</b>:
+<td> <b>type</b>: String Match<br /><b>data</b>: String Match<br /><b> world &lt;string match> </b>: <br /><b> totype &lt;string match> </b>: <br /><b> todata &lt;string match> </b>: <br /><b> toworld &lt;string match> </b>: <br /><b> face &lt;string match></b>:
 </td>
-<td> <b>block</b>: An array with keys 'type' (int), 'data' (int), 'X' (int), 'Y' (int), 'Z' (int) and 'world' (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b>toblock</b>: target block<br /><b>tolocation</b>: target block's locationArray
+<td> <b>block</b>: An array with keys &#39;type&#39; (int), &#39;data&#39; (int), &#39;X&#39; (int), &#39;Y&#39; (int), &#39;Z&#39; (int) and &#39;world&#39; (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b>toblock</b>: target block<br /><b>tolocation</b>: target block&#39;s locationArray
 </td>
 <td> <b>block</b><br /><b>toblock</b>
 </td>
@@ -125,7 +125,7 @@
 </td>
 <td> <b>oldtype</b>: String Match The block type before the growth<br /><b>olddata</b>: String Match The block data before the growth<br /><b>newtype</b>: String Match The block type after the growth<br /><b>newdata</b>: String Match The block data after the growth<br /><b>world</b>: Macro
 </td>
-<td> <b>oldblock</b>: The block before the growth (an array with keys 'type' and 'data')<br /><b>newblock</b>: The block after the growth (an array with keys 'type' and 'data')<br /><b>location</b>: the location of the block that will grow
+<td> <b>oldblock</b>: The block before the growth (an array with keys &#39;type&#39; and &#39;data&#39;)<br /><b>newblock</b>: The block after the growth (an array with keys &#39;type&#39; and &#39;data&#39;)<br /><b>location</b>: the location of the block that will grow
 </td>
 <td>
 </td>
@@ -138,7 +138,7 @@
 </td>
 <td> <b>player</b>: String Match<br /><b>cause</b>: Macro<br /><b>world</b>: Macro
 </td>
-<td> <b>player</b>: The player's name<br /><b>ignitingentity</b>: entity ID, if entity is ignited<br /><b>ignitingblock</b>: block ID, if block is ignited<br /><b>location</b>: the locationArray of block or entity<br /><b>cause</b>: the cause of ignition, one of: LAVA, FLINT_AND_STEEL, SPREAD, LIGHTNING, FIREBALL, ENDER_CRYSTAL, EXPLOSION
+<td> <b>player</b>: The player&#39;s name<br /><b>ignitingentity</b>: entity ID, if entity is ignited<br /><b>ignitingblock</b>: block ID, if block is ignited<br /><b>location</b>: the locationArray of block or entity<br /><b>cause</b>: the cause of ignition, one of: LAVA, FLINT_AND_STEEL, SPREAD, LIGHTNING, FIREBALL, ENDER_CRYSTAL, EXPLOSION
 </td>
 <td>
 </td>
@@ -151,7 +151,7 @@
 </td>
 <td> <b>player</b>: String Match<br /><b>type</b>: String Match<br /><b>data</b>: String Match
 </td>
-<td> <b>player</b>: The player's name<br /><b>type</b>: numerical type id of the block being placed<br /><b>X</b>: the X coordinate of the block<br /><b>Y</b>: the Y coordinate of the block<br /><b>Z</b>: the Z coordinate of the block<br /><b>world</b>: the world of the block<br /><b>data</b>: the data value for the block being placed<br /><b>against</b>: the block being placed against<br /><b>oldblock</b>: the blocktype and blockdata being replaced<br /><b>location</b>: A locationArray for this block
+<td> <b>player</b>: The player&#39;s name<br /><b>type</b>: numerical type id of the block being placed<br /><b>X</b>: the X coordinate of the block<br /><b>Y</b>: the Y coordinate of the block<br /><b>Z</b>: the Z coordinate of the block<br /><b>world</b>: the world of the block<br /><b>data</b>: the data value for the block being placed<br /><b>against</b>: the block being placed against<br /><b>oldblock</b>: the blocktype and blockdata being replaced<br /><b>location</b>: A locationArray for this block
 </td>
 <td> <b>type</b><br /><b>data</b>
 </td>
@@ -192,7 +192,7 @@
 </td>
 <td> <b>type</b>: the type of creature spawning<br /><b>id</b>: the entityID of the creature<br /><b>reason</b>: the reason this creature is spawning<br /><b>location</b>: locationArray of the event
 </td>
-<td> <b>type</b>:&#160;: Spawn a different entity instead. This will fire a new event with a reason of 'CUSTOM'.
+<td> <b>type</b>:&#x00a0;: Spawn a different entity instead. This will fire a new event with a reason of &#39;CUSTOM&#39;.
 </td>
 <td> 3.3.1
 </td></tr>
@@ -218,7 +218,7 @@
 </td>
 <td> <b>type</b>: The type of entity the got damaged<br /><b>id</b>: The entityID of the victim<br /><b>player</b>: the player who got damaged (only present if type is PLAYER)<br /><b> world </b>: <br /><b> location </b>: <br /><b>cause</b>: The type of damage<br /><b> amount </b>: <br /><b>finalamount</b>: health entity will lose after modifiers<br /><b>damager</b>: If the source of damage is a player this will contain their name, otherwise it will be the entityID of the damager (only available when an entity causes damage)<br /><b>shooter</b>: The name of the player who shot, otherwise the entityID (only available when damager is a projectile)
 </td>
-<td> <b>amount</b>:&#160;: raw amount of damage (in half hearts)
+<td> <b>amount</b>:&#x00a0;: raw amount of damage (in half hearts)
 </td>
 <td> 3.3.1
 </td></tr>
@@ -229,7 +229,7 @@
 </td>
 <td> <b>id</b>: Macro The entityID<br /><b>damager</b>: String Match
 </td>
-<td> <b>player</b>: The player being damaged<br /><b>damager</b>: The type of entity causing damage<br /><b>amount</b>: raw amount of damage caused<br /><b>finalamount</b>: health player will lose after modifiers<br /><b>cause</b>: the cause of damage<br /><b>data</b>: the attacking player's name or the shooter if damager is a projectile<br /><b>id</b>: EntityID of the damager<br /><b> location</b>:
+<td> <b>player</b>: The player being damaged<br /><b>damager</b>: The type of entity causing damage<br /><b>amount</b>: raw amount of damage caused<br /><b>finalamount</b>: health player will lose after modifiers<br /><b>cause</b>: the cause of damage<br /><b>data</b>: the attacking player&#39;s name or the shooter if damager is a projectile<br /><b>id</b>: EntityID of the damager<br /><b> location</b>:
 </td>
 <td> <b>amount</b>
 </td>
@@ -244,7 +244,7 @@
 </td>
 <td> <b>type </b>: <br /><b>id</b>: The entityID<br /><b>drops</b>: an array of item arrays of each stack<br /><b> xp </b>: <br /><b>cause</b>: the last entity_damage object for this entity<br /><b>location</b>: where the entity was when it died
 </td>
-<td> <b>drops</b>:&#160;: an array of item arrays of what will be dropped, replaces the normal drops, can be null<br /><b>xp</b>:&#160;: the amount of xp to drop
+<td> <b>drops</b>:&#x00a0;: an array of item arrays of what will be dropped, replaces the normal drops, can be null<br /><b>xp</b>:&#x00a0;: the amount of xp to drop
 </td>
 <td> 3.3.1
 </td></tr>
@@ -270,7 +270,7 @@
 </td>
 <td> <b>id</b>: entityID, or null if no entity<br /><b>type</b>: entitytype, or null if no entity<br /><b>location</b>: where the explosion occurs<br /><b> blocks </b>: <br /><b> yield</b>:
 </td>
-<td> <b>blocks</b>:&#160;: An array of blocks destroyed by the explosion.<br /><b>yield</b>:&#160;: Percent of the blocks destroyed that should drop items. A value greater than 100 will cause more drops than the original blocks.
+<td> <b>blocks</b>:&#x00a0;: An array of blocks destroyed by the explosion.<br /><b>yield</b>:&#x00a0;: Percent of the blocks destroyed that should drop items. A value greater than 100 will cause more drops than the original blocks.
 </td>
 <td> 3.3.1
 </td></tr>
@@ -290,7 +290,7 @@
 <tr>
 <th > entity_toggle_glide
 </th>
-<td> This event is called when an entity toggles it's gliding state (Using Elytra).
+<td> This event is called when an entity toggles it&#39;s gliding state (Using Elytra).
 </td>
 <td> <b>type</b>: Macro The entity type of the entity<br /><b>id</b>: Macro The entity id of the entity<br /><b>player</b>: Macro The player triggering the event
 </td>
@@ -303,33 +303,33 @@
 <tr>
 <th > exp_change
 </th>
-<td> Fired when a player's experience changes naturally.
+<td> Fired when a player&#39;s experience changes naturally.
 </td>
 <td> <b>player</b>: Macro
 </td>
 <td> <b>player </b>: <br /><b> amount</b>:
 </td>
-<td> <b>amount</b>:&#160;: an integer of the amount of exp that will be added to the player's total exp
+<td> <b>amount</b>:&#x00a0;: an integer of the amount of exp that will be added to the player&#39;s total exp
 </td>
 <td> 3.3.1
 </td></tr>
 <tr>
 <th > food_level_changed
 </th>
-<td> Fires as a player's food level changes. Cancelling the event will cause the change to not be applied.
+<td> Fires as a player&#39;s food level changes. Cancelling the event will cause the change to not be applied.
 </td>
 <td> <b>player</b>: String Match
 </td>
 <td> <b>player</b>: the player<br /><b>level</b>: the new food level to be applied<br /><b>difference</b>: the difference between the old level and the new
 </td>
-<td> <b>level</b>:&#160;: A different level to be applied
+<td> <b>level</b>:&#x00a0;: A different level to be applied
 </td>
 <td> 3.3.1
 </td></tr>
 <tr>
 <th > gamemode_change
 </th>
-<td> Fires when something causes a player's gamemode to change. Cancelling the event will cancel the change. The mode itself cannot be modified.
+<td> Fires when something causes a player&#39;s gamemode to change. Cancelling the event will cancel the change. The mode itself cannot be modified.
 </td>
 <td> <b>newmode</b>: Macro gamemode being changed to, one of SURVIVAL, CREATIVE, ADVENTURE, or SPECTATOR<br /><b>player</b>: Macro
 </td>
@@ -361,7 +361,7 @@
 </td>
 <td> <b>player</b>: The player who clicked<br /><b>viewers</b>: everyone looking in this inventory<br /><b>leftclick</b>: true/false if this was a left click<br /><b>keyboardclick</b>: true/false if a key was pressed<br /><b>rightclick</b>: true/false if this was a right click<br /><b>shiftclick</b>: true/false if shift was being held<br /><b>creativeclick</b>: true/false if this action could only be performed in creative mode<br /><b>slot</b>: the number of the slot<br /><b>rawslot</b>: the number of the slot in whole inventory window<br /><b> slottype </b>: <br /><b> slotitem </b>: <br /><b> inventorytype </b>: <br /><b>inventorysize</b>: number of slots in opened inventory<br /><b> cursoritem </b>: <br /><b>inventory</b>: all the items in the (top) inventory<br /><b> clicktype </b>: <br /><b> action</b>:
 </td>
-<td> <b>slotitem</b>:&#160;: the item currently in the clicked slot<br /><b>cursoritem</b>:&#160;: the item on the cursor (may cause unexpected behavior)
+<td> <b>slotitem</b>:&#x00a0;: the item currently in the clicked slot<br /><b>cursoritem</b>:&#x00a0;: the item on the cursor (may cause unexpected behavior)
 </td>
 <td> 3.3.1
 </td></tr>
@@ -387,7 +387,7 @@
 </td>
 <td> <b>player</b>: The player who clicked<br /><b>newcursoritem</b>: item on cursor, after event<br /><b>oldcursoritem</b>: item on cursor, before event<br /><b>slots</b>: used slots<br /><b>rawslots</b>: used slots, as the numbers of the slots in whole inventory window<br /><b>newitems</b>: array of items which are dropped in selected slots<br /><b> inventorytype </b>: <br /><b>inventorysize</b>: number of slots in opened inventory
 </td>
-<td> <b>cursoritem</b>:&#160;: the item on the cursor, after event
+<td> <b>cursoritem</b>:&#x00a0;: the item on the cursor, after event
 </td>
 <td> 3.3.1
 </td></tr>
@@ -411,7 +411,7 @@
 </td>
 <td> <b>item</b>: Item Match the item id and data value to check
 </td>
-<td> <b>location</b>: where the item is<br /><b>id</b>: the item's entityID<br /><b>item</b>: the itemstack of the entity
+<td> <b>location</b>: where the item is<br /><b>id</b>: the item&#39;s entityID<br /><b>item</b>: the itemstack of the entity
 </td>
 <td>
 </td>
@@ -426,7 +426,7 @@
 </td>
 <td> <b>player</b>: The player<br /><b>item</b>: An item array representing the item being dropped.
 </td>
-<td> <b>item</b>:&#160;: setting this to null removes the dropped item
+<td> <b>item</b>:&#x00a0;: setting this to null removes the dropped item
 </td>
 <td> 3.3.1
 </td></tr>
@@ -439,7 +439,7 @@
 </td>
 <td> <b>player</b>: The player that enchanted the item<br /><b>item</b>: The item to be enchanted<br /><b>inventorytype</b>: type of inventory<br /><b>levels</b>: The amount of levels the player used<br /><b>enchants</b>: Array of added enchantments<br /><b>location</b>: Location of the used enchantment table<br /><b>option</b>: The enchantment option the player clicked
 </td>
-<td> <b>levels</b>:&#160;: The amount of levels to use<br /><b>item</b>:&#160;: The item to be enchanted<br /><b>enchants</b>:&#160;: The enchants to add to the item
+<td> <b>levels</b>:&#x00a0;: The amount of levels to use<br /><b>item</b>:&#x00a0;: The item to be enchanted<br /><b>enchants</b>:&#x00a0;: The enchants to add to the item
 </td>
 <td> 3.3.1
 </td></tr>
@@ -452,7 +452,7 @@
 </td>
 <td> <b>player </b>: <br /><b> to </b>: <br /><b>from</b>: the slot the player is switching from
 </td>
-<td> <b>to</b>:&#160;: the slot that the player is switching to
+<td> <b>to</b>:&#x00a0;: the slot that the player is switching to
 </td>
 <td> 3.3.1
 </td></tr>
@@ -465,7 +465,7 @@
 </td>
 <td> <b>player</b>: The player<br /><b>item</b>: An item array representing the item being picked up<br /><b>remaining</b>: Other items left on the ground.
 </td>
-<td> <b>item</b>:&#160;: setting this to null will remove the item from the world
+<td> <b>item</b>:&#x00a0;: setting this to null will remove the item from the world
 </td>
 <td> 3.3.1
 </td></tr>
@@ -491,7 +491,7 @@
 </td>
 <td> <b>player</b>: The player that placed the item<br /><b>item</b>: The item to be enchanted<br /><b>inventorytype</b>: Type of inventory<br /><b>enchantmentbonus</b>: the amount of bookshelves influencing the enchantment table<br /><b>expcosts</b>: The offered costs of the 3 options<br /><b>location</b>: Location of the used enchantment table
 </td>
-<td> <b>item</b>:&#160;: The item to be enchanted<br /><b>expcosts</b>:&#160;: The costs of the 3 options on the enchantment table
+<td> <b>item</b>:&#x00a0;: The item to be enchanted<br /><b>expcosts</b>:&#x00a0;: The costs of the 3 options on the enchantment table
 </td>
 <td> 3.3.1
 </td></tr>
@@ -502,9 +502,9 @@
 </td>
 <td> <b>item</b>: Item Match the item id and data value to check
 </td>
-<td> <b>location</b>: where the item spawns<br /><b>id</b>: the item's entityID<br /><b> item</b>:
+<td> <b>location</b>: where the item spawns<br /><b>id</b>: the item&#39;s entityID<br /><b> item</b>:
 </td>
-<td> <b>item</b>:&#160;: the itemstack of the entity
+<td> <b>item</b>:&#x00a0;: the itemstack of the entity
 </td>
 <td> 3.3.1
 </td></tr>
@@ -554,7 +554,7 @@
 </td>
 <td>
 </td>
-<td> <b>block</b>: An array with keys 'type' (int), 'data' (int), 'X' (int), 'Y' (int), 'Z' (int) and 'world' (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b>direction</b>: direction of travel<br /><b>sticky</b>: true if the piston is sticky<br /><b>affectedBlocks</b>: blocks pushed
+<td> <b>block</b>: An array with keys &#39;type&#39; (int), &#39;data&#39; (int), &#39;X&#39; (int), &#39;Y&#39; (int), &#39;Z&#39; (int) and &#39;world&#39; (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b>direction</b>: direction of travel<br /><b>sticky</b>: true if the piston is sticky<br /><b>affectedBlocks</b>: blocks pushed
 </td>
 <td>
 </td>
@@ -567,7 +567,7 @@
 </td>
 <td>
 </td>
-<td> <b>block</b>: An array with keys 'type' (int), 'data' (int), 'X' (int), 'Y' (int), 'Z' (int) and 'world' (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b>direction</b>: direction of travel<br /><b>sticky</b>: true if the piston is sticky<br /><b>retractedLocation</b>: if the piston is sticky and attached to a block, where the attached block would end up
+<td> <b>block</b>: An array with keys &#39;type&#39; (int), &#39;data&#39; (int), &#39;X&#39; (int), &#39;Y&#39; (int), &#39;Z&#39; (int) and &#39;world&#39; (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b>direction</b>: direction of travel<br /><b>sticky</b>: true if the piston is sticky<br /><b>retractedLocation</b>: if the piston is sticky and attached to a block, where the attached block would end up
 </td>
 <td>
 </td>
@@ -582,7 +582,7 @@
 </td>
 <td> <b>message</b>: The message to be sent<br /><b> recipients </b>: <br /><b> format</b>:
 </td>
-<td> <b>message</b><br /><b>recipients</b>:&#160;: An array of players that will recieve the chat message. If a player doesn't exist or is offline, and is in the array, it is simply ignored, no exceptions will be thrown.<br /><b>format</b>:&#160;: The "printf" format string, by default: "&lt;%1$s&gt;&#160;%2$s". The first parameter is the player's display name, and the second one is the message.
+<td> <b>message</b><br /><b>recipients</b>:&#x00a0;: An array of players that will recieve the chat message. If a player doesn&#39;t exist or is offline, and is in the array, it is simply ignored, no exceptions will be thrown.<br /><b>format</b>:&#x00a0;: The &quot;printf&quot; format string, by default: &quot;&lt;%1$s>&#x00a0;%2$s&quot;. The first parameter is the player&#39;s display name, and the second one is the message.
 </td>
 <td> 3.3.0
 </td></tr>
@@ -591,7 +591,7 @@
 </th>
 <td> This event is fired off when a player runs any command at all. This actually fires before normal CommandHelper aliases, allowing you to insert control before defined aliases, even.
 </td>
-<td> <b>command</b>: String Match The entire command the player ran<br /><b>prefix</b>: String Match Just the first part of the command, i.e. '/cmd' in '/cmd blah blah'<br /><b>player</b>: Macro The player using the command
+<td> <b>command</b>: String Match The entire command the player ran<br /><b>prefix</b>: String Match Just the first part of the command, i.e. &#39;/cmd&#39; in &#39;/cmd blah blah&#39;<br /><b>player</b>: Macro The player using the command
 </td>
 <td> <b>command</b>: The entire command<br /><b>prefix</b>: Just the prefix of the command
 </td>
@@ -608,7 +608,7 @@
 </td>
 <td> <b>player</b>: the player consuming<br /><b>item</b>: the item being consumed
 </td>
-<td> <b>item</b>:&#160;: A different item to be consumed, changing this will cause the original item to remain in the inventory
+<td> <b>item</b>:&#x00a0;: A different item to be consumed, changing this will cause the original item to remain in the inventory
 </td>
 <td> 3.3.1
 </td></tr>
@@ -619,9 +619,9 @@
 </td>
 <td> <b>player</b>: Macro
 </td>
-<td> <b>player</b>: The player that died<br /><b>drops</b>: An array of the items that will be dropped, or null<br /><b>xp</b>: The amount of experience that will be dropped<br /><b>cause</b>: The cause of death<br /><b>death_message</b>: The death message, or null if absent<br /><b>keep_inventory</b>: If the player will keep their inventory<br /><b>keep_level</b>: If the player will keep their experience and their level<br /><b>new_exp</b>: The player's experience when they will respawn<br /><b>new_level</b>: The player's level when they will respawn<br /><b>new_total_exp</b>: The player's total experience when they will respawn<br /><b>killer</b>: The name of the killer if a player killed them, otherwise null
+<td> <b>player</b>: The player that died<br /><b>drops</b>: An array of the items that will be dropped, or null<br /><b>xp</b>: The amount of experience that will be dropped<br /><b>cause</b>: The cause of death<br /><b>death_message</b>: The death message, or null if absent<br /><b>keep_inventory</b>: If the player will keep their inventory<br /><b>keep_level</b>: If the player will keep their experience and their level<br /><b>new_exp</b>: The player&#39;s experience when they will respawn<br /><b>new_level</b>: The player&#39;s level when they will respawn<br /><b>new_total_exp</b>: The player&#39;s total experience when they will respawn<br /><b>killer</b>: The name of the killer if a player killed them, otherwise null
 </td>
-<td> <b>xp</b><br /><b>drops</b>:&#160;: The items will be replaced by the given items<br /><b>death_message</b><br /><b>keep_inventory</b><br /><b>keep_level</b><br /><b>new_exp</b><br /><b>new_level</b><br /><b>new_total_exp</b>
+<td> <b>xp</b><br /><b>drops</b>:&#x00a0;: The items will be replaced by the given items<br /><b>death_message</b><br /><b>keep_inventory</b><br /><b>keep_level</b><br /><b>new_exp</b><br /><b>new_level</b><br /><b>new_total_exp</b>
 </td>
 <td> 3.3.0
 </td></tr>
@@ -647,7 +647,7 @@
 </td>
 <td> <b>player </b>: <br /><b> world </b>: <br /><b> state </b>: <br /><b> chance </b>: <br /><b> xp </b>: <br /><b>hook</b>: the fishhook entity id<br /><b>caught</b>: the id of the snared entity, can be a fish item
 </td>
-<td> <b>chance</b>:&#160;: the chance of catching a fish from pulling the bobber at random<br /><b>xp</b>:&#160;: the exp the player will get from catching a fish
+<td> <b>chance</b>:&#x00a0;: the chance of catching a fish from pulling the bobber at random<br /><b>xp</b>:&#x00a0;: the exp the player will get from catching a fish
 </td>
 <td> 3.3.1
 </td></tr>
@@ -697,7 +697,7 @@
 </td>
 <td> <b>player</b>: String Match<br /><b>world</b>: String Match<br /><b>join_message</b>: Regex
 </td>
-<td> <b>player</b>: The player's name<br /><b> world </b>: <br /><b>join_message</b>: The default join message<br /><b>first_login</b>: True if this is the first time the player has logged in.
+<td> <b>player</b>: The player&#39;s name<br /><b> world </b>: <br /><b>join_message</b>: The default join message<br /><b>first_login</b>: True if this is the first time the player has logged in.
 </td>
 <td> <b>join_message</b>
 </td>
@@ -732,11 +732,11 @@
 <tr>
 <th > player_login
 </th>
-<td> This event is called when a player is about to log in. This event cannot be cancelled. Instead, you can deny them by setting 'result' to KICK_BANNED, KICK_WHITELIST, KICK_OTHER, or KICK_FULL. The default for 'result' is ALLOWED. When setting 'result', you can specify the kick message by modifying 'kickmsg'.
+<td> This event is called when a player is about to log in. This event cannot be cancelled. Instead, you can deny them by setting &#39;result&#39; to KICK_BANNED, KICK_WHITELIST, KICK_OTHER, or KICK_FULL. The default for &#39;result&#39; is ALLOWED. When setting &#39;result&#39;, you can specify the kick message by modifying &#39;kickmsg&#39;.
 </td>
 <td> <b>player</b>: String Match
 </td>
-<td> <b>player</b>: The player's name<br /><b>uuid</b>: The player's unique id<br /><b>kickmsg</b>: The default kick message<br /><b>ip</b>: the player's IP address<br /><b>hostname</b>: The hostname used to reach the server<br /><b>result</b>: the default response to their logging in
+<td> <b>player</b>: The player&#39;s name<br /><b>uuid</b>: The player&#39;s unique id<br /><b>kickmsg</b>: The default kick message<br /><b>ip</b>: the player&#39;s IP address<br /><b>hostname</b>: The hostname used to reach the server<br /><b>result</b>: the default response to their logging in
 </td>
 <td> <b>kickmsg</b><br /><b>result</b>
 </td>
@@ -745,9 +745,9 @@
 <tr>
 <th > player_move
 </th>
-<td> This event is fired off after a player has moved a certain distance. Due to the high frequency of this event, prefilters are extremely important to use -- especially a threshold -- so that the script doesn't run every time.
+<td> This event is fired off after a player has moved a certain distance. Due to the high frequency of this event, prefilters are extremely important to use -- especially a threshold -- so that the script doesn&#39;t run every time.
 </td>
-<td> <b>player</b>: Macro The player that moved. Switching worlds does not trigger this event.<br /><b>world</b>: String Match The world the player moved in.<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is now in. This should be a location array as well.<br /><b>threshold</b>: &lt;custom&gt; The minimum distance the player must have travelled before the event will be triggered. This is based on the 3D distance, and is measured in block units.
+<td> <b>player</b>: Macro The player that moved. Switching worlds does not trigger this event.<br /><b>world</b>: String Match The world the player moved in.<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is now in. This should be a location array as well.<br /><b>threshold</b>: &lt;custom> The minimum distance the player must have travelled before the event will be triggered. This is based on the 3D distance, and is measured in block units.
 </td>
 <td> <b>player </b>: <br /><b> world </b>: <br /><b>from</b>: The location the player is coming from<br /><b>to</b>: The location the player is now in
 </td>
@@ -762,7 +762,7 @@
 </td>
 <td> <b>player</b>: Macro<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is coming to. This should be a location array as well.<br /><b>type</b>: the type of portal occuring, one of: COMMAND, END_PORTAL, ENDER_PEARL, NETHER_PORTAL, PLUGIN, SPECTATE, END_GATEWAY, CHORUS_FRUIT, UNKNOWN
 </td>
-<td> <b>player</b>: The player that teleport<br /><b>from</b>: The location the player is coming from<br /><b>to</b>: The location the player is coming to. Returns null when using Nether portal and "allow-nether" in server.properties is set to false or when using Ender portal and "allow-end" in bukkit.yml is set to false.<br /><b>type</b>: the type of portal occuring<br /><b>creationradius</b>: Gets the maximum radius from the given location to create a portal.<br /><b>searchradius</b>: Gets the search radius value for finding an available portal.
+<td> <b>player</b>: The player that teleport<br /><b>from</b>: The location the player is coming from<br /><b>to</b>: The location the player is coming to. Returns null when using Nether portal and &quot;allow-nether&quot; in server.properties is set to false or when using Ender portal and &quot;allow-end&quot; in bukkit.yml is set to false.<br /><b>type</b>: the type of portal occuring<br /><b>creationradius</b>: Gets the maximum radius from the given location to create a portal.<br /><b>searchradius</b>: Gets the search radius value for finding an available portal.
 </td>
 <td> <b>to</b><br /><b>creationradius</b><br /><b>searchradius</b>
 </td>
@@ -771,11 +771,11 @@
 <tr>
 <th > player_prelogin
 </th>
-<td> This event is called when a player is about to be authed. This event only fires if your server is in online mode. This event cannot be cancelled. Instead, you can deny them by setting 'result' to KICK_BANNED, KICK_WHITELIST, KICK_OTHER, or KICK_FULL. The default for 'result' is ALLOWED. When setting 'result', you can specify the kick message by modifying 'kickmsg'.
+<td> This event is called when a player is about to be authed. This event only fires if your server is in online mode. This event cannot be cancelled. Instead, you can deny them by setting &#39;result&#39; to KICK_BANNED, KICK_WHITELIST, KICK_OTHER, or KICK_FULL. The default for &#39;result&#39; is ALLOWED. When setting &#39;result&#39;, you can specify the kick message by modifying &#39;kickmsg&#39;.
 </td>
 <td> <b>player</b>: String Match
 </td>
-<td> <b>player</b>: The player's name<br /><b>kickmsg</b>: The default kick message<br /><b>ip</b>: the player's IP address<br /><b>result</b>: the default response to their logging in
+<td> <b>player</b>: The player&#39;s name<br /><b>kickmsg</b>: The default kick message<br /><b>ip</b>: the player&#39;s IP address<br /><b>result</b>: the default response to their logging in
 </td>
 <td> <b>kickmsg</b><br /><b>result</b>
 </td>
@@ -797,11 +797,11 @@
 <tr>
 <th > player_spawn
 </th>
-<td> Fires when a player respawns. Technically during this time, the player is not considered to be 'online'. This can cause problems if you try to run an external command with run() or something. CommandHelper takes into account the fact that the player is offline, and works around this, so all CH functions should respond correctly, as if the player was online, however other plugins or plain text commands that are run may not.
+<td> Fires when a player respawns. Technically during this time, the player is not considered to be &#39;online&#39;. This can cause problems if you try to run an external command with run() or something. CommandHelper takes into account the fact that the player is offline, and works around this, so all CH functions should respond correctly, as if the player was online, however other plugins or plain text commands that are run may not.
 </td>
 <td> <b>x</b>: Expression<br /><b>y</b>: Expression<br /><b>z</b>: Expression<br /><b>world</b>: String Match<br /><b>player</b>: Macro
 </td>
-<td> <b>player</b>: The player that is respawning<br /><b>location</b>: The location they are going to respawn at<br /><b>bed_spawn</b>: True if the respawn location is the player's bed
+<td> <b>player</b>: The player that is respawning<br /><b>location</b>: The location they are going to respawn at<br /><b>bed_spawn</b>: True if the respawn location is the player&#39;s bed
 </td>
 <td> <b>location</b>
 </td>
@@ -812,7 +812,7 @@
 </th>
 <td>
 </td>
-<td> <b>player</b>: Macro The player that teleport. Switching worlds will trigger this event, but world_changed is called after, only if this isn't cancelled first.<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is now in. This should be a location array as well.
+<td> <b>player</b>: Macro The player that teleport. Switching worlds will trigger this event, but world_changed is called after, only if this isn&#39;t cancelled first.<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is now in. This should be a location array as well.
 </td>
 <td> <b>player </b>: <br /><b>from</b>: The location the player is coming from<br /><b>to</b>: The location the player is now in<br /><b>type</b>: the type of teleport occuring, one of: COMMAND, END_PORTAL, ENDER_PEARL, NETHER_PORTAL, PLUGIN, SPECTATE, END_GATEWAY, CHORUS_FRUIT, UNKNOWN
 </td>
@@ -862,7 +862,7 @@
 <tr>
 <th > plugin_message_received
 </th>
-<td> Fires when a player's client sends a plugin message.
+<td> Fires when a player&#39;s client sends a plugin message.
 </td>
 <td> <b>channel</b>: String Match
 </td>
@@ -894,7 +894,7 @@
 </td>
 <td> <b>type </b>: <br /><b>id</b>: the entityID of the projectile<br /><b>location</b>: where it makes contact<br /><b> shooter</b>:
 </td>
-<td> <b>shooter</b>:&#160;: the entityID of the mob/player that fired the projectile, or null if it is from a dispenser
+<td> <b>shooter</b>:&#x00a0;: the entityID of the mob/player that fired the projectile, or null if it is from a dispenser
 </td>
 <td> 3.3.1
 </td></tr>
@@ -903,7 +903,7 @@
 </th>
 <td> This event is called when a projectile is launched. Cancelling the event will only cancel the launching of the projectile. For instance when a player shoots an arrow with a bow, if the event is cancelled the bow will still take damage from use.
 </td>
-<td> <b>type</b>: Macro The entity type of the projectile<br /><b>world</b>: Macro<br /><b>shootertype</b>: Macro The entity type of the shooter, or 'block', or 'null'
+<td> <b>type</b>: Macro The entity type of the projectile<br /><b>world</b>: Macro<br /><b>shootertype</b>: Macro The entity type of the shooter, or &#39;block&#39;, or &#39;null&#39;
 </td>
 <td> <b>id</b>: The entityID of the projectile<br /><b>type</b>: The entity type of the projectile<br /><b>shooter</b>: The entityID of the shooter (null if the projectile is launched by a dispenser)<br /><b>shootertype</b>: The entity type of the shooter (null if the projectile is launched by a dispenser)<br /><b>player</b>: the player which has launched the projectile (null if the shooter is not a player)<br /><b>location</b>: from where the projectile is launched<br /><b>velocity</b>: the velocity of the projectile
 </td>
@@ -933,7 +933,7 @@
 </td>
 <td> <b>ip</b>: The address the ping is coming from<br /><b>players</b>: The number of players online<br /><b>maxplayers</b>: The number of slots on the server<br /><b>motd</b>: The message a player is shown on the serverlist<br /><b>list</b>: The list of connected players
 </td>
-<td> <b>motd</b><br /><b>maxplayers</b><br /><b>list</b>:&#160;: It is only possible to remove players, the added players will be ignored. This will also change the player count.
+<td> <b>motd</b><br /><b>maxplayers</b><br /><b>list</b>:&#x00a0;: It is only possible to remove players, the added players will be ignored. This will also change the player count.
 </td>
 <td> 3.3.1
 </td></tr>
@@ -957,29 +957,29 @@
 </td>
 <td> <b>player</b>: String Match<br /><b>1</b>: Macro<br /><b>2</b>: Macro<br /><b>3</b>: Macro<br /><b>4</b>: Macro
 </td>
-<td> <b>player</b>: The player's name<br /><b>location</b>: an array usable as a locationArray while also compatible with X,Y,Z,world indices<br /><b>text</b>: An array with keys 0 thru 3 defining every line on the sign
+<td> <b>player</b>: The player&#39;s name<br /><b>location</b>: an array usable as a locationArray while also compatible with X,Y,Z,world indices<br /><b>text</b>: An array with keys 0 thru 3 defining every line on the sign
 </td>
-<td> <b>1</b><br /><b>2</b><br /><b>3</b><br /><b>4</b><br /><b>text</b>:&#160;: An array with keys 0 thru 3 defining every line on the sign
+<td> <b>1</b><br /><b>2</b><br /><b>3</b><br /><b>4</b><br /><b>text</b>:&#x00a0;: An array with keys 0 thru 3 defining every line on the sign
 </td>
 <td> 3.3.1
 </td></tr>
 <tr>
 <th > tab_complete_chat
 </th>
-<td> Fires when a player asks for a list of completions to the current word in their chat message. Setting the completions to an empty array is this event's equivalent of cancel().
+<td> Fires when a player asks for a list of completions to the current word in their chat message. Setting the completions to an empty array is this event&#39;s equivalent of cancel().
 </td>
 <td> <b>player</b>: Macro
 </td>
 <td> <b>player</b>: the player asking for completion<br /><b>message</b>: the full message they have typed<br /><b>last</b>: the partial word completion is asked for<br /><b> completions</b>:
 </td>
-<td> <b>completions</b>:&#160;: the list of completions to send, default is player names containing the last text
+<td> <b>completions</b>:&#x00a0;: the list of completions to send, default is player names containing the last text
 </td>
 <td> 3.3.1
 </td></tr>
 <tr>
 <th > tab_complete_command
 </th>
-<td> This will fire if a tab completer has not been set for a command registered with register_command(), or if the set tab completer doesn't return an array. If completions are not modified, registered commands will tab complete online player names.
+<td> This will fire if a tab completer has not been set for a command registered with register_command(), or if the set tab completer doesn&#39;t return an array. If completions are not modified, registered commands will tab complete online player names.
 </td>
 <td>
 </td>
@@ -996,9 +996,9 @@
 </td>
 <td> <b>player</b>: String Match<br /><b>mobtype</b>: Macro
 </td>
-<td> <b>player</b>: The player's name<br /><b>mobtype</b>: The type of mob targeting the player (this will be all capitals!)<br /><b>id</b>: The EntityID of the mob
+<td> <b>player</b>: The player&#39;s name<br /><b>mobtype</b>: The type of mob targeting the player (this will be all capitals!)<br /><b>id</b>: The EntityID of the mob
 </td>
-<td> <b>player</b>:&#160;: target a different player, or null to make the mob re-look for targets
+<td> <b>player</b>:&#x00a0;: target a different player, or null to make the mob re-look for targets
 </td>
 <td> 3.3.1
 </td></tr>
@@ -1037,7 +1037,7 @@
 </td>
 <td> <b>type </b>: <br /><b>id</b>: The entityID of the vehicle<br /><b>entity</b>: the entityID of the entity that was hit<br /><b>block</b>: the location of the block that was hit<br /><b> collisiontype </b>: <br /><b> collide </b>: <br /><b> pickup</b>:
 </td>
-<td> <b>collide</b>:&#160;: whether the vehicle hits the entity or passes through it<br /><b>pickup</b>:&#160;: whether or not the vehicle pick up the entity<br /><b>both fields can only be modified for entity collisions</b>
+<td> <b>collide</b>:&#x00a0;: whether the vehicle hits the entity or passes through it<br /><b>pickup</b>:&#x00a0;: whether or not the vehicle pick up the entity<br /><b>both fields can only be modified for entity collisions</b>
 </td>
 <td> 3.3.1
 </td></tr>
@@ -1085,7 +1085,7 @@
 </th>
 <td> Fires when a vehicle is moving. Due to the high frequency of this event, prefilters are extremely important to use -- especially threshold.
 </td>
-<td> <b>vehicletype</b>: Macro the entitytype of the vehicle<br /><b>passengertype</b>: Macro the enitytype of the passenger<br /><b>world</b>: &lt;string&gt; the world the vehicle is in
+<td> <b>vehicletype</b>: Macro the entitytype of the vehicle<br /><b>passengertype</b>: Macro the enitytype of the passenger<br /><b>world</b>: &lt;string> the world the vehicle is in
 </td>
 <td> <b>world </b>: <br /><b>from</b>: Get the previous position<br /><b>to</b>: Get the next position<br /><b> vehicletype </b>: <br /><b> passengertype </b>: <br /><b>id</b>: entityID<br /><b>passenger</b>: entityID<br /><b>player</b>: player name if passenger is a player, null otherwise
 </td>
@@ -1170,23 +1170,8 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
-					<ul class="icons">
-						<li><a href="#" class="icon fa-facebook">
-							<span class="label">Facebook</span>
-						</a></li>
-						<li><a href="#" class="icon fa-twitter">
-							<span class="label">Twitter</span>
-						</a></li>
-						<li><a href="#" class="icon fa-instagram">
-							<span class="label">Instagram</span>
-						</a></li>
-						<li><a href="#" class="icon fa-linkedin">
-							<span class="label">LinkedIn</span>
-						</a></li>
-					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled.</li>
-						<li>Images: <a href="http://unsplash.com">Unsplash</a>.</li>
+						<li>&copy; 2017-2018 TEAM STEAK.</li>
 						<li>Design: <a href="http://templated.co">TEMPLATED</a>.</li>
 					</ul>
 				</div>
