@@ -56,22 +56,24 @@
 <tr>
 <th > async_player_chat
 </th>
-<td> Fired when any player attempts to send a chat message. The event handler is run on the async thread, and not the main server thread, which can lead to undefined results if your code accesses non-threadsafe methods, hence why this feature is undocumented. If this event is cancelled, player_chat binds will not fire.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xcc44;&#xd305; &#xba54;&#xc2dc;&#xc9c0;&#xb97c; &#xbcf4;&#xb0b4;&#xb824;&#xace0; &#xd560; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774;&#xbca4;&#xd2b8;&#xb294; &#xba54;&#xc778; &#xc11c;&#xbc84; &#xc4f0;&#xb808;&#xb4dc;&#xac00; &#xc544;&#xb2cc; &#xbcf4;&#xc870; &#xc4f0;&#xb808;&#xb4dc;&#xc5d0;&#xc11c; &#xc2e4;&#xd589;&#xb418;&#xba70;,
+&#xc4f0;&#xb808;&#xb4dc;-&#xc548;&#xc804; &#xd391;&#xc158;&#xc774; &#xc544;&#xb2cc; &#xacbd;&#xc6b0;&#xc5d4; &#xc815;&#xc758;&#xb418;&#xc9c0; &#xc54a;&#xc740; &#xac12;&#xc744; &#xbc18;&#xd658;&#xd560; &#xc218;&#xb3c4; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;. &#xb9cc;&#xc57d; &#xc774; &#xc774;&#xbca4;&#xd2b8;&#xac00; &#xcde8;&#xc18c;&#xb418;&#xba74;,
+player_chat &#xc740; &#xbc1c;&#xc0dd;&#xd558;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
-<td> <b>message</b>: The message to be sent<br /><b> recipients </b>: <br /><b> format</b>:
+<td> <b>message</b>: &#xbcf4;&#xb0b8; &#xba54;&#xc2dc;&#xc9c0;<br /><b> recipients </b>: <br /><b> format</b>:
 </td>
-<td> <b>message</b><br /><b>recipients</b>:&#x00a0;: An array of players that will recieve the chat message. If a player doesn&#39;t exist or is offline, and is in the array, it is simply ignored, no exceptions will be thrown.<br /><b>format</b>:&#x00a0;: The &quot;printf&quot; format string, by default: &quot;&lt;%1$s>&#x00a0;%2$s&quot;. The first parameter is the player&#39;s display name, and the second one is the message.
+<td> <b>message</b><br /><b>recipients</b>:&#x00a0;: &#xcc44;&#xd305; &#xba54;&#xc2dc;&#xc9c0;&#xb97c; &#xbc1b;&#xc744; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xc758; &#xbc30;&#xc5f4;&#xc785;&#xb2c8;&#xb2e4;. &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc624;&#xd504;&#xb77c;&#xc778;&#xc774;&#xac70;&#xb098; &#xc874;&#xc7ac;&#xd558;&#xc9c0; &#xc54a;&#xb354;&#xb77c;&#xb3c4; &#xc608;&#xc678;&#xac00; &#xbc1c;&#xc0dd;&#xd558;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.<br /><b>format</b>:&#x00a0;: &quot;printf&quot; &#xd615;&#xc2dd; &#xbb38;&#xc790;&#xc5f4;&#xc785;&#xb2c8;&#xb2e4;. &#xae30;&#xbcf8;&#xac12;: &quot;&lt;%1$s>&#x00a0;%2$s&quot;. &#xccab;&#xbc88;&#xc9f8; &#xc778;&#xc218;&#xb294; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xc758; &#xc774;&#xb984;&#xc774;&#xba70;, &#xb450;&#xbc88;&#xc9f8; &#xc778;&#xc218;&#xb294; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xbcf4;&#xb0b8; &#xba54;&#xc2dc;&#xc9c0;&#xc785;&#xb2c8;&#xb2e4;.
 </td>
 <td> 3.3.1
 </td></tr>
 <tr>
 <th > block_break
 </th>
-<td> This event is called when a block is broken. Cancelling the event cancels the breakage.
+<td> &#xbe14;&#xb85d;&#xc774; &#xbd80;&#xc11c;&#xc84c;&#xc744; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774;&#xbca4;&#xd2b8;&#xb97c; &#xcde8;&#xc18c;&#xd558;&#xba74; &#xbe14;&#xb85d;&#xc744; &#xbd80;&#xc21c; &#xd589;&#xb3d9;&#xc774; &#xcde8;&#xc18c;&#xb429;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: String Match<br /><b>type</b>: String Match<br /><b>data</b>: String Match
+<td> <b>player</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>type</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>data</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;
 </td>
 <td> <b>player</b>: The player&#39;s name<br /><b>block</b>: An array with keys &#39;type&#39; (int), &#39;data&#39; (int), &#39;X&#39; (int), &#39;Y&#39; (int), &#39;Z&#39; (int) and &#39;world&#39; (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b> drops </b>: <br /><b> xp</b>:
 </td>
@@ -82,9 +84,9 @@
 <tr>
 <th > block_burn
 </th>
-<td> This event is called when a block is burned. Cancelling the event cancels the burn.
+<td> &#xbe14;&#xb85d;&#xc774; &#xbd88;&#xd0c0;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcde8;&#xc18c;&#xd558;&#xba74; &#xbd88;&#xc5d0; &#xd0c0;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>type</b>: String Match<br /><b>data</b>: String Match
+<td> <b>type</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>data</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;
 </td>
 <td> <b>block</b>: An array with keys &#39;type&#39; (int), &#39;data&#39; (int), &#39;X&#39; (int), &#39;Y&#39; (int), &#39;Z&#39; (int) and &#39;world&#39; (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block
 </td>
@@ -95,9 +97,9 @@
 <tr>
 <th > block_dispense
 </th>
-<td> This event is called when a dispenser dispense an item. Cancelling the event cancels dispensing.
+<td> &#xb514;&#xc2a4;&#xd39c;&#xc11c;&#xac00; &#xc544;&#xc774;&#xd15c;&#xc744; &#xb0b4;&#xbcf4;&#xb0b4;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcde8;&#xc18c;&#xd558;&#xba74; &#xb0b4;&#xbcf4;&#xb0b8; &#xac83;&#xc744; &#xcde8;&#xc18c;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>type</b>: String Match Type of dispenser<br /><b>item</b>: Item Match Item which is dispensed
+<td> <b>type</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; Type of dispenser<br /><b>item</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778; Item which is dispensed
 </td>
 <td> <b>type</b>: Type of dispenser<br /><b>item</b>: Item which is dispensed<br /><b>velocity</b>: Returns an associative array indicating the x/y/z components of item velocity. As a convenience, the magnitude is also included.<br /><b>location</b>: Location of dispenser
 </td>
@@ -108,9 +110,9 @@
 <tr>
 <th > block_from_to
 </th>
-<td> This event is called when a water or lava is flowed and ender dragon egg is teleportedCancelling the event cancels the flow or teleport
+<td> &#xc6a9;&#xc554;&#xc774;&#xb098; &#xbb3c;&#xc774; &#xd750;&#xb974;&#xac70;&#xb098; &#xc5d4;&#xb354; &#xb4dc;&#xb798;&#xace4; &#xc54c;&#xc774; &#xc774;&#xb3d9;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774;&#xbca4;&#xd2b8;&#xb97c; &#xcde8;&#xc18c;&#xd558;&#xba74; &#xd154;&#xb808;&#xd3ec;&#xd2b8;&#xb098; &#xd750;&#xb984;&#xc744; &#xcde8;&#xc18c;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>type</b>: String Match<br /><b>data</b>: String Match<br /><b> world &lt;string match> </b>: <br /><b> totype &lt;string match> </b>: <br /><b> todata &lt;string match> </b>: <br /><b> toworld &lt;string match> </b>: <br /><b> face &lt;string match></b>:
+<td> <b>type</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>data</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b> world:</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b> totype</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; <br /><b> todata</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; <br /><b> toworld</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; <br /><b> face</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;
 </td>
 <td> <b>block</b>: An array with keys &#39;type&#39; (int), &#39;data&#39; (int), &#39;X&#39; (int), &#39;Y&#39; (int), &#39;Z&#39; (int) and &#39;world&#39; (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b>toblock</b>: target block<br /><b>tolocation</b>: target block&#39;s locationArray
 </td>
@@ -121,9 +123,9 @@
 <tr>
 <th > block_grow
 </th>
-<td> This event is called when a block grows naturally. If the event is cancelled, the block will not grow.
+<td> &#xbe14;&#xb85d;&#xc774; &#xc790;&#xc5f0;&#xc801;&#xc73c;&#xb85c; &#xc790;&#xb77c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcde8;&#xc18c;&#xd558;&#xba74; &#xc790;&#xb77c;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>oldtype</b>: String Match The block type before the growth<br /><b>olddata</b>: String Match The block data before the growth<br /><b>newtype</b>: String Match The block type after the growth<br /><b>newdata</b>: String Match The block data after the growth<br /><b>world</b>: Macro
+<td> <b>oldtype</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; The block type before the growth<br /><b>olddata</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; The block data before the growth<br /><b>newtype</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; The block type after the growth<br /><b>newdata</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; The block data after the growth<br /><b>world</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>oldblock</b>: The block before the growth (an array with keys &#39;type&#39; and &#39;data&#39;)<br /><b>newblock</b>: The block after the growth (an array with keys &#39;type&#39; and &#39;data&#39;)<br /><b>location</b>: the location of the block that will grow
 </td>
@@ -134,9 +136,9 @@
 <tr>
 <th > block_ignite
 </th>
-<td> This event is called when a block or entity is ignited.
+<td> &#xbe14;&#xb85d;&#xc774;&#xb098; &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xbd88;&#xc774; &#xbd99;&#xc73c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: String Match<br /><b>cause</b>: Macro<br /><b>world</b>: Macro
+<td> <b>player</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>cause</b>: &#xb9e4;&#xd06c;&#xb85c;<br /><b>world</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player</b>: The player&#39;s name<br /><b>ignitingentity</b>: entity ID, if entity is ignited<br /><b>ignitingblock</b>: block ID, if block is ignited<br /><b>location</b>: the locationArray of block or entity<br /><b>cause</b>: the cause of ignition, one of: LAVA, FLINT_AND_STEEL, SPREAD, LIGHTNING, FIREBALL, ENDER_CRYSTAL, EXPLOSION
 </td>
@@ -147,9 +149,9 @@
 <tr>
 <th > block_place
 </th>
-<td> This event is called when a player places a block. Cancelling the event cancels placing the block.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xbe14;&#xb85d;&#xc744; &#xb193;&#xc73c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcde8;&#xc18c;&#xd558;&#xba74; &#xbe14;&#xb85d;&#xc744; &#xb193;&#xc740; &#xac83;&#xc744; &#xcde8;&#xc18c;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: String Match<br /><b>type</b>: String Match<br /><b>data</b>: String Match
+<td> <b>player</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>type</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>data</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;
 </td>
 <td> <b>player</b>: The player&#39;s name<br /><b>type</b>: numerical type id of the block being placed<br /><b>X</b>: the X coordinate of the block<br /><b>Y</b>: the Y coordinate of the block<br /><b>Z</b>: the Z coordinate of the block<br /><b>world</b>: the world of the block<br /><b>data</b>: the data value for the block being placed<br /><b>against</b>: the block being placed against<br /><b>oldblock</b>: the blocktype and blockdata being replaced<br /><b>location</b>: A locationArray for this block
 </td>
@@ -160,9 +162,9 @@
 <tr>
 <th > book_edited
 </th>
-<td> This event is called when a player edit a book.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xcc45;&#xc744; &#xc218;&#xc815;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro The player which edited the book<br /><b>signing</b>: Boolean Match Whether or not the book is being signed
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c; The player which edited the book<br /><b>signing</b>: Boolean Match Whether or not the book is being signed
 </td>
 <td> <b>player</b>: The player which edited the book<br /><b>slot</b>: The inventory slot number where the book is<br /><b>oldbook</b>: The book before the editing (an array with keys title, author and pages)<br /><b>newbook</b>: The book after the editing (an array with keys title, author and pages)<br /><b>signing</b>: Whether or not the book is being signed
 </td>
@@ -173,7 +175,8 @@
 <tr>
 <th > cmdline_prompt_input
 </th>
-<td> Fired when a command is issued from the interactive prompt. If the event is not cancelled, the interpreter will handle it as normal. Otherwise, the event can be cancelled, and custom handling can be triggered.
+<td> &#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4;&#xac00; &#xd504;&#xb85c;&#xbaa8;&#xd2b8;&#xb97c; &#xbc1b;&#xc73c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcde8;&#xc18c;&#xd558;&#xc9c0; &#xc54a;&#xc73c;&#xba74; &#xc778;&#xd130;&#xd504;&#xb9ac;&#xd130;&#xac00;
+&#xc815;&#xc0c1;&#xc801;&#xc73c;&#xb85c; &#xb2e4;&#xb8e8;&#xba70;, &#xc544;&#xb2d0; &#xacbd;&#xc6b0; &#xcde8;&#xc18c;&#xd558;&#xac70;&#xb098; &#xcee4;&#xc2a4;&#xd140; &#xd504;&#xb85c;&#xbaa8;&#xd2b8;&#xac00; &#xbc1c;&#xc0dd;&#xd560; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
 <td>
 </td>
@@ -186,9 +189,9 @@
 <tr>
 <th > creature_spawn
 </th>
-<td> Fired when a living entity spawns on the server.
+<td> &#xc11c;&#xbc84;&#xc5d0; &#xc0b4;&#xc544;&#xc788;&#xb294; &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xc0dd;&#xc131;&#xb418;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>type</b>: Macro<br /><b>reason</b>: Macro One of BED, BREEDING, BUILD_IRONGOLEM, BUILD_SNOWMAN, BUILD_WITHER, CHUNK_GEN, CUSTOM, DEFAULT, EGG, JOCKEY, LIGHTNING, NATURAL, REINFORCEMENTS, SLIME_SPLIT, SPAWNER, SPAWNER_EGG, VILLAGE_DEFENSE, VILLAGE_INVASION, NETHER_PORTAL, DISPENSE_EGG, INFECTION, CURED, OCELOT_BABY, SILVERFISH_BLOCK, MOUNT, or TRAP
+<td> <b>type</b>: &#xb9e4;&#xd06c;&#xb85c;<br /><b>reason</b>: &#xb9e4;&#xd06c;&#xb85c; One of BED, BREEDING, BUILD_IRONGOLEM, BUILD_SNOWMAN, BUILD_WITHER, CHUNK_GEN, CUSTOM, DEFAULT, EGG, JOCKEY, LIGHTNING, NATURAL, REINFORCEMENTS, SLIME_SPLIT, SPAWNER, SPAWNER_EGG, VILLAGE_DEFENSE, VILLAGE_INVASION, NETHER_PORTAL, DISPENSE_EGG, INFECTION, CURED, OCELOT_BABY, SILVERFISH_BLOCK, MOUNT, or TRAP
 </td>
 <td> <b>type</b>: the type of creature spawning<br /><b>id</b>: the entityID of the creature<br /><b>reason</b>: the reason this creature is spawning<br /><b>location</b>: locationArray of the event
 </td>
@@ -199,9 +202,9 @@
 <tr>
 <th > entity_change_block
 </th>
-<td> Fires when an entity change block in some way.
+<td> &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xc5b4;&#xb5bb;&#xac8c;&#xb4e0; &#xbe14;&#xb85d;&#xc744; &#xbcc0;&#xacbd;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>from</b>: Math Match the block ID before the change<br /><b>to</b>: Math Match the block ID after change<br /><b>location</b>: Location Match the location of the block changed
+<td> <b>from</b>: &#xc218; &#xd655;&#xc778; the block ID before the change<br /><b>to</b>: &#xc218; &#xd655;&#xc778; the block ID after change<br /><b>location</b>: Location Match the location of the block changed
 </td>
 <td> <b>entity</b>: the entity ID of the entity which changed block<br /><b>from</b>: the block ID before the change<br /><b>data</b>: the data value for the block being changed<br /><b>to</b>: the block ID after change<br /><b>location</b>: the location of the block changed
 </td>
@@ -212,9 +215,9 @@
 <tr>
 <th > entity_damage
 </th>
-<td> Fires when any loaded entity takes damage.
+<td> &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xb370;&#xbbf8;&#xc9c0;&#xb97c; &#xbc1b;&#xc73c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>id</b>: Macro The entityID<br /><b>type</b>: Macro The type of entity being damaged<br /><b>cause</b>: Macro One of CONTACT, ENTITY_ATTACK, PROJECTILE, SUFFOCATION, FALL, FIRE, FIRE_TICK, LAVA, DROWNING, BLOCK_EXPLOSION, ENTITY_EXPLOSION, VOID, LIGHTNING, SUICIDE, STARVATION, POISON, MAGIC, MELTING, WITHER, FALLING_BLOCK, THORNS, DRAGON_BREATH, FLY_INTO_WALL, or CUSTOM<br /><b>world</b>: String Match
+<td> <b>id</b>: &#xb9e4;&#xd06c;&#xb85c; The entityID<br /><b>type</b>: &#xb9e4;&#xd06c;&#xb85c; The type of entity being damaged<br /><b>cause</b>: &#xb9e4;&#xd06c;&#xb85c; One of CONTACT, ENTITY_ATTACK, PROJECTILE, SUFFOCATION, FALL, FIRE, FIRE_TICK, LAVA, DROWNING, BLOCK_EXPLOSION, ENTITY_EXPLOSION, VOID, LIGHTNING, SUICIDE, STARVATION, POISON, MAGIC, MELTING, WITHER, FALLING_BLOCK, THORNS, DRAGON_BREATH, FLY_INTO_WALL, or CUSTOM<br /><b>world</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;
 </td>
 <td> <b>type</b>: The type of entity the got damaged<br /><b>id</b>: The entityID of the victim<br /><b>player</b>: the player who got damaged (only present if type is PLAYER)<br /><b> world </b>: <br /><b> location </b>: <br /><b>cause</b>: The type of damage<br /><b> amount </b>: <br /><b>finalamount</b>: health entity will lose after modifiers<br /><b>damager</b>: If the source of damage is a player this will contain their name, otherwise it will be the entityID of the damager (only available when an entity causes damage)<br /><b>shooter</b>: The name of the player who shot, otherwise the entityID (only available when damager is a projectile)
 </td>
@@ -225,9 +228,9 @@
 <tr>
 <th > entity_damage_player
 </th>
-<td> This event is called when a player is damaged by another entity.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc5d4;&#xb514;&#xd2f0;&#xc5d0;&#xac8c; &#xb370;&#xbbf8;&#xc9c0;&#xb97c; &#xbc1b;&#xc73c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>id</b>: Macro The entityID<br /><b>damager</b>: String Match
+<td> <b>id</b>: &#xb9e4;&#xd06c;&#xb85c; The entityID<br /><b>damager</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;
 </td>
 <td> <b>player</b>: The player being damaged<br /><b>damager</b>: The type of entity causing damage<br /><b>amount</b>: raw amount of damage caused<br /><b>finalamount</b>: health player will lose after modifiers<br /><b>cause</b>: the cause of damage<br /><b>data</b>: the attacking player&#39;s name or the shooter if damager is a projectile<br /><b>id</b>: EntityID of the damager<br /><b> location</b>:
 </td>
@@ -238,9 +241,9 @@
 <tr>
 <th > entity_death
 </th>
-<td> Fires when any living entity dies.
+<td> &#xc0b4;&#xc544;&#xc788;&#xb294; &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xc8fd;&#xc73c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>id</b>: Macro The entityID<br /><b>type</b>: Macro The type of entity dying.
+<td> <b>id</b>: &#xb9e4;&#xd06c;&#xb85c; The entityID<br /><b>type</b>: &#xb9e4;&#xd06c;&#xb85c; The type of entity dying.
 </td>
 <td> <b>type </b>: <br /><b>id</b>: The entityID<br /><b>drops</b>: an array of item arrays of each stack<br /><b> xp </b>: <br /><b>cause</b>: the last entity_damage object for this entity<br /><b>location</b>: where the entity was when it died
 </td>
@@ -251,9 +254,9 @@
 <tr>
 <th > entity_enter_portal
 </th>
-<td> Fires when an entity touches a portal block.
+<td> &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xd3ec;&#xd0c8; &#xbe14;&#xb85d;&#xc744; &#xb9cc;&#xc9c0;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>type</b>: Macro the type of entity<br /><b>block</b>: Math Match the blockID of the portal world: Macro the world in which the portal was entered
+<td> <b>type</b>: &#xb9e4;&#xd06c;&#xb85c; the type of entity<br /><b>block</b>: &#xc218; &#xd655;&#xc778; the blockID of the portal world: &#xb9e4;&#xd06c;&#xb85c; the world in which the portal was entered
 </td>
 <td> <b>id</b>: the entityID of the entity<br /><b>location</b>: the location of the block touched<br /><b> type </b>: <br /><b> block</b>:
 </td>
@@ -264,9 +267,10 @@
 <tr>
 <th > entity_explode
 </th>
-<td> Fires when an explosion occurs. The entity itself may not exist if triggered by a plugin. Cancelling this event only protects blocks, entities are handled in damage events.
+<td> &#xd3ed;&#xbc1c;&#xc774; &#xbc1c;&#xc0dd;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xd50c;&#xb7ec;&#xadf8;&#xc778;&#xc774; &#xd3ed;&#xbc1c;&#xc2dc;&#xcf30;&#xc744; &#xacbd;&#xc6b0; &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xc5c6;&#xc744; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
+&#xc774; &#xc774;&#xbca4;&#xd2b8;&#xb97c; &#xcde8;&#xc18c;&#xd558;&#xba74; &#xbe14;&#xb85d;&#xb9cc; &#xbcf4;&#xd638;&#xd558;&#xba70;, &#xc5d4;&#xb514;&#xd2f0; &#xb370;&#xbbf8;&#xc9c0;&#xb97c; &#xb370;&#xbbf8;&#xc9c0; &#xc774;&#xbca4;&#xd2b8;&#xc5d0;&#xc11c; &#xb2e4;&#xb904;&#xc9d1;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>id</b>: Macro The entityID. If null is used here, it will match events that lack a specific entity, such as using the explosion function.<br /><b>type</b>: Macro The type of entity exploding. Can be null, as id.
+<td> <b>id</b>: &#xb9e4;&#xd06c;&#xb85c; The entityID. If null is used here, it will match events that lack a specific entity, such as using the explosion function.<br /><b>type</b>: &#xb9e4;&#xd06c;&#xb85c; The type of entity exploding. Can be null, as id.
 </td>
 <td> <b>id</b>: entityID, or null if no entity<br /><b>type</b>: entitytype, or null if no entity<br /><b>location</b>: where the explosion occurs<br /><b> blocks </b>: <br /><b> yield</b>:
 </td>
@@ -277,9 +281,9 @@
 <tr>
 <th > entity_interact
 </th>
-<td> Fires when a non-player entity physically interacts with and triggers a block. (eg. pressure plates, redstone ore, farmland, tripwire, and wooden button)
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc544;&#xb2cc; &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xbe14;&#xb85d;&#xacfc; &#xc0c1;&#xd638;&#xc791;&#xc6a9;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.(&#xc555;&#xb825; &#xbc1c;&#xd310;, &#xb808;&#xb4dc;&#xc2a4;&#xd1a4; &#xad11;&#xc11d; &#xb4f1;)
 </td>
-<td> <b>type</b>: String Match the entity type<br /><b>block</b>: Item Match The block id
+<td> <b>type</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; the entity type<br /><b>block</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778; The block id
 </td>
 <td> <b>entity</b>: the ID of the entity that interacted with the block<br /><b>block</b>: the block ID with which the entity interacted<br /><b>location</b>: the location of the interaction
 </td>
@@ -290,9 +294,9 @@
 <tr>
 <th > entity_toggle_glide
 </th>
-<td> This event is called when an entity toggles it&#39;s gliding state (Using Elytra).
+<td> &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xae00;&#xb77c;&#xc774;&#xb529; &#xc0c1;&#xd0dc;&#xb97c; &#xd1a0;&#xae00;&#xd560;&#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.(&#xb0a0;&#xac1c; &#xc0ac;&#xc6a9;)
 </td>
-<td> <b>type</b>: Macro The entity type of the entity<br /><b>id</b>: Macro The entity id of the entity<br /><b>player</b>: Macro The player triggering the event
+<td> <b>type</b>: &#xb9e4;&#xd06c;&#xb85c; The entity type of the entity<br /><b>id</b>: &#xb9e4;&#xd06c;&#xb85c; The entity id of the entity<br /><b>player</b>: &#xb9e4;&#xd06c;&#xb85c; The player triggering the event
 </td>
 <td> <b>id</b>: The entityID of the entity<br /><b>type</b>: The entity type of the entity<br /><b>gliding</b>: true if the entity is entering gliding mode, false if the entity is leaving it<br /><b>player</b>: If the entity is a player, this will contain their name, otherwise null
 </td>
@@ -303,9 +307,9 @@
 <tr>
 <th > exp_change
 </th>
-<td> Fired when a player&#39;s experience changes naturally.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xc758; &#xacbd;&#xd5d8;&#xce58;&#xac00; &#xc790;&#xc5f0;&#xc801;&#xc73c;&#xb85c; &#xbcc0;&#xacbd;&#xb418;&#xc5c8;&#xc744; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player </b>: <br /><b> amount</b>:
 </td>
@@ -316,9 +320,9 @@
 <tr>
 <th > food_level_changed
 </th>
-<td> Fires as a player&#39;s food level changes. Cancelling the event will cause the change to not be applied.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xc758; &#xd5c8;&#xae30; &#xbcc0;&#xacbd;&#xc774; &#xc788;&#xc744; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcde8;&#xc18c;&#xd558;&#xba74; &#xd5c8;&#xae30;&#xac00; &#xbcc0;&#xd558;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: String Match
+<td> <b>player</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;
 </td>
 <td> <b>player</b>: the player<br /><b>level</b>: the new food level to be applied<br /><b>difference</b>: the difference between the old level and the new
 </td>
@@ -329,9 +333,10 @@
 <tr>
 <th > gamemode_change
 </th>
-<td> Fires when something causes a player&#39;s gamemode to change. Cancelling the event will cancel the change. The mode itself cannot be modified.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xac8c;&#xc784;&#xbaa8;&#xb4dc;&#xb97c; &#xbcc0;&#xacbd;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcde8;&#xc18c;&#xd558;&#xba74; &#xac8c;&#xc784;&#xbaa8;&#xb4dc; &#xbcc0;&#xacbd;&#xc744; &#xcde8;&#xc18c;&#xd569;&#xb2c8;&#xb2e4;.
+&#xbaa8;&#xb4dc; &#xc790;&#xccb4;&#xb294; &#xc218;&#xc815;&#xd560; &#xc218; &#xc5c6;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>newmode</b>: Macro gamemode being changed to, one of SURVIVAL, CREATIVE, ADVENTURE, or SPECTATOR<br /><b>player</b>: Macro
+<td> <b>newmode</b>: &#xb9e4;&#xd06c;&#xb85c; gamemode being changed to, one of SURVIVAL, CREATIVE, ADVENTURE, or SPECTATOR<br /><b>player</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player</b>: player whose mode is changing<br /><b> newmode</b>:
 </td>
@@ -342,9 +347,9 @@
 <tr>
 <th > hanging_break
 </th>
-<td> This event is called when a hanged entity is broken.
+<td> &#xac78;&#xc5b4;&#xc838; &#xc788;&#xb294; &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xbd80;&#xc11c;&#xc9c0;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>type</b>: Macro The entity type of the hanging entity<br /><b>cause</b>: Macro The cause of the removing<br /><b>world</b>: Macro
+<td> <b>type</b>: &#xb9e4;&#xd06c;&#xb85c; The entity type of the hanging entity<br /><b>cause</b>: &#xb9e4;&#xd06c;&#xb85c; The cause of the removing<br /><b>world</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>id</b>: The entityID of the hanging entity<br /><b>type</b>: The entity type of the hanging entity, can be ITEM_FRAME, PAINTING or LEASH_HITCH<br /><b>cause</b>: The cause of the removing, can be DEFAULT, ENTITY, EXPLOSION, OBSTRUCTION, or PHYSICS<br /><b>location</b>: Where was the hanging entity before the removing<br /><b>remover</b>: If the hanging entity has been removed by an other entity, this will contain its entityID, otherwise null<br /><b>player</b>: If the hanging entity has been removed by a player, this will contain their name, otherwise null
 </td>
@@ -355,9 +360,9 @@
 <tr>
 <th > inventory_click
 </th>
-<td> Fired when a player clicks a slot in any inventory.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc5b4;&#xb5a0;&#xd55c; &#xc778;&#xbca4;&#xd1a0;&#xb9ac;&#xc758; &#xc2ac;&#xb86f;&#xc744; &#xd074;&#xb9ad;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>slottype</b>: Macro The type of slot being clicked, can be ARMOR, CONTAINER, CRAFTING, FUEL, OUTSIDE, QUICKBAR, or RESULT<br /><b>clicktype</b>: Macro One of LEFT, SHIFT_LEFT, RIGHT, SHIFT_RIGHT, WINDOW_BORDER_LEFT, WINDOW_BORDER_RIGHT, MIDDLE, NUMBER_KEY, DOUBLE_CLICK, DROP, CONTROL_DROP, CREATIVE, or UNKNOWN<br /><b>action</b>: Macro One of NOTHING, PICKUP_ALL, PICKUP_SOME, PICKUP_HALF, PICKUP_ONE, PLACE_ALL, PLACE_SOME, PLACE_ONE, SWAP_WITH_CURSOR, DROP_ALL_CURSOR, DROP_ONE_CURSOR, DROP_ALL_SLOT, DROP_ONE_SLOT, MOVE_TO_OTHER_INVENTORY, HOTBAR_MOVE_AND_READD, HOTBAR_SWAP, CLONE_STACK, COLLECT_TO_CURSOR, or UNKNOWN<br /><b>slotitem</b>: Item Match<br /><b>player</b>: Macro
+<td> <b>slottype</b>: &#xb9e4;&#xd06c;&#xb85c; The type of slot being clicked, can be ARMOR, CONTAINER, CRAFTING, FUEL, OUTSIDE, QUICKBAR, or RESULT<br /><b>clicktype</b>: &#xb9e4;&#xd06c;&#xb85c; One of LEFT, SHIFT_LEFT, RIGHT, SHIFT_RIGHT, WINDOW_BORDER_LEFT, WINDOW_BORDER_RIGHT, MIDDLE, NUMBER_KEY, DOUBLE_CLICK, DROP, CONTROL_DROP, CREATIVE, or UNKNOWN<br /><b>action</b>: &#xb9e4;&#xd06c;&#xb85c; One of NOTHING, PICKUP_ALL, PICKUP_SOME, PICKUP_HALF, PICKUP_ONE, PLACE_ALL, PLACE_SOME, PLACE_ONE, SWAP_WITH_CURSOR, DROP_ALL_CURSOR, DROP_ONE_CURSOR, DROP_ALL_SLOT, DROP_ONE_SLOT, MOVE_TO_OTHER_INVENTORY, HOTBAR_MOVE_AND_READD, HOTBAR_SWAP, CLONE_STACK, COLLECT_TO_CURSOR, or UNKNOWN<br /><b>slotitem</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778;<br /><b>player</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player</b>: The player who clicked<br /><b>viewers</b>: everyone looking in this inventory<br /><b>leftclick</b>: true/false if this was a left click<br /><b>keyboardclick</b>: true/false if a key was pressed<br /><b>rightclick</b>: true/false if this was a right click<br /><b>shiftclick</b>: true/false if shift was being held<br /><b>creativeclick</b>: true/false if this action could only be performed in creative mode<br /><b>slot</b>: the number of the slot<br /><b>rawslot</b>: the number of the slot in whole inventory window<br /><b> slottype </b>: <br /><b> slotitem </b>: <br /><b> inventorytype </b>: <br /><b>inventorysize</b>: number of slots in opened inventory<br /><b> cursoritem </b>: <br /><b>inventory</b>: all the items in the (top) inventory<br /><b> clicktype </b>: <br /><b> action</b>:
 </td>
@@ -368,7 +373,7 @@
 <tr>
 <th > inventory_close
 </th>
-<td> Fired when a player closes an inventory.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc778;&#xbca4;&#xd1a0;&#xb9ac;&#xb97c; &#xb2eb;&#xc73c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td>
 </td>
@@ -381,9 +386,9 @@
 <tr>
 <th > inventory_drag
 </th>
-<td> Fired when a player clicks (by left or right mouse button) a slot in inventory and drag mouse across slots.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc778;&#xbca4;&#xd1a0;&#xb9ac;&#xc758; &#xc2ac;&#xb86f;&#xc744; &#xd074;&#xb9ad;&#xd558;&#xace0; &#xb4dc;&#xb798;&#xadf8;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>world</b>: String Match World name<br /><b>type</b>: Macro Can be SINGLE, or EVEN<br /><b>cursoritem</b>: Item Match item in hand, before event starts
+<td> <b>world</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; World name<br /><b>type</b>: &#xb9e4;&#xd06c;&#xb85c; Can be SINGLE, or EVEN<br /><b>cursoritem</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778; item in hand, before event starts
 </td>
 <td> <b>player</b>: The player who clicked<br /><b>newcursoritem</b>: item on cursor, after event<br /><b>oldcursoritem</b>: item on cursor, before event<br /><b>slots</b>: used slots<br /><b>rawslots</b>: used slots, as the numbers of the slots in whole inventory window<br /><b>newitems</b>: array of items which are dropped in selected slots<br /><b> inventorytype </b>: <br /><b>inventorysize</b>: number of slots in opened inventory
 </td>
@@ -394,7 +399,7 @@
 <tr>
 <th > inventory_open
 </th>
-<td> Fired when a player opens an inventory.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc778;&#xbca4;&#xd1a0;&#xb9ac;&#xb97c; &#xc5f4;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td>
 </td>
@@ -407,9 +412,9 @@
 <tr>
 <th > item_despawn
 </th>
-<td> Fires when an item entity is removed from the world because it has existed for 5 minutes. Cancelling the event will allow the item to exist for 5 more minutes.
+<td> &#xc544;&#xc774;&#xd15c;&#xc774; 5&#xbd84; &#xc774;&#xc0c1; &#xc874;&#xc7ac;&#xd574;&#xc11c; &#xc0ac;&#xb77c;&#xc9c0;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774; &#xc774;&#xbca4;&#xd2b8;&#xb97c; &#xcde8;&#xc18c;&#xd558;&#xba74; &#xc544;&#xc774;&#xd15c;&#xc744; 5&#xbd84; &#xc774;&#xc0c1; &#xc874;&#xc7ac;&#xd558;&#xac8c; &#xd560; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>item</b>: Item Match the item id and data value to check
+<td> <b>item</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778; the item id and data value to check
 </td>
 <td> <b>location</b>: where the item is<br /><b>id</b>: the item&#39;s entityID<br /><b>item</b>: the itemstack of the entity
 </td>
@@ -420,9 +425,9 @@
 <tr>
 <th > item_drop
 </th>
-<td> This event is called when a player drops an item.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc544;&#xc774;&#xd15c;&#xc744; &#xbc84;&#xb9ac;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: String Match<br /><b>item</b>: Item Match
+<td> <b>player</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>item</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778;
 </td>
 <td> <b>player</b>: The player<br /><b>item</b>: An item array representing the item being dropped.
 </td>
@@ -433,7 +438,7 @@
 <tr>
 <th > item_enchant
 </th>
-<td> Fired when a player enchants an item.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc544;&#xc774;&#xd15c;&#xc744; &#xc778;&#xccb8;&#xd2b8;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td>
 </td>
@@ -446,7 +451,7 @@
 <tr>
 <th > item_held
 </th>
-<td> Fires when a player changes which quickbar slot they have selected.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc120;&#xd0dd;&#xb41c; &#xd035;&#xbc14; &#xc2ac;&#xb86f;&#xc744; &#xbcc0;&#xacbd;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td>
 </td>
@@ -459,9 +464,9 @@
 <tr>
 <th > item_pickup
 </th>
-<td> This event is called when a player picks up an item.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc544;&#xc774;&#xd15c;&#xc744; &#xc8fc;&#xc73c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: String Match<br /><b>item</b>: Item Match
+<td> <b>player</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>item</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778;
 </td>
 <td> <b>player</b>: The player<br /><b>item</b>: An item array representing the item being picked up<br /><b>remaining</b>: Other items left on the ground.
 </td>
@@ -472,7 +477,7 @@
 <tr>
 <th > item_pre_craft
 </th>
-<td> Fires when a recipe is formed in a crafting matrix, but the result has not yet been clicked.
+<td> &#xc870;&#xd569;&#xbc95;&#xc5d0; &#xb9de;&#xac8c; &#xc544;&#xc774;&#xd15c;&#xc774; &#xc870;&#xd569;&#xcc3d;&#xc5d0; &#xbc30;&#xc5f4;&#xb418;&#xc5c8;&#xc9c0;&#xb9cc;, &#xacb0;&#xacfc; &#xc544;&#xc774;&#xd15c;&#xc744; &#xd074;&#xb9ad;&#xd558;&#xc9c0; &#xc54a;&#xc558;&#xc744; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td>
 </td>
@@ -485,7 +490,7 @@
 <tr>
 <th > item_pre_enchant
 </th>
-<td> Fired when a player places an item in an enchantment table
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc544;&#xc774;&#xd15c;&#xc744; &#xc778;&#xccb8;&#xd2b8; &#xd14c;&#xc774;&#xbe14;&#xc5d0; &#xb193;&#xc73c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td>
 </td>
@@ -498,9 +503,9 @@
 <tr>
 <th > item_spawn
 </th>
-<td> Fires when an item entity comes into existance.
+<td> &#xc544;&#xc774;&#xd15c; &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xc0dd;&#xaca8;&#xb098;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>item</b>: Item Match the item id and data value to check
+<td> <b>item</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778; the item id and data value to check
 </td>
 <td> <b>location</b>: where the item spawns<br /><b>id</b>: the item&#39;s entityID<br /><b> item</b>:
 </td>
@@ -511,9 +516,9 @@
 <tr>
 <th > item_swap
 </th>
-<td> Fires when a player swaps the items in their main and off hands.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc544;&#xc774;&#xd15c;&#xc744; &#xb2e4;&#xb978; &#xc190;&#xc73c;&#xb85c; &#xc62e;&#xae30;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro<br /><b>main_hand</b>: Item Match<br /><b>off_hand</b>: Item Match
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c;<br /><b>main_hand</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778;<br /><b>off_hand</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778;
 </td>
 <td> <b>player </b>: <br /><b>main_hand</b>: the item array in the main hand before swapping<br /><b>off_hand</b>: the item in the off hand
 </td>
@@ -524,9 +529,9 @@
 <tr>
 <th > lightning_strike
 </th>
-<td> Fires when lightning strikes or the lightning strike effect occurs.
+<td> &#xbc88;&#xac1c;&#xac00; &#xce58;&#xac70;&#xb098; &#xbc88;&#xac1c; &#xc774;&#xd399;&#xd2b8;&#xac00; &#xc0dd;&#xaca8;&#xb098;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>world</b>: String Match the world<br /><b>location</b>: Location Match the lightning strike location<br /><b>is_effect</b>: Boolean Match whether the strike was real or just an effect
+<td> <b>world</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; the world<br /><b>location</b>: Location Match the lightning strike location<br /><b>is_effect</b>: Boolean Match whether the strike was real or just an effect
 </td>
 <td> <b>world</b>: the name of the world in which the strike occurred<br /><b>id</b>: the lightning entityID<br /><b>location</b>: locationArray of the event<br /><b>is_effect</b>: the data value for the block being changed
 </td>
@@ -537,7 +542,8 @@
 <tr>
 <th > note_play
 </th>
-<td> This event is called when a noteblock is activated via player interaction or redstone. The instrument may be one of: PIANO, BASS_DRUM, SNARE_DRUM, STICKS, or BASS_GUITAR.
+<td> &#xb178;&#xd2b8;&#xbe14;&#xb7ed;&#xc774; &#xb808;&#xb4dc;&#xc2a4;&#xd1a4;&#xc774;&#xb098; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xc5d0; &#xc758;&#xd574; &#xd65c;&#xc131;&#xd654;&#xb418;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
+&#xc545;&#xae30;&#xb294; &#xb2e4;&#xc74c; &#xc911; &#xd558;&#xb098;&#xc785;&#xb2c8;&#xb2e4;: PIANO, BASS_DRUM, SNARE_DRUM, STICKS, BASS_GUITAR
 </td>
 <td>
 </td>
@@ -550,7 +556,7 @@
 <tr>
 <th > piston_extend
 </th>
-<td> This event is called when a piston is extended. Cancelling the event cancels the move.
+<td> &#xd53c;&#xc2a4;&#xd1a4;&#xc774; &#xb298;&#xc5b4;&#xb098;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcde8;&#xc18c;&#xd558;&#xba74; &#xd53c;&#xc2a4;&#xd1a4;&#xc774; &#xb298;&#xc5b4;&#xb098;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
 <td>
 </td>
@@ -563,7 +569,7 @@
 <tr>
 <th > piston_retract
 </th>
-<td> This event is called when a piston is retracted. Cancelling the event cancels the move.
+<td> &#xd53c;&#xc2a4;&#xd1a4;&#xc774; &#xb2e4;&#xc2dc; &#xc904;&#xc5b4;&#xb4e4;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcde8;&#xc18c;&#xd558;&#xba74; &#xd53c;&#xc2a4;&#xd1a4;&#xc774; &#xb2e4;&#xc2dc; &#xc904;&#xc5b4;&#xb4e4;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
 <td>
 </td>
@@ -576,22 +582,23 @@
 <tr>
 <th > player_chat
 </th>
-<td> Fired when any player attempts to send a chat message.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xcc44;&#xd305;&#xc744; &#xd558;&#xb824;&#xace0; &#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
-<td> <b>message</b>: The message to be sent<br /><b> recipients </b>: <br /><b> format</b>:
+<td> <b>message</b>: &#xbcf4;&#xb0b8; &#xba54;&#xc2dc;&#xc9c0;<br /><b> recipients </b>: <br /><b> format</b>:
 </td>
-<td> <b>message</b><br /><b>recipients</b>:&#x00a0;: An array of players that will recieve the chat message. If a player doesn&#39;t exist or is offline, and is in the array, it is simply ignored, no exceptions will be thrown.<br /><b>format</b>:&#x00a0;: The &quot;printf&quot; format string, by default: &quot;&lt;%1$s>&#x00a0;%2$s&quot;. The first parameter is the player&#39;s display name, and the second one is the message.
+<td> <b>message</b><br /><b>recipients</b>:&#x00a0;: &#xcc44;&#xd305; &#xba54;&#xc2dc;&#xc9c0;&#xb97c; &#xbc1b;&#xc744; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xc758; &#xbc30;&#xc5f4;&#xc785;&#xb2c8;&#xb2e4;. &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc624;&#xd504;&#xb77c;&#xc778;&#xc774;&#xac70;&#xb098; &#xc874;&#xc7ac;&#xd558;&#xc9c0; &#xc54a;&#xb354;&#xb77c;&#xb3c4; &#xc608;&#xc678;&#xac00; &#xbc1c;&#xc0dd;&#xd558;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.<br /><b>format</b>:&#x00a0;: &quot;printf&quot; &#xd615;&#xc2dd; &#xbb38;&#xc790;&#xc5f4;&#xc785;&#xb2c8;&#xb2e4;. &#xae30;&#xbcf8;&#xac12;: &quot;&lt;%1$s>&#x00a0;%2$s&quot;. &#xccab;&#xbc88;&#xc9f8; &#xc778;&#xc218;&#xb294; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xc758; &#xc774;&#xb984;&#xc774;&#xba70;, &#xb450;&#xbc88;&#xc9f8; &#xc778;&#xc218;&#xb294; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xbcf4;&#xb0b8; &#xba54;&#xc2dc;&#xc9c0;&#xc785;&#xb2c8;&#xb2e4;.
 </td>
 <td> 3.3.0
 </td></tr>
 <tr>
 <th > player_command
 </th>
-<td> This event is fired off when a player runs any command at all. This actually fires before normal CommandHelper aliases, allowing you to insert control before defined aliases, even.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xba85;&#xb839;&#xc5b4;&#xb97c; &#xc2e4;&#xd589;&#xd558;&#xb824;&#xace0; &#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774;&#xb294; CommandHelper &#xb2e8;&#xcd95; &#xba85;&#xb839;&#xc5b4;&#xbcf4;&#xb2e4; &#xbe68;&#xb9ac; &#xc2e4;&#xd589;&#xb418;&#xbbc0;&#xb85c;,
+&#xb2e8;&#xcd95; &#xba85;&#xb839;&#xc5b4;&#xbcf4;&#xb2e4; &#xb354; &#xbe60;&#xb974;&#xac8c; &#xba85;&#xb839;&#xc5b4; &#xc2e4;&#xd589;&#xc744; &#xc870;&#xc885;&#xd560; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>command</b>: String Match The entire command the player ran<br /><b>prefix</b>: String Match Just the first part of the command, i.e. &#39;/cmd&#39; in &#39;/cmd blah blah&#39;<br /><b>player</b>: Macro The player using the command
+<td> <b>command</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; The entire command the player ran<br /><b>prefix</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; Just the first part of the command, i.e. &#39;/cmd&#39; in &#39;/cmd blah blah&#39;<br /><b>player</b>: &#xb9e4;&#xd06c;&#xb85c; The player using the command
 </td>
 <td> <b>command</b>: The entire command<br /><b>prefix</b>: Just the prefix of the command
 </td>
@@ -602,9 +609,9 @@
 <tr>
 <th > player_consume
 </th>
-<td> Fires as a player is finishing eating/drinking an item. Cancelling the event will cause any effects to not be applied and the item to not be taken from the player.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc544;&#xc774;&#xd15c;&#xc744; &#xba39;&#xac70;&#xb098; &#xb9c8;&#xc2dc;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcde8;&#xc18c;&#xd558;&#xba74; &#xadf8; &#xc544;&#xc774;&#xd15c;&#xc73c;&#xb85c; &#xc5bb;&#xc740; &#xbaa8;&#xb4e0; &#xd6a8;&#xacfc;&#xb97c; &#xcde8;&#xc18c;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>item</b>: Item Match
+<td> <b>item</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778;
 </td>
 <td> <b>player</b>: the player consuming<br /><b>item</b>: the item being consumed
 </td>
@@ -615,9 +622,9 @@
 <tr>
 <th > player_death
 </th>
-<td> Fired when a player dies.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc8fd;&#xc73c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player</b>: The player that died<br /><b>drops</b>: An array of the items that will be dropped, or null<br /><b>xp</b>: The amount of experience that will be dropped<br /><b>cause</b>: The cause of death<br /><b>death_message</b>: The death message, or null if absent<br /><b>keep_inventory</b>: If the player will keep their inventory<br /><b>keep_level</b>: If the player will keep their experience and their level<br /><b>new_exp</b>: The player&#39;s experience when they will respawn<br /><b>new_level</b>: The player&#39;s level when they will respawn<br /><b>new_total_exp</b>: The player&#39;s total experience when they will respawn<br /><b>killer</b>: The name of the killer if a player killed them, otherwise null
 </td>
@@ -628,7 +635,7 @@
 <tr>
 <th > player_enter_bed
 </th>
-<td> Fires when a player tries to enter a bed.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xce68;&#xb300;&#xc5d0; &#xb204;&#xc73c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td> <b>location</b>: The location of the bed
 </td>
@@ -641,9 +648,9 @@
 <tr>
 <th > player_fish
 </th>
-<td> Fires when a player casts or reels a fishing rod.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xb09a;&#xc2dc;&#xb300;&#xb97c; &#xb193;&#xac70;&#xb098; &#xbe7c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>state</b>: Macro Can be one of CAUGHT_ENTITY, CAUGHT_FISH, FAILED_ATTEMPT, FISHING, IN_GROUND, or BITE<br /><b>player</b>: Macro The player who is fishing<br /><b>world</b>: String Match
+<td> <b>state</b>: &#xb9e4;&#xd06c;&#xb85c; Can be one of CAUGHT_ENTITY, CAUGHT_FISH, FAILED_ATTEMPT, FISHING, IN_GROUND, or BITE<br /><b>player</b>: &#xb9e4;&#xd06c;&#xb85c; The player who is fishing<br /><b>world</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;
 </td>
 <td> <b>player </b>: <br /><b> world </b>: <br /><b> state </b>: <br /><b> chance </b>: <br /><b> xp </b>: <br /><b>hook</b>: the fishhook entity id<br /><b>caught</b>: the id of the snared entity, can be a fish item
 </td>
@@ -654,9 +661,9 @@
 <tr>
 <th > player_interact
 </th>
-<td> Fires when a player left or right clicks a block or the air
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xbe14;&#xb85d; &#xd639;&#xc740; &#xacf5;&#xae30;&#xb97c; &#xc67c;&#xcabd; &#xc624;&#xb978;&#xcabd; &#xd074;&#xb9ad;&#xc744; &#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>block</b>: Item Match If the block the player interacts with is this<br /><b>button</b>: String Match left or right. If they left or right clicked<br /><b>item</b>: Item Match The item they are holding when they interacted<br /><b>hand</b>: String Match The hand the player clicked with<br /><b>player</b>: String Match The player that triggered the event
+<td> <b>block</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778; If the block the player interacts with is this<br /><b>button</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; left or right. If they left or right clicked<br /><b>item</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778; The item they are holding when they interacted<br /><b>hand</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; The hand the player clicked with<br /><b>player</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; The player that triggered the event
 </td>
 <td> <b>action</b>: One of either: left_click_block, right_click_block, left_click_air, or right_click_air<br /><b>block</b>: The id of the block they clicked, or 0 if they clicked the air. If they clicked the air, neither facing or location will be present.<br /><b>player</b>: The player associated with this event<br /><b>facing</b>: The (lowercase) face of the block they clicked. (One of NORTH, EAST, SOUTH, WEST, UP, DOWN, NORTH_EAST, NORTH_WEST, SOUTH_EAST, SOUTH_WEST, WEST_NORTH_WEST, NORTH_NORTH_WEST, NORTH_NORTH_EAST, EAST_NORTH_EAST, EAST_SOUTH_EAST, SOUTH_SOUTH_EAST, SOUTH_SOUTH_WEST, WEST_SOUTH_WEST, or SELF)<br /><b>location</b>: The (x, y, z, world) location of the block they clicked<br /><b>hand</b>: The hand used to click with, can be either main_hand or off_hand
 </td>
@@ -667,9 +674,10 @@
 <tr>
 <th > player_interact_at_entity
 </th>
-<td> Fires when a player right clicks an entity. This event is like player_interact_entity but also has the click position, and when cancelled only cancels interactions with Armor Stand entities.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc5d4;&#xb514;&#xd2f0;&#xb97c; &#xc624;&#xb978;&#xcabd; &#xd074;&#xb9ad;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774; &#xc774;&#xbca4;&#xd2b8;&#xb294; player_interact_entity &#xc640; &#xbe44;&#xc2b7;&#xd558;&#xc9c0;&#xba74;
+&#xd074;&#xb9ad;&#xd55c; &#xc704;&#xce58;&#xb3c4; &#xc54c;&#xb824;&#xc90d;&#xb2c8;&#xb2e4;. &#xb610;&#xd55c; &#xcde8;&#xc18c;&#xd558;&#xba74; &#xc544;&#xba38; &#xc2a4;&#xd0e0;&#xb4dc;&#xc758; &#xc0c1;&#xd638;&#xc791;&#xc6a9;&#xb9cc;&#xc744; &#xcde8;&#xc18c;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>clicked</b>: the type of entity being clicked<br /><b>x</b>: Expression offset of clicked location from entity location on the x axis.<br /><b>y</b>: Expression<br /><b>z</b>: Expression
+<td> <b>clicked</b>: the type of entity being clicked<br /><b>x</b>: &#xbd80;&#xb4f1;&#xc2dd; offset of clicked location from entity location on the x axis.<br /><b>y</b>: &#xbd80;&#xb4f1;&#xc2dd;<br /><b>z</b>: &#xbd80;&#xb4f1;&#xc2dd;
 </td>
 <td> <b>player</b>: the player clicking<br /><b> clicked </b>: <br /><b>id</b>: the id of the entity<br /><b>data</b>: if a player is clicked, this will contain their name<br /><b>position</b>: offset of clicked location from entity location in an xyz array.
 </td>
@@ -680,7 +688,8 @@
 <tr>
 <th > player_interact_entity
 </th>
-<td> Fires when a player right clicks an entity. Note, not all entities are clickable. Interactions with Armor Stands do not trigger this event.
+<td> &#xc5d4;&#xb514;&#xd2f0;&#xb97c; &#xc624;&#xb978;&#xcabd; &#xd074;&#xb9ad;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcc38;&#xace0;&#xb85c; &#xbaa8;&#xb4e0; &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xd074;&#xb9ad; &#xac00;&#xb2a5;&#xd558;&#xc9c4; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
+&#xc544;&#xba38; &#xc2a4;&#xd0e0;&#xb4dc;&#xc640;&#xc758; &#xc0c1;&#xd638;&#xc791;&#xc6a9;&#xc740; &#xc774; &#xc774;&#xbca4;&#xd2b8;&#xb97c; &#xbc1c;&#xc0dd;&#xc2dc;&#xd0a4;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
 <td> <b>clicked</b>: the type of entity being clicked
 </td>
@@ -693,9 +702,10 @@
 <tr>
 <th > player_join
 </th>
-<td> This event is called when a player logs in. Setting join_message to null causes it to not be displayed at all. Cancelling the event does not prevent them from logging in. Instead, you should just pkick() them.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc11c;&#xbc84;&#xc5d0; &#xb4e4;&#xc5b4;&#xc624;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. join_message &#xb97c; null &#xc73c;&#xb85c; &#xd558;&#xba74; &#xd45c;&#xc2dc;&#xb418;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
+&#xc774;&#xbca4;&#xd2b8;&#xb97c; &#xcde8;&#xc18c;&#xd558;&#xb354;&#xb77c;&#xb3c4; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xb4e4;&#xc5b4;&#xc624;&#xb294; &#xac83;&#xc744; &#xb9c9;&#xc744;&#xc218;&#xb294; &#xc5c6;&#xc2b5;&#xb2c8;&#xb2e4;. &#xb300;&#xc2e0; pkick() &#xc744; &#xc0ac;&#xc6a9;&#xd574;&#xc57c; &#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: String Match<br /><b>world</b>: String Match<br /><b>join_message</b>: Regex
+<td> <b>player</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>world</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>join_message</b>: &#xc815;&#xaddc;&#xc2dd;
 </td>
 <td> <b>player</b>: The player&#39;s name<br /><b> world </b>: <br /><b>join_message</b>: The default join message<br /><b>first_login</b>: True if this is the first time the player has logged in.
 </td>
@@ -706,9 +716,9 @@
 <tr>
 <th > player_kick
 </th>
-<td> Fired when a player is kicked from the game.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xac8c;&#xc784;&#xc5d0;&#xc11c; &#xac15;&#xc81c; &#xd1f4;&#xc7a5;&#xb418;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro<br /><b>reason</b>: Macro
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c;<br /><b>reason</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player</b>: the kicked player<br /><b>message</b>: the message shown to all online players<br /><b>reason</b>: the message shown to the player getting kicked
 </td>
@@ -719,7 +729,7 @@
 <tr>
 <th > player_leave_bed
 </th>
-<td> Fires when a player leaves a bed.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xce68;&#xb300;&#xc5d0;&#xc11c; &#xc77c;&#xc5b4;&#xb098;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td> <b>location</b>: The location of the bed
 </td>
@@ -732,9 +742,10 @@
 <tr>
 <th > player_login
 </th>
-<td> This event is called when a player is about to log in. This event cannot be cancelled. Instead, you can deny them by setting &#39;result&#39; to KICK_BANNED, KICK_WHITELIST, KICK_OTHER, or KICK_FULL. The default for &#39;result&#39; is ALLOWED. When setting &#39;result&#39;, you can specify the kick message by modifying &#39;kickmsg&#39;.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xb85c;&#xadf8;&#xc778;&#xd558;&#xb824;&#xace0; &#xd560; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774;&#xbca4;&#xd2b8;&#xb294; &#xcde8;&#xc18c;&#xd560; &#xc218; &#xc5c6;&#xc9c0;&#xb9cc;, &#39;result&#39; &#xb97c; KICK_BANNED, KICK_WHITELIST, KICK_OTHER, KICK_FULL
+&#xc73c;&#xb85c; &#xc218;&#xc815;&#xd568;&#xc73c;&#xb85c;&#xc368; &#xb4e4;&#xc5b4;&#xc624;&#xc9c0; &#xbabb;&#xd558;&#xac8c; &#xb9c9;&#xc744; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;. &#xae30;&#xbcf8; &#39;result&#39; &#xb294; ALLOWED &#xc774;&#xba70;, &#39;result&#39; &#xb97c; &#xc124;&#xc815;&#xd558;&#xba74;&#xc11c; &#xba54;&#xc2dc;&#xc9c0;&#xb97c; &#xbcc0;&#xacbd;&#xd558;&#xace0; &#xc2f6;&#xb2e4;&#xba74; &#39;kickmsg&#39; &#xb97c; &#xc218;&#xc815;&#xd558;&#xba74; &#xb429;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: String Match
+<td> <b>player</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;
 </td>
 <td> <b>player</b>: The player&#39;s name<br /><b>uuid</b>: The player&#39;s unique id<br /><b>kickmsg</b>: The default kick message<br /><b>ip</b>: the player&#39;s IP address<br /><b>hostname</b>: The hostname used to reach the server<br /><b>result</b>: the default response to their logging in
 </td>
@@ -745,9 +756,10 @@
 <tr>
 <th > player_move
 </th>
-<td> This event is fired off after a player has moved a certain distance. Due to the high frequency of this event, prefilters are extremely important to use -- especially a threshold -- so that the script doesn&#39;t run every time.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xd2b9;&#xc815;&#xd55c; &#xac70;&#xb9ac;&#xb9cc;&#xd07c; &#xc774;&#xb3d9;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774; &#xc774;&#xbca4;&#xd2b8;&#xb294; &#xc544;&#xc8fc; &#xc9e7;&#xc740; &#xac70;&#xb9ac;&#xc5d0;&#xb294; &#xbc1c;&#xc0dd;&#xd558;&#xc9c0; &#xc54a;&#xae30; &#xb54c;&#xbb38;&#xc5d0;, &#xc0ac;&#xc804; &#xd544;&#xd130;&#xac00; &#xc911;&#xc694;&#xd569;&#xb2c8;&#xb2e4;.
+&#xd2b9;&#xd788; threshold &#xb294; &#xb354; &#xc911;&#xc694;&#xd569;&#xb2c8;&#xb2e4;. -- &#xc774;&#xb97c; &#xc124;&#xc815;&#xd558;&#xbbc0;&#xb85c;&#xc368; &#xc2a4;&#xd06c;&#xb9bd;&#xd2b8;&#xac00; &#xd56d;&#xc0c1; &#xc791;&#xb3d9;&#xd558;&#xc9c0; &#xc54a;&#xb3c4;&#xb85d; &#xd560; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro The player that moved. Switching worlds does not trigger this event.<br /><b>world</b>: String Match The world the player moved in.<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is now in. This should be a location array as well.<br /><b>threshold</b>: &lt;custom> The minimum distance the player must have travelled before the event will be triggered. This is based on the 3D distance, and is measured in block units.
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c; The player that moved. Switching worlds does not trigger this event.<br /><b>world</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; The world the player moved in.<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is now in. This should be a location array as well.<br /><b>threshold</b>: &lt;custom> The minimum distance the player must have travelled before the event will be triggered. This is based on the 3D distance, and is measured in block units.
 </td>
 <td> <b>player </b>: <br /><b> world </b>: <br /><b>from</b>: The location the player is coming from<br /><b>to</b>: The location the player is now in
 </td>
@@ -758,9 +770,9 @@
 <tr>
 <th > player_portal_travel
 </th>
-<td> Fired when a player collides with portal.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xd3ec;&#xd0c8;&#xc5d0; &#xb4e4;&#xc5b4;&#xac00;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is coming to. This should be a location array as well.<br /><b>type</b>: the type of portal occuring, one of: COMMAND, END_PORTAL, ENDER_PEARL, NETHER_PORTAL, PLUGIN, SPECTATE, END_GATEWAY, CHORUS_FRUIT, UNKNOWN
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c;<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is coming to. This should be a location array as well.<br /><b>type</b>: the type of portal occuring, one of: COMMAND, END_PORTAL, ENDER_PEARL, NETHER_PORTAL, PLUGIN, SPECTATE, END_GATEWAY, CHORUS_FRUIT, UNKNOWN
 </td>
 <td> <b>player</b>: The player that teleport<br /><b>from</b>: The location the player is coming from<br /><b>to</b>: The location the player is coming to. Returns null when using Nether portal and &quot;allow-nether&quot; in server.properties is set to false or when using Ender portal and &quot;allow-end&quot; in bukkit.yml is set to false.<br /><b>type</b>: the type of portal occuring<br /><b>creationradius</b>: Gets the maximum radius from the given location to create a portal.<br /><b>searchradius</b>: Gets the search radius value for finding an available portal.
 </td>
@@ -771,9 +783,10 @@
 <tr>
 <th > player_prelogin
 </th>
-<td> This event is called when a player is about to be authed. This event only fires if your server is in online mode. This event cannot be cancelled. Instead, you can deny them by setting &#39;result&#39; to KICK_BANNED, KICK_WHITELIST, KICK_OTHER, or KICK_FULL. The default for &#39;result&#39; is ALLOWED. When setting &#39;result&#39;, you can specify the kick message by modifying &#39;kickmsg&#39;.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc778;&#xc99d;&#xd558;&#xb824;&#xace0; &#xd560; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774; &#xc774;&#xbca4;&#xd2b8;&#xb294; &#xc11c;&#xbc84;&#xac00; &#xc628;&#xb77c;&#xc778; &#xbaa8;&#xb4dc;&#xc77c; &#xb54c;&#xc5d0;&#xb9cc; &#xbc1c;&#xc0dd;&#xd560; &#xc218; &#xc788;&#xc73c;&#xba70;, &#xcde8;&#xc18c;&#xd560; &#xc218; &#xc5c6;&#xc2b5;&#xb2c8;&#xb2e4;.
+&#xb300;&#xc2e0; &#39;result&#39; &#xb97c; KICK_BANNED, KICK_WHITELIST, KICK_OTHER, KICK_FULL &#xc73c;&#xb85c; &#xc124;&#xc815;&#xd558;&#xc5ec; &#xb4e4;&#xc5b4;&#xc624;&#xc9c0; &#xbabb;&#xd558;&#xac8c; &#xd560; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;. &#xae30;&#xbcf8; &#39;result&#39; &#xb294; ALLOWED &#xc774;&#xba70;, &#39;result&#39; &#xb97c; &#xc124;&#xc815;&#xd560; &#xb54c; &#39;kickmsg&#39; &#xb97c; &#xc124;&#xc815;&#xd568;&#xc73c;&#xb85c;&#xc368; &#xba54;&#xc2dc;&#xc9c0;&#xb97c; &#xbcf4;&#xb0bc; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: String Match
+<td> <b>player</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;
 </td>
 <td> <b>player</b>: The player&#39;s name<br /><b>kickmsg</b>: The default kick message<br /><b>ip</b>: the player&#39;s IP address<br /><b>result</b>: the default response to their logging in
 </td>
@@ -784,9 +797,9 @@
 <tr>
 <th > player_quit
 </th>
-<td> Fired when any player quits.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xb098;&#xac08; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>message</b>: The message to be sent
 </td>
@@ -797,9 +810,9 @@
 <tr>
 <th > player_spawn
 </th>
-<td> Fires when a player respawns. Technically during this time, the player is not considered to be &#39;online&#39;. This can cause problems if you try to run an external command with run() or something. CommandHelper takes into account the fact that the player is offline, and works around this, so all CH functions should respond correctly, as if the player was online, however other plugins or plain text commands that are run may not.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xb9ac;&#xc2a4;&#xd3f0;&#xd560; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xae30;&#xc220;&#xc801;&#xc73c;&#xb85c; &#xc774; &#xae30;&#xac04;&#xc5d4; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xb294; &#xc628;&#xb77c;&#xc778;&#xc73c;&#xb85c; &#xac04;&#xc8fc;&#xb418;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;. &#xc774;&#xb294; run() &#xacfc; &#xac19;&#xc740; &#xd391;&#xc158;&#xc744; &#xc0ac;&#xc6a9;&#xd560; &#xb54c; &#xbb38;&#xc81c;&#xac00; &#xb420; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;. CommandHelper &#xc5d0;&#xc11c;&#xb294; &#xacc4;&#xc815;&#xc758; &#xc624;&#xd504;&#xb77c;&#xc778; &#xc5ec;&#xbd80;&#xb97c; &#xbcf4;&#xae30; &#xb54c;&#xbb38;&#xc5d0;, &#xbaa8;&#xb4e0; CH &#xd391;&#xc158;&#xc740; &#xc815;&#xc0c1;&#xc801;&#xc73c;&#xb85c; &#xc791;&#xb3d9;&#xd558;&#xc9c0;&#xb9cc;, &#xb2e4;&#xb978; &#xd50c;&#xb7ec;&#xadf8;&#xc778;&#xc774;&#xb098; &#xc77c;&#xbc18; &#xd14d;&#xc2a4;&#xd2b8; &#xba85;&#xb839;&#xc5b4;&#xb294; &#xadf8;&#xb7ec;&#xc9c0; &#xc54a;&#xc744; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>x</b>: Expression<br /><b>y</b>: Expression<br /><b>z</b>: Expression<br /><b>world</b>: String Match<br /><b>player</b>: Macro
+<td> <b>x</b>: &#xbd80;&#xb4f1;&#xc2dd;<br /><b>y</b>: &#xbd80;&#xb4f1;&#xc2dd;<br /><b>z</b>: &#xbd80;&#xb4f1;&#xc2dd;<br /><b>world</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>player</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player</b>: The player that is respawning<br /><b>location</b>: The location they are going to respawn at<br /><b>bed_spawn</b>: True if the respawn location is the player&#39;s bed
 </td>
@@ -812,7 +825,7 @@
 </th>
 <td>
 </td>
-<td> <b>player</b>: Macro The player that teleport. Switching worlds will trigger this event, but world_changed is called after, only if this isn&#39;t cancelled first.<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is now in. This should be a location array as well.
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c; The player that teleport. Switching worlds will trigger this event, but world_changed is called after, only if this isn&#39;t cancelled first.<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is now in. This should be a location array as well.
 </td>
 <td> <b>player </b>: <br /><b>from</b>: The location the player is coming from<br /><b>to</b>: The location the player is now in<br /><b>type</b>: the type of teleport occuring, one of: COMMAND, END_PORTAL, ENDER_PEARL, NETHER_PORTAL, PLUGIN, SPECTATE, END_GATEWAY, CHORUS_FRUIT, UNKNOWN
 </td>
@@ -823,9 +836,9 @@
 <tr>
 <th > player_toggle_flight
 </th>
-<td> Called when a player toggles their flying state.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc790;&#xc2e0;&#xc758; &#xb0a0;&#xae30; &#xc0c1;&#xd0dc;&#xb97c; &#xbc14;&#xafb8;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro The player who toggled their flying state<br /><b>flying</b>: Boolean Match Whether or not the player is trying to start or stop flying<br /><b>world</b>: Macro
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c; The player who toggled their flying state<br /><b>flying</b>: Boolean Match Whether or not the player is trying to start or stop flying<br /><b>world</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player</b>: The player who toggled their flying state<br /><b>flying</b>: Whether or not the player is trying to start or stop flying<br /><b>location</b>: Where the player is
 </td>
@@ -836,9 +849,9 @@
 <tr>
 <th > player_toggle_sneak
 </th>
-<td> Called when a player toggles their sneaking state.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc790;&#xc2e0;&#xc758; &#xc219;&#xc774;&#xae30; &#xc0c1;&#xd0dc;&#xb97c; &#xbc14;&#xafb8;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro The player who toggled their sneaking state<br /><b>sneaking</b>: Boolean Match Whether or not the player is now sneaking<br /><b>world</b>: Macro
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c; The player who toggled their sneaking state<br /><b>sneaking</b>: Boolean Match Whether or not the player is now sneaking<br /><b>world</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player</b>: The player who toggled their sneaking state<br /><b>sneaking</b>: Whether or not the player is now sneaking<br /><b>location</b>: Where the player is
 </td>
@@ -849,9 +862,9 @@
 <tr>
 <th > player_toggle_sprint
 </th>
-<td> Called when a player toggles their sprinting state.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc790;&#xc2e0;&#xc758; &#xb2ec;&#xb9ac;&#xae30; &#xc0c1;&#xd0dc;&#xb97c; &#xbc14;&#xafb8;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro The player who toggled their sprinting state<br /><b>sprinting</b>: Boolean Match Whether or not the player is now sprinting<br /><b>world</b>: Macro
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c; The player who toggled their sprinting state<br /><b>sprinting</b>: Boolean Match Whether or not the player is now sprinting<br /><b>world</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player</b>: The player who toggled their sprinting state<br /><b>sprinting</b>: Whether or not the player is now sprinting<br /><b>location</b>: Where the player is
 </td>
@@ -862,7 +875,7 @@
 <tr>
 <th > plugin_message_received
 </th>
-<td> Fires when a player&#39;s client sends a plugin message.
+<td> &#xd074;&#xb77c;&#xc774;&#xc5b8;&#xd2b8;&#xac00; &#xd50c;&#xb7ec;&#xadf8;&#xc778; &#xba54;&#xc2dc;&#xc9c0;&#xb97c; &#xbcf4;&#xb0b4;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td> <b>channel</b>: String Match
 </td>
@@ -875,7 +888,7 @@
 <tr>
 <th > pressure_plate_activated
 </th>
-<td> Fires when a player steps on a pressure plate
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc555;&#xb825; &#xbc1c;&#xd310;&#xc744; &#xbc1f;&#xc73c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td> <b>location</b>: Location Match The location of the pressure plate<br /><b>activated</b>: Boolean Match If true, only will trigger when the plate is stepped on. Currently, this will only be true, since the event is only triggered on activations, not deactivations, but is reserved for future use.
 </td>
@@ -888,9 +901,9 @@
 <tr>
 <th > projectile_hit
 </th>
-<td> Fires when a projectile collides with something.
+<td> &#xbc1c;&#xc0ac;&#xccb4;&#xac00; &#xbb34;&#xc5b8;&#xac00;&#xc5d0; &#xbd80;&#xb52a;&#xd788;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>id</b>: Macro The entityID<br /><b>type</b>: Macro the entity type of the projectile
+<td> <b>id</b>: &#xb9e4;&#xd06c;&#xb85c; The entityID<br /><b>type</b>: &#xb9e4;&#xd06c;&#xb85c; the entity type of the projectile
 </td>
 <td> <b>type </b>: <br /><b>id</b>: the entityID of the projectile<br /><b>location</b>: where it makes contact<br /><b> shooter</b>:
 </td>
@@ -901,9 +914,10 @@
 <tr>
 <th > projectile_launch
 </th>
-<td> This event is called when a projectile is launched. Cancelling the event will only cancel the launching of the projectile. For instance when a player shoots an arrow with a bow, if the event is cancelled the bow will still take damage from use.
+<td> &#xbc1c;&#xc0ac;&#xccb4;&#xac00; &#xbc1c;&#xc0ac;&#xb418;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774;&#xbca4;&#xd2b8;&#xb97c; &#xcde8;&#xc18c;&#xd558;&#xba74; &#xbc1c;&#xc0ac;&#xccb4;&#xc758; &#xbc1c;&#xc0ac;&#xb9cc; &#xcde8;&#xc18c;&#xb429;&#xb2c8;&#xb2e4;. &#xc608;&#xb97c; &#xb4e4;&#xc5b4;,
+&#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xd65c;&#xc744; &#xc3d8;&#xba74; &#xd654;&#xc0b4;&#xc740; &#xbc1c;&#xc0ac;&#xb418;&#xc9c0; &#xc54a;&#xc9c0;&#xb9cc; &#xd65c;&#xc758; &#xb0b4;&#xad6c;&#xb3c4;&#xb294; &#xc904;&#xc5b4;&#xb4ed;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>type</b>: Macro The entity type of the projectile<br /><b>world</b>: Macro<br /><b>shootertype</b>: Macro The entity type of the shooter, or &#39;block&#39;, or &#39;null&#39;
+<td> <b>type</b>: &#xb9e4;&#xd06c;&#xb85c; The entity type of the projectile<br /><b>world</b>: &#xb9e4;&#xd06c;&#xb85c;<br /><b>shootertype</b>: &#xb9e4;&#xd06c;&#xb85c; The entity type of the shooter, or &#39;block&#39;, or &#39;null&#39;
 </td>
 <td> <b>id</b>: The entityID of the projectile<br /><b>type</b>: The entity type of the projectile<br /><b>shooter</b>: The entityID of the shooter (null if the projectile is launched by a dispenser)<br /><b>shootertype</b>: The entity type of the shooter (null if the projectile is launched by a dispenser)<br /><b>player</b>: the player which has launched the projectile (null if the shooter is not a player)<br /><b>location</b>: from where the projectile is launched<br /><b>velocity</b>: the velocity of the projectile
 </td>
@@ -914,7 +928,7 @@
 <tr>
 <th > redstone_changed
 </th>
-<td> Fired when a redstone activatable block is toggled, either on or off, AND the block has been set to be monitored with the monitor_redstone function.
+<td> &#xb808;&#xb4dc;&#xc2a4;&#xd1a4;&#xc73c;&#xb85c; &#xd65c;&#xc131;&#xd654; &#xd560; &#xc218; &#xc788;&#xb294; &#xbe14;&#xb85d;&#xc758; &#xc0c1;&#xd0dc;&#xac00; &#xbcc0;&#xacbd;&#xb418;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xd574;&#xb2f9; &#xbe14;&#xb85d;&#xc740; monitor_redstone &#xd391;&#xc158;&#xc5d0; &#xb4f1;&#xb85d;&#xc744; &#xd558;&#xc5ec;&#xc57c;&#xb9cc; &#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td> <b>location</b>: Location Match
 </td>
@@ -927,9 +941,9 @@
 <tr>
 <th > server_ping
 </th>
-<td> Fired when a user who has saved this server looks at their serverlist.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc800;&#xc7a5;&#xb41c; &#xc11c;&#xbc84; &#xb9ac;&#xc2a4;&#xd2b8;&#xc5d0;&#xc11c; &#xc11c;&#xbc84;&#xc758; motd &#xb97c; &#xbc1b;&#xc544;&#xc62c; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>players</b>: Math Match<br /><b>maxplayers</b>: Math Match
+<td> <b>players</b>: &#xc218; &#xd655;&#xc778;<br /><b>maxplayers</b>: &#xc218; &#xd655;&#xc778;
 </td>
 <td> <b>ip</b>: The address the ping is coming from<br /><b>players</b>: The number of players online<br /><b>maxplayers</b>: The number of slots on the server<br /><b>motd</b>: The message a player is shown on the serverlist<br /><b>list</b>: The list of connected players
 </td>
@@ -940,7 +954,7 @@
 <tr>
 <th > shutdown
 </th>
-<td> Fired the process is being shut down. This is not guaranteed to run, because some cases may cause the process to die unexpectedly. Code within the event handler should take as little time as possible, as the process may force an exit if the handler takes too long.
+<td> &#xd504;&#xb85c;&#xc138;&#xc2a4;&#xac00; &#xaebc;&#xc9c0;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774; &#xc774;&#xbca4;&#xd2b8;&#xb294; &#xd504;&#xb85c;&#xc138;&#xc2a4;&#xac00; &#xac15;&#xc81c; &#xc911;&#xc9c0;&#xb418;&#xba74; &#xbc1c;&#xc0dd;&#xd558;&#xc9c0; &#xc54a;&#xc744; &#xc218;&#xb3c4; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;. &#xc774; &#xc774;&#xbca4;&#xd2b8;&#xc758; &#xc2e4;&#xd589;&#xc5d0; &#xb108;&#xbb34; &#xc624;&#xb798; &#xac78;&#xb9ac;&#xba74;, &#xc2e4;&#xd589;&#xc744; &#xc911;&#xc9c0;&#xd558;&#xace0; &#xd504;&#xb85c;&#xc138;&#xc2a4;&#xac00; &#xc885;&#xb8cc;&#xb420; &#xc218;&#xb3c4; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
 <td>
 </td>
@@ -953,9 +967,9 @@
 <tr>
 <th > sign_changed
 </th>
-<td> This event is called when a player changes a sign. Cancelling the event cancels any edits completely.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xd45c;&#xc9c0;&#xd310;&#xc744; &#xbc14;&#xafb8;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcde8;&#xc18c;&#xd558;&#xba74; &#xd45c;&#xc9c0;&#xd310;&#xc758; &#xbcc0;&#xacbd;&#xc774; &#xcde8;&#xc18c;&#xb429;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: String Match<br /><b>1</b>: Macro<br /><b>2</b>: Macro<br /><b>3</b>: Macro<br /><b>4</b>: Macro
+<td> <b>player</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>1</b>: &#xb9e4;&#xd06c;&#xb85c;<br /><b>2</b>: &#xb9e4;&#xd06c;&#xb85c;<br /><b>3</b>: &#xb9e4;&#xd06c;&#xb85c;<br /><b>4</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player</b>: The player&#39;s name<br /><b>location</b>: an array usable as a locationArray while also compatible with X,Y,Z,world indices<br /><b>text</b>: An array with keys 0 thru 3 defining every line on the sign
 </td>
@@ -966,9 +980,9 @@
 <tr>
 <th > tab_complete_chat
 </th>
-<td> Fires when a player asks for a list of completions to the current word in their chat message. Setting the completions to an empty array is this event&#39;s equivalent of cancel().
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xcc44;&#xd305;&#xc5d0;&#xc11c; &#xc790;&#xb3d9;&#xc644;&#xc131;&#xc744; &#xc0ac;&#xc6a9;&#xd558;&#xb824; &#xd560; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc790;&#xb3d9;&#xc644;&#xc131; &#xacb0;&#xacfc;&#xb97c; &#xbe48; &#xbc30;&#xc5f4;&#xb85c; &#xd558;&#xb294; &#xac83;&#xc740; &#xc774; &#xc774;&#xbca4;&#xd2b8;&#xb97c; &#xcde8;&#xc18c;&#xd55c;&#xb290; &#xac83;&#xacfc; &#xac19;&#xc2b5;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player</b>: the player asking for completion<br /><b>message</b>: the full message they have typed<br /><b>last</b>: the partial word completion is asked for<br /><b> completions</b>:
 </td>
@@ -979,7 +993,7 @@
 <tr>
 <th > tab_complete_command
 </th>
-<td> This will fire if a tab completer has not been set for a command registered with register_command(), or if the set tab completer doesn&#39;t return an array. If completions are not modified, registered commands will tab complete online player names.
+<td> &#xc774; &#xc774;&#xbca4;&#xd2b8;&#xb294; register_command() &#xc5d0;&#xc11c; tabcompleter &#xac00; &#xc815;&#xc758;&#xb418;&#xc9c0; &#xc54a;&#xac70;&#xb098; tabcompleter &#xac00; &#xc544;&#xbb34;&#xac83;&#xb3c4; &#xbc18;&#xd658;&#xd558;&#xc9c0; &#xc54a;&#xc544;&#xb3c4; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xb9cc;&#xc57d; &#xc790;&#xb3d9;&#xc644;&#xc131; &#xacb0;&#xacfc;&#xac00; &#xc218;&#xc815;&#xb418;&#xc9c0; &#xc54a;&#xc558;&#xb2e4;&#xba74;, &#xb4f1;&#xb85d;&#xb41c; &#xba85;&#xb839;&#xc5b4;&#xb294; &#xc628;&#xb77c;&#xc778;&#xc778; &#xd50c;&#xb808;&#xc774;&#xc5b4; &#xc774;&#xb984;&#xc744; &#xc790;&#xb3d9;&#xc644;&#xc131;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td>
 </td>
@@ -992,9 +1006,9 @@
 <tr>
 <th > target_player
 </th>
-<td> This event is called when a player is targeted by another entity.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xb2e4;&#xb978; &#xc5d4;&#xb514;&#xd2f0;&#xc758; &#xd45c;&#xc801;&#xc774; &#xb418;&#xc5c8;&#xc744; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: String Match<br /><b>mobtype</b>: Macro
+<td> <b>player</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778;<br /><b>mobtype</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>player</b>: The player&#39;s name<br /><b>mobtype</b>: The type of mob targeting the player (this will be all capitals!)<br /><b>id</b>: The EntityID of the mob
 </td>
@@ -1005,9 +1019,9 @@
 <tr>
 <th > thunder_change
 </th>
-<td> Fires when thunder begins or ends.
+<td> &#xbe44;&#xac00; &#xc624;&#xae30; &#xc2dc;&#xc791;&#xd558;&#xac70;&#xb098; &#xadf8;&#xce60; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>world</b>: String Match the world<br /><b>has_thunder</b>: Boolean Match if it is thundering
+<td> <b>world</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; the world<br /><b>has_thunder</b>: Boolean Match if it is thundering
 </td>
 <td> <b>world</b>: the name of the world in which thunder is changing<br /><b>has_thunder</b>: if the world is thundering
 </td>
@@ -1018,9 +1032,9 @@
 <tr>
 <th > tree_grow
 </th>
-<td> Fires when a tree grows.
+<td> &#xb098;&#xbb34;&#xac00; &#xc790;&#xb77c;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>world</b>: Macro<br /><b>player</b>: Macro<br /><b>type</b>: Macro<br /><b>bonemeal</b>: Boolean Match
+<td> <b>world</b>: &#xb9e4;&#xd06c;&#xb85c;<br /><b>player</b>: &#xb9e4;&#xd06c;&#xb85c;<br /><b>type</b>: &#xb9e4;&#xd06c;&#xb85c;<br /><b>bonemeal</b>: Boolean Match
 </td>
 <td> <b>world</b>: The world where the tree grown.<br /><b>type</b>: The tree type, can be one of TREE, BIG_TREE, REDWOOD, TALL_REDWOOD, BIRCH, JUNGLE, SMALL_JUNGLE, JUNGLE_BUSH, RED_MUSHROOM, BROWN_MUSHROOM, SWAMP, ACACIA, DARK_OAK, COCOA_TREE, MEGA_REDWOOD, or TALL_BIRCH<br /><b>bonemeal</b>: If the tree grown due to a bonemeal or not.<br /><b>player</b>: The player who used the bonemeal, or null.
 </td>
@@ -1031,9 +1045,9 @@
 <tr>
 <th > vehicle_collide
 </th>
-<td> Fires when a vehicle runs into something. If it ran into a block, event data will contain block info. If it ran into an entity, event data will contain info and options relevant to hitting an entity.
+<td> &#xc6b4;&#xc1a1; &#xc218;&#xb2e8;&#xc774; &#xc5b4;&#xb5a4; &#xac83;&#xacfc; &#xcda9;&#xb3cc;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xbe14;&#xb85d;&#xacfc; &#xcda9;&#xb3cc;&#xd558;&#xba74; &#xc774;&#xbca4;&#xd2b8; &#xb370;&#xc774;&#xd130;&#xb294; &#xbe14;&#xb85d;&#xc758; &#xc815;&#xbcf4;&#xb97c; &#xd3ec;&#xd568;&#xd558;&#xba70;, &#xc5d4;&#xb514;&#xd2f0;&#xc640; &#xcda9;&#xb3cc;&#xd558;&#xba74; &#xc774;&#xbca4;&#xd2b8; &#xb370;&#xc774;&#xd130;&#xb294; &#xbd80;&#xb52a;&#xd78c; &#xc5d4;&#xb514;&#xd2f0;&#xc758; &#xc815;&#xbcf4;&#xc640; &#xad00;&#xb828;&#xb41c; &#xc635;&#xc158;&#xc744; &#xd3ec;&#xd568;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>type</b>: Macro The entitytype of the vehicle<br /><b>collisiontype</b>: Macro One of BLOCK or ENTITY<br /><b>hittype</b>: Macro Matches an entitytype in an enitity collision<br /><b>hittype</b>: Item Match Matches a block in a block collision
+<td> <b>type</b>: &#xb9e4;&#xd06c;&#xb85c; The entitytype of the vehicle<br /><b>collisiontype</b>: &#xb9e4;&#xd06c;&#xb85c; One of BLOCK or ENTITY<br /><b>hittype</b>: &#xb9e4;&#xd06c;&#xb85c; Matches an entitytype in an enitity collision<br /><b>hittype</b>: &#xc544;&#xc774;&#xd15c; &#xd655;&#xc778; Matches a block in a block collision
 </td>
 <td> <b>type </b>: <br /><b>id</b>: The entityID of the vehicle<br /><b>entity</b>: the entityID of the entity that was hit<br /><b>block</b>: the location of the block that was hit<br /><b> collisiontype </b>: <br /><b> collide </b>: <br /><b> pickup</b>:
 </td>
@@ -1044,7 +1058,7 @@
 <tr>
 <th > vehicle_destroy
 </th>
-<td> Fires when a vehicle is destroyed.
+<td> &#xc6b4;&#xc1a1; &#xc218;&#xb2e8;&#xc774; &#xbd80;&#xc11c;&#xc84c;&#xc744; &#xb54c; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
 <td> <b>vehicletype</b>: Macro the entitytype of the vehicle
 </td>
@@ -1057,9 +1071,9 @@
 <tr>
 <th > vehicle_enter
 </th>
-<td> Fires when an entity enters a vehicle.
+<td> &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xc6b4;&#xc1a1; &#xc218;&#xb2e8;&#xc5d0; &#xd0c0;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>vehicletype</b>: Macro the entitytype of the vehicle<br /><b>passengertype</b>: Macro the enitytype of the passenger
+<td> <b>vehicletype</b>: &#xb9e4;&#xd06c;&#xb85c; the entitytype of the vehicle<br /><b>passengertype</b>: &#xb9e4;&#xd06c;&#xb85c; the enitytype of the passenger
 </td>
 <td> <b>vehicletype </b>: <br /><b> passengertype </b>: <br /><b>vehicle</b>: entityID<br /><b>passenger</b>: entityID<br /><b>player</b>: player name if passenger is a player, null otherwise
 </td>
@@ -1070,9 +1084,9 @@
 <tr>
 <th > vehicle_leave
 </th>
-<td> Fires when an entity leaves a vehicle.
+<td> &#xc5d4;&#xb514;&#xd2f0;&#xac00; &#xc6b4;&#xc1a1; &#xc218;&#xb2e8;&#xc5d0;&#xc11c; &#xb098;&#xac00;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>vehicletype</b>: Macro the entitytype of the vehicle<br /><b>passengertype</b>: Macro the enitytype of the passenger
+<td> <b>vehicletype</b>: &#xb9e4;&#xd06c;&#xb85c; the entitytype of the vehicle<br /><b>passengertype</b>: &#xb9e4;&#xd06c;&#xb85c; the enitytype of the passenger
 </td>
 <td> <b>vehicletype </b>: <br /><b> passengertype </b>: <br /><b>vehicle</b>: entityID<br /><b>passenger</b>: entityID<br /><b>player</b>: player name if passenger is a player, null otherwise
 </td>
@@ -1083,9 +1097,9 @@
 <tr>
 <th > vehicle_move
 </th>
-<td> Fires when a vehicle is moving. Due to the high frequency of this event, prefilters are extremely important to use -- especially threshold.
+<td> &#xc6b4;&#xc1a1; &#xc218;&#xb2e8;&#xc774; &#xc6c0;&#xc9c1;&#xc774;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774; &#xc774;&#xbca4;&#xd2b8;&#xb294; &#xc9e7;&#xc740; &#xac70;&#xb9ac;&#xb9cc; &#xc6c0;&#xc9c1;&#xc5ec;&#xb3c4; &#xbc1c;&#xc0dd;&#xd558;&#xae30; &#xb54c;&#xbb38;&#xc5d0; &#xc0ac;&#xc804; &#xd544;&#xd130;&#xac00; &#xc544;&#xc8fc; &#xc911;&#xc694;&#xd569;&#xb2c8;&#xb2e4;. -- &#xd2b9;&#xd788; threshold &#xb294;&#xc694;.
 </td>
-<td> <b>vehicletype</b>: Macro the entitytype of the vehicle<br /><b>passengertype</b>: Macro the enitytype of the passenger<br /><b>world</b>: &lt;string> the world the vehicle is in
+<td> <b>vehicletype</b>: &#xb9e4;&#xd06c;&#xb85c; the entitytype of the vehicle<br /><b>passengertype</b>: &#xb9e4;&#xd06c;&#xb85c; the enitytype of the passenger<br /><b>world</b>: &lt;string> the world the vehicle is in
 </td>
 <td> <b>world </b>: <br /><b>from</b>: Get the previous position<br /><b>to</b>: Get the next position<br /><b> vehicletype </b>: <br /><b> passengertype </b>: <br /><b>id</b>: entityID<br /><b>passenger</b>: entityID<br /><b>player</b>: player name if passenger is a player, null otherwise
 </td>
@@ -1096,9 +1110,9 @@
 <tr>
 <th > weather_change
 </th>
-<td> Fires when rain starts or stops.
+<td> &#xbe44;&#xac00; &#xc624;&#xae30; &#xc2dc;&#xc791;&#xd558;&#xac70;&#xb098; &#xadf8;&#xce58;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>world</b>: String Match the world<br /><b>has_rain</b>: Boolean Match if it is raining
+<td> <b>world</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; the world<br /><b>has_rain</b>: Boolean Match if it is raining
 </td>
 <td> <b>world</b>: the name of the world in which the weather changed<br /><b>has_rain</b>: if it is raining
 </td>
@@ -1109,9 +1123,9 @@
 <tr>
 <th > world_changed
 </th>
-<td> This event is fired off when a player changes worlds. This event is not cancellable, so to prevent it, the player_teleport event must be checked.
+<td> &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xc6d4;&#xb4dc;&#xb97c; &#xbcc0;&#xacbd;&#xd558;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xc774;&#xb294; &#xcde8;&#xc18c;&#xd560; &#xc218; &#xc5c6;&#xc2b5;&#xb2c8;&#xb2e4;. &#xc774;&#xb97c; &#xb9c9;&#xc73c;&#xb824;&#xba74;, player_teleport &#xc774;&#xbca4;&#xd2b8;&#xb97c; &#xd655;&#xc778;&#xd558;&#xc5ec;&#xc57c; &#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>player</b>: Macro The player that switched worlds<br /><b>from</b>: String Match The world the player is coming from<br /><b>to</b>: String Match The world the player is now in
+<td> <b>player</b>: &#xb9e4;&#xd06c;&#xb85c; The player that switched worlds<br /><b>from</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; The world the player is coming from<br /><b>to</b>: &#xbb38;&#xc790;&#xc5f4; &#xd655;&#xc778; The world the player is now in
 </td>
 <td> <b>player </b>: <br /><b>from</b>: The world the player is coming from<br /><b>to</b>: The world the player is now in
 </td>
@@ -1122,9 +1136,9 @@
 <tr>
 <th > world_load
 </th>
-<td> Fires when a world is loaded.
+<td> &#xc6d4;&#xb4dc;&#xac00; &#xb85c;&#xb4dc;&#xb418;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>world</b>: Macro
+<td> <b>world</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>world</b>: The loaded world.
 </td>
@@ -1135,9 +1149,9 @@
 <tr>
 <th > world_save
 </th>
-<td> Fires when a world is saved.
+<td> &#xc6d4;&#xb4dc;&#xac00; &#xc800;&#xc7a5;&#xb418;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>world</b>: Macro
+<td> <b>world</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>world</b>: The saved world.
 </td>
@@ -1148,9 +1162,9 @@
 <tr>
 <th > world_unload
 </th>
-<td> Fires when a world is unloaded.
+<td> &#xc6d4;&#xb4dc;&#xac00; &#xc5b8;&#xb85c;&#xb4dc;&#xb418;&#xba74; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.
 </td>
-<td> <b>world</b>: Macro
+<td> <b>world</b>: &#xb9e4;&#xd06c;&#xb85c;
 </td>
 <td> <b>world</b>: The unloaded world.
 </td>
@@ -1158,8 +1172,8 @@
 </td>
 <td> 3.3.1
 </td></tr></table>
-<h3>Errors in documentation</h3>
-<p><i>Please note that this documentation is generated automatically, if you notice an error in the documentation, please file a bug report for the plugin itself!</i> For information on undocumented functions, see this page
+<h3>&#xbb38;&#xc11c;&#xc758; &#xc624;&#xb958;</h3>
+<p><i>&#xc774; &#xbb38;&#xc11c;&#xb294; &#xc6d0;&#xbcf8; &#xbb38;&#xc11c;&#xb97c; &#xbc88;&#xc5ed;&#xd55c; &#xac83;&#xc774;&#xbbc0;&#xb85c; &#xc815;&#xd655;&#xd558;&#xc9c0; &#xc54a;&#xac70;&#xb098; &#xd3ec;&#xd568;&#xb418;&#xc9c0; &#xc54a;&#xc740; &#xc815;&#xbcf4;&#xac00; &#xc788;&#xc744; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;. &#xb9cc;&#xc57d; &#xbb38;&#xc81c;&#xb97c; &#xbc1c;&#xacac;&#xd588;&#xb2e4;&#xba74;, Discord &#xc758; #commandhelper-localize &#xcc44;&#xb110;&#xc5d0; &#xc54c;&#xb824; &#xc8fc;&#xc138;&#xc694;!</i>
 </p><p><br /><br />
 </p>
 
