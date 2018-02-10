@@ -46,7 +46,7 @@
 					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">&#xcd08;&#xbcf4;&#xc790; &#xac00;&#xc774;&#xb4dc;</a></li>
 					<li><a href="API.html">API</a></li>
 					<li><a href="EventAPI.html">&#xc774;&#xbca4;&#xd2b8; API</a></li>
-					<li><a href="extensions.html">&#xd655;&#xc7a5;&#xae30;&#xb2a5;</a></li>
+					<li><a href="extensions.html">&#54869;&#51109;&#44592;&#45733;</a></li>
 				</ul>
 			</nav>
 
@@ -54,7 +54,7 @@
 			<section id="main" class="wrapper">
 				<div class="container">
 				<header class="major special">
-						<h2>API &#xbb38;&#xc11c;</h2>
+						<h2>API &#47928;&#49436;</h2>
 						<p>CommandHelper &#xc758; &#xbaa8;&#xb4e0; &#xd391;&#xc158; &#xbaa9;&#xb85d;&#xc744; &#xc815;&#xb9ac;&#xd55c; &#xbb38;&#xc11c;&#xc785;&#xb2c8;&#xb2e4;.</p>
 					</header>
 <ul id="TOC"><li><a href="#ArrayHandling">&#xbc30;&#xc5f4; &#xad00;&#xb9ac;</a></li><li><a href="#BasicLogic">&#xae30;&#xbcf8; &#xb17c;&#xb9ac;</a></li><li><a href="#BossBar">&#xbcf4;&#xc2a4;&#xbc14;</a></li><li><a href="#BukkitMetadata">&#xbc84;&#xd0b7; &#xba54;&#xd0c0;&#xb370;&#xc774;&#xd130;</a></li><li><a href="#ByteArrays">&#xbc14;&#xc774;&#xd2b8; &#xbc30;&#xc5f4;</a></li><li><a href="#Clipboard">&#xd074;&#xb9bd;&#xbcf4;&#xb4dc;</a></li><li><a href="#Cmdline">&#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4;</a></li><li><a href="#Commands">&#xba85;&#xb839;&#xc5b4;</a></li><li><a href="#Compiler">&#xcef4;&#xd30c;&#xc77c;&#xb7ec;</a></li><li><a href="#Crypto">&#xc554;&#xd638;&#xd654;</a></li><li><a href="#DataHandling">&#xb370;&#xc774;&#xd130; &#xad00;&#xb9ac;</a></li><li><a href="#DataTransformations">&#xb370;&#xc774;&#xd130; &#xbcc0;&#xd658;</a></li><li><a href="#Debug">&#xb514;&#xbc84;&#xadf8;</a></li><li><a href="#Echoes">&#xba54;&#xc2dc;&#xc9c0; &#xcd9c;&#xb825;</a></li><li><a href="#Enchantments">&#xc778;&#xccb8;&#xd2b8;</a></li><li><a href="#EntityManagement">&#xc5d4;&#xb514;&#xd2f0; &#xad00;&#xb9ac;</a></li><li><a href="#Environment">&#xd658;&#xacbd;</a></li><li><a href="#EventBinding">&#xc774;&#xbca4;&#xd2b8; &#xb4f1;&#xb85d;</a></li><li><a href="#Exceptions">&#xc608;&#xc678; &#xcc98;&#xb9ac;</a></li><li><a href="#ExecutionQueue">&#xc2e4;&#xd589; &#xd050;</a></li><li><a href="#ExtensionMeta">&#xd655;&#xc7a5;&#xae30;&#xb2a5; &#xc815;&#xbcf4;</a></li><li><a href="#FileHandling">&#xd30c;&#xc77c; &#xad00;&#xb9ac;</a></li><li><a href="#InventoryManagement">&#xc778;&#xbca4;&#xd1a0;&#xb9ac; &#xad00;&#xb9ac;</a></li><li><a href="#ItemMeta">&#xc544;&#xc774;&#xd15c; &#xba54;&#xd0c0;&#xb370;&#xc774;&#xd130;</a></li><li><a href="#Marquee">&#xd750;&#xb974;&#xb294; &#xae00;&#xc528;</a></li><li><a href="#Math">&#xc218;&#xd559;</a></li><li><a href="#Meta">&#xba54;&#xd0c0;&#xb370;&#xc774;&#xd130;</a></li><li><a href="#Minecraft">&#xb9c8;&#xc778;&#xd06c;&#xb798;&#xd504;&#xd2b8;</a></li><li><a href="#MobManagement">&#xbab9; &#xad00;&#xb9ac;</a></li><li><a href="#OAuth">OAuth</a></li><li><a href="#Performance">&#xc131;&#xb2a5;</a></li><li><a href="#Permissions">&#xad8c;&#xd55c;</a></li><li><a href="#Persistence">&#xc9c0;&#xc18d; &#xc800;&#xc7a5;&#xc18c;</a></li><li><a href="#PlayerManagement">&#xd50c;&#xb808;&#xc774;&#xc5b4; &#xad00;&#xb9ac;</a></li><li><a href="#PluginMeta">&#xd50c;&#xb7ec;&#xadf8;&#xc778; &#xba54;&#xd0c0;&#xb370;&#xc774;&#xd130;</a></li><li><a href="#Recipes">&#xc870;&#xd569;&#xbc95;</a></li><li><a href="#Reflection">&#xb9ac;&#xd50c;&#xb809;&#xc158;</a></li><li><a href="#Regex">&#xc815;&#xaddc;&#xc2dd;</a></li><li><a href="#ResourceManager">&#xb9ac;&#xc18c;&#xc2a4; &#xad00;&#xb9ac;</a></li><li><a href="#SQL">SQL</a></li><li><a href="#Sandbox">&#xc0cc;&#xb4dc;&#xbc15;&#xc2a4;(&#xbd88;&#xc548;&#xc815;)</a></li><li><a href="#Scheduling">&#xc2a4;&#xcf00;&#xc904;&#xb9c1;</a></li><li><a href="#Scoreboards">&#xc2a4;&#xcf54;&#xc5b4;&#xbcf4;&#xb4dc;</a></li><li><a href="#StringHandling">&#xbb38;&#xc790;&#xc5f4; &#xad00;&#xb9ac;</a></li><li><a href="#TaskHandling">&#xc791;&#xc5c5; &#xad00;&#xb9ac;</a></li><li><a href="#Threading">&#xc4f0;&#xb808;&#xb4dc;</a></li><li><a href="#Weather">&#xb0a0;&#xc528;</a></li><li><a href="#Web">&#xc6f9;</a></li><li><a href="#World">&#xc6d4;&#xb4dc;</a></li><li><a href="#XGUI">XGUI</a></li></ul>
@@ -319,21 +319,21 @@ create_bar() &#xb97c; &#xcc38;&#xace0;&#xd558;&#xc138;&#xc694;. &#xb9cc;&#xc57d;
 &#xac1d;&#xccb4;&#xb294; &#xc704;&#xce58; &#xbc30;&#xc5f4;(&#xbe14;&#xb85d;&#xc77c; &#xacbd;&#xc6b0;), &#xc5d4;&#xb514;&#xd2f0; ID(&#xc5d4;&#xb514;&#xd2f0;&#xc77c; &#xacbd;&#xc6b0;), &#xbb38;&#xc790;&#xc5f4;(&#xc6d4;&#xb4dc;&#xc77c; &#xacbd;&#xc6b0;) &#xc911; &#xd558;&#xb098;&#xc785;&#xb2c8;&#xb2e4;. 
 &#xb9cc;&#xc57d; &#xd0a4;&#xb9cc; &#xc8fc;&#xc5b4;&#xc84c;&#xc744; &#xacbd;&#xc6b0;, &#xb300;&#xc0c1; &#xc5d4;&#xb514;&#xd2f0;&#xb294; &#xc774; &#xd391;&#xc158;&#xc744; &#xc2e4;&#xd589;&#xd558;&#xb294; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xc785;&#xb2c8;&#xb2e4;.
 &#xb9cc;&#xc57d; &#xd50c;&#xb7ec;&#xadf8;&#xc778; &#xc778;&#xc218;&#xac00; &#xc8fc;&#xc5b4;&#xc84c;&#xc744; &#xacbd;&#xc6b0;(&#xd50c;&#xb7ec;&#xadf8;&#xc778; &#xc774;&#xb984;&#xc758; &#xbb38;&#xc790;&#xc5f4;),
-&#xd574;&#xb2f9; &#xd0a4;&#xb97c; &#xc8fc;&#xc5b4;&#xc9c4; &#xd50c;&#xb7ec;&#xadf8;&#xc778;&#xc774; &#xac1d;&#xccb4;&#xc5d0; &#xbd80;&#xc5ec;&#xd588;&#xb294;&#xc9c0; &#xd655;&#xc778;&#xd569;&#xb2c8;&#xb2e4;.
-&#xbc84;&#xd0b7; &#xba54;&#xd0c0;&#xb370;&#xc774;&#xd130;&#xc5d0; &#xb300;&#xd574; &#xb354; &#xc790;&#xc138;&#xd788; &#xc54c;&#xace0; &#xc2f6;&#xc73c;&#xc2dc;&#xb2e4;&#xba74; get_metadata() &#xd56d;&#xbaa9;&#xc744; &#xd655;&#xc778;&#xd558;&#xc138;&#xc694;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/remove_metadata">remove_metadata</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> <strong>[</strong>&#xac1d;&#xccb4;<strong>]</strong>, &#xd0a4; <hr> &#xac1d;&#xccb4;, &#xd0a4;, <strong>[</strong>&#xd50c;&#xb7ec;&#xadf8;&#xc778;<strong>]</strong></td><td> BadEntityException<br>CastException<br>FormatException<br>InvalidPluginException<br>LengthException<br>InvalidWorldException<br>PlayerOfflineException</td><td>
- &#xc8fc;&#xc5b4;&#xc9c4; &#xac1d;&#xccb4;&#xc758; &#xc8fc;&#xc5b4;&#xc9c4; &#xd0a4;&#xc758; &#xba54;&#xd0c0;&#xb370;&#xc774;&#xd130;&#xb97c; &#xc81c;&#xac70;&#xd569;&#xb2c8;&#xb2e4;.
-&#xac1d;&#xccb4;&#xb294; &#xc704;&#xce58; &#xbc30;&#xc5f4;(&#xbe14;&#xb85d;&#xc77c; &#xacbd;&#xc6b0;), &#xc5d4;&#xb514;&#xd2f0; ID(&#xc5d4;&#xb514;&#xd2f0;&#xc77c; &#xacbd;&#xc6b0;), &#xbb38;&#xc790;&#xc5f4;(&#xc6d4;&#xb4dc;&#xc77c; &#xacbd;&#xc6b0;) &#xc911; &#xd558;&#xb098;&#xc785;&#xb2c8;&#xb2e4;. 
-&#xb9cc;&#xc57d; &#xd0a4;&#xb9cc; &#xc8fc;&#xc5b4;&#xc84c;&#xc744; &#xacbd;&#xc6b0;, &#xb300;&#xc0c1; &#xc5d4;&#xb514;&#xd2f0;&#xb294; &#xc774; &#xd391;&#xc158;&#xc744; &#xc2e4;&#xd589;&#xd558;&#xb294; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xc785;&#xb2c8;&#xb2e4;.
-&#xd50c;&#xb7ec;&#xadf8;&#xc778; &#xc778;&#xc218;&#xac00; &#xc8fc;&#xc5b4;&#xc9c0;&#xc9c0; &#xc54a;&#xc558;&#xc744; &#xacbd;&#xc6b0;, &#xadf8; &#xd0a4;&#xb97c; &#xac00;&#xc9c4; &#xbaa8;&#xb4e0; &#xd50c;&#xb7ec;&#xadf8;&#xc778;&#xc758; &#xba54;&#xd0c0;&#xb370;&#xc774;&#xd130;&#xb97c;
-&#xc81c;&#xac70;&#xd569;&#xb2c8;&#xb2e4;. 
-&#xbc84;&#xd0b7; &#xba54;&#xd0c0;&#xb370;&#xc774;&#xd130;&#xc5d0; &#xb300;&#xd574; &#xb354; &#xc790;&#xc138;&#xd788; &#xc54c;&#xace0; &#xc2f6;&#xc73c;&#xc2dc;&#xb2e4;&#xba74; get_metadata() &#xd56d;&#xbaa9;&#xc744; &#xd655;&#xc778;&#xd558;&#xc138;&#xc694;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/set_metadata">set_metadata</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> <strong>[</strong>&#xac1d;&#xccb4;<strong>]</strong>, &#xd0a4;, &#xac12; <hr> &#xac1d;&#xccb4;, &#xd0a4;, &#xac12;, <strong>[</strong>&#xd50c;&#xb7ec;&#xadf8;&#xc778;<strong>]</strong></td><td> BadEntityException<br>CastException<br>FormatException<br>InvalidPluginException<br>LengthException<br>InvalidWorldException<br>PlayerOfflineException</td><td>
- &#xc8fc;&#xc5b4;&#xc9c4; &#xac1d;&#xccb4;&#xc758; &#xc8fc;&#xc5b4;&#xc9c4; &#xd0a4;&#xc5d0; &#xac12;&#xc744; &#xb4f1;&#xb85d;&#xd569;&#xb2c8;&#xb2e4;.
-&#xac1d;&#xccb4;&#xb294; &#xc704;&#xce58; &#xbc30;&#xc5f4;(&#xbe14;&#xb85d;&#xc77c; &#xacbd;&#xc6b0;), &#xc5d4;&#xb514;&#xd2f0; ID(&#xc5d4;&#xb514;&#xd2f0;&#xc77c; &#xacbd;&#xc6b0;), &#xbb38;&#xc790;&#xc5f4;(&#xc6d4;&#xb4dc;&#xc77c; &#xacbd;&#xc6b0;) &#xc911; &#xd558;&#xb098;&#xc785;&#xb2c8;&#xb2e4;. 
-&#xb9cc;&#xc57d; &#xd0a4;&#xb9cc; &#xc8fc;&#xc5b4;&#xc84c;&#xc744; &#xacbd;&#xc6b0;, &#xb300;&#xc0c1; &#xc5d4;&#xb514;&#xd2f0;&#xb294; &#xc774; &#xd391;&#xc158;&#xc744; &#xc2e4;&#xd589;&#xd558;&#xb294; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xc785;&#xb2c8;&#xb2e4;.
-&#xb9cc;&#xc57d; &#xd50c;&#xb7ec;&#xadf8;&#xc778; &#xc778;&#xc218;&#xac00; &#xc8fc;&#xc5b4;&#xc84c;&#xc744; &#xacbd;&#xc6b0;(&#xd50c;&#xb7ec;&#xadf8;&#xc778; &#xc774;&#xb984;&#xc758; &#xbb38;&#xc790;&#xc5f4;), &#xd574;&#xb2f9; &#xd50c;&#xb7ec;&#xadf8;&#xc778;&#xc758; &#xc774;&#xb984;&#xc73c;&#xb85c;
-&#xba54;&#xd0c0;&#xb370;&#xc774;&#xd130;&#xb97c; &#xb4f1;&#xb85d;&#xd558;&#xba70;, &#xc8fc;&#xc5b4;&#xc9c0;&#xc9c0; &#xc54a;&#xc558;&#xc744; &#xacbd;&#xc6b0; &#39;MethodScript&#39; &#xb77c;&#xb294; &#xc774;&#xb984;&#xc73c;&#xb85c; &#xb4f1;&#xb85d;&#xd569;&#xb2c8;&#xb2e4;.
-&#xbc84;&#xd0b7; &#xba54;&#xd0c0;&#xb370;&#xc774;&#xd130;&#xc5d0; &#xb300;&#xd574; &#xb354; &#xc790;&#xc138;&#xd788; &#xc54c;&#xace0; &#xc2f6;&#xc73c;&#xc2dc;&#xb2e4;&#xba74; get_metadata() &#xd56d;&#xbaa9;&#xc744; &#xd655;&#xc778;&#xd558;&#xc138;&#xc694;.
-</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span>
+&#xd574;&#xb2f9; &#xd0a4;&#xb97c;</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/remove_metadata">remove_metadata</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> <strong>[</strong>&#xac1d;&#xccb4;<strong>]</strong>, &#xd0a4; <hr> &#xac1d;&#xccb4;, &#xd0a4;, <strong>[</strong>&#xd50c;&#xb7ec;&#xadf8;&#xc778;<strong>]</strong></td><td> BadEntityException<br>CastException<br>FormatException<br>InvalidPluginException<br>LengthException<br>InvalidWorldException<br>PlayerOfflineException</td><td>
+ Remove the metadata in the given object at the given key. object can be
+ a location array (it will designate a block), an entityID (it will 
+designate an entity) or a string (it will designate a world). If only 
+the key is given, the object is the current player. If no plugin is 
+given, the function removes all metadata at the given key, otherwise 
+only the value set by the given plugin. See get_metadata() for more 
+informations about Bukkit metadata.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/set_metadata">set_metadata</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> <strong>[</strong>object<strong>]</strong>, key, value <hr> object, key, value, <strong>[</strong>plugin<strong>]</strong></td><td> BadEntityException<br>CastException<br>FormatException<br>InvalidPluginException<br>LengthException<br>InvalidWorldException<br>PlayerOfflineException</td><td>
+ Registers a metadata value in the given object with the given key. 
+object can be a location array (it will designate a block), an entityID 
+(it will designate an entity) or a string (it will designate a world). 
+If only the key and the value are given, the object is the current 
+player. You can specify the plugin that will own the metadata, 
+&#39;MethodScript&#39; by default. See get_metadata() for more informations 
+about Bukkit metadata.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span>
 </td></tr><tr></tr></tbody></table>
 <p><a href="#TOC">&#xb9e8; &#xc704;&#xb85c; &#xc774;&#xb3d9;</a></p>
 <h2 id="ByteArrays">&#xbc14;&#xc774;&#xd2b8; &#xbc30;&#xc5f4;</h2>
@@ -349,14 +349,14 @@ definitions apply: a byte is 8 bits, a short is 16 bits, an int is 32
 bits, a long is 64 bits. UTF-8 strings are supported directly. The byte 
 array is automatically resized as needed.</div>
 <p>
-</p><table><tbody><tr><th scope="col" width="6%">&#xd391;&#xc158; &#xc774;&#xb984;</th><th scope="col" width="5%">&#xbc18;&#xd658;</th><th scope="col" width="10%">&#xc778;&#xc218;</th><th scope="col" width="10%">&#xc608;&#xc678;</th><th scope="col" width="61%">&#xc124;&#xba85;</th><th scope="col" width="3%">&#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;</th><th scope="col" width="5%">&#xc81c;&#xd55c;&#xb428;</th></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_as_array">ba_as_array</a>()</td><td> &#xbc30;&#xc5f4;</td><td> &#xbc14;&#xc774;&#xd2b8;_&#xbc30;&#xc5f4;</td><td> CastException</td><td>
+</p><table><tbody><tr><th scope="col" width="6%">&#xd391;&#xc158; &#xc774;&#xb984;</th><th scope="col" width="5%">&#xbc18;&#xd658;</th><th scope="col" width="10%">&#xc778;&#xc218;</th><th scope="col" width="10%">&#xc608;&#xc678;</th><th scope="col" width="61%">&#xc124;&#xba85;</th><th scope="col" width="3%">&#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;</th><th scope="col" width="5%">&#xc81c;&#xd55c;&#xb428;</th></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_as_array">ba_as_array</a>()</td><td> &#xbc30;&#xc5f4;</td><td> byte_array</td><td> CastException</td><td>
  Returns a new read only copy of the underlying byte array. This array 
 is much more efficient than if the array were made manually, however, it
  is read only. If you need to manipulate the array&#39;s contents, then you 
 can clone the array, however, the returned array (and any clones) cannot
  be automatically interfaced with the byte array primitives. This 
 operation is discouraged, because normal arrays are very inefficient for
- dealing with low level bit data.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_get_byte">ba_get_byte</a>()</td><td> &#xc815;&#xc218;</td><td> byte_array, <strong>[</strong>pos<strong>]</strong></td><td> CastException<br>RangeException</td><td> Returns an int, read in as an 8 bit byte, from the given position, or wherever the marker is currently at by default.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_get_bytes">ba_get_bytes</a>()</td><td> &#xbc14;&#xc774;&#xd2b8;_&#xbc30;&#xc5f4;</td><td> byte_array, length, <strong>[</strong>pos<strong>]</strong></td><td> CastException<br>RangeException</td><td> Returns a new byte_array primitive, starting from pos (or wherever the marker is by default) to length.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_get_char">ba_get_char</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> byte_array, <strong>[</strong>pos<strong>]</strong></td><td> CastException<br>RangeException</td><td>
+ dealing with low level bit data.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_get_byte">ba_get_byte</a>()</td><td> &#xc815;&#xc218;</td><td> byte_array, <strong>[</strong>pos<strong>]</strong></td><td> CastException<br>RangeException</td><td> Returns an int, read in as an 8 bit byte, from the given position, or wherever the marker is currently at by default.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_get_bytes">ba_get_bytes</a>()</td><td> byte_array</td><td> byte_array, length, <strong>[</strong>pos<strong>]</strong></td><td> CastException<br>RangeException</td><td> Returns a new byte_array primitive, starting from pos (or wherever the marker is by default) to length.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_get_char">ba_get_char</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> byte_array, <strong>[</strong>pos<strong>]</strong></td><td> CastException<br>RangeException</td><td>
  Returns a one character string, read in as an 32 bit char, from the 
 given position, or wherever the marker is currently at by default.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_get_double">ba_get_double</a>()</td><td> double</td><td> byte_array, <strong>[</strong>pos<strong>]</strong></td><td> CastException<br>RangeException</td><td> Returns a double, read in as a 64 bit double, from the given position, or wherever the marker is currently at by default.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_get_float">ba_get_float</a>()</td><td> double</td><td> byte_array, <strong>[</strong>pos<strong>]</strong></td><td> CastException<br>RangeException</td><td> Returns a double, read in as a 32 bit float, from the given position, or wherever the marker is currently at by default.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_get_int">ba_get_int</a>()</td><td> &#xc815;&#xc218;</td><td> byte_array, <strong>[</strong>pos<strong>]</strong></td><td> CastException<br>RangeException</td><td> Returns an int, read in as a 32 bit int, from the given position, or wherever the marker is currently at by default.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_get_long">ba_get_long</a>()</td><td> &#xc815;&#xc218;</td><td> byte_array, <strong>[</strong>pos<strong>]</strong></td><td> CastException<br>RangeException</td><td> Returns an int, read in as a 64 bit long, from the given position, or wherever the marker is currently at by default.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_get_short">ba_get_short</a>()</td><td> &#xc815;&#xc218;</td><td> byte_array, <strong>[</strong>pos<strong>]</strong></td><td> CastException<br>RangeException</td><td> Returns an int, read in as a 16 bit short, from the given position, or wherever the marker is currently at by default.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_get_string">ba_get_string</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> byte_array, <strong>[</strong>pos<strong>]</strong>, <strong>[</strong>encoding<strong>]</strong></td><td> CastException<br>RangeException</td><td>
  Returns a UTF-8 encoded string, from the given position, or wherever 
@@ -364,7 +364,7 @@ the marker is currently at by default. The string is assumed to have
 encoded the length of the string with a 32 bit integer, then the string 
 bytes. (This will be the case is the byte_array was encoded with 
 ba_set_string.) The encoding of the string may be set, but defaults to 
-UTF-8.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_is_little_endian">ba_is_little_endian</a>()</td><td> boolean</td><td> &#xbc14;&#xc774;&#xd2b8;_&#xbc30;&#xc5f4;</td><td> CastException</td><td>
+UTF-8.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_is_little_endian">ba_is_little_endian</a>()</td><td> boolean</td><td> byte_array</td><td> CastException</td><td>
  Returns true if this byte array is little endian. By default, byte 
 arrays are big endian, but this may be changed with 
 ba_set_little_endian.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_put_byte">ba_put_byte</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> byte_array, int, <strong>[</strong>pos<strong>]</strong></td><td> CastException</td><td>
@@ -389,11 +389,11 @@ position, or wherever the marker is currently at by default.</td><td> 3.3.1</td>
 external application requires the string to be serialized in a different
  manner, then use the string-byte_array conversion methods in 
 StringHandling, however strings written in this manner are compatible 
-with ba_get_string. The encoding may be set, but defaults to UTF-8.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_rewind">ba_rewind</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xbc14;&#xc774;&#xd2b8;_&#xbc30;&#xc5f4;</td><td> CastException</td><td> Rewinds the byte array marker to 0.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_set_little_endian">ba_set_little_endian</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> byte_array, setLittleEndian</td><td> CastException</td><td>
+with ba_get_string. The encoding may be set, but defaults to UTF-8.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_rewind">ba_rewind</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> byte_array</td><td> CastException</td><td> Rewinds the byte array marker to 0.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ba_set_little_endian">ba_set_little_endian</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> byte_array, setLittleEndian</td><td> CastException</td><td>
  Sets the byte order that the specified byte array will use for all 
 future gets/sets. By default, a byte array is Big Endian. If 
 setLittleEndian is true, the byte array will be set to little endian, 
-otherwise it will be set to big endian.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/byte_array">byte_array</a>()</td><td> &#xbc14;&#xc774;&#xd2b8;_&#xbc30;&#xc5f4;</td><td></td><td></td><td> Returns a new byte array primitive, which can be operated on with the ba_ series of functions.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span>
+otherwise it will be set to big endian.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/byte_array">byte_array</a>()</td><td> byte_array</td><td></td><td></td><td> Returns a new byte array primitive, which can be operated on with the ba_ series of functions.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span>
 </td></tr><tr></tr></tbody></table>
 <p><a href="#TOC">&#xb9e8; &#xc704;&#xb85c; &#xc774;&#xb3d9;</a></p>
 <h2 id="Clipboard">&#xd074;&#xb9bd;&#xbcf4;&#xb4dc;</h2>
@@ -410,59 +410,66 @@ unused. Only strings are currently supported.</td><td> 3.3.2</td><td> <span clas
 </td></tr><tr></tr></tbody></table>
 <p><a href="#TOC">&#xb9e8; &#xc704;&#xb85c; &#xc774;&#xb3d9;</a></p>
 <h2 id="Cmdline">&#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4;</h2>
-<div>&#xc774; &#xbd84;&#xb958;&#xb294; &#xba85;&#xb839;&#xc904; &#xc2a4;&#xd06c;&#xb9bd;&#xd2b8;&#xc5d0;&#xc11c; &#xc0ac;&#xc6a9;&#xd560; &#xc218; &#xc788;&#xb294; &#xd391;&#xc158;&#xc744; &#xd3ec;&#xd568;&#xd569;&#xb2c8;&#xb2e4;.
-&#xd558;&#xc9c0;&#xb9cc; &#xba87;&#xba87; &#xd391;&#xc158;&#xc740; &#xc77c;&#xbc18; &#xc2a4;&#xd06c;&#xb9bd;&#xd2b8;&#xc5d0;&#xc11c;&#xb3c4; &#xc0ac;&#xc6a9;&#xd560; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4;&#xc5d0; &#xb300;&#xd55c; &#xc790;&#xc138;&#xd55c; &#xc124;&#xba85;&#xc740; <a href="https://methodscript.com/docs/3.3.2/CommandHelper/Command_Line_Scripting">&#xc774;&#xacf3;&#xc744; &#xd655;&#xc778;&#xd558;&#xc138;&#xc694;(&#xc601;&#xc5b4;)</a>.</div>
+<div>This class contains functions that are mostly only useful for 
+command line scripts, but in general may be used by any script. For more
+ information on running MethodScript from the command line, see <a href="https://methodscript.com/docs/3.3.2/CommandHelper/Command_Line_Scripting">this wiki page</a>.</div>
 <p>
-</p><table><tbody><tr><th scope="col" width="6%">&#xd391;&#xc158; &#xc774;&#xb984;</th><th scope="col" width="5%">&#xbc18;&#xd658;</th><th scope="col" width="10%">&#xc778;&#xc218;</th><th scope="col" width="10%">&#xc608;&#xc678;</th><th scope="col" width="61%">&#xc124;&#xba85;</th><th scope="col" width="3%">&#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;</th><th scope="col" width="5%">&#xc81c;&#xd55c;&#xb428;</th></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/cd">cd</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> <strong>[</strong>&#xacbd;&#xb85c;<strong>]</strong></td><td> IOException<br>InsufficientPermissionException</td><td>
- &#xc2e4;&#xd589; &#xb514;&#xb809;&#xd1a0;&#xb9ac;&#xb97c; &#xc8fc;&#xc5b4;&#xc9c4; &#xacbd;&#xb85c;&#xb85c; &#xbc14;&#xafc9;&#xb2c8;&#xb2e4;.
-&#xba85;&#xb839;&#xc904; &#xbaa8;&#xb4dc;&#xc5d0;&#xc11c;&#xb9cc; &#xc791;&#xb3d9;&#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/clear_screen">clear_screen</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td></td><td></td><td> &#xcf58;&#xc194;&#xc744; &#xc9c0;&#xc6c1;&#xb2c8;&#xb2e4;. &#xba85;&#xb839;&#xc904; &#xbaa8;&#xb4dc;&#xc5d0;&#xc11c;&#xb9cc; &#xc791;&#xb3d9;&#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/exit">exit</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> <strong>[</strong>&#xc22b;&#xc790;<strong>]</strong></td><td></td><td>
- &#xd504;&#xb85c;&#xadf8;&#xb7a8;&#xc744; &#xc885;&#xb8cc;&#xd569;&#xb2c8;&#xb2e4;. &#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4;&#xc5d0;&#xc11c; &#xc2e4;&#xd589;&#xb41c;&#xb2e4;&#xba74;,
-&#xc778;&#xd130;&#xd504;&#xb9ac;&#xd130;&#xb97c; &#xd2b9;&#xc815; &#xcf54;&#xb4dc;(&#xae30;&#xbcf8;&#xc740; 0)&#xc640; &#xd568;&#xaed8; &#xc885;&#xb8cc;&#xd569;&#xb2c8;&#xb2e4;.
-&#xb9cc;&#xc57d; &#xac8c;&#xc784; &#xb0b4; &#xc2a4;&#xd06c;&#xb9bd;&#xd2b8;&#xc5d0;&#xc11c; &#xc2e4;&#xd589;&#xb41c;&#xb2e4;&#xba74; die() &#xc640; &#xb3d9;&#xc77c;&#xd558;&#xac8c; &#xc791;&#xb3d9;&#xd569;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_env">get_env</a>()</td><td> &#xb2e4;&#xc591;&#xd568;</td><td> <strong>[</strong>&#xbcc0;&#xc218; &#xc774;&#xb984;<strong>]</strong></td><td></td><td>
- &#xb9cc;&#xc57d; &#xbcc0;&#xc218; &#xc774;&#xb984;&#xc774; &#xc8fc;&#xc5b4;&#xc84c;&#xb2e4;&#xba74;, &#xc8fc;&#xc5b4;&#xc9c4; &#xd658;&#xacbd; &#xbcc0;&#xc218;&#xb97c; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-&#xc8fc;&#xc5b4;&#xc9c0;&#xc9c0; &#xc54a;&#xc558;&#xb2e4;&#xba74; &#xbaa8;&#xb4e0; &#xd658;&#xacbd; &#xbcc0;&#xc218;&#xb97c; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_os">get_os</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td></td><td></td><td> &#xd604;&#xc7ac; OS &#xc758; &#xc774;&#xb984;&#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;. WINDOWS, MAC, LINUX, SOLARIS, UNKNOWN &#xc911; &#xd558;&#xb098;&#xc785;&#xb2c8;&#xb2e4;.</td><td> 3.3.2</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_terminal_width">get_terminal_width</a>()</td><td> &#xc815;&#xc218;</td><td></td><td> InsufficientPermissionException</td><td>
- &#xd604;&#xc7ac; &#xba85;&#xb839; &#xd504;&#xb86c;&#xd3ec;&#xd2b8;&#xc758; &#xc88c;&#xc6b0; &#xb113;&#xc774;&#xb97c; &#xae00;&#xc790; &#xc218;&#xb85c; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-&#xc774;&#xb294; &#xcd9c;&#xb825;&#xc744; &#xb3d9;&#xc801;&#xc73c;&#xb85c; &#xd574;&#xc57c;&#xd560; &#xacbd;&#xc6b0; &#xc815;&#xd655;&#xd55c; &#xb808;&#xc774;&#xc544;&#xc6c3;&#xc774; &#xd544;&#xc694;&#xd560; &#xb54c; &#xc720;&#xc6a9;&#xd569;&#xb2c8;&#xb2e4;.
-&#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4;&#xc5d0;&#xc11c;&#xb9cc; &#xc791;&#xb3d9;&#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/in_cmdline_mode">in_cmdline_mode</a>()</td><td> boolean</td><td></td><td></td><td> &#xb9cc;&#xc57d; &#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4;&#xb77c;&#xba74; &#xcc38;&#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ls">ls</a>()</td><td> &#xbc30;&#xc5f4;</td><td> <strong>[</strong>&#xb514;&#xb809;&#xd1a0;&#xb9ac;<strong>]</strong></td><td> InsufficientPermissionException</td><td>
- &#xd604;&#xc7ac; &#xc791;&#xb3d9;&#xc911;&#xc778; &#xb514;&#xb809;&#xd1a0;&#xb9ac;&#xc758; &#xbaa8;&#xb4e0; &#xd30c;&#xc77c;&#xc758; &#xbc30;&#xc5f4;&#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-&quot;&#xc228;&#xaca8;&#xc9c4;&quot; &#xd30c;&#xc77c; &#xb610;&#xd55c; &#xd3ec;&#xd568;&#xd569;&#xb2c8;&#xb2e4;. &#xd639;&#xc740; &#xb514;&#xb809;&#xd1a0;&#xb9ac;&#xac00; &#xc8fc;&#xc5b4;&#xc84c;&#xc744; &#xacbd;&#xc6b0;,
-&#xd574;&#xb2f9; &#xb514;&#xb809;&#xd1a0;&#xb9ac;&#xc758; &#xbaa8;&#xb4e0; &#xd30c;&#xc77c;&#xc758; &#xbc30;&#xc5f4;&#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-&#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4;&#xc5d0;&#xc11c;&#xb9cc; &#xc791;&#xb3d9;&#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/print_err">print_err</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xd14d;&#xc2a4;&#xd2b8;</td><td></td><td>
- &#xc2dc;&#xc2a4;&#xd15c;&#xc5d0; &#xd14d;&#xc2a4;&#xd2b8;&#xb97c; std err &#xc73c;&#xb85c; &#xc501;&#xb2c8;&#xb2e4;. &#xc790;&#xb3d9;&#xc73c;&#xb85c; &#xc0c8;&#xb85c;&#xc6b4; &#xc904;&#xc744; &#xb9cc;&#xb4e4;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
-console() &#xacfc; &#xb2ec;&#xb9ac;, &#xba54;&#xc2dc;&#xc9c0;&#xb97c; &#xbcf4;&#xb0bc; &#xb54c; &#xc5b4;&#xb5a0;&#xd55c; &#xd615;&#xc2dd;&#xb3c4; &#xc874;&#xc7ac;&#xd558;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#xb2e4;&#xb978; print &#xd391;&#xc158;&#xacfc; &#xb2ec;&#xb9ac; &#xc774; &#xd391;&#xc158;&#xc5d0; &#xc4f4; &#xd615;&#xc2dd; &#xbcc0;&#xacbd;&#xc740; &#xc774;&#xd6c4;&#xc5d0; &#xcd9c;&#xb825;&#xb418;&#xb294; &#xc904;&#xae4c;&#xc9c0;
-&#xc601;&#xd5a5;&#xc744; &#xbbf8;&#xce69;&#xb2c8;&#xb2e4;. &#xadf8;&#xb7ec;&#xbbc0;&#xb85c; &#xc5ec;&#xb7ec; &#xc904;&#xc744; &#xcd9c;&#xb825;&#xd574;&#xc57c; &#xd560; &#xb54c;&#xc5d0;&#xb294;, &#xc9c1;&#xc811;
-print_out(color(RESET)) &#xc744; &#xd1b5;&#xd574; &#xc0c9;&#xc0c1;&#xc744; &#xcd08;&#xae30;&#xd654;&#xd574;&#xc57c; &#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/print_out">print_out</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xd14d;&#xc2a4;&#xd2b8;</td><td></td><td>
- &#xc2dc;&#xc2a4;&#xd15c;&#xc5d0; &#xd14d;&#xc2a4;&#xd2b8;&#xb97c; std out &#xc73c;&#xb85c; &#xc501;&#xb2c8;&#xb2e4;. &#xd558;&#xc9c0;&#xb9cc; &#xc790;&#xb3d9;&#xc73c;&#xb85c; &#xc0c8; &#xc904;&#xc744; &#xb9cc;&#xb4e4;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
-console() &#xacfc; &#xb2ec;&#xb9ac;, &#xba54;&#xc2dc;&#xc9c0;&#xb97c; &#xbcf4;&#xb0bc; &#xb54c; &#xc5b4;&#xb5a0;&#xd55c; &#xd615;&#xc2dd;&#xb3c4; &#xc874;&#xc7ac;&#xd558;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#xb2e4;&#xb978; print &#xd391;&#xc158;&#xacfc; &#xb2ec;&#xb9ac; &#xc774; &#xd391;&#xc158;&#xc5d0; &#xc4f4; &#xd615;&#xc2dd; &#xbcc0;&#xacbd;&#xc740; &#xc774;&#xd6c4;&#xc5d0; &#xcd9c;&#xb825;&#xb418;&#xb294; &#xc904;&#xae4c;&#xc9c0;
-&#xc601;&#xd5a5;&#xc744; &#xbbf8;&#xce69;&#xb2c8;&#xb2e4;. &#xadf8;&#xb7ec;&#xbbc0;&#xb85c; &#xc5ec;&#xb7ec; &#xc904;&#xc744; &#xcd9c;&#xb825;&#xd574;&#xc57c; &#xd560; &#xb54c;&#xc5d0;&#xb294;, &#xc9c1;&#xc811;
-print_out(color(RESET)) &#xc744; &#xd1b5;&#xd574; &#xc0c9;&#xc0c1;&#xc744; &#xcd08;&#xae30;&#xd654;&#xd574;&#xc57c; &#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/prompt_char">prompt_char</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xbb3c;&#xc744; &#xb0b4;&#xc6a9;</td><td> InsufficientPermissionException<br>IOException</td><td> &#xc0ac;&#xc6a9;&#xc790;&#xc5d0;&#xac8c; &#xd55c; &#xae00;&#xc790;&#xb97c; &#xbb3c;&#xc5b4;&#xbd05;&#xb2c8;&#xb2e4;. &#xc0ac;&#xc6a9;&#xc790;&#xb294; &#xc5d4;&#xd130;&#xb97c; &#xce60; &#xd544;&#xc694;&#xac00; &#xc5c6;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4;&#xc5d0;&#xc11c;&#xb9cc; &#xc791;&#xb3d9;&#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/prompt_line">prompt_line</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xbb3c;&#xc744; &#xb0b4;&#xc6a9;</td><td> InsufficientPermissionException<br>IOException</td><td> &#xc0ac;&#xc6a9;&#xc790;&#xc5d0;&#xac8c; &#xbb38;&#xc790;&#xc5f4;&#xc744; &#xbb3c;&#xc5b4;&#xbd05;&#xb2c8;&#xb2e4;. &#xc0ac;&#xc6a9;&#xc790;&#xac00; &#xbb38;&#xc790;&#xc5f4;&#xc744; &#xc785;&#xb825;&#xd558;&#xace0; &#xc5d4;&#xd130;&#xb97c; &#xb204;&#xb974;&#xba74; &#xbc18;&#xd658;&#xb429;&#xb2c8;&#xb2e4;.
-&#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4;&#xc5d0;&#xc11c;&#xb9cc; &#xc791;&#xb3d9;&#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/prompt_pass">prompt_pass</a>()</td><td> &#xc554;&#xd638;&#xd654;&#xb41c; &#xbb38;&#xc790;&#xc5f4;</td><td> &#xbb3c;&#xc5b4;&#xbcfc; &#xac83;, <strong>[</strong>&#xac00;&#xb9ac;&#xae30;<strong>]</strong></td><td> InsufficientPermissionException<br>IOException</td><td>
- &#xc0ac;&#xc6a9;&#xc790;&#xc5d0;&#xac8c; &#xbe44;&#xbc00;&#xbc88;&#xd638;&#xb97c; &#xbb3c;&#xc5b4;&#xbd05;&#xb2c8;&#xb2e4;. &#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4;&#xc5d0;&#xc11c;&#xb9cc; &#xc791;&#xb3d9;&#xd569;&#xb2c8;&#xb2e4;.
-&#xb9cc;&#xc57d; &#xac00;&#xb9ac;&#xae30; &#xac12;&#xc774; &#xcc38;(&#xae30;&#xbcf8;) &#xc774;&#xb77c;&#xba74; &#xc785;&#xb825;&#xd558;&#xb294; &#xbe44;&#xbc00;&#xbc88;&#xd638;&#xac00; * &#xc73c;&#xb85c; &#xbcf4;&#xc785;&#xb2c8;&#xb2e4;.
-&#xb9cc;&#xc57d; &#xac00;&#xb9ac;&#xae30; &#xac12;&#xc774; &#xac70;&#xc9d3;&#xc774;&#xb77c;&#xba74; &#xc785;&#xb825;&#xd558;&#xb294; &#xbe44;&#xbc00;&#xbc88;&#xd638;&#xac00; &#xbcf4;&#xc774;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#xac12;&#xc740; &#xc5d4;&#xd130;&#xb97c; &#xb204;&#xb974;&#xba74; &#xbc18;&#xd658;&#xb418;&#xba70;, &#xc554;&#xd638;&#xd654;&#xb41c; &#xbb38;&#xc790;&#xc5f4;&#xc73c;&#xb85c; &#xbc18;&#xd658;&#xb418;&#xae30; &#xb54c;&#xbb38;&#xc5d0;
-&#xc2e4;&#xc81c; &#xbe44;&#xbc00;&#xbc88;&#xd638;&#xb97c; &#xc5bb;&#xc73c;&#xb824;&#xba74; decrypt_secure_string &#xc744; &#xc0ac;&#xc6a9;&#xd574;&#xc57c; &#xd569;&#xb2c8;&#xb2e4;.
+</p><table><tbody><tr><th scope="col" width="6%">&#xd391;&#xc158; &#xc774;&#xb984;</th><th scope="col" width="5%">&#xbc18;&#xd658;</th><th scope="col" width="10%">&#xc778;&#xc218;</th><th scope="col" width="10%">&#xc608;&#xc678;</th><th scope="col" width="61%">&#xc124;&#xba85;</th><th scope="col" width="3%">&#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;</th><th scope="col" width="5%">&#xc81c;&#xd55c;&#xb428;</th></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/cd">cd</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> <strong>[</strong>dir<strong>]</strong></td><td> IOException<br>InsufficientPermissionException</td><td>
+ Changes the current working directory to the path specified, or the 
+user&#39;s home directory if omitted. This only works from cmdline mode.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/clear_screen">clear_screen</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td></td><td></td><td> Clears the screen. This only works from cmdline mode, nothing happens otherwise.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/exit">exit</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> <strong>[</strong>int<strong>]</strong></td><td></td><td>
+ Exits the program. If this is being run from the command line, works by
+ exiting the interpreter, with  the specified exit code (defaulting to 
+0). If this is being run from in-game, works just like die().<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/exit#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_env">get_env</a>()</td><td> &#xb2e4;&#xc591;&#xd568;</td><td> <strong>[</strong>variableName<strong>]</strong></td><td></td><td>
+ Returns the environment variable specified, if variableName is set. 
+Otherwise, returns an associative array of all the environment 
+variables.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_os">get_os</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td></td><td></td><td> &#x00a0;Returns the name of the current OS. Will be one of WINDOWS, MAC, LINUX, SOLARIS, or UNKNOWN.</td><td> 3.3.2</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_terminal_width">get_terminal_width</a>()</td><td> &#xc815;&#xc218;</td><td></td><td> InsufficientPermissionException</td><td>
+ Returns the current width of the terminal, measured in characters. This
+ is useful for determining proper layout for dynamic output. This only 
+works in cmdline mode.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/in_cmdline_mode">in_cmdline_mode</a>()</td><td> boolean</td><td></td><td></td><td> Returns true if the environment is in cmdline mode. False otherwise.</td><td> 3.3.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ls">ls</a>()</td><td> &#xbc30;&#xc5f4;</td><td> <strong>[</strong>directory<strong>]</strong></td><td> InsufficientPermissionException</td><td>
+ Returns an array of files in the current working directory, including 
+&quot;hidden&quot; files, orif directory is specified, the files in that 
+directory. This is only available in cmdline mode.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/print_err">print_err</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> text</td><td></td><td>
+ Writes the text to the system&#39;s std err, but does not automatically add
+ a newline at the end. Unlike console(), this does not use anything else
+ to format the output, though in many cases they will behave the same. 
+Unlike other print methdods, colors and other formatting characters WILL
+ &quot;bleed&quot; through, so print_err(color(RED) . &#39;This is red&#39;) will also 
+cause the next line to also be red, so if you need to print multiple 
+lines out, you should manually reset the color with 
+print_out(color(RESET)).</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/print_out">print_out</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> text</td><td></td><td>
+ Writes the text to the system&#39;s std out, but does not automatically add
+ a newline at the end. Unlike console(), this does not use anything else
+ to format the output, though in many cases they will behave the same. 
+Unlike other print methdods, colors and other formatting characters WILL
+ &quot;bleed&quot; through, so print_out(color(RED) . &#39;This is red&#39;) will also 
+cause the next line to also be red, so if you need to print multiple 
+lines out, you should manually reset the color with 
+print_out(color(RESET)).</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/prompt_char">prompt_char</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> prompt</td><td> InsufficientPermissionException<br>IOException</td><td> Prompts the user for a single character. They do not need to hit enter first. This only works in cmdline mode.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/prompt_line">prompt_line</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> prompt</td><td> InsufficientPermissionException<br>IOException</td><td> Prompts the user for a line. The line typed is returned once the user presses enter. This only works in cmdline mode.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/prompt_pass">prompt_pass</a>()</td><td> secure_string</td><td> prompt, <strong>[</strong>mask<strong>]</strong></td><td> InsufficientPermissionException<br>IOException</td><td>
+ Prompts the user for a password. This only works in cmdline mode. If 
+mask is true (default), then the password displays * characters for each
+ password character they type. If mask is false, the field stays blank 
+as they type. What they type is returned once they hit enter. The value 
+returned is a secure_string, so to get the actual password, you must use
+ decrypt_secure_string.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/prompt_pass#Examples">Examples...</a>)
 <p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/pwd">pwd</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td></td><td> ShellException</td><td>
- &#xd604;&#xc7ac; &#xc791;&#xb3d9;&#xd558;&#xb294; &#xb514;&#xb809;&#xd1a0;&#xb9ac;&#xc758; &#xacbd;&#xb85c;&#xb97c; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-&#xc774; &#xd391;&#xc158;&#xc740; &#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4; &#xbc16;&#xc5d0;&#xc11c;&#xb3c4; &#xc791;&#xb3d9;&#xd569;&#xb2c8;&#xb2e4;.
-&#xd558;&#xc9c0;&#xb9cc; &#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd504;&#xb9ac;&#xd130;&#xac00; &#xc544;&#xb2d0; &#xb54c;&#xc5d0;&#xb294; &#xb514;&#xbc84;&#xadf8;&#xc640; &#xac19;&#xc740; &#xbaa9;&#xc801;&#xc73c;&#xb85c;&#xb9cc;
-&#xc720;&#xc6a9;&#xd569;&#xb2c8;&#xb2e4;. &#xb9cc;&#xc57d; &#xc791;&#xb3d9;&#xd558;&#xb294; &#xb514;&#xb809;&#xd1a0;&#xb9ac;&#xac00; &#xc5c6;&#xb2e4;&#xba74;, ShellException &#xc774; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/read_pipe_input">read_pipe_input</a>()</td><td> &#xb2e4;&#xc591;&#xd568;</td><td> <strong>[</strong>&#xbc14;&#xc774;&#xb108;&#xb9ac;<strong>]</strong></td><td> IOException<br>InsufficientPermissionException</td><td>
- &#xc774; &#xc2a4;&#xd06c;&#xb9bd;&#xd2b8;&#xc5d0;&#xc11c;&#xc758; &#xc785;&#xb825;&#xac12;&#xc744; &#xc77d;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#xc2a4;&#xd06c;&#xb9bd;&#xd2b8; &#xc804;&#xccb4;&#xc5d0;&#xc11c; &#xc5bb;&#xc740; &#xb370;&#xc774;&#xd130;&#xb97c; &#xd55c;&#xbc88;&#xc5d0; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-&#xadf8;&#xb9ac;&#xace0; &#xc774;&#xb97c; &#xbb38;&#xc790;&#xc5f4;(&#xbc14;&#xc774;&#xb108;&#xb9ac;&#xac00; &#xcc38;&#xc774;&#xb77c;&#xba74; &#xbc14;&#xc774;&#xd2b8; &#xbc30;&#xc5f4;)&#xb85c; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-&#xba85;&#xb839;&#xc904; &#xc778;&#xd130;&#xd398;&#xc774;&#xc2a4;&#xc5d0;&#xc11c;&#xb9cc; &#xc0ac;&#xc6a9;&#xd560; &#xc218; &#xc788;&#xace0;, &#xbc14;&#xc774;&#xb108;&#xb9ac;&#xc758; &#xae30;&#xbcf8;&#xac12;&#xc740; &#xac70;&#xc9d3;&#xc785;&#xb2c8;&#xb2e4;.
-&#xb9cc;&#xc57d; &#xc2a4;&#xd06c;&#xb9bd;&#xd2b8;&#xac00; TTY &#xbaa8;&#xb4dc;&#xac00; &#xc544;&#xb2c8;&#xb77c;&#xba74; IOException &#xc774; &#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/set_cmdline_prompt">set_cmdline_prompt</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xd074;&#xb85c;&#xc800;</td><td> CastException<br>InsufficientPermissionException</td><td>
+ Returns the path to the current working directory. This is available 
+outside cmdline mode, but is probably only useful for debugging, meta, 
+or informational purposes when not in cmdline interpreter mode, as the 
+current working directory is known simply by knowing what file this is 
+running from. When run from a context where there is no working 
+directory, a ShellException is thrown.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/read_pipe_input">read_pipe_input</a>()</td><td> &#xb2e4;&#xc591;&#xd568;</td><td> <strong>[</strong>binary<strong>]</strong></td><td> IOException<br>InsufficientPermissionException</td><td>
+ Reads the input from a process that is piped to this script. It is 
+assumed that the data piped to the script will come all at once, and it 
+will be returned as a string (or byte_array if binary is true). This can
+ only be used in cmdline mode, and binary defaults to false. If the 
+script isn&#39;t started in TTY mode, an IOException is thrown.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/set_cmdline_prompt">set_cmdline_prompt</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> closure</td><td> CastException<br>InsufficientPermissionException</td><td>
  Sets the cmdline prompt. This is only usable or useful in cmdline 
 interpreter mode. The closure should return a string, that string will 
 be used as the prompt. The closure is called each time a prompt needs 
 generating, thereby allowing for dynamic prompts. A boolean is sent to 
 the closure, if true, the shell is in shellMode, meaning the command is 
-interpreted as a shell command. If false, it is in normal mscript mode.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/set_env">set_env</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xbcc0;&#xc218; &#xc774;&#xb984;, &#xac12;</td><td></td><td>
+interpreted as a shell command. If false, it is in normal mscript mode.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/set_env">set_env</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> variableName, value</td><td></td><td>
  Sets the value of an environment variable. This only changes the 
 environment value in this process, not system-wide. This uses some 
 hackery to work, and may not be 100% reliable in all cases, and 
@@ -470,7 +477,7 @@ shouldn&#39;t be relied on heavily. It will always work with get_env,
 however, so you can rely on that mechanism. The value will always be 
 interpreted as a string, so if you are expecting a particular data type 
 on a call to get_env, you will need to manually cast the variable. 
-Arrays will be toString&#39;d as well, but will be accepted.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/shell">shell</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xba85;&#xb839;&#xc5b4;, <strong>[</strong>&#xc635;&#xc158;<strong>]</strong></td><td> InsufficientPermissionException<br>ShellException<br>IOException</td><td>
+Arrays will be toString&#39;d as well, but will be accepted.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/shell">shell</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> command, <strong>[</strong>options<strong>]</strong></td><td> InsufficientPermissionException<br>ShellException<br>IOException</td><td>
  Runs a shell command. &lt;code>command&lt;/code> can be either a 
 string, or array of string arguments. This works mostly like <a href="https://methodscript.com/docs/3.3.2/API/functions/shell_adv"><span class="function_tooltip tt_cursor tooltipstered" data-tooltip-content="#function_tooltip_content">shell_adv</span></a>
  however, it buffers then returns the output for sysout once the process
@@ -488,13 +495,13 @@ indicating successful command completion. Defaults to 0. workingDir -
 Sets the working directory for the sub process. By default null, which 
 represents the directory of this script. If the path is relative, it is 
 relative to the directory of this script.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/shell#Examples">Examples...</a>)
-<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/shell_adv">shell_adv</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xba85;&#xb839;&#xc5b4;, <strong>[</strong>&#xc635;&#xc158;<strong>]</strong></td><td> InsufficientPermissionException<br>IOException</td><td>
+<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/shell_adv">shell_adv</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> command, <strong>[</strong>options<strong>]</strong></td><td> InsufficientPermissionException<br>IOException</td><td>
  Runs a shell command. &lt;code>command&lt;/code> can either be a 
 string or an array of string arguments, which are run as an external 
 process. Requires the allow-shell-commands option to be enabled in 
 preferences, or run from command line, otherwise an 
 InsufficientPermissionException is thrown. <a href="https://methodscript.com/docs/3.3.2/functions/shell_adv">See more...</a><br>
-<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/shell_on">shell_on</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> os, &#xba85;&#xb839;&#xc5b4;, <strong>[</strong>&#xc635;&#xc158;<strong>]</strong></td><td> InsufficientPermissionException<br>ShellException<br>IOException<br>FormatException</td><td>
+<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/shell_on">shell_on</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> os, command, <strong>[</strong>options<strong>]</strong></td><td> InsufficientPermissionException<br>ShellException<br>IOException<br>FormatException</td><td>
  Executes the command if and only if on the given operating system (one 
 of WINDOWS, MAC, LINUX, SOLARIS, or UNKNOWN). If not on the specified 
 OS, this command returns null. The os argument may be a pipe seperated 
@@ -505,7 +512,7 @@ Otherwise completely equivalent to <a href="https://methodscript.com/docs/3.3.2/
  and simply won&#39;t run on other OSes. This allows you to create similar 
 commands across various OSes, and ensure that they only run for the 
 correct OS.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/shell_on#Examples">Examples...</a>)
-<p></p></td><td> 3.3.2</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/shell_on_adv">shell_on_adv</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> os, &#xba85;&#xb839;&#xc5b4;, <strong>[</strong>&#xc635;&#xc158;<strong>]</strong></td><td> InsufficientPermissionException<br>ShellException<br>IOException<br>FormatException</td><td>
+<p></p></td><td> 3.3.2</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/shell_on_adv">shell_on_adv</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> os, command, <strong>[</strong>options<strong>]</strong></td><td> InsufficientPermissionException<br>ShellException<br>IOException<br>FormatException</td><td>
  Executes the command if and only if on the given operating system (one 
 of WINDOWS, MAC, LINUX, SOLARIS, or UNKNOWN). If not on the specified 
 OS, this command does nothing. The os argument may be a pipe seperated 
@@ -515,7 +522,7 @@ Otherwise completely equivalent to <a href="https://methodscript.com/docs/3.3.2/
  This is useful, because usually a command is tailored to a specific OS,
  and simply won&#39;t run on other OSes. This allows you to create similar 
 commands across various OSes, and ensure that they only run for the 
-correct OS.</td><td> 3.3.2</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sys_beep">sys_beep</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td></td><td> InsufficientPermissionException<br>PluginInternalException</td><td> Emits a system beep, on the system itself, not in game. This is only useful from cmdline.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sys_err">sys_err</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xd14d;&#xc2a4;&#xd2b8;</td><td></td><td>
+correct OS.</td><td> 3.3.2</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sys_beep">sys_beep</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td></td><td> InsufficientPermissionException<br>PluginInternalException</td><td> Emits a system beep, on the system itself, not in game. This is only useful from cmdline.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sys_err">sys_err</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> text</td><td></td><td>
  Writes the text to the system&#39;s std err. Unlike console(), this does 
 not use anything else to format the output, though in many cases they 
 will behave nearly the same. However, colors and other formatting 
@@ -523,7 +530,7 @@ characters will not &quot;bleed&quot; through, so sys_err(color(RED) . &#39;This
 red&#39;) will not cause the next line to also be red, so if you need to 
 print multiple lines out, you should manually add \n to create your 
 linebreaks, and only make one call to sys_err.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/sys_err#Examples">Examples...</a>)
-<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sys_out">sys_out</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xd14d;&#xc2a4;&#xd2b8;</td><td></td><td>
+<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sys_out">sys_out</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> text</td><td></td><td>
  Writes the text to the system&#39;s std out. Unlike console(), this does 
 not use anything else to format the output, though in many cases they 
 will behave the same. However, colors and other formatting characters 
@@ -549,165 +556,189 @@ returned if this function call is non-sensical in the current platform</td><td> 
 </td></tr><tr></tr></tbody></table>
 <p><a href="#TOC">&#xb9e8; &#xc704;&#xb85c; &#xc774;&#xb3d9;</a></p>
 <h2 id="Commands">&#xba85;&#xb839;&#xc5b4;</h2>
-<div>&#xc774; &#xbd84;&#xb958;&#xb294; &#xcee4;&#xc2a4;&#xd140; &#xcee4;&#xb9e8;&#xb4dc;&#xb97c; &#xb9cc;&#xb4e4;&#xace0; &#xad00;&#xb9ac;&#xd558;&#xb294; &#xd391;&#xc158;&#xc774; &#xd3ec;&#xd568;&#xb418;&#xc5b4; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.</div>
+<div>A series of functions for creating and managing custom commands.</div>
 <p>
 </p><table><tbody><tr><th scope="col" width="6%">&#xd391;&#xc158; &#xc774;&#xb984;</th><th scope="col" width="5%">&#xbc18;&#xd658;</th><th scope="col" width="10%">&#xc778;&#xc218;</th><th scope="col" width="10%">&#xc608;&#xc678;</th><th scope="col" width="61%">&#xc124;&#xba85;</th><th scope="col" width="3%">&#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;</th><th scope="col" width="5%">&#xc81c;&#xd55c;&#xb428;</th></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/clear_commands">clear_commands</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td></td><td></td><td>
- &#xc774; &#xc11c;&#xbc84;&#xc5d0; &#xbaa8;&#xb4e0; &#xb4f1;&#xb85d;&#xb41c; &#xba85;&#xb839;&#xc5b4;&#xb97c; &#xc81c;&#xac70;&#xd558;&#xb824;&#xace0; &#xc2dc;&#xb3c4;&#xd569;&#xb2c8;&#xb2e4;.
-&#xc774; &#xd391;&#xc158;&#xc740; &#xba87;&#xac00;&#xc9c0; &#xc81c;&#xd55c;&#xc0ac;&#xd56d;&#xc774; &#xc788;&#xc744; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;. &#xd558;&#xc9c0;&#xb9cc; &#xc5b4;&#xb5a4; &#xba85;&#xb839;&#xc5b4;&#xb97c;
-&#xb4f1;&#xb85d;&#xd574;&#xc81c;&#xd560; &#xc218; &#xc5c6;&#xb294;&#xc9c0;&#xb294; &#xbd88;&#xd655;&#xc2e4;&#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_commands">get_commands</a>()</td><td> &#xbc30;&#xc5f4;</td><td></td><td></td><td>
- register_command &#xc758; &#xd615;&#xc2dd;&#xc73c;&#xb85c; &#xb41c; &#xba85;&#xb839;&#xc5b4; &#xbc30;&#xc5f4;&#xc758; &#xbc30;&#xc5f4;&#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-&#xb9cc;&#xc57d; &#xc5b4;&#xb5a4; &#xba85;&#xb839;&#xc5b4;&#xb3c4; &#xcc3e;&#xc744; &#xc218; &#xc5c6;&#xb2e4;&#xba74; null &#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;. &#xc774; &#xba85;&#xb839;&#xc5b4;&#xb294;
-MethodScript &#xb2e8;&#xcd95; &#xba85;&#xb839;&#xc5b4;&#xb97c; &#xd3ec;&#xd568;&#xd558;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;. &#xb2e8;&#xcd95; &#xba85;&#xb839;&#xc5b4;&#xb294;
-&#xb4f1;&#xb85d;&#xb41c; &#xba85;&#xb839;&#xc5b4;&#xac00; &#xc544;&#xb2d9;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/register_command">register_command</a>()</td><td> boolean</td><td> &#xba85;&#xb839;&#xc5b4; &#xc774;&#xb984;, &#xc635;&#xc158; &#xbc30;&#xc5f4;</td><td> FormatException<br>NotFoundException</td><td>
- &#xc11c;&#xbc84;&#xc758; &#xba85;&#xb839;&#xc5b4; &#xbaa9;&#xb85d;&#xc5d0; &#xba85;&#xb839;&#xc5b4;&#xb97c; &#xb4f1;&#xb85d;&#xd558;&#xac70;&#xb098; &#xc874;&#xc7ac;&#xd558;&#xb294; &#xba85;&#xb839;&#xc5b4;&#xb97c;
-&#xc5c5;&#xb370;&#xc774;&#xd2b8; &#xd569;&#xb2c8;&#xb2e4;. &#xc635;&#xc158;&#xc740; &#xd0a4;&#xb97c; &#xd3ec;&#xd568;&#xd55c; &#xbc30;&#xc5f4;&#xc73c;&#xb85c;, &#xc544;&#xb798;&#xc758; &#xd0a4;&#xac00; &#xd3ec;&#xd568;&#xb418;&#xc5b4; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;:
-description, usage, permission, noPermMsg, aliases, tabcompleter, executor.
-&#xbaa8;&#xb4e0; &#xd0a4;&#xb294; &#xd544;&#xc218;&#xac00; &#xc544;&#xb2c8;&#xba70; &#39;aliases&#39; &#xb97c; &#xc81c;&#xc678;&#xd558;&#xace0; &#xb098;&#xc911;&#xc5d0; &#xc218;&#xc815;&#xd560; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#39;noPermMsg&#39; &#xb294; &#xc0ac;&#xc6a9;&#xc790;&#xac00; &#39;permission&#39; &#xc5d0;&#xc11c; &#xc815;&#xc758;&#xb41c; &#xad8c;&#xd55c;&#xc774; &#xc5c6;&#xc744; &#xacbd;&#xc6b0; &#xbcf4;&#xb0b4;&#xb294; &#xba54;&#xc2dc;&#xc9c0;&#xc785;&#xb2c8;&#xb2e4;.
-&#39;Usage&#39; &#xb294; &#39;executor&#39; &#xac00; &#xac70;&#xc9d3;&#xc744; &#xbc18;&#xd658;&#xd560; &#xb54c; &#xbcf4;&#xb0b4;&#xc9c8; &#xba54;&#xc2dc;&#xc9c0;&#xc774;&#xba70;, &#39;Executor&#39; &#xb294; &#xba85;&#xb839;&#xc5b4;&#xac00; &#xb3d9;&#xc791;&#xd55c; &#xcf54;&#xb4dc;&#xc758;
-&#xd074;&#xb85c;&#xc800;&#xc774;&#xba70;, &#xcc38;&#xacfc; &#xac70;&#xc9d3;&#xc744; &#xbc18;&#xd658;&#xd560; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;(&#xc544;&#xbb34;&#xac83;&#xb3c4; &#xbc18;&#xd658;&#xd558;&#xc9c0; &#xc54a;&#xc744; &#xc2dc; &#xcc38;&#xc73c;&#xb85c; &#xac04;&#xc8fc;&#xd569;&#xb2c8;&#xb2e4;).
-&#39;tabcompleter&#39; &#xb294; &#xd50c;&#xb808;&#xc774;&#xc5b4;&#xac00; &#xba85;&#xb839;&#xc5b4;&#xb97c; &#xce58;&#xba74;&#xc11c; &#xd0ed;&#xc744; &#xb20c;&#xb800;&#xc744; &#xb54c; &#xbcf4;&#xb0bc; &#xc790;&#xb3d9;&#xc644;&#xc131; &#xd0a4;&#xc6cc;&#xb4dc;&#xc758; &#xbaa9;&#xb85d;&#xc774;&#xba70;,
-&#xc0ac;&#xc6a9;&#xc790;&#xc5d0;&#xac8c; &#xbcf4;&#xc5ec;&#xc9c8; &#xc790;&#xb3d9;&#xc644;&#xc131; &#xd0a4;&#xc6cc;&#xb4dc;&#xc758; &#xbc30;&#xc5f4;&#xc744; &#xbc18;&#xd658;&#xd558;&#xb294; &#xd074;&#xb85c;&#xc800;&#xc785;&#xb2c8;&#xb2e4;. &#39;executor&#39; &#xc640; &#39;tabcompleter&#39;
-&#xbaa8;&#xb450; &#xc778;&#xc218;&#xb85c; &#xc0ac;&#xc6a9;&#xc790;&#xac00; &#xc0ac;&#xc6a9;&#xd55c; &#xba85;&#xb839;&#xc5b4;&#xc758; &#xc774;&#xb984;, &#xbcf4;&#xb0b8; &#xc0ac;&#xb78c;&#xc758; &#xc774;&#xb984;, &#xc785;&#xb825;&#xd55c; &#xc778;&#xc218;&#xc758; &#xbc30;&#xc5f4;, &#xba85;&#xb839;&#xc5b4;&#xc758; &#xc815;&#xbcf4; &#xbc30;&#xc5f4;&#xc774;
-&#xd3ec;&#xd568;&#xb418;&#xc5b4; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;. &#xb610;&#xd55c; tab_complete_command &#xc774;&#xbca4;&#xd2b8;&#xac00; &#xc2e4;&#xd589;&#xb420; &#xacbd;&#xc6b0;, tabcompleter &#xc758; &#xd074;&#xb85c;&#xc800;&#xc758;
-&#xacb0;&#xacfc;&#xac00; &#xbc18;&#xc601;&#xb418;&#xc9c0; &#xc54a;&#xc744; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/set_executor">set_executor</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xba85;&#xb839;&#xc5b4; &#xc774;&#xb984;, &#xd074;&#xb85c;&#xc800;</td><td> FormatException<br>NotFoundException</td><td>
- &#xc0ac;&#xc6a9;&#xc790;&#xac00; &#xba85;&#xb839;&#xc5b4;&#xb97c; &#xc2e4;&#xd589;&#xd558;&#xb824; &#xd560; &#xb54c; &#xc2e4;&#xd589;&#xd560; &#xcf54;&#xb4dc;&#xc758; &#xd074;&#xb85c;&#xc800;&#xb97c; &#xc124;&#xc815;&#xd569;&#xb2c8;&#xb2e4;.
-&#xd074;&#xb85c;&#xc800;&#xb294; &#xcc38;&#xacfc; &#xac70;&#xc9d3;&#xc744; &#xbc18;&#xd658;&#xd560; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.(&#xc544;&#xbb34;&#xac83;&#xb3c4; &#xbc18;&#xd658;&#xd558;&#xc9c0; &#xc54a;&#xc744; &#xacbd;&#xc6b0; &#xcc38;&#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.)
-&#xac70;&#xc9d3;&#xc744; &#xbc18;&#xd658;&#xd560; &#xacbd;&#xc6b0; &#39;usage&#39; &#xba54;&#xc2dc;&#xc9c0;&#xac00; &#xc124;&#xc815;&#xb429;&#xb2c8;&#xb2e4;. &#xd074;&#xb85c;&#xc800;&#xc758; &#xc778;&#xc218;&#xb294; &#xb2e4;&#xc74c;&#xacfc; &#xac19;&#xc2b5;&#xb2c8;&#xb2e4;:
-&#xc0ac;&#xc6a9;&#xd55c; &#xba85;&#xb839;&#xc5b4;, &#xba85;&#xb839;&#xc5b4;&#xb97c; &#xc0ac;&#xc6a9;&#xd55c; &#xc0ac;&#xc6a9;&#xc790;, &#xc785;&#xb825;&#xd55c; &#xc778;&#xc218;&#xc758; &#xbc30;&#xc5f4;, &#xba85;&#xb839;&#xc5b4;&#xc758; &#xc815;&#xbcf4; &#xbc30;&#xc5f4;</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/set_tabcompleter">set_tabcompleter</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xba85;&#xb839;&#xc5b4; &#xc774;&#xb984;, &#xd074;&#xb85c;&#xc800;</td><td> FormatException<br>NotFoundException</td><td>
- &#xc0ac;&#xc6a9;&#xc790;&#xac00; &#xba85;&#xb839;&#xc5b4;&#xb97c; &#xce60; &#xb54c; &#xd0ed; &#xc790;&#xb3d9;&#xc644;&#xc131;&#xc744; &#xc0ac;&#xc6a9;&#xd558;&#xba74; &#xc2e4;&#xd589;&#xd560; &#xcf54;&#xb4dc;&#xc758; &#xd074;&#xb85c;&#xc800;&#xb97c; &#xc124;&#xc815;&#xd569;&#xb2c8;&#xb2e4;.
-&#xd074;&#xb85c;&#xc800;&#xb294; &#xc790;&#xb3d9;&#xc644;&#xc131; &#xd0a4;&#xc6cc;&#xb4dc;&#xc758; &#xbc30;&#xc5f4;&#xc744; &#xbc18;&#xd658;&#xd574;&#xc57c; &#xd569;&#xb2c8;&#xb2e4;. &#xd639;&#xc740; tab_complete_command &#xc774;&#xbca4;&#xd2b8;&#xb97c;
-&#xd1b5;&#xd574; &#xc790;&#xb3d9;&#xc644;&#xc131; &#xd0a4;&#xc6cc;&#xb4dc;&#xb97c; &#xc124;&#xc815;&#xd560; &#xc218;&#xb3c4; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.  &#xd074;&#xb85c;&#xc800;&#xc758; &#xc778;&#xc218;&#xb294; &#xb2e4;&#xc74c;&#xacfc; &#xac19;&#xc2b5;&#xb2c8;&#xb2e4;:
-&#xc0ac;&#xc6a9;&#xd55c; &#xba85;&#xb839;&#xc5b4;, &#xba85;&#xb839;&#xc5b4;&#xb97c; &#xc0ac;&#xc6a9;&#xd55c; &#xc0ac;&#xc6a9;&#xc790;, &#xc785;&#xb825;&#xd55c; &#xc778;&#xc218;&#xc758; &#xbc30;&#xc5f4;, &#xba85;&#xb839;&#xc5b4;&#xc758; &#xc815;&#xbcf4; &#xbc30;&#xc5f4;</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/unregister_command">unregister_command</a>()</td><td> boolean</td><td> &#xba85;&#xb839;&#xc5b4; &#xc774;&#xb984;</td><td> NotFoundException</td><td> &#xc11c;&#xbc84;&#xc758; &#xba85;&#xb839;&#xc5b4; &#xbaa9;&#xb85d;&#xc5d0;&#xc11c; &#xd574;&#xb2f9; &#xba85;&#xb839;&#xc5b4;&#xb97c; &#xc81c;&#xac70;&#xd569;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span>
+ Attempts to clear all registered commands on the server. Note that this
+ probably has some special limitations, but they are a bit unclear as to
+ what commands can and cannot be unregistered.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_commands">get_commands</a>()</td><td> &#xbc30;&#xc5f4;</td><td></td><td></td><td>
+ Returns an array of command arrays in the format register_command 
+expects or null if no commands could be found. This does not include 
+MethodScript aliases, as they are not registered commands.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/register_command">register_command</a>()</td><td> boolean</td><td> commandname, optionsArray</td><td> FormatException<br>NotFoundException</td><td>
+ Registers a command to the server&#39;s command list, or updates an 
+existing one. Options is an associative array that can have the 
+following keys: description, usage, permission, noPermMsg, aliases, 
+tabcompleter, and/or executor. Everything is optional and can be 
+modified later, except for &#39;aliases&#39; which can only be changed by first 
+unregistering the command. &#39;noPermMsg&#39; is the message displayed when the
+ user doesn&#39;t have the permission specified in &#39;permission&#39;. &#39;Usage&#39; is 
+the message shown when the &#39;executor&#39; returns false. &#39;Executor&#39; is the 
+closure run when the command is executed, and can return true or false 
+(by default is treated as true). &#39;tabcompleter&#39; is the closure run when a
+ user hits tab while the command is entered and ready for args. It is 
+meant to return an array of completions, but if not the 
+tab_complete_command event will be fired, and the completions of that 
+event will be sent to the user. Both executor and tabcompleter closures 
+are passed the following information in this order: alias used, name of 
+the sender, array of arguments used, array of command info.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/register_command#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/set_executor">set_executor</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> commandname, closure</td><td> FormatException<br>NotFoundException</td><td>
+ Sets the code that will be run when a user attempts to execute a 
+command. The closure can return true false (treated as true by default).
+ Returning false will display The usage message if it is set. The 
+closure is passed the following information in this order: alias used, 
+name of the sender, array of arguments used, array of command info.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/set_tabcompleter">set_tabcompleter</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> commandname, closure</td><td> FormatException<br>NotFoundException</td><td>
+ Sets the code that will be run when a user attempts to tabcomplete a 
+command. The closure is expected to return an array of completions, 
+otherwise the tab_complete_command event will be fired and used to send 
+completions. The closure is passed the following information in this 
+order: alias used, name of the sender, array of arguments used, array of
+ command info.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/unregister_command">unregister_command</a>()</td><td> boolean</td><td> commandname</td><td> NotFoundException</td><td> unregisters a command from the server&#39;s command list</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span>
 </td></tr><tr></tr></tbody></table>
 <p><a href="#TOC">&#xb9e8; &#xc704;&#xb85c; &#xc774;&#xb3d9;</a></p>
 <h2 id="Compiler">&#xcef4;&#xd30c;&#xc77c;&#xb7ec;</h2>
-<div>&#xc774; &#xbd84;&#xb958;&#xb294; &#xcef4;&#xd30c;&#xc77c;&#xb7ec;&#xc758; &#xb0b4;&#xbd80; &#xd391;&#xc158;&#xb4e4;&#xc744; &#xd3ec;&#xd568;&#xd569;&#xb2c8;&#xb2e4;.
-&#xc774; &#xd391;&#xc158;&#xb4e4;&#xc740; &#xc2a4;&#xd06c;&#xb9bd;&#xd2b8;&#xc5d0;&#xc11c; &#xc808;&#xb300; &#xc0ac;&#xc6a9;&#xb418;&#xc11c;&#xb294; &#xc548;&#xb429;&#xb2c8;&#xb2e4;.</div>
+<div>Compiler internal functions should be declared here. If you&#39;re 
+reading this from anywhere but the source code, there&#39;s a bug, because 
+these functions shouldn&#39;t be public or used in a script.</div>
 <p>
-</p><table><tbody><tr><th scope="col" width="6%">&#xd391;&#xc158; &#xc774;&#xb984;</th><th scope="col" width="5%">&#xbc18;&#xd658;</th><th scope="col" width="10%">&#xc778;&#xc218;</th><th scope="col" width="10%">&#xc608;&#xc678;</th><th scope="col" width="61%">&#xc124;&#xba85;</th><th scope="col" width="3%">&#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;</th><th scope="col" width="5%">&#xc81c;&#xd55c;&#xb428;</th></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/smart_string">smart_string</a>()</td><td> &#xc5c6;&#xc74c;</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td></td><td> &#xcef4;&#xd30c;&#xc77c;&#xb7ec; &#xad6c;&#xc870; &#xc911; &#xd558;&#xb098;&#xc774;&#xba70;, &#xc9c1;&#xc811; &#xc0ac;&#xc6a9;&#xb418;&#xb294; &#xc77c;&#xc740; &#xc5c6;&#xc2b5;&#xb2c8;&#xb2e4;. &#xc30d;&#xb530;&#xc634;&#xd45c;&#xb97c; &#xd1b5;&#xd574; &#xb9cc;&#xb4e4;&#xc5b4;&#xc9d1;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span>
+</p><table><tbody><tr><th scope="col" width="6%">&#xd391;&#xc158; &#xc774;&#xb984;</th><th scope="col" width="5%">&#xbc18;&#xd658;</th><th scope="col" width="10%">&#xc778;&#xc218;</th><th scope="col" width="10%">&#xc608;&#xc678;</th><th scope="col" width="61%">&#xc124;&#xba85;</th><th scope="col" width="3%">&#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;</th><th scope="col" width="5%">&#xc81c;&#xd55c;&#xb428;</th></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/smart_string">smart_string</a>()</td><td> none</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td></td><td> This is a compiler construct, and is not normally used directly. It is created via double quoted strings.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span>
 </td></tr><tr></tr></tbody></table>
 <p><a href="#TOC">&#xb9e8; &#xc704;&#xb85c; &#xc774;&#xb3d9;</a></p>
 <h2 id="Crypto">&#xc554;&#xd638;&#xd654;</h2>
-<div>&#xc774; &#xbd84;&#xb958;&#xb294; &#xc77c;&#xbc18;&#xc801;&#xc778; &#xc554;&#xd638;&#xd654; &#xd391;&#xc158;&#xb4e4;&#xc744; &#xd3ec;&#xd568;&#xd569;&#xb2c8;&#xb2e4;.</div>
+<div>Provides common cryptographic functions</div>
 <p>
-</p><table><tbody><tr><th scope="col" width="6%">&#xd391;&#xc158; &#xc774;&#xb984;</th><th scope="col" width="5%">&#xbc18;&#xd658;</th><th scope="col" width="10%">&#xc778;&#xc218;</th><th scope="col" width="10%">&#xc608;&#xc678;</th><th scope="col" width="61%">&#xc124;&#xba85;</th><th scope="col" width="3%">&#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;</th><th scope="col" width="5%">&#xc81c;&#xd55c;&#xb428;</th></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/base64_decode">base64_decode</a>()</td><td> &#xbc14;&#xc774;&#xd2b8;_&#xbc30;&#xc5f4;</td><td> base64 &#xb370;&#xc774;&#xd130;</td><td> CastException</td><td> base64 &#xc778;&#xcf54;&#xb529;&#xb41c; &#xbb38;&#xc790;&#xc5f4;&#xc744; &#xc77c;&#xbc18; &#xbb38;&#xc790;&#xc5f4;&#xb85c; &#xbcc0;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/base64_encode">base64_encode</a>()</td><td> &#xbc14;&#xc774;&#xd2b8;_&#xbc30;&#xc5f4;</td><td> &#xbc14;&#xc774;&#xd2b8; &#xb370;&#xc774;&#xd130;</td><td> CastException</td><td> &#xc8fc;&#xc5b4;&#xc9c4; &#xbc14;&#xc774;&#xd2b8; &#xbc30;&#xc5f4; &#xb370;&#xc774;&#xd130;&#xb97c; base 64 &#xbc14;&#xc774;&#xd2b8; &#xb370;&#xc774;&#xd130;&#xb85c; &#xbcc0;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/bcrypt">bcrypt</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xac12;, <strong>[</strong>&#xc791;&#xc5c5;&#xb7c9;<strong>]</strong></td><td> CastException<br>RangeException</td><td>
- &#xac12;&#xc744; bcrypt &#xb97c; &#xc774;&#xc6a9;&#xd574; &#xc8fc;&#xc5b4;&#xc9c4; &#xc791;&#xc5c5;&#xb7c9;&#xc744; &#xc774;&#xc6a9;&#xd574; &#xc554;&#xd638;&#xd654;&#xd569;&#xb2c8;&#xb2e4;. &#xb9cc;&#xc57d; &#xc791;&#xc5c5;&#xb7c9;&#xc774; &#xc8fc;&#xc5b4;&#xc9c0;&#xc9c0; &#xc54a;&#xc558;&#xc744; &#xacbd;&#xc6b0;
-5&#xac00; &#xc8fc;&#xc5b4;&#xc9d1;&#xb2c8;&#xb2e4;. BCrypt &#xb294; SHA1 &#xbcf4;&#xb2e4; &#xb354;&#xc6b1; &#xc548;&#xc804;&#xd558;&#xac8c; &#xc124;&#xacc4;&#xb418;&#xc5c8;&#xc73c;&#xba70;, md5 &#xbcf4;&#xb2e4; &#xd655;&#xc2e4;&#xd788; &#xc548;&#xc804;&#xd569;&#xb2c8;&#xb2e4;.
-&#xcc38;&#xace0;&#xb85c; bcrypt &#xc0ac;&#xc6a9;&#xc740; &#xb290;&#xb9ac;&#xba70;, &#xc774;&#xb294; &#xbcf4;&#xc548;&#xc5d0;&#xc11c; &#xc7a5;&#xc810;&#xc774; &#xb429;&#xb2c8;&#xb2e4;. &#xc791;&#xc5c5;&#xb7c9;&#xc744; &#xb192;&#xc740; &#xc22b;&#xc790;&#xb85c; &#xd560; &#xc218;&#xb85d;
-&#xc791;&#xc5c5;&#xc774; &#xb354; &#xc624;&#xb798; &#xac78;&#xb9bd;&#xb2c8;&#xb2e4;. 5&#xc758; &#xc791;&#xc5c5;&#xb7c9;&#xc740; &#xbcf4;&#xd1b5;&#xc758; &#xc791;&#xc5c5;&#xc774;&#xba70;, &#xbcf4;&#xd1b5; 1&#xcd08; &#xc548;&#xc5d0; &#xc644;&#xb8cc;&#xb429;&#xb2c8;&#xb2e4;.
-10 &#xc774;&#xc0c1;&#xc73c;&#xb85c; &#xc124;&#xc815;&#xd558;&#xba74; &#xba87;&#xcd08;&#xac00; &#xac78;&#xb9ac;&#xba70;, 15&#xb85c; &#xc124;&#xc815;&#xd558;&#xba74; &#xba87;&#xbd84;&#xc774; &#xac78;&#xb9bd;&#xb2c8;&#xb2e4;. &#xc791;&#xc5c5;&#xb7c9;&#xc740; 5&#xc640; 31 &#xc0ac;&#xc774;&#xc5ec;&#xc57c; &#xd569;&#xb2c8;&#xb2e4;.
-check_bcrypt &#xb97c; &#xd655;&#xc778;&#xd558;&#xc5ec; &#xc0ac;&#xc6a9; &#xbc29;&#xbc95;&#xc744; &#xd655;&#xc778;&#xd558;&#xc138;&#xc694;. Bcrypt &#xb294; sha-* &#xd391;&#xc158;&#xc744; &#xc0ac;&#xc6a9;&#xd560; &#xc218; &#xc5c6;&#xb294; &#xacf3;&#xc5d0;&#xc11c;
-&#xbe44;&#xbc00;&#xbc88;&#xd638;&#xb97c; &#xcc98;&#xb9ac;&#xd560; &#xb54c; &#xc720;&#xc6a9;&#xd569;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/check_bcrypt">check_bcrypt</a>()</td><td> boolean</td><td> &#xc77c;&#xbc18; &#xbb38;&#xc790;&#xc5f4;, &#xd574;&#xc26c;</td><td></td><td>
- &#xc77c;&#xbc18; &#xbb38;&#xc790;&#xc5f4; &#xbe44;&#xbc00;&#xbc88;&#xd638;&#xac00; &#xd574;&#xc26c;&#xc640; &#xc77c;&#xce58;&#xd55c;&#xc9c0; &#xd655;&#xc778;&#xd569;&#xb2c8;&#xb2e4;.
-md5&#xb098; sha1 &#xacfc; &#xb2ec;&#xb9ac;, &#xb2e8;&#xc21c;&#xd788; &#xd574;&#xc26c;&#xb97c; &#xbe44;&#xad50;&#xd574;&#xc11c;&#xb294; &#xc791;&#xb3d9;&#xd558;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#xc0ac;&#xc6a9;&#xbc95;:
+</p><table><tbody><tr><th scope="col" width="6%">&#xd391;&#xc158; &#xc774;&#xb984;</th><th scope="col" width="5%">&#xbc18;&#xd658;</th><th scope="col" width="10%">&#xc778;&#xc218;</th><th scope="col" width="10%">&#xc608;&#xc678;</th><th scope="col" width="61%">&#xc124;&#xba85;</th><th scope="col" width="3%">&#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;</th><th scope="col" width="5%">&#xc81c;&#xd55c;&#xb428;</th></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/base64_decode">base64_decode</a>()</td><td> byte_array</td><td> base64data</td><td> CastException</td><td> Decodes the base 64 encoded byte_array data back into the original byte_array data.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/base64_decode#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/base64_encode">base64_encode</a>()</td><td> byte_array</td><td> byteData</td><td> CastException</td><td> Encodes the given byte_array data into a base 64 byte_array.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/base64_encode#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/bcrypt">bcrypt</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> val, <strong>[</strong>workload<strong>]</strong></td><td> CastException<br>RangeException</td><td>
+ Encrypts a value using bcrypt, using the specified workload, or 5 if 
+none provided. BCrypt is supposedly more secure than SHA1, and certainly
+ more secure than md5. Note that using bcrypt is slower, which is one of
+ its security advantages, however, setting the workload to higher 
+numbers will take exponentially more time. A workload of 5 is a moderate
+ operation, which should complete in under a second, however, setting it
+ to 10 will take many seconds, and setting it to 15 will take a few 
+minutes. The workload must be between 5 and 31. See the documentation 
+for check_bcrypt for full usage. Bcrypt is recommended for password 
+hashing, whereas sha-* functions are not.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/bcrypt#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/check_bcrypt">check_bcrypt</a>()</td><td> boolean</td><td> plaintext, hash</td><td></td><td>
+ Checks to see if this plaintext password does in fact hash to the hash 
+specified. Unlike md5 or sha1, simply comparing hashes won&#39;t work. 
+Consider the following usage:
 string @plain = &#39;plaintext&#39;;
 string @hash = bcrypt(@plain);
-msg(if(check_bcrypt(@plain, @hash), &#39;&#xb3d9;&#xc77c;&#xd569;&#xb2c8;&#xb2e4;!&#39;, &#39;&#xb3d9;&#xc77c;&#xd558;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;!&#39;));
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/hmac_md5">hmac_md5</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xd0a4;, &#xac12;</td><td> PluginInternalException</td><td> &#xc8fc;&#xc5b4;&#xc9c4; &#xd0a4;&#xc5d0; &#xb9de;&#xb294; &#xc8fc;&#xc5b4;&#xc9c4; &#xac12;&#xc758; md5 HMAC &#xac12;&#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/hmac_sha1">hmac_sha1</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xd0a4;, &#xac12;</td><td> PluginInternalException</td><td> &#xc8fc;&#xc5b4;&#xc9c4; &#xd0a4;&#xc5d0; &#xb9de;&#xb294; &#xc8fc;&#xc5b4;&#xc9c4; &#xac12;&#xc758; sha1 HMAC &#xac12;&#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/hmac_sha256">hmac_sha256</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xd0a4;, &#xac12;</td><td> PluginInternalException</td><td> &#xc8fc;&#xc5b4;&#xc9c4; &#xd0a4;&#xc5d0; &#xb9de;&#xb294; &#xc8fc;&#xc5b4;&#xc9c4; &#xac12;&#xc758; sha256 HMAC &#xac12;&#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/md5">md5</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xac12;</td><td> PluginInternalException</td><td>
- &#xc8fc;&#xc5b4;&#xc9c4; &#xac12;&#xc758; md5 &#xd574;&#xc26c;&#xb97c; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-md5 &#xd574;&#xc26c;&#xb294; &#xb354;&#xc774;&#xc0c1; &#xc548;&#xc804;&#xd558;&#xb2e4;&#xace0; &#xac04;&#xc8fc;&#xb418;&#xc9c0; &#xc54a;&#xc73c;&#xbbc0;&#xb85c;,
-&#xc911;&#xc694;&#xd55c; &#xb370;&#xc774;&#xd130;&#xc758; &#xc554;&#xd638;&#xd654;&#xc5d0; &#xc0ac;&#xc6a9;&#xd574;&#xc11c;&#xb294; &#xc548;&#xb429;&#xb2c8;&#xb2e4;.
-&#xc77c;&#xbc18; &#xd574;&#xc26c;&#xb85c;&#xb294; &#xbe60;&#xb974;&#xace0; &#xc26c;&#xc6b4; &#xbc29;&#xbc95;&#xc774;&#xba70;, md5 &#xb294; &#xb2e8;&#xbc29;&#xd5a5; &#xd574;&#xc26c; &#xc54c;&#xace0;&#xb9ac;&#xc998;&#xc785;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/rot13">rot13</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xac12;</td><td></td><td> &#xac12;&#xc758; rot13 &#xbc84;&#xc804;&#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;. &#xcc38;&#xace0;&#xb85c; rot13(rot13(val)) &#xc740; val &#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sha1">sha1</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xac12;</td><td> PluginInternalException</td><td>
- &#xc8fc;&#xc5b4;&#xc9c4; &#xac12;&#xc758; sha1 &#xd574;&#xc26c;&#xb97c; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-sha1 &#xd574;&#xc26c;&#xb294; md5 &#xd574;&#xc26c;&#xbcf4;&#xb2e4;&#xb294; &#xc548;&#xc804;&#xd558;&#xc9c0;&#xb9cc;,&#xc774;&#xac83; &#xb610;&#xd55c; &#xb354;&#xc774;&#xc0c1; &#xc548;&#xc804;&#xd558;&#xb2e4;&#xace0; &#xac04;&#xc8fc;&#xb418;&#xc9c0; &#xc54a;&#xc73c;&#xbbc0;&#xb85c;,
-sha-256 &#xc744; &#xc911;&#xc694;&#xd55c; &#xb370;&#xc774;&#xd130;&#xb97c; &#xc554;&#xd638;&#xd654; &#xd558;&#xb294;&#xb370; &#xc0ac;&#xc6a9;&#xd574;&#xc57c; &#xd569;&#xb2c8;&#xb2e4;.
-sha1 &#xd574;&#xc26c;&#xb294; &#xb2e8;&#xbc29;&#xd5a5; &#xd574;&#xc26c; &#xc54c;&#xace0;&#xb9ac;&#xc998;&#xc785;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sha256">sha256</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xac12;</td><td> PluginInternalException</td><td>
- &#xc8fc;&#xc5b4;&#xc9c4; &#xac12;&#xc758; sha256 &#xd574;&#xc26c;&#xb97c; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;. sha256 &#xc740;
-sha1 &#xc774;&#xb098; md5 &#xbcf4;&#xb2e4; &#xd6e8;&#xc52c; &#xc548;&#xc804;&#xd558;&#xb2e4;&#xace0; &#xac04;&#xc8fc;&#xb418;&#xba70;, &#xc911;&#xc694;&#xd55c; &#xb370;&#xc774;&#xd130;&#xb97c; &#xc554;&#xd638;&#xd654;&#xd558;&#xb294;&#xb370;
-&#xc8fc;&#xb85c; &#xc0ac;&#xc6a9;&#xb429;&#xb2c8;&#xb2e4;. &#xb2e8;&#xbc29;&#xd5a5; &#xd574;&#xc26c; &#xc54c;&#xace0;&#xb9ac;&#xc998;&#xc785;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sha512">sha512</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xac12;</td><td> PluginInternalException</td><td>
- &#xc8fc;&#xc5b4;&#xc9c4; &#xac12;&#xc758; sha512 &#xd574;&#xc26c;&#xb97c; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;. sha512 &#xb294;
-sha1 &#xc774;&#xb098; md5 &#xbcf4;&#xb2e4; &#xd6e8;&#xc52c; &#xc548;&#xc804;&#xd558;&#xb2e4;&#xace0; &#xac04;&#xc8fc;&#xb418;&#xba70;(sha256 &#xbcf4;&#xb2e4;&#xb3c4; &#xc548;&#xc804;&#xd558;&#xc9c0;&#xb9cc; &#xc18d;&#xb3c4;&#xac00; &#xb290;&#xb9bd;&#xb2c8;&#xb2e4;.),
-&#xc544;&#xc8fc; &#xc911;&#xc694;&#xd55c; &#xb370;&#xc774;&#xd130;&#xb97c; &#xc554;&#xd638;&#xd654;&#xd558;&#xb294;&#xb370; &#xc8fc;&#xb85c; &#xc0ac;&#xc6a9;&#xb429;&#xb2c8;&#xb2e4;. &#xb2e8;&#xbc29;&#xd5a5; &#xd574;&#xc26c; &#xc54c;&#xace0;&#xb9ac;&#xc998;&#xc785;&#xb2c8;&#xb2e4;.
+msg(if(check_bcrypt(@plain, @hash), &#39;They match!&#39;, &#39;They do not 
+match!&#39;));
+<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/check_bcrypt#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/hmac_md5">hmac_md5</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> key, val</td><td> PluginInternalException</td><td> Returns the md5 HMAC of the specified string using the provided key.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/hmac_md5#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/hmac_sha1">hmac_sha1</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> key, val</td><td> PluginInternalException</td><td> Returns the sha1 HMAC of the specified string using the provided key.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/hmac_sha1#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/hmac_sha256">hmac_sha256</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> key, val</td><td> PluginInternalException</td><td> Returns the sha256 HMAC of the specified string using the provided key.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/hmac_sha256#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/md5">md5</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> val</td><td> PluginInternalException</td><td>
+ Returns the md5 hash of the specified string. The md5 hash is no longer
+ considered secure, so you should not use it for storage of sensitive 
+data, however for general hashing, it is a quick and easy solution. md5 
+is a one way hashing algorithm.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/md5#Examples">Examples...</a>)
+<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/rot13">rot13</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> val</td><td></td><td> Returns the rot13 version of val. Note that rot13(rot13(val)) returns val<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/rot13#Examples">Examples...</a>)
+<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sha1">sha1</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> val</td><td> PluginInternalException</td><td>
+ Returns the sha1 hash of the specified string. Note that sha1 is 
+considered more secure than md5, but is also not considered secure. 
+sha-256 should be used instead for storing sensitive data. It is a one 
+way hashing algorithm.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/sha1#Examples">Examples...</a>)
+<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sha256">sha256</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> val</td><td> PluginInternalException</td><td>
+ Returns the sha256 hash of the specified string. Note that sha256 is 
+considered more secure than sha1 and md5, and is typically used when 
+storing sensitive data. It is a one way hashing algorithm.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/sha256#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sha512">sha512</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> val</td><td> PluginInternalException</td><td>
+ Returns the sha512 hash of the specified string. Note that sha512 is 
+considered more secure than sha1 and md5 (and sha256, because it takes 
+longer to calculate), and is typically used when storing sensitive data.
+ It is a one way hashing algorithm.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/sha512#Examples">Examples...</a>)
 <p></p></td><td> 3.3.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span>
 </td></tr><tr></tr></tbody></table>
 <p><a href="#TOC">&#xb9e8; &#xc704;&#xb85c; &#xc774;&#xb3d9;</a></p>
 <h2 id="DataHandling">&#xb370;&#xc774;&#xd130; &#xad00;&#xb9ac;</h2>
-<div>&#xc774; &#xbd84;&#xb958;&#xb294; &#xc2a4;&#xd06c;&#xb9bd;&#xd2b8; &#xb370;&#xc774;&#xd130;&#xc640; &#xd504;&#xb85c;&#xadf8;&#xb7a8; &#xc9c4;&#xd589;&#xc744; &#xc81c;&#xc5b4;&#xd558;&#xb294; &#xd391;&#xc158;&#xb4e4;&#xc744; &#xd3ec;&#xd568;&#xd569;&#xb2c8;&#xb2e4;.</div>
+<div>This class provides various methods to control script data and program flow.</div>
 <p>
-</p><table><tbody><tr><th scope="col" width="6%">&#xd391;&#xc158; &#xc774;&#xb984;</th><th scope="col" width="5%">&#xbc18;&#xd658;</th><th scope="col" width="10%">&#xc778;&#xc218;</th><th scope="col" width="10%">&#xc608;&#xc678;</th><th scope="col" width="61%">&#xc124;&#xba85;</th><th scope="col" width="3%">&#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;</th><th scope="col" width="5%">&#xc81c;&#xd55c;&#xb428;</th></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/array">array</a>()</td><td> &#xbc30;&#xc5f4;</td><td> <strong>[</strong>&#xac12;1, [&#xac12;2...<strong>]</strong>]</td><td></td><td> &#xc8fc;&#xc5b4;&#xc9c4; &#xac12;&#xc73c;&#xb85c; &#xb9cc;&#xb4e0; &#xbc30;&#xc5f4;&#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.0.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/assign">assign</a>()</td><td> ivariable</td><td> <strong>[</strong>&#xd615;&#xc2dd;<strong>]</strong>, ivar, &#xb2e4;&#xc591;&#xd55c; &#xac12;</td><td> CastException</td><td>
- ivar &#xb97c; &#xc778;&#xc218;&#xb85c; &#xbc1b;&#xace0;, &#xd2b9;&#xc815;&#xd55c; &#xac12;&#xc744; &#xc785;&#xb825;&#xd569;&#xb2c8;&#xb2e4;.
-&#xc785;&#xb825;&#xb41c; &#xac12;&#xc758; ivar &#xb97c; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-&#xc5f0;&#xc0b0;&#xc790; &#xad6c;&#xbb38;&#xc744; &#xc9c0;&#xc6d0;&#xd569;&#xb2c8;&#xb2e4;: &lt;code>@a = 5;&lt;/code>.
-+=,-=,*=,/=,.= &#xac19;&#xc740; &#xc5ec;&#xb7ec; &#xc791;&#xc5c5;&#xc744; &#xb3d9;&#xc2dc;&#xc5d0; &#xc218;&#xd589;&#xd558;&#xb294; &#xb2e4;&#xb978; &#xd615;&#xc2dd;&#xb3c4; &#xc9c0;&#xc6d0;&#xd569;&#xb2c8;&#xb2e4;.
-&#xbc30;&#xc5f4; &#xc785;&#xb825;&#xb3c4; &#xc9c0;&#xc6d0;&#xd569;&#xb2c8;&#xb2e4;: @array[5] = &#39;5&#xbc88; &#xc778;&#xb371;&#xc2a4;&#xc758; &#xc0c8; &#xac12;&#39;
-<p></p></td><td> 3.0.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/associative_array">associative_array</a>()</td><td> &#xbc30;&#xc5f4;</td><td> <strong>[</strong>&#xac12;...<strong>]</strong></td><td></td><td>
- array() &#xc640; &#xb3d9;&#xc77c;&#xd558;&#xc9c0;&#xb9cc; &#xac12;&#xc774; &#xc874;&#xc7ac;&#xd558;&#xc9c0; &#xc54a;&#xc544;&#xb3c4; &#xd0a4;&#xac00; &#xc788;&#xb294; &#xbc30;&#xc5f4;&#xc744; &#xc0dd;&#xc131;&#xd569;&#xb2c8;&#xb2e4;.
-&#xc774; &#xd391;&#xc158;&#xc740; &#xc815;&#xb9d0; &#xd544;&#xc694;&#xd560; &#xb54c;&#xb9cc; &#xc0ac;&#xc6a9;&#xd569;&#xb2c8;&#xb2e4;. &#xadf8; &#xc678;&#xc5d0;&#xb294; &#xc77c;&#xbc18; array() &#xb97c; &#xc0ac;&#xc6a9;&#xd558;&#xc5ec;&#xb3c4;
-&#xc0c1;&#xad00; &#xc5c6;&#xc2b5;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/boolean">boolean</a>()</td><td> boolean</td><td> &#xac12;</td><td></td><td>
- boolean &#xc73c;&#xb85c; &#xbcc0;&#xd658;&#xd560; &#xc218; &#xc788;&#xb294; &#xc8fc;&#xc5b4;&#xc9c4; &#xac12;&#xc744; &#xbcc0;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-&#xbaa8;&#xb4e0; &#xb370;&#xc774;&#xd130; &#xd615;&#xc2dd;&#xc740; boolean &#xc73c;&#xb85c; &#xbcc0;&#xd658;&#xd560; &#xc218; &#xc788;&#xae30; &#xb54c;&#xbb38;&#xc5d0;,
-&#xc608;&#xc678;&#xb97c; &#xbc1c;&#xc0dd;&#xd558;&#xc9c0; &#xc54a;&#xc2b5;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/break">break</a>()</td><td> &#xc5c6;&#xc74c;</td><td> <strong>[</strong>&#xc22b;&#xc790;<strong>]</strong></td><td> CastException</td><td>
- &#xd604;&#xc7ac; &#xbc18;&#xbcf5;&#xbb38;&#xc744; &#xc911;&#xb2e8;&#xd569;&#xb2c8;&#xb2e4;. &#xb9cc;&#xc57d; &#xc815;&#xc218;&#xac00; &#xc8fc;&#xc5b4;&#xc9c4;&#xb2e4;&#xba74;,
-&#xadf8;&#xb9cc;&#xd07c;&#xc758; &#xbc18;&#xbcf5;&#xbb38;&#xc744; &#xc911;&#xb2e8;&#xd569;&#xb2c8;&#xb2e4;. &#xc608;&#xb97c; &#xb4e4;&#xc5b4; &#xbc18;&#xbcf5;&#xbb38; &#xc548;&#xc5d0; &#xbc18;&#xbcf5;&#xbb38;&#xc774; &#xc788;&#xb2e4;&#xba74;,
-break(2) &#xb97c; &#xd558;&#xba74; &#xb450; &#xbc18;&#xbcf5;&#xbb38;&#xc744; &#xbaa8;&#xb450; &#xc911;&#xc9c0;&#xd569;&#xb2c8;&#xb2e4;. &#xb9cc;&#xc57d; &#xc815;&#xc218;&#xac00; &#xc8fc;&#xc5b4;&#xc9c0;&#xc9c0; &#xc54a;&#xb294;&#xb2e4;&#xba74;,
-break(1) &#xacfc; &#xb3d9;&#xc77c;&#xd569;&#xb2c8;&#xb2e4;. &#xb610;&#xd55c; &#xc774; &#xd391;&#xc158;&#xc740; &#xd2b9;&#xc774;&#xd558;&#xac8c; &#xc815;&#xc218;&#xac00; &#xbcc0;&#xc218;&#xc77c; &#xacbd;&#xc6b0;&#xc5d0;&#xb294;
-&#xcef4;&#xd30c;&#xc77c; &#xc5d0;&#xb7ec;&#xac00; &#xc77c;&#xc5b4;&#xb0a9;&#xb2c8;&#xb2e4;. &#xc608;&#xb97c; &#xb4e4;&#xc5b4; break(3) &#xc740; &#xac00;&#xb2a5;&#xd558;&#xc9c0;&#xb9cc;,
-break(@&#xac12;) &#xc740; &#xbd88;&#xac00;&#xb2a5;&#xd569;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.1.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/call_proc">call_proc</a>()</td><td> &#xb2e4;&#xc591;&#xd568;</td><td> &#xd504;&#xb85c;&#xc2dc;&#xc800; &#xc774;&#xb984;, <strong>[</strong>&#xac12;1...<strong>]</strong></td><td> InvalidProcedureException</td><td>
- &#xc0ac;&#xc6a9;&#xc790; &#xc9c0;&#xc815; &#xd504;&#xb85c;&#xc2dc;&#xc800;&#xb97c; &#xb3d9;&#xc801;&#xc73c;&#xb85c; &#xd638;&#xcd9c;&#xd569;&#xb2c8;&#xb2e4;.
-call_proc(_myProc, &#39;&#xac12;1&#39;) &#xc740; _myProc(&#39;&#xac12;1&#39;) &#xacfc; &#xb3d9;&#xc77c;&#xd569;&#xb2c8;&#xb2e4;.
-&#xb9cc;&#xc57d; &#xd504;&#xb85c;&#xc2dc;&#xc800;&#xc758; &#xc774;&#xb984;&#xc744; &#xb3d9;&#xc801;&#xc73c;&#xb85c; &#xbc14;&#xafd4;&#xc57c; &#xd560; &#xacbd;&#xc6b0; &#xc774; &#xd391;&#xc158;&#xc744; &#xc0ac;&#xc6a9;&#xd569;&#xb2c8;&#xb2e4;.
-&#xcf5c;&#xbc31;&#xc758; &#xacbd;&#xc6b0;&#xc5d0;&#xb294; &#xd074;&#xb85c;&#xc800;&#xb97c; &#xc0ac;&#xc6a9;&#xd558;&#xb294; &#xac83;&#xc774; &#xc720;&#xc6a9;&#xd569;&#xb2c8;&#xb2e4;.
-&#xb9cc;&#xc57d; &#xd504;&#xb85c;&#xc2dc;&#xc800;&#xac00; &#xc874;&#xc7ac;&#xd558;&#xc9c0; &#xc54a;&#xb294;&#xb2e4;&#xba74; InvalidProcedureException &#xc744;
-&#xbc1c;&#xc0dd;&#xc2dc;&#xd0b5;&#xb2c8;&#xb2e4;. &#xb9cc;&#xc57d; &#xccab;&#xbc88;&#xc9f8; &#xc778;&#xc218;&#xb97c; &#xd558;&#xb4dc;&#xcf54;&#xb529;&#xd588;&#xb2e4;&#xba74; &#xb354; &#xac04;&#xb2e8;&#xd55c; &#xbc29;&#xbc95;&#xc774; &#xc788;&#xb2e4;&#xb294;
-&#xacbd;&#xace0;&#xac00; &#xd45c;&#xc2dc;&#xb429;&#xb2c8;&#xb2e4;.</td><td> 3.2.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/call_proc_array">call_proc_array</a>()</td><td> &#xb2e4;&#xc591;&#xd568;</td><td> &#xd504;&#xb85c;&#xc2dc;&#xc800; &#xc774;&#xb984;, &#xbc30;&#xc5f4;</td><td> InvalidProcedureException<br>CastException</td><td>
- call_proc &#xacfc; &#xb3d9;&#xc77c;&#xd558;&#xc9c0;&#xb9cc;, &#xc54c; &#xc218; &#xc5c6;&#xb294; &#xc778;&#xc218; &#xac2f;&#xc218;&#xb97c; &#xd5c8;&#xc6a9;&#xd569;&#xb2c8;&#xb2e4;.
-&#xbc30;&#xc5f4;&#xc740; &#xbb34;&#xc870;&#xac74; &#xc77c;&#xbc18; &#xbc30;&#xc5f4;&#xc774;&#xc5ec;&#xc57c; &#xd558;&#xba70;, &#xd0a4;&#xac00; &#xc788;&#xb294; &#xbc30;&#xc5f4;&#xc77c; &#xacbd;&#xc6b0;
-&#xc608;&#xc678;&#xb97c; &#xbc1c;&#xc0dd;&#xc2dc;&#xd0b5;&#xb2c8;&#xb2e4;.
-</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/closure">closure</a>()</td><td> &#xd074;&#xb85c;&#xc800;</td><td> <strong>[</strong>&#xbcc0;&#xc218; &#xc774;&#xb984;...,<strong>]</strong> &#xcf54;&#xb4dc;</td><td></td><td>
- &#xc8fc;&#xc5b4;&#xc9c4; &#xcf54;&#xb4dc;&#xac00; &#xb2f4;&#xaca8; &#xc788;&#xb294; &#xd074;&#xb85c;&#xc800;&#xb97c; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-&#xd074;&#xb85c;&#xc800;&#xb294; &#xcf54;&#xb4dc;&#xac00; &#xb2f4;&#xaca8; &#xc788;&#xb294; &#xb370;&#xc774;&#xd130; &#xd615;&#xc2dd;&#xc73c;&#xb85c;,
-&#xcf54;&#xb4dc;&#xc758; &#xbc18;&#xd658; &#xac12;&#xc744; &#xb2f4;&#xc740; &#xb370;&#xc774;&#xd130; &#xd615;&#xc2dd;&#xc774; &#xc544;&#xb2d9;&#xb2c8;&#xb2e4;.
-&#xb0b4;&#xbd80;&#xc5d0; &#xb2f4;&#xae34; &#xd074;&#xb85c;&#xc800;&#xb294; &#xbb38;&#xc790;&#xc5f4;&#xb85c;&#xb3c4; &#xc0ac;&#xc6a9;&#xd560; &#xc218; &#xc788;&#xc73c;&#xba70;,
-eval() &#xd391;&#xc158;&#xacfc; &#xac19;&#xc740; &#xd391;&#xc158;&#xc73c;&#xb85c; &#xc2e4;&#xd589;&#xd560; &#xc218;&#xb3c4; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;. &#xb9cc;&#xc57d; &#xd074;&#xb85c;&#xc800;&#xb97c;
-&#xbb38;&#xc790;&#xc5f4;&#xb85c; &#xbcc0;&#xd658;&#xc2dc;&#xd0a4;&#xba74; &#xc6d0;&#xb798; &#xc37c;&#xb358; &#xcf54;&#xb4dc;&#xc640; &#xb3d9;&#xc77c;&#xd558;&#xc9c0; &#xc54a;&#xc740; &#xcd9c;&#xb825;&#xac12;&#xc774;
-&#xbc18;&#xd658;&#xb420;&#xc218;&#xb3c4; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;. &#xb610;&#xd55c; &#xc774; &#xd074;&#xb85c;&#xc800;&#xb294; &#xba54;&#xbaa8;&#xb9ac;&#xc5d0;&#xb9cc; &#xc800;&#xc7a5;&#xb418;&#xba70;,
-&#xc601;&#xad6c;&#xc801;&#xc73c;&#xb85c; &#xc800;&#xc7a5;&#xd560; &#xc218; &#xc5c6;&#xc2b5;&#xb2c8;&#xb2e4;. &#xb610;&#xd55c; &#xd2b9;&#xbcc4;&#xd55c; &#xc778;&#xc218;&#xc778; @arguments &#xac00; &#xc790;&#xb3d9;&#xc73c;&#xb85c; &#xc0dd;&#xc131;&#xb418;&#xba70;,
-&#xd504;&#xb85c;&#xc2dc;&#xc800;&#xcc98;&#xb7fc; &#xd074;&#xb85c;&#xc800;&#xc5d0; &#xc785;&#xb825;&#xb41c; &#xbaa8;&#xb4e0; &#xc778;&#xc218;&#xc758; &#xbc30;&#xc5f4;&#xc744; &#xd3ec;&#xd568;&#xd558;&#xace0; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#xc790;&#xc138;&#xd55c; &#xc815;&#xbcf4;&#xb294; &#xcd08;&#xbcf4;&#xc790; &#xac00;&#xc774;&#xb4dc;&#xc758; &#xd074;&#xb85c;&#xc800;&#xb97c; &#xcc38;&#xace0;&#xd558;&#xc138;&#xc694;.
-<p></p></td><td> 3.3.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/continue">continue</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> <strong>[</strong>&#xc22b;&#xc790;<strong>]</strong></td><td> CastException</td><td>
- &#xc774; &#xbc18;&#xbcf5;&#xbb38;&#xc758; &#xb098;&#xba38;&#xc9c0; &#xcf54;&#xb4dc;&#xb97c; &#xac74;&#xb108;&#xb701;&#xb2c8;&#xb2e4;.
-&#xb9cc;&#xc57d; &#xc774; &#xd391;&#xc158;&#xc774; &#xbc18;&#xbcf5;&#xbb38; &#xbc16;&#xc5d0;&#xc11c; &#xc2e4;&#xd589;&#xb418;&#xba74;, &#xba85;&#xb839;&#xc774; &#xc2e4;&#xd328;&#xd569;&#xb2c8;&#xb2e4;.
-&#xb9cc;&#xc57d; &#xc815;&#xc218;&#xac00; &#xc8fc;&#xc5b4;&#xc9c0;&#xba74;, &#xadf8; &#xc815;&#xc218;&#xb9cc;&#xd07c; &#xbc18;&#xbcf5;&#xbb38;&#xc744; &#xac74;&#xb108;&#xb6f0;&#xace0;,
-&#xc815;&#xc218;&#xac00; &#xc8fc;&#xc5b4;&#xc9c0;&#xc9c0; &#xc54a;&#xc73c;&#xba74; &#xae30;&#xbcf8;&#xc801;&#xc73c;&#xb85c; 1&#xc774; &#xc0ac;&#xc6a9;&#xb429;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.1.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/double">double</a>()</td><td> double</td><td> &#xac12;</td><td> CastException</td><td>
- &#xc8fc;&#xc5b4;&#xc9c4; &#xac12;&#xc744; &#xc18c;&#xc218; &#xd615;&#xd0dc;&#xb85c; &#xbcc0;&#xd658;&#xd569;&#xb2c8;&#xb2e4;. &#xb9cc;&#xc57d; &#xc8fc;&#xc5b4;&#xc9c4; &#xac12;&#xc774;
-is_numeric &#xd391;&#xc158;&#xc774; &#xac70;&#xc9d3;&#xc744; &#xbc18;&#xd658;&#xd558;&#xb294; &#xb370;&#xc774;&#xd130; &#xd615;&#xc2dd;&#xc774;&#xb77c;&#xba74; CastException&#xc774;
-&#xbc1c;&#xc0dd;&#xd569;&#xb2c8;&#xb2e4;. &#xcc38;&#xc744; &#xbc18;&#xd658;&#xd558;&#xba74; &#xc815;&#xc0c1;&#xc801;&#xc73c;&#xb85c; &#xc2e4;&#xd589;&#xb429;&#xb2c8;&#xb2e4;.
-<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/dowhile">dowhile</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xcf54;&#xb4dc;, &#xc870;&#xac74;</td><td></td><td>
- while &#xbb38;&#xacfc; &#xbe44;&#xc2b7;&#xd569;&#xb2c8;&#xb2e4;. &#xd558;&#xc9c0;&#xb9cc; &#xcf54;&#xb4dc;&#xb294; &#xc801;&#xc5b4;&#xb3c4; &#xd55c;&#xbc88; &#xc2e4;&#xd589;&#xb418;&#xba70;,
-&#xb9e4; &#xcf54;&#xb4dc;&#xc758; &#xc2e4;&#xd589; &#xd6c4; &#xc870;&#xac74; &#xcf54;&#xb4dc;&#xb97c; &#xc2e4;&#xd589;&#xd569;&#xb2c8;&#xb2e4;. &#xb9cc;&#xc57d; &#xc870;&#xac74; &#xcf54;&#xb4dc;&#xac00; &#xac70;&#xc9d3;&#xc744; &#xbc18;&#xd658;&#xd588;&#xc744; &#xacbd;&#xc6b0;,
-&#xcf54;&#xb4dc; &#xc2e4;&#xd589;&#xc744; &#xc911;&#xc9c0;&#xd558;&#xba70;, &#xcc38;&#xc744; &#xbc18;&#xd658;&#xd558;&#xba74; &#xacc4;&#xc18d; &#xbc18;&#xbcf5;&#xd569;&#xb2c8;&#xb2e4;.
-&#xc77c;&#xbc18;&#xc801;&#xc73c;&#xb85c; &#xb300;&#xad04;&#xd638; &#xad6c;&#xbb38;&#xc744; &#xc0ac;&#xc6a9;&#xd558;&#xb294;&#xac8c; &#xc88b;&#xc2b5;&#xb2c8;&#xb2e4;:
-do { code(); } while(&#xc870;&#xac74;);
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/eval">eval</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xc2a4;&#xd06c;&#xb9bd;&#xd2b8; &#xbb38;&#xc790;&#xc5f4;</td><td> CastException</td><td> &#xc8fc;&#xc5b4;&#xc9c4; &#xbb38;&#xc790;&#xc5f4;&#xc744; &#xc2a4;&#xd06c;&#xb9bd;&#xd2b8;&#xb85c; &#xbcf4;&#xace0; &#xc2e4;&#xd589;&#xd569;&#xb2c8;&#xb2e4;.
-&#xc774; &#xd391;&#xc158;&#xc740; &#xc544;&#xc8fc; &#xbd88;&#xc548;&#xc815;&#xd558;&#xae30; &#xb54c;&#xbb38;&#xc5d0; &#xbc14;&#xb00c;&#xac70;&#xb098; &#xc0ac;&#xb77c;&#xc9c8; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.</td><td> 3.1.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/execute">execute</a>()</td><td> &#xb2e4;&#xc591;&#xd568;</td><td> <strong>[</strong>&#xac12;...,<strong>]</strong> &#xd074;&#xb85c;&#xc800;</td><td> CastException</td><td>
- &#xc8fc;&#xc5b4;&#xc9c4; &#xd074;&#xb85c;&#xc800;&#xb97c; &#xc2e4;&#xd589;&#xd569;&#xb2c8;&#xb2e4;. &#xb610;&#xd55c; &#xd074;&#xb85c;&#xc800;&#xc5d0; &#xc778;&#xc218;&#xb97c; &#xbcf4;&#xb0bc; &#xc218;&#xb3c4; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#xd074;&#xb85c;&#xc800;&#xc5d0; &#xb530;&#xb77c; &#xd574;&#xb2f9; &#xac12;&#xc744; &#xc0ac;&#xc6a9;&#xd560; &#xc218;&#xb3c4;, &#xc0ac;&#xc6a9;&#xd558;&#xc9c0; &#xc54a;&#xc744;&#xc218;&#xb3c4; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#xb9cc;&#xc57d; &#xd074;&#xb85c;&#xc800;&#xac00; return() &#xd391;&#xc158;&#xc744; &#xd1b5;&#xd574; &#xc5b4;&#xb5a0;&#xd55c; &#xac12;&#xc744; &#xbc18;&#xd658;&#xd558;&#xba74;, &#xc774; &#xd391;&#xc158;&#xc758; &#xbc18;&#xd658;&#xac12;&#xc774; &#xb429;&#xb2c8;&#xb2e4;.
-&#xbc18;&#xd658;&#xd558;&#xc9c0; &#xc54a;&#xc558;&#xb2e4;&#xba74;, &#xbe48; &#xac12;&#xc774; &#xbc18;&#xd658;&#xb429;&#xb2c8;&#xb2e4;.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/export">export</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xd0a4;, &#xac12;</td><td> IllegalArgumentException<br>IndexOverflowException</td><td>
- &#xc804;&#xc5ed; &#xc2a4;&#xd1a0;&#xb9ac;&#xc9c0; &#xb808;&#xc9c0;&#xc2a4;&#xd130;&#xc5d0; &#xac12;&#xc744; &#xb4f1;&#xb85d;&#xd569;&#xb2c8;&#xb2e4;.
-&#xac12;&#xc740; &#xc8fc;&#xc5b4;&#xc9c4; &#xd0a4;&#xc640; &#xb4f1;&#xb85d;&#xb418;&#xba70;, import &#xb97c; &#xd1b5;&#xd574; &#xac00;&#xc838;&#xc62c; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#xb9cc;&#xc57d; &#xac12;&#xc774; &#xc774;&#xbbf8; &#xb4f1;&#xb85d;&#xb418;&#xc5b4; &#xc788;&#xb2e4;&#xba74;, &#xb36e;&#xc5b4;&#xc50c;&#xc6cc;&#xc9d1;&#xb2c8;&#xb2e4;.
-&#xc5ec;&#xae30;&#xc5d0; &#xb4f1;&#xb85d;&#xd558;&#xb294; &#xac12;&#xc740; &#xd574;&#xb2f9; &#xac12;&#xc758; &#xc6d0;&#xbcf8;&#xc73c;&#xb85c;, &#xbcf5;&#xc0ac;&#xbcf8;&#xc774; &#xc544;&#xb2d9;&#xb2c8;&#xb2e4;.
-&#xbc30;&#xc5f4;&#xc758; &#xacbd;&#xc6b0;, &#xb4f1;&#xb85d;&#xd55c; &#xbc30;&#xc5f4;&#xc774; &#xb098;&#xc911;&#xc5d0; &#xbcc0;&#xacbd;&#xb418;&#xba74; &#xc800;&#xc7a5;&#xc18c;&#xc5d0; &#xb4f1;&#xb85d;&#xb41c;
-&#xbc30;&#xc5f4;&#xb3c4; &#xbcc0;&#xacbd;&#xb429;&#xb2c8;&#xb2e4;. export() &#xb294; threadsafe &#xc785;&#xb2c8;&#xb2e4;.
+</p><table><tbody><tr><th scope="col" width="6%">&#xd391;&#xc158; &#xc774;&#xb984;</th><th scope="col" width="5%">&#xbc18;&#xd658;</th><th scope="col" width="10%">&#xc778;&#xc218;</th><th scope="col" width="10%">&#xc608;&#xc678;</th><th scope="col" width="61%">&#xc124;&#xba85;</th><th scope="col" width="3%">&#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;</th><th scope="col" width="5%">&#xc81c;&#xd55c;&#xb428;</th></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/array">array</a>()</td><td> &#xbc30;&#xc5f4;</td><td> <strong>[</strong>var1, [var2...<strong>]</strong>]</td><td></td><td> Creates an array of values.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/array#Examples">Examples...</a>)
+<p></p></td><td> 3.0.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/assign">assign</a>()</td><td> ivariable</td><td> <strong>[</strong>type<strong>]</strong>, ivar, mixed</td><td> CastException</td><td>
+ Accepts an ivariable ivar as a parameter, and puts the specified value 
+mixed in it. Returns the variable that was assigned. Operator syntax is 
+also supported: &lt;code>@a = 5;&lt;/code>. Other forms are 
+supported as well, +=, -=, *=, /=, .=, which do multiple operations at 
+once. Array assigns are also supported: @array[5] = &#39;new value in index 
+5&#39;;<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/assign#Examples">Examples...</a>)
+<p></p></td><td> 3.0.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/associative_array">associative_array</a>()</td><td> &#xbc30;&#xc5f4;</td><td> <strong>[</strong>args...<strong>]</strong></td><td></td><td>
+ Works exactly like array(), except the array created will be an 
+associative array, even if the array has been created with no elements. 
+This is the only use case where this is neccessary, vs using the normal 
+array() function, or in the case where you assign sequential keys 
+anyways, and the same array could have been created using array().<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/associative_array#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/boolean">boolean</a>()</td><td> boolean</td><td> item</td><td></td><td>
+ Returns a new construct that has been cast to a boolean. The item is 
+cast according to the boolean conversion rules. Since all data types can
+ be cast to a a boolean, this function will never throw an exception.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/boolean#Examples">Examples...</a>)
+<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/break">break</a>()</td><td> &#xc5c6;&#xc74c;</td><td> <strong>[</strong>int<strong>]</strong></td><td> CastException</td><td>
+ Stops the current loop. If int is specified, and is greater than 1, the
+ break travels that many loops up. So, if you had a loop embedded in a 
+loop, and you wanted to break in both loops, you would call break(2). If
+ this function is called outside a loop (or the number specified would 
+cause the break to travel up further than any loops are defined), the 
+function will fail. If no argument is specified, it is the same as 
+calling break(1). This function has special compilation rules. The break
+ number must not be dynamic, or a compile error will occur. An integer 
+must be hard coded into the function.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/break#Examples">Examples...</a>)
+<p></p></td><td> 3.1.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/call_proc">call_proc</a>()</td><td> &#xb2e4;&#xc591;&#xd568;</td><td> proc_name, <strong>[</strong>var1...<strong>]</strong></td><td> InvalidProcedureException</td><td>
+ Dynamically calls a user defined procedure. call_proc(_myProc, &#39;var1&#39;) 
+is the equivalent of _myProc(&#39;var1&#39;), except you could dynamically build
+ the procedure name if need be. This is useful for dynamic coding, 
+however, closures work best for callbacks. Throws an 
+InvalidProcedureException if the procedure isn&#39;t defined. If you are 
+hardcoding the first parameter, a warning will be issued, because it is 
+much more efficient and safe to directly use a procedure if you know 
+what its name is beforehand.</td><td> 3.2.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/call_proc_array">call_proc_array</a>()</td><td> &#xb2e4;&#xc591;&#xd568;</td><td> proc_name, array</td><td> InvalidProcedureException<br>CastException</td><td>
+ Works like call_proc, but allows for variable or unknown number of 
+arguments to be passed to a proc. The array parameter is &quot;flattened&quot;, 
+and call_proc is essentially called. If the array is associative, an 
+exception is thrown.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/closure">closure</a>()</td><td> closure</td><td> <strong>[</strong>varNames...,<strong>]</strong> code</td><td></td><td>
+ Returns a closure on the provided code. A closure is a datatype that 
+represents some code as code, not the results of some code after it is 
+run. Code placed in a closure can be used as a string, or executed by 
+other functions using the eval() function. If a closure is &quot;to string&#39;d&quot;
+ it will not necessarily look like the original code, but will be 
+functionally equivalent. The current environment is &quot;snapshotted&quot; and 
+stored with the closure, however, this information is only stored in 
+memory, it isn&#39;t retained during a serialization operation. Also, the 
+special variable @arguments is automatically created for you, and 
+contains an array of all the arguments passed to the closure, much like 
+procedures. See the wiki article on <a href="https://methodscript.com/docs/3.3.2/CommandHelper/Staged/Closures">closures</a> for more details and examples.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/closure#Examples">Examples...</a>)
+<p></p></td><td> 3.3.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/continue">continue</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> <strong>[</strong>int<strong>]</strong></td><td> CastException</td><td>
+ Skips the rest of the code in this loop, and starts the loop over, with
+ it continuing at the next index. If this function is called outside of a
+ loop, the command will fail. If int is set, it will skip &#39;int&#39; 
+repetitions. If no argument is specified, 1 is used.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/continue#Examples">Examples...</a>)
+<p></p></td><td> 3.1.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/double">double</a>()</td><td> double</td><td> item</td><td> CastException</td><td>
+ Returns a new construct that has been cast to an double. This function 
+will throw a CastException if is_numeric would return false for this 
+item, but otherwise, it will be cast properly.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/double#Examples">Examples...</a>)
+<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/dowhile">dowhile</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> code, condition</td><td></td><td>
+ Like while, but always runs the code at least once. The condition is 
+checked after each run of the code, and if it is true, the code is run 
+again. break and continue work inside a dowhile, but continuing more 
+than once is pointless, since the loop isn&#39;t inherently keeping track of
+ any counters anyways. Breaking multiple times still works however. In 
+general, using brace syntax is preferred: do { code(); } 
+while(@condition); instead of using dowhile() directly.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/dowhile#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/eval">eval</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> script_string</td><td> CastException</td><td> Executes arbitrary MethodScript. Note that this function is very experimental, and is subject to changing or removal.</td><td> 3.1.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/execute">execute</a>()</td><td> &#xb2e4;&#xc591;&#xd568;</td><td> <strong>[</strong>values...,<strong>]</strong> closure</td><td> CastException</td><td>
+ Executes the given closure. You can also send arguments to the closure,
+ which it may or may not use, depending on the particular closure&#39;s 
+definition. If the closure returns a value with return(), then that 
+value will be returned with execute. Otherwise, void is returned.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/export">export</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> key, value</td><td> IllegalArgumentException<br>IndexOverflowException</td><td>
+ Stores a value in the global storage register. An arbitrary value is 
+stored with the given key, and can be retreived using import. If the 
+value is already stored, it is overwritten. See <a href="https://methodscript.com/docs/3.3.2/API/functions/import"><span class="function_tooltip tt_cursor tooltipstered" data-tooltip-content="#function_tooltip_content">import</span></a>.
+ The reference to the value is stored, not a copy of the value, so in 
+the case of arrays, manipulating the contents of the array will 
+manipulate the stored value. An array may be used as a key. It is 
+converted into a string with the array values separated by dots. 
+export() is threadsafe.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/export#Examples">Examples...</a>)
 <p></p></td><td> 3.3.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/for">for</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> assign, condition, expression1, expression2</td><td> CastException</td><td>
  Acts as a typical for loop. The assignment is first run. Then, a 
 condition is checked. If that condition is checked and returns true, 
@@ -734,7 +765,7 @@ first time, it is determined that it is false (that is, NO code loops
 are going to be run) the else code is run instead. If the loop runs, 
 even once, it will NOT run the else branch. In general, brace syntax and
  use of for(){ } else { } syntax is preferred, instead of using forelse 
-directly.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/g">g</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> func1, <strong>[</strong>func2...<strong>]</strong></td><td></td><td> Groups any number of functions together, and returns void.</td><td> 3.0.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/iclosure">iclosure</a>()</td><td> iclosure</td><td> <strong>[</strong>&#xbcc0;&#xc218; &#xc774;&#xb984;...,<strong>]</strong> &#xcf54;&#xb4dc;</td><td></td><td>
+directly.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/g">g</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> func1, <strong>[</strong>func2...<strong>]</strong></td><td></td><td> Groups any number of functions together, and returns void.</td><td> 3.0.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/iclosure">iclosure</a>()</td><td> iclosure</td><td> <strong>[</strong>varNames...,<strong>]</strong> code</td><td></td><td>
  Returns a scope isolated closure on the provided code. An iclosure is a
  datatype that represents some code as code, not the results of some 
 code after it is run. Code placed in an iclosure can be used as a 
@@ -761,52 +792,52 @@ Keyword usage is preferred: &lt;code>@value instanceof
 int&lt;/code>. The opposite operation is &lt;code>@value 
 notinstanceof int&lt;/code>. <a href="https://methodscript.com/docs/3.3.2/functions/instanceof">See more...</a><br>
 <br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/instanceof#Examples">Examples...</a>)
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/integer">integer</a>()</td><td> integer</td><td> &#xac12;</td><td> CastException</td><td>
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/integer">integer</a>()</td><td> integer</td><td> item</td><td> CastException</td><td>
  Returns a new construct that has been cast to an integer. This function
  will throw a CastException if is_numeric would return false for this 
 item, but otherwise, it will be cast properly. Data may be lost in this 
 conversion. For instance, 4.5 will be converted to 4, by using integer 
 truncation. You can use is_integral to see if this data loss would 
 occur.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/integer#Examples">Examples...</a>)
-<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_array">is_array</a>()</td><td> boolean</td><td> &#xac12;</td><td></td><td> Returns whether or not the item is an array<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_array#Examples">Examples...</a>)
+<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_array">is_array</a>()</td><td> boolean</td><td> item</td><td></td><td> Returns whether or not the item is an array<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_array#Examples">Examples...</a>)
 <p></p></td><td> 3.1.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_associative">is_associative</a>()</td><td> boolean</td><td> &#xbc30;&#xc5f4;</td><td> CastException</td><td> Returns whether or not the array is associative. If the parameter is not an array, throws a CastException.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_associative#Examples">Examples...</a>)
-<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_boolean">is_boolean</a>()</td><td> boolean</td><td> &#xac12;</td><td></td><td>
+<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_boolean">is_boolean</a>()</td><td> boolean</td><td> item</td><td></td><td>
  Returns whether the given item is of the boolean datatype. Note that 
 all datatypes can be used as booleans, however this function checks the 
 specific datatype of the given item.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_boolean#Examples">Examples...</a>)
-<p></p></td><td> 3.1.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_bytearray">is_bytearray</a>()</td><td> boolean</td><td> &#xac12;</td><td></td><td> Returns whether or not the item is actually a ByteArray datatype.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_bytearray#Examples">Examples...</a>)
+<p></p></td><td> 3.1.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_bytearray">is_bytearray</a>()</td><td> boolean</td><td> item</td><td></td><td> Returns whether or not the item is actually a ByteArray datatype.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_bytearray#Examples">Examples...</a>)
 <p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_closure">is_closure</a>()</td><td> boolean</td><td> arg</td><td></td><td> Returns true if the argument is a closure (could be executed) or false otherwise<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_closure#Examples">Examples...</a>)
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_double">is_double</a>()</td><td> boolean</td><td> &#xac12;</td><td></td><td>
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_double">is_double</a>()</td><td> boolean</td><td> item</td><td></td><td>
  Returns whether or not the given item is a double. Note that numeric 
 strings and integers can usually be used as a double, however this 
 function checks the actual datatype of the item. If you just want to see
  if an item can be used as a number, use is_numeric() instead.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_double#Examples">Examples...</a>)
-<p></p></td><td> 3.1.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_integer">is_integer</a>()</td><td> boolean</td><td> &#xac12;</td><td></td><td>
+<p></p></td><td> 3.1.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_integer">is_integer</a>()</td><td> boolean</td><td> item</td><td></td><td>
  Returns whether or not the given item is an integer. Note that numeric 
 strings can usually be used as integers, however this function checks 
 the actual datatype of the item. If you just want to see if an item can 
 be used as a number, use is_integral() or is_numeric() instead.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_integer#Examples">Examples...</a>)
-<p></p></td><td> 3.1.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_integral">is_integral</a>()</td><td> boolean</td><td> &#xac12;</td><td> CastException</td><td>
+<p></p></td><td> 3.1.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_integral">is_integral</a>()</td><td> boolean</td><td> item</td><td> CastException</td><td>
  Returns true if the numeric value represented by  a given double or 
 numeric string could be cast to an integer without losing data (or if 
 it&#39;s an integer). For instance, is_numeric(4.5) would return true, and 
 integer(4.5) would work, however, equals(4.5, integer(4.5)) returns 
 false, because the value was narrowed to 4.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_integral#Examples">Examples...</a>)
-<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_null">is_null</a>()</td><td> boolean</td><td> &#xac12;</td><td></td><td> Returns whether or not the given item is null.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_null#Examples">Examples...</a>)
-<p></p></td><td> 3.1.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_number">is_number</a>()</td><td> boolean</td><td> &#xac12;</td><td></td><td>
+<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_null">is_null</a>()</td><td> boolean</td><td> item</td><td></td><td> Returns whether or not the given item is null.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_null#Examples">Examples...</a>)
+<p></p></td><td> 3.1.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_number">is_number</a>()</td><td> boolean</td><td> item</td><td></td><td>
  Returns whether or not the given item is an integer or a double. Note 
 that numeric strings can usually be used as integers and doubles, 
 however this function checks the actual datatype of the item. If you 
 just want to see if an item can be used as a number, use is_integral() 
 or is_numeric() instead.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_number#Examples">Examples...</a>)
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_numeric">is_numeric</a>()</td><td> boolean</td><td> &#xac12;</td><td></td><td>
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_numeric">is_numeric</a>()</td><td> boolean</td><td> item</td><td></td><td>
  Returns false if the item would fail if it were used as a numeric 
 value. If it can be parsed or otherwise converted into a numeric value, 
 true is returned.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_numeric#Examples">Examples...</a>)
-<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_proc">is_proc</a>()</td><td> boolean</td><td> procName</td><td></td><td> Returns whether or not the given procName is currently defined, i.e. if calling this proc wouldn&#39;t throw an exception.</td><td> 3.2.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_string">is_string</a>()</td><td> boolean</td><td> &#xac12;</td><td></td><td>
+<p></p></td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_proc">is_proc</a>()</td><td> boolean</td><td> procName</td><td></td><td> Returns whether or not the given procName is currently defined, i.e. if calling this proc wouldn&#39;t throw an exception.</td><td> 3.2.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_string">is_string</a>()</td><td> boolean</td><td> item</td><td></td><td>
  Returns whether or not the item is actually a string datatype. If you 
 just care if some data can be used as a string, use is_stringable().<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_string#Examples">Examples...</a>)
-<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_stringable">is_stringable</a>()</td><td> boolean</td><td> &#xac12;</td><td></td><td> Returns whether or not the item is convertable to a string. Everything but arrays can be used as strings.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_stringable#Examples">Examples...</a>)
+<p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_stringable">is_stringable</a>()</td><td> boolean</td><td> item</td><td></td><td> Returns whether or not the item is convertable to a string. Everything but arrays can be used as strings.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/is_stringable#Examples">Examples...</a>)
 <p></p></td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/mutable_primitive">mutable_primitive</a>()</td><td> mutable_primitive</td><td> <strong>[</strong>primitive_value<strong>]</strong></td><td> FormatException</td><td>
  Creates a mutable primitive object, initially setting the value of the 
 object to null, or the specified value. The value must be a primitive 
@@ -817,7 +848,7 @@ value, and cannot be an array or object. <a href="https://methodscript.com/docs/
  Creates a new user defined procedure (also known as &quot;function&quot;) that 
 can be called later in code. Please see the more detailed documentation 
 on procedures for more information. In general, brace syntax and keyword
- usage is preferred: proc _myProc(@a, @b){ procCode(@a, @b); }</td><td> 3.1.3</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/rclosure">rclosure</a>()</td><td> &#xd074;&#xb85c;&#xc800;</td><td> <strong>[</strong>varNames...<strong>]</strong>, code</td><td></td><td>
+ usage is preferred: proc _myProc(@a, @b){ procCode(@a, @b); }</td><td> 3.1.3</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/rclosure">rclosure</a>()</td><td> closure</td><td> <strong>[</strong>varNames...<strong>]</strong>, code</td><td></td><td>
  Returns a non-linking closure on the provided code. The same rules 
 apply for closures, except the top level internal code does not check 
 for proper linking at compile time, and instead links at runtime. Lexer 
@@ -825,7 +856,7 @@ errors and some other compile time checks ARE done however, but
 functions are not optimized or linked. This is used for remote code 
 execution, since the remote platform may have some functionality 
 unavailable on this current platform.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/rclosure#Examples">Examples...</a>)
-<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/return">return</a>()</td><td> &#xc5c6;&#xc74c;</td><td> &#xb2e4;&#xc591;&#xd568;</td><td></td><td> Returns the specified value from this procedure. It cannot be called outside a procedure.</td><td> 3.2.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/string">string</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xac12;</td><td></td><td>
+<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/return">return</a>()</td><td> &#xc5c6;&#xc74c;</td><td> &#xb2e4;&#xc591;&#xd568;</td><td></td><td> Returns the specified value from this procedure. It cannot be called outside a procedure.</td><td> 3.2.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/string">string</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> item</td><td></td><td>
  Creates a new construct that is the &quot;toString&quot; of an item. For arrays, 
 an human readable version is returned; this should not be used directly,
  as the format is not guaranteed to remain consistent. Booleans return 
@@ -849,17 +880,23 @@ Breaking multiple times still works however.<br>(<a href="https://methodscript.c
 </td></tr><tr></tr></tbody></table>
 <p><a href="#TOC">&#xb9e8; &#xc704;&#xb85c; &#xc774;&#xb3d9;</a></p>
 <h2 id="DataTransformations">&#xb370;&#xc774;&#xd130; &#xbcc0;&#xd658;</h2>
-<div>&#xc774; &#xbd84;&#xb958;&#xb294; &#xc790;&#xccb4; &#xac1d;&#xccb4;&#xc5d0;&#xc11c; &#xb370;&#xc774;&#xd130;&#xb97c; &#xc9c1;&#xb82c;&#xd654;&#xb41c; &#xd615;&#xd0dc;(json, ini &#xb4f1;)&#xb85c; &#xbcc0;&#xd658;&#xd560; &#xc218; &#xc788;&#xb294; &#xd391;&#xc158;&#xc744; &#xd3ec;&#xd568;&#xd569;&#xb2c8;&#xb2e4;.</div>
+<div>This class provides functions that are able to transform data from 
+native objects to their serialized forms, i.e. json, ini, etc.</div>
 <p>
 </p><table><tbody><tr><th scope="col" width="6%">&#xd391;&#xc158; &#xc774;&#xb984;</th><th scope="col" width="5%">&#xbc18;&#xd658;</th><th scope="col" width="10%">&#xc778;&#xc218;</th><th scope="col" width="10%">&#xc608;&#xc678;</th><th scope="col" width="61%">&#xc124;&#xba85;</th><th scope="col" width="3%">&#xcd94;&#xac00;&#xb41c; &#xbc84;&#xc804;</th><th scope="col" width="5%">&#xc81c;&#xd55c;&#xb428;</th></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ini_decode">ini_decode</a>()</td><td> &#xbc30;&#xc5f4;</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> FormatException</td><td>
- INI &#xd3ec;&#xb9f7; &#xc785;&#xb825;&#xc744; &#xbc30;&#xc5f4;&#xc73c;&#xb85c; &#xbcc0;&#xd658;&#xd55c; &#xac12;&#xc744; &#xbc18;&#xd658;&#xd569;&#xb2c8;&#xb2e4;.
-INI &#xd30c;&#xc77c;&#xc740; &#xd0a4;&#xc640; &#xac12;&#xc73c;&#xb85c; &#xc774;&#xb8e8;&#xc5b4;&#xc838; &#xc788;&#xc73c;&#xba70;,
-&#xd0a4;&#xac00; &#xc788;&#xb294; &#xbc30;&#xc5f4;&#xc758; &#xd615;&#xd0dc;&#xb85c; &#xbcc0;&#xd658;&#xb429;&#xb2c8;&#xb2e4;. &#xd0a4;&#xc640; &#xac12;&#xc740;
-&lt;code>key=value&lt;/code> &#xd615;&#xd0dc;&#xb85c; &#xb418;&#xc5b4; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;.
-&#xbc18;&#xd658;&#xb41c; &#xd0a4;&#xac00; &#xc788;&#xb294; &#xbc30;&#xc5f4;&#xc758; &#xac12;&#xc740; &#xbaa8;&#xb450; &#xbb38;&#xc790;&#xc5f4;&#xc774;&#xba70;,
-integer, float &#xd391;&#xc158; &#xb4f1;&#xc744; &#xd1b5;&#xd574; &#xc22b;&#xc790;&#xcc98;&#xb7fc; &#xb418;&#xc5b4; &#xc788;&#xb294; &#xbb38;&#xc790;&#xc5f4;&#xc744;
-&#xbcc0;&#xd658;&#xd560; &#xc218; &#xc788;&#xc2b5;&#xb2c8;&#xb2e4;. &#xb9cc;&#xc57d; &#xbb38;&#xc790;&#xc5f4;&#xc774; &#xc544;&#xb2cc; &#xd615;&#xc2dd;&#xc758; &#xb370;&#xc774;&#xd130;&#xb3c4;
-&#xadf8;&#xb300;&#xb85c; &#xbcf4;&#xc874;&#xd558;&#xace0; &#xc2f6;&#xb2e4;&#xba74; <a href="https://methodscript.com/docs/3.3.2/API/functions/json_encode"><span class="function_tooltip tt_cursor tooltipstered" data-tooltip-content="#function_tooltip_content">json_encode</span></a>/<a href="https://methodscript.com/docs/3.3.2/API/functions/json_decode"><span class="function_tooltip tt_cursor tooltipstered" data-tooltip-content="#function_tooltip_content">json_decode</span></a> &#xb97c; &#xc0ac;&#xc6a9;&#xd558;&#xc138;&#xc694;.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ini_encode">ini_encode</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> array, <strong>[</strong>comment<strong>]</strong></td><td> FormatException<br>CastException</td><td>
+ Returns an array, given an INI format input. INI files are loosely 
+defined as a set of key->value pairs, which lends itself to an 
+associative array format. Key value pairs are denoted usually by a 
+&lt;code>key=value&lt;/code> format. The specific rules for 
+decoding an INI file can be found &lt;a href=&quot;http://docs.oracle.com/javase/6/docs/api/java/util/Properties.html#load%28java.io.Reader%29&quot; style=&quot;background: url(&quot; data:image=&quot;&quot; png;base64,ivborw0kggoaaaansuheugaaaaoaaaakcayaaacnms+9aaaagxrfwhrtb2z0d2fyzqbbzg9izsbjbwfnzvjlywr5ccllpaaaafzjrefuef59z4ejadeiq1f36k7u5e7zkxeuqpacj3wk7unokvxvk9khnqh7by9hbdydhnxgjprlqflo4m2ggfyjhhjq8v4agfrgpqx3jtjqgbofmchga=&quot;&quot; nakks+jajfaaaaaelftksuqmcc&quot;)=&quot;&quot; no-repeat=&quot;&quot; scroll=&quot;&quot; right=&quot;&quot; center=&quot;&quot; transparent;padding-right:=&quot;&quot; 13px;&quot;=&quot;&quot;>here</a>.
+ An associative array is returned. All values are stored as strings, so 
+if 1 was stored, it will be returned as a string &#39;1&#39;. This is a 
+limitation of the ini format, as it is expected that the code that reads
+ the ini knows what the type of the data is anticipated, not the data 
+itself. You can easily cast data that is expected to be numeric via the <a href="https://methodscript.com/docs/3.3.2/API/functions/integer"><span class="function_tooltip tt_cursor tooltipstered" data-tooltip-content="#function_tooltip_content">integer</span></a>
+ and float functions when reading in the data if exact types are truly 
+needed. INI doesn&#39;t easily support non-string values, if that is needed,
+ consider using <a href="https://methodscript.com/docs/3.3.2/API/functions/json_encode"><span class="function_tooltip tt_cursor tooltipstered" data-tooltip-content="#function_tooltip_content">json_encode</span></a>/<a href="https://methodscript.com/docs/3.3.2/API/functions/json_decode"><span class="function_tooltip tt_cursor tooltipstered" data-tooltip-content="#function_tooltip_content">json_decode</span></a> instead.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/ini_encode">ini_encode</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> array, <strong>[</strong>comment<strong>]</strong></td><td> FormatException<br>CastException</td><td>
  Encodes an array into an INI format output. An associative array is 
 expected, and a format exception is thrown if it is a normal array. The 
 comment is optional, but if provided will be added to the header of the 
@@ -958,7 +995,7 @@ currently selected slot is used. If the enchantment cannot be applied to
  specified is not valid, a RangeException is thrown. If type is an 
 array, level must also be an array, with equal number of values in it, 
 with each int corresponding to the appropriate type. You may use either 
-the bukkit names for enchantments, or the name shown on the wiki, and level may be a roman numeral as well.</td><td> 3.3.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/enchant_rm_inv">enchant_rm_inv</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> <strong>[</strong>player<strong>]</strong>, slot, type</td><td> CastException<br>EnchantmentException<br>PlayerOfflineException</td><td>
+the bukkit names for enchantments, or the name shown on the wiki: &lt;a href=&quot;http://www.minecraftwiki.net/wiki/Enchanting#Enchantment_Types&quot; style=&quot;background: url(&quot; data:image=&quot;&quot; png;base64,ivborw0kggoaaaansuheugaaaaoaaaakcayaaacnms+9aaaagxrfwhrtb2z0d2fyzqbbzg9izsbjbwfnzvjlywr5ccllpaaaafzjrefuef59z4ejadeiq1f36k7u5e7zkxeuqpacj3wk7unokvxvk9khnqh7by9hbdydhnxgjprlqflo4m2ggfyjhhjq8v4agfrgpqx3jtjqgbofmchga=&quot;&quot; nakks+jajfaaaaaelftksuqmcc&quot;)=&quot;&quot; no-repeat=&quot;&quot; scroll=&quot;&quot; right=&quot;&quot; center=&quot;&quot; transparent;padding-right:=&quot;&quot; 13px;&quot;=&quot;&quot;>http://www.minecraftwiki.net/wiki/Enchanting#Enchantment_Types</a>, and level may be a roman numeral as well.</td><td> 3.3.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/enchant_rm_inv">enchant_rm_inv</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> <strong>[</strong>player<strong>]</strong>, slot, type</td><td> CastException<br>EnchantmentException<br>PlayerOfflineException</td><td>
  Removes an enchantment from an item. type may be a valid enchantment, 
 or an array of enchantment names. It can also be null, and all 
 enchantments will be removed. If an enchantment is specified, and the 
@@ -970,7 +1007,7 @@ however, the list returned here is &quot;comprehensive&quot; and &quot;official&
 Additionally, this may vary from server type to server type.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_enchant_inv">get_enchant_inv</a>()</td><td> &#xbc30;&#xc5f4;</td><td> <strong>[</strong>player<strong>]</strong>, slot</td><td> PlayerOfflineException<br>CastException</td><td>
  Returns an array of arrays of the enchantments and their levels on the 
 given item. For example: array(array(DAMAGE_ALL, DAMAGE_UNDEAD), 
-array(1, 2))</td><td> 3.3.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_enchant_max">get_enchant_max</a>()</td><td> &#xc815;&#xc218;</td><td> name</td><td> EnchantmentException</td><td> Given an enchantment name, returns the max level it can be. If name is not a valid enchantment, an EnchantException is thrown.</td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_enchants">get_enchants</a>()</td><td> &#xbc30;&#xc5f4;</td><td> &#xac12;</td><td> FormatException<br>CastException<br>RangeException<br>NotFoundException</td><td> Given an item array or id, returns the enchantments that can be validly added to this item. This may return an empty array.</td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_enchantment">is_enchantment</a>()</td><td> boolean</td><td> name</td><td></td><td> Returns true if this name is a valid enchantment type. Note that either the bukkit names or the wiki names are valid.</td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span>
+array(1, 2))</td><td> 3.3.0</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_enchant_max">get_enchant_max</a>()</td><td> &#xc815;&#xc218;</td><td> name</td><td> EnchantmentException</td><td> Given an enchantment name, returns the max level it can be. If name is not a valid enchantment, an EnchantException is thrown.</td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/get_enchants">get_enchants</a>()</td><td> &#xbc30;&#xc5f4;</td><td> item</td><td> FormatException<br>CastException<br>RangeException<br>NotFoundException</td><td> Given an item array or id, returns the enchantments that can be validly added to this item. This may return an empty array.</td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/is_enchantment">is_enchantment</a>()</td><td> boolean</td><td> name</td><td></td><td> Returns true if this name is a valid enchantment type. Note that either the bukkit names or the wiki names are valid.</td><td> 3.3.0</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span>
 </td></tr><tr></tr></tbody></table>
 <p><a href="#TOC">&#xb9e8; &#xc704;&#xb85c; &#xc774;&#xb3d9;</a></p>
 <h2 id="EntityManagement">&#xc5d4;&#xb514;&#xd2f0; &#xad00;&#xb9ac;</h2>
@@ -1224,7 +1261,7 @@ current event id.</td><td> 3.3.0</td><td> <span class="api_yes">&#xc608;</span>
  Returns an array of stack trace elements. This is the same stack trace 
 that would be generated if one were to throw an exception, then catch 
 it.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/get_stack_trace#Examples">Examples...</a>)
-<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/set_uncaught_exception_handler">set_uncaught_exception_handler</a>()</td><td> &#xd074;&#xb85c;&#xc800;</td><td> closure(@ex)</td><td> CastException</td><td>
+<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/set_uncaught_exception_handler">set_uncaught_exception_handler</a>()</td><td> closure</td><td> closure(@ex)</td><td> CastException</td><td>
  Sets the uncaught exception handler, returning the currently set one, 
 or null if none has been set yet. If code throws an exception, instead 
 of doing the default (displaying the error to the user/console) it will 
@@ -1318,12 +1355,12 @@ CommandHelper. If the file is not found, or otherwise can&#39;t be read in,
 an IOException is thrown. If the file specified is not within base-dir 
 (as specified in the preferences file), a SecurityException is thrown. 
 The line endings for the string returned will always be \n, even if they
- originally were \r\n.</td><td> 3.0.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/read_binary">read_binary</a>()</td><td> &#xbc14;&#xc774;&#xd2b8;_&#xbc30;&#xc5f4;</td><td> file</td><td> IOException</td><td>
+ originally were \r\n.</td><td> 3.0.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/read_binary">read_binary</a>()</td><td> byte_array</td><td> file</td><td> IOException</td><td>
  Reads in a file, and returns a byte_array for it. The file is returned 
 exactly as is on disk, no conversions are done. base-dir restrictions 
 are enforced for the path, the same as read(). If file is relative, it 
 is assumed to be relative to this file. This is useful for managing 
-binary files.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/read_gzip_binary">read_gzip_binary</a>()</td><td> &#xbc14;&#xc774;&#xd2b8;_&#xbc30;&#xc5f4;</td><td> file</td><td> IOException</td><td>
+binary files.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/read_gzip_binary">read_gzip_binary</a>()</td><td> byte_array</td><td> file</td><td> IOException</td><td>
  Reads in a gzipped file, and returns a byte_array for it. The file is 
 returned exactly as is on disk, no conversions are done. base-dir 
 restrictions are enforced for the path, the same as read(). If file is 
@@ -2413,7 +2450,7 @@ uses a basic argument parser that supports quotes for allowing arguments
  with spaces.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/parse_args#Examples">Examples...</a>)
 <p></p></td><td> 3.0.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/replace">replace</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> subject, search, replacement</td><td></td><td> Replaces all instances of &#39;search&#39; with &#39;replacement&#39; in &#39;subject&#39;<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/replace#Examples">Examples...</a>)
 <p></p></td><td> 3.0.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/sconcat">sconcat</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> &#xac12;1, <strong>[</strong>&#xac12;2...<strong>]</strong></td><td></td><td> Concatenates any number of arguments together, but puts a space between elements<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/sconcat#Examples">Examples...</a>)
-<p></p></td><td> 3.0.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/secure_string">secure_string</a>()</td><td> &#xc554;&#xd638;&#xd654;&#xb41c; &#xbb38;&#xc790;&#xc5f4;</td><td> charArray<hr>&#xbb38;&#xc790;&#xc5f4;</td><td> FormatException</td><td> &#x00a0;Constructs a secure_string from a given char array or string. <a href="https://methodscript.com/docs/3.3.2/functions/secure_string">See more...</a><br>
+<p></p></td><td> 3.0.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/secure_string">secure_string</a>()</td><td> secure_string</td><td> charArray<hr>&#xbb38;&#xc790;&#xc5f4;</td><td> FormatException</td><td> &#x00a0;Constructs a secure_string from a given char array or string. <a href="https://methodscript.com/docs/3.3.2/functions/secure_string">See more...</a><br>
 <br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/secure_string#Examples">Examples...</a>)
 <p></p></td><td> 3.3.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/split">split</a>()</td><td> &#xbc30;&#xc5f4;</td><td> split, string, <strong>[</strong>limit<strong>]</strong></td><td> CastException</td><td>
  Splits a string into parts, using the split as the index. Though it can
@@ -2440,7 +2477,7 @@ building a string in a loop. The underlying resource may be converted to
 <p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/string_ends_with">string_ends_with</a>()</td><td> boolean</td><td> teststring, keyword</td><td> NullPointerException</td><td> Determines if the provided teststring ends with the provided keyword.</td><td> 3.3.2</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/string_from_bytes">string_from_bytes</a>()</td><td> &#xbb38;&#xc790;&#xc5f4;</td><td> byte_array, <strong>[</strong>encoding<strong>]</strong></td><td> CastException<br>FormatException</td><td>
  Returns a new string, given the byte array encoding provided. The 
 encoding defaults to UTF-8, but may be specified. A FormatException is 
-thrown if the encoding type is invalid.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/string_get_bytes">string_get_bytes</a>()</td><td> &#xbc14;&#xc774;&#xd2b8;_&#xbc30;&#xc5f4;</td><td> string, <strong>[</strong>encoding<strong>]</strong></td><td> CastException<br>FormatException</td><td>
+thrown if the encoding type is invalid.</td><td> 3.3.1</td><td> <span class="api_no">&#xc544;&#xb2c8;&#xc624;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/string_get_bytes">string_get_bytes</a>()</td><td> byte_array</td><td> string, <strong>[</strong>encoding<strong>]</strong></td><td> CastException<br>FormatException</td><td>
  Returns this string as a byte_array, encoded using the specified 
 encoding, or UTF-8 if no encoding is specified. Valid encodings are the 
 encoding types that java supports. If the encoding is invalid, a 
@@ -2507,12 +2544,12 @@ Note that many operations are not advisable to be run on other threads,
 and unless otherwise stated, functions are generally not thread safe. 
 You can use x_run_on_main_thread_later() and x_run_on_main_thread_now() 
 to ensure operations will be run correctly, however.<br>(<a href="https://methodscript.com/docs/3.3.2/API/functions/x_new_thread#Examples">Examples...</a>)
-<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/x_run_on_main_thread_later">x_run_on_main_thread_later</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> &#xd074;&#xb85c;&#xc800;</td><td></td><td>
+<p></p></td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/x_run_on_main_thread_later">x_run_on_main_thread_later</a>()</td><td> &#xbc18;&#xd658; &#xac12;&#xc774; &#xbe44;&#xc5b4;&#xc788;&#xc74c;</td><td> closure</td><td></td><td>
  Runs the closure on the main thread later. If the function call is 
 itself being run from the main thread, then the function still will not 
 block, but it is not an error to call this from the main thread. If an 
 exception is thrown from the closure, it is handled using the uncaught 
-exception handler.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/x_run_on_main_thread_now">x_run_on_main_thread_now</a>()</td><td> &#xb2e4;&#xc591;&#xd568;</td><td> &#xd074;&#xb85c;&#xc800;</td><td></td><td>
+exception handler.</td><td> 3.3.1</td><td> <span class="api_yes">&#xc608;</span></td></tr><tr><td> <a href="https://methodscript.com/docs/3.3.2/API/functions/x_run_on_main_thread_now">x_run_on_main_thread_now</a>()</td><td> &#xb2e4;&#xc591;&#xd568;</td><td> closure</td><td></td><td>
  Runs the closure on the main thread now, blocking the current thread 
 until it is finished. If the function call is itself being run from the 
 main thread, then the function still will block as expected; it is not 

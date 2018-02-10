@@ -1,0 +1,1206 @@
+<!DOCTYPE HTML>
+<!--
+	Retrospect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>이벤트 API - MethodScript Korean Docs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+		<link rel="manifest" href="images/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="index.html">MethodScript Korean Docs</a></h1>
+				<a href="#nav">메뉴</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">메인</a></li>
+					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">초보자 가이드</a></li>
+					<li><a href="API.html">API</a></li>
+					<li><a href="EventAPI.html">이벤트 API</a></li>
+					<li><a href="extensions.html">확장기능</a></li>
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+					<header class="major special">
+						<h2>이벤트 API 문서</h2>
+						<p>Events allow you to trigger scripts not just on commands, but also on other actions, such as a player logging in, or a player breaking a block. See the documentation on events for more information</p>
+					</header>
+<table>
+<tr>
+<th  width="7%"> Event Name
+</th>
+<th  width="36%"> Description
+</th>
+<th  width="18%"> Prefilters
+</th>
+<th  width="18%"> Event Data
+</th>
+<th  width="18%"> Mutable Fields
+</th>
+<th  width="3%"> Since
+</th></tr>
+<tr>
+<th > async_player_chat
+</th>
+<td> Fired when any player attempts to send a chat message. The event handler is run on the async thread, and not the main server thread, which can lead to undefined results if your code accesses non-threadsafe methods, hence why this feature is undocumented. If this event is cancelled, player_chat binds will not fire.
+</td>
+<td> <b>player</b>: Macro
+</td>
+<td> <b>message</b>: The message to be sent<br /><b> recipients </b>: <br /><b> format</b>:
+</td>
+<td> <b>message</b><br /><b>recipients</b>:&#160;: An array of players that will recieve the chat message. If a player doesn't exist or is offline, and is in the array, it is simply ignored, no exceptions will be thrown.<br /><b>format</b>:&#160;: The "printf" format string, by default: "&lt;%1$s&gt;&#160;%2$s". The first parameter is the player's display name, and the second one is the message.
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > block_break
+</th>
+<td> This event is called when a block is broken. Cancelling the event cancels the breakage.
+</td>
+<td> <b>player</b>: String Match<br /><b>type</b>: String Match<br /><b>data</b>: String Match
+</td>
+<td> <b>player</b>: The player's name<br /><b>block</b>: An array with keys 'type' (int), 'data' (int), 'X' (int), 'Y' (int), 'Z' (int) and 'world' (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b> drops </b>: <br /><b> xp</b>:
+</td>
+<td> <b>drops</b>:&#160;: an array of arrays (with keys 'type' (string), 'qty' (int), 'data' (int), 'enchants' (array)) of items the block will drop<br /><b>xp</b>:&#160;: the xp that this block will drop, if any
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > block_burn
+</th>
+<td> This event is called when a block is burned. Cancelling the event cancels the burn.
+</td>
+<td> <b>type</b>: String Match<br /><b>data</b>: String Match
+</td>
+<td> <b>block</b>: An array with keys 'type' (int), 'data' (int), 'X' (int), 'Y' (int), 'Z' (int) and 'world' (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block
+</td>
+<td> <b>block</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > block_dispense
+</th>
+<td> This event is called when a dispenser dispense an item. Cancelling the event cancels dispensing.
+</td>
+<td> <b>type</b>: String Match Type of dispenser<br /><b>item</b>: Item Match Item which is dispensed
+</td>
+<td> <b>type</b>: Type of dispenser<br /><b>item</b>: Item which is dispensed<br /><b>velocity</b>: Returns an associative array indicating the x/y/z components of item velocity. As a convenience, the magnitude is also included.<br /><b>location</b>: Location of dispenser
+</td>
+<td> <b>item</b><br /><b>velocity</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > block_from_to
+</th>
+<td> This event is called when a water or lava is flowed and ender dragon egg is teleportedCancelling the event cancels the flow or teleport
+</td>
+<td> <b>type</b>: String Match<br /><b>data</b>: String Match<br /><b> world &lt;string match&gt; </b>: <br /><b> totype &lt;string match&gt; </b>: <br /><b> todata &lt;string match&gt; </b>: <br /><b> toworld &lt;string match&gt; </b>: <br /><b> face &lt;string match&gt;</b>:
+</td>
+<td> <b>block</b>: An array with keys 'type' (int), 'data' (int), 'X' (int), 'Y' (int), 'Z' (int) and 'world' (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b>toblock</b>: target block<br /><b>tolocation</b>: target block's locationArray
+</td>
+<td> <b>block</b><br /><b>toblock</b>
+</td>
+<td> 3.3.2
+</td></tr>
+<tr>
+<th > block_grow
+</th>
+<td> This event is called when a block grows naturally. If the event is cancelled, the block will not grow.
+</td>
+<td> <b>oldtype</b>: String Match The block type before the growth<br /><b>olddata</b>: String Match The block data before the growth<br /><b>newtype</b>: String Match The block type after the growth<br /><b>newdata</b>: String Match The block data after the growth<br /><b>world</b>: Macro
+</td>
+<td> <b>oldblock</b>: The block before the growth (an array with keys 'type' and 'data')<br /><b>newblock</b>: The block after the growth (an array with keys 'type' and 'data')<br /><b>location</b>: the location of the block that will grow
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > block_ignite
+</th>
+<td> This event is called when a block or entity is ignited.
+</td>
+<td> <b>player</b>: String Match<br /><b>cause</b>: Macro<br /><b>world</b>: Macro
+</td>
+<td> <b>player</b>: The player's name<br /><b>ignitingentity</b>: entity ID, if entity is ignited<br /><b>ignitingblock</b>: block ID, if block is ignited<br /><b>location</b>: the locationArray of block or entity<br /><b>cause</b>: the cause of ignition, one of: LAVA, FLINT_AND_STEEL, SPREAD, LIGHTNING, FIREBALL, ENDER_CRYSTAL, EXPLOSION
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > block_place
+</th>
+<td> This event is called when a player places a block. Cancelling the event cancels placing the block.
+</td>
+<td> <b>player</b>: String Match<br /><b>type</b>: String Match<br /><b>data</b>: String Match
+</td>
+<td> <b>player</b>: The player's name<br /><b>type</b>: numerical type id of the block being placed<br /><b>X</b>: the X coordinate of the block<br /><b>Y</b>: the Y coordinate of the block<br /><b>Z</b>: the Z coordinate of the block<br /><b>world</b>: the world of the block<br /><b>data</b>: the data value for the block being placed<br /><b>against</b>: the block being placed against<br /><b>oldblock</b>: the blocktype and blockdata being replaced<br /><b>location</b>: A locationArray for this block
+</td>
+<td> <b>type</b><br /><b>data</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > book_edited
+</th>
+<td> This event is called when a player edit a book.
+</td>
+<td> <b>player</b>: Macro The player which edited the book<br /><b>signing</b>: Boolean Match Whether or not the book is being signed
+</td>
+<td> <b>player</b>: The player which edited the book<br /><b>slot</b>: The inventory slot number where the book is<br /><b>oldbook</b>: The book before the editing (an array with keys title, author and pages)<br /><b>newbook</b>: The book after the editing (an array with keys title, author and pages)<br /><b>signing</b>: Whether or not the book is being signed
+</td>
+<td> <b>title</b><br /><b>author</b><br /><b>pages</b><br /><b>signing</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > cmdline_prompt_input
+</th>
+<td> Fired when a command is issued from the interactive prompt. If the event is not cancelled, the interpreter will handle it as normal. Otherwise, the event can be cancelled, and custom handling can be triggered.
+</td>
+<td>
+</td>
+<td> <b>command</b>: The command that was triggered
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > creature_spawn
+</th>
+<td> Fired when a living entity spawns on the server.
+</td>
+<td> <b>type</b>: Macro<br /><b>reason</b>: Macro One of BED, BREEDING, BUILD_IRONGOLEM, BUILD_SNOWMAN, BUILD_WITHER, CHUNK_GEN, CUSTOM, DEFAULT, EGG, JOCKEY, LIGHTNING, NATURAL, REINFORCEMENTS, SLIME_SPLIT, SPAWNER, SPAWNER_EGG, VILLAGE_DEFENSE, VILLAGE_INVASION, NETHER_PORTAL, DISPENSE_EGG, INFECTION, CURED, OCELOT_BABY, SILVERFISH_BLOCK, MOUNT, or TRAP
+</td>
+<td> <b>type</b>: the type of creature spawning<br /><b>id</b>: the entityID of the creature<br /><b>reason</b>: the reason this creature is spawning<br /><b>location</b>: locationArray of the event
+</td>
+<td> <b>type</b>:&#160;: Spawn a different entity instead. This will fire a new event with a reason of 'CUSTOM'.
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > entity_change_block
+</th>
+<td> Fires when an entity change block in some way.
+</td>
+<td> <b>from</b>: Math Match the block ID before the change<br /><b>to</b>: Math Match the block ID after change<br /><b>location</b>: Location Match the location of the block changed
+</td>
+<td> <b>entity</b>: the entity ID of the entity which changed block<br /><b>from</b>: the block ID before the change<br /><b>data</b>: the data value for the block being changed<br /><b>to</b>: the block ID after change<br /><b>location</b>: the location of the block changed
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > entity_damage
+</th>
+<td> Fires when any loaded entity takes damage.
+</td>
+<td> <b>id</b>: Macro The entityID<br /><b>type</b>: Macro The type of entity being damaged<br /><b>cause</b>: Macro One of CONTACT, ENTITY_ATTACK, PROJECTILE, SUFFOCATION, FALL, FIRE, FIRE_TICK, LAVA, DROWNING, BLOCK_EXPLOSION, ENTITY_EXPLOSION, VOID, LIGHTNING, SUICIDE, STARVATION, POISON, MAGIC, MELTING, WITHER, FALLING_BLOCK, THORNS, DRAGON_BREATH, FLY_INTO_WALL, or CUSTOM<br /><b>world</b>: String Match
+</td>
+<td> <b>type</b>: The type of entity the got damaged<br /><b>id</b>: The entityID of the victim<br /><b>player</b>: the player who got damaged (only present if type is PLAYER)<br /><b> world </b>: <br /><b> location </b>: <br /><b>cause</b>: The type of damage<br /><b> amount </b>: <br /><b>finalamount</b>: health entity will lose after modifiers<br /><b>damager</b>: If the source of damage is a player this will contain their name, otherwise it will be the entityID of the damager (only available when an entity causes damage)<br /><b>shooter</b>: The name of the player who shot, otherwise the entityID (only available when damager is a projectile)
+</td>
+<td> <b>amount</b>:&#160;: raw amount of damage (in half hearts)
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > entity_damage_player
+</th>
+<td> This event is called when a player is damaged by another entity.
+</td>
+<td> <b>id</b>: Macro The entityID<br /><b>damager</b>: String Match
+</td>
+<td> <b>player</b>: The player being damaged<br /><b>damager</b>: The type of entity causing damage<br /><b>amount</b>: raw amount of damage caused<br /><b>finalamount</b>: health player will lose after modifiers<br /><b>cause</b>: the cause of damage<br /><b>data</b>: the attacking player's name or the shooter if damager is a projectile<br /><b>id</b>: EntityID of the damager<br /><b> location</b>:
+</td>
+<td> <b>amount</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > entity_death
+</th>
+<td> Fires when any living entity dies.
+</td>
+<td> <b>id</b>: Macro The entityID<br /><b>type</b>: Macro The type of entity dying.
+</td>
+<td> <b>type </b>: <br /><b>id</b>: The entityID<br /><b>drops</b>: an array of item arrays of each stack<br /><b> xp </b>: <br /><b>cause</b>: the last entity_damage object for this entity<br /><b>location</b>: where the entity was when it died
+</td>
+<td> <b>drops</b>:&#160;: an array of item arrays of what will be dropped, replaces the normal drops, can be null<br /><b>xp</b>:&#160;: the amount of xp to drop
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > entity_enter_portal
+</th>
+<td> Fires when an entity touches a portal block.
+</td>
+<td> <b>type</b>: Macro the type of entity<br /><b>block</b>: Math Match the blockID of the portal world: Macro the world in which the portal was entered
+</td>
+<td> <b>id</b>: the entityID of the entity<br /><b>location</b>: the location of the block touched<br /><b> type </b>: <br /><b> block</b>:
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > entity_explode
+</th>
+<td> Fires when an explosion occurs. The entity itself may not exist if triggered by a plugin. Cancelling this event only protects blocks, entities are handled in damage events.
+</td>
+<td> <b>id</b>: Macro The entityID. If null is used here, it will match events that lack a specific entity, such as using the explosion function.<br /><b>type</b>: Macro The type of entity exploding. Can be null, as id.
+</td>
+<td> <b>id</b>: entityID, or null if no entity<br /><b>type</b>: entitytype, or null if no entity<br /><b>location</b>: where the explosion occurs<br /><b> blocks </b>: <br /><b> yield</b>:
+</td>
+<td> <b>blocks</b>:&#160;: An array of blocks destroyed by the explosion.<br /><b>yield</b>:&#160;: Percent of the blocks destroyed that should drop items. A value greater than 100 will cause more drops than the original blocks.
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > entity_interact
+</th>
+<td> Fires when a non-player entity physically interacts with and triggers a block. (eg. pressure plates, redstone ore, farmland, tripwire, and wooden button)
+</td>
+<td> <b>type</b>: String Match the entity type<br /><b>block</b>: Item Match The block id
+</td>
+<td> <b>entity</b>: the ID of the entity that interacted with the block<br /><b>block</b>: the block ID with which the entity interacted<br /><b>location</b>: the location of the interaction
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > entity_toggle_glide
+</th>
+<td> This event is called when an entity toggles it's gliding state (Using Elytra).
+</td>
+<td> <b>type</b>: Macro The entity type of the entity<br /><b>id</b>: Macro The entity id of the entity<br /><b>player</b>: Macro The player triggering the event
+</td>
+<td> <b>id</b>: The entityID of the entity<br /><b>type</b>: The entity type of the entity<br /><b>gliding</b>: true if the entity is entering gliding mode, false if the entity is leaving it<br /><b>player</b>: If the entity is a player, this will contain their name, otherwise null
+</td>
+<td>
+</td>
+<td> 3.3.2
+</td></tr>
+<tr>
+<th > exp_change
+</th>
+<td> Fired when a player's experience changes naturally.
+</td>
+<td> <b>player</b>: Macro
+</td>
+<td> <b>player </b>: <br /><b> amount</b>:
+</td>
+<td> <b>amount</b>:&#160;: an integer of the amount of exp that will be added to the player's total exp
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > food_level_changed
+</th>
+<td> Fires as a player's food level changes. Cancelling the event will cause the change to not be applied.
+</td>
+<td> <b>player</b>: String Match
+</td>
+<td> <b>player</b>: the player<br /><b>level</b>: the new food level to be applied<br /><b>difference</b>: the difference between the old level and the new
+</td>
+<td> <b>level</b>:&#160;: A different level to be applied
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > gamemode_change
+</th>
+<td> Fires when something causes a player's gamemode to change. Cancelling the event will cancel the change. The mode itself cannot be modified.
+</td>
+<td> <b>newmode</b>: Macro gamemode being changed to, one of SURVIVAL, CREATIVE, ADVENTURE, or SPECTATOR<br /><b>player</b>: Macro
+</td>
+<td> <b>player</b>: player whose mode is changing<br /><b> newmode</b>:
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > hanging_break
+</th>
+<td> This event is called when a hanged entity is broken.
+</td>
+<td> <b>type</b>: Macro The entity type of the hanging entity<br /><b>cause</b>: Macro The cause of the removing<br /><b>world</b>: Macro
+</td>
+<td> <b>id</b>: The entityID of the hanging entity<br /><b>type</b>: The entity type of the hanging entity, can be ITEM_FRAME, PAINTING or LEASH_HITCH<br /><b>cause</b>: The cause of the removing, can be DEFAULT, ENTITY, EXPLOSION, OBSTRUCTION, or PHYSICS<br /><b>location</b>: Where was the hanging entity before the removing<br /><b>remover</b>: If the hanging entity has been removed by an other entity, this will contain its entityID, otherwise null<br /><b>player</b>: If the hanging entity has been removed by a player, this will contain their name, otherwise null
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > inventory_click
+</th>
+<td> Fired when a player clicks a slot in any inventory.
+</td>
+<td> <b>slottype</b>: Macro The type of slot being clicked, can be ARMOR, CONTAINER, CRAFTING, FUEL, OUTSIDE, QUICKBAR, or RESULT<br /><b>clicktype</b>: Macro One of LEFT, SHIFT_LEFT, RIGHT, SHIFT_RIGHT, WINDOW_BORDER_LEFT, WINDOW_BORDER_RIGHT, MIDDLE, NUMBER_KEY, DOUBLE_CLICK, DROP, CONTROL_DROP, CREATIVE, or UNKNOWN<br /><b>action</b>: Macro One of NOTHING, PICKUP_ALL, PICKUP_SOME, PICKUP_HALF, PICKUP_ONE, PLACE_ALL, PLACE_SOME, PLACE_ONE, SWAP_WITH_CURSOR, DROP_ALL_CURSOR, DROP_ONE_CURSOR, DROP_ALL_SLOT, DROP_ONE_SLOT, MOVE_TO_OTHER_INVENTORY, HOTBAR_MOVE_AND_READD, HOTBAR_SWAP, CLONE_STACK, COLLECT_TO_CURSOR, or UNKNOWN<br /><b>slotitem</b>: Item Match<br /><b>player</b>: Macro
+</td>
+<td> <b>player</b>: The player who clicked<br /><b>viewers</b>: everyone looking in this inventory<br /><b>leftclick</b>: true/false if this was a left click<br /><b>keyboardclick</b>: true/false if a key was pressed<br /><b>rightclick</b>: true/false if this was a right click<br /><b>shiftclick</b>: true/false if shift was being held<br /><b>creativeclick</b>: true/false if this action could only be performed in creative mode<br /><b>slot</b>: the number of the slot<br /><b>rawslot</b>: the number of the slot in whole inventory window<br /><b> slottype </b>: <br /><b> slotitem </b>: <br /><b> inventorytype </b>: <br /><b>inventorysize</b>: number of slots in opened inventory<br /><b> cursoritem </b>: <br /><b>inventory</b>: all the items in the (top) inventory<br /><b> clicktype </b>: <br /><b> action</b>:
+</td>
+<td> <b>slotitem</b>:&#160;: the item currently in the clicked slot<br /><b>cursoritem</b>:&#160;: the item on the cursor (may cause unexpected behavior)
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > inventory_close
+</th>
+<td> Fired when a player closes an inventory.
+</td>
+<td>
+</td>
+<td> <b>player</b>: The player<br /><b>inventory</b>: the inventory items in this inventory<br /><b>inventorytype</b>: type of inventory
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > inventory_drag
+</th>
+<td> Fired when a player clicks (by left or right mouse button) a slot in inventory and drag mouse across slots.
+</td>
+<td> <b>world</b>: String Match World name<br /><b>type</b>: Macro Can be SINGLE, or EVEN<br /><b>cursoritem</b>: Item Match item in hand, before event starts
+</td>
+<td> <b>player</b>: The player who clicked<br /><b>newcursoritem</b>: item on cursor, after event<br /><b>oldcursoritem</b>: item on cursor, before event<br /><b>slots</b>: used slots<br /><b>rawslots</b>: used slots, as the numbers of the slots in whole inventory window<br /><b>newitems</b>: array of items which are dropped in selected slots<br /><b> inventorytype </b>: <br /><b>inventorysize</b>: number of slots in opened inventory
+</td>
+<td> <b>cursoritem</b>:&#160;: the item on the cursor, after event
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > inventory_open
+</th>
+<td> Fired when a player opens an inventory.
+</td>
+<td>
+</td>
+<td> <b>player</b>: The player<br /><b>inventory</b>: the inventory items in this inventory<br /><b>inventorytype</b>: type of inventory
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > item_despawn
+</th>
+<td> Fires when an item entity is removed from the world because it has existed for 5 minutes. Cancelling the event will allow the item to exist for 5 more minutes.
+</td>
+<td> <b>item</b>: Item Match the item id and data value to check
+</td>
+<td> <b>location</b>: where the item is<br /><b>id</b>: the item's entityID<br /><b>item</b>: the itemstack of the entity
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > item_drop
+</th>
+<td> This event is called when a player drops an item.
+</td>
+<td> <b>player</b>: String Match<br /><b>item</b>: Item Match
+</td>
+<td> <b>player</b>: The player<br /><b>item</b>: An item array representing the item being dropped.
+</td>
+<td> <b>item</b>:&#160;: setting this to null removes the dropped item
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > item_enchant
+</th>
+<td> Fired when a player enchants an item.
+</td>
+<td>
+</td>
+<td> <b>player</b>: The player that enchanted the item<br /><b>item</b>: The item to be enchanted<br /><b>inventorytype</b>: type of inventory<br /><b>levels</b>: The amount of levels the player used<br /><b>enchants</b>: Array of added enchantments<br /><b>location</b>: Location of the used enchantment table<br /><b>option</b>: The enchantment option the player clicked
+</td>
+<td> <b>levels</b>:&#160;: The amount of levels to use<br /><b>item</b>:&#160;: The item to be enchanted<br /><b>enchants</b>:&#160;: The enchants to add to the item
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > item_held
+</th>
+<td> Fires when a player changes which quickbar slot they have selected.
+</td>
+<td>
+</td>
+<td> <b>player </b>: <br /><b> to </b>: <br /><b>from</b>: the slot the player is switching from
+</td>
+<td> <b>to</b>:&#160;: the slot that the player is switching to
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > item_pickup
+</th>
+<td> This event is called when a player picks up an item.
+</td>
+<td> <b>player</b>: String Match<br /><b>item</b>: Item Match
+</td>
+<td> <b>player</b>: The player<br /><b>item</b>: An item array representing the item being picked up<br /><b>remaining</b>: Other items left on the ground.
+</td>
+<td> <b>item</b>:&#160;: setting this to null will remove the item from the world
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > item_pre_craft
+</th>
+<td> Fires when a recipe is formed in a crafting matrix, but the result has not yet been clicked.
+</td>
+<td>
+</td>
+<td> <b>viewers</b>: all humanentities viewing the screen this event takes place in<br /><b> matrix </b>: <br /><b> result </b>: <br /><b>isRepair</b>: true if this event was triggered by a repair operation (different than normal crafting)<br /><b>recipe</b>: information about the formed recipe, or null if there is not one
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > item_pre_enchant
+</th>
+<td> Fired when a player places an item in an enchantment table
+</td>
+<td>
+</td>
+<td> <b>player</b>: The player that placed the item<br /><b>item</b>: The item to be enchanted<br /><b>inventorytype</b>: Type of inventory<br /><b>enchantmentbonus</b>: the amount of bookshelves influencing the enchantment table<br /><b>expcosts</b>: The offered costs of the 3 options<br /><b>location</b>: Location of the used enchantment table
+</td>
+<td> <b>item</b>:&#160;: The item to be enchanted<br /><b>expcosts</b>:&#160;: The costs of the 3 options on the enchantment table
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > item_spawn
+</th>
+<td> Fires when an item entity comes into existance.
+</td>
+<td> <b>item</b>: Item Match the item id and data value to check
+</td>
+<td> <b>location</b>: where the item spawns<br /><b>id</b>: the item's entityID<br /><b> item</b>:
+</td>
+<td> <b>item</b>:&#160;: the itemstack of the entity
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > item_swap
+</th>
+<td> Fires when a player swaps the items in their main and off hands.
+</td>
+<td> <b>player</b>: Macro<br /><b>main_hand</b>: Item Match<br /><b>off_hand</b>: Item Match
+</td>
+<td> <b>player </b>: <br /><b>main_hand</b>: the item array in the main hand before swapping<br /><b>off_hand</b>: the item in the off hand
+</td>
+<td> <b>main_hand</b><br /><b>off_hand</b>
+</td>
+<td> 3.3.2
+</td></tr>
+<tr>
+<th > lightning_strike
+</th>
+<td> Fires when lightning strikes or the lightning strike effect occurs.
+</td>
+<td> <b>world</b>: String Match the world<br /><b>location</b>: Location Match the lightning strike location<br /><b>is_effect</b>: Boolean Match whether the strike was real or just an effect
+</td>
+<td> <b>world</b>: the name of the world in which the strike occurred<br /><b>id</b>: the lightning entityID<br /><b>location</b>: locationArray of the event<br /><b>is_effect</b>: the data value for the block being changed
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > note_play
+</th>
+<td> This event is called when a noteblock is activated via player interaction or redstone. The instrument may be one of: PIANO, BASS_DRUM, SNARE_DRUM, STICKS, or BASS_GUITAR.
+</td>
+<td>
+</td>
+<td> <b>location</b>: The location of the noteblock<br /><b>instrument</b>: The name of the sound<br /><b>tone</b>: The note played (eg. F#)<br /><b>octave</b>: The octave the tone was played (0 - 2)
+</td>
+<td> <b>instrument</b><br /><b>tone</b><br /><b>octave</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > piston_extend
+</th>
+<td> This event is called when a piston is extended. Cancelling the event cancels the move.
+</td>
+<td>
+</td>
+<td> <b>block</b>: An array with keys 'type' (int), 'data' (int), 'X' (int), 'Y' (int), 'Z' (int) and 'world' (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b>direction</b>: direction of travel<br /><b>sticky</b>: true if the piston is sticky<br /><b>affectedBlocks</b>: blocks pushed
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > piston_retract
+</th>
+<td> This event is called when a piston is retracted. Cancelling the event cancels the move.
+</td>
+<td>
+</td>
+<td> <b>block</b>: An array with keys 'type' (int), 'data' (int), 'X' (int), 'Y' (int), 'Z' (int) and 'world' (string) for the physical location of the block<br /><b>location</b>: the locationArray of this block<br /><b>direction</b>: direction of travel<br /><b>sticky</b>: true if the piston is sticky<br /><b>retractedLocation</b>: if the piston is sticky and attached to a block, where the attached block would end up
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_chat
+</th>
+<td> Fired when any player attempts to send a chat message.
+</td>
+<td> <b>player</b>: Macro
+</td>
+<td> <b>message</b>: The message to be sent<br /><b> recipients </b>: <br /><b> format</b>:
+</td>
+<td> <b>message</b><br /><b>recipients</b>:&#160;: An array of players that will recieve the chat message. If a player doesn't exist or is offline, and is in the array, it is simply ignored, no exceptions will be thrown.<br /><b>format</b>:&#160;: The "printf" format string, by default: "&lt;%1$s&gt;&#160;%2$s". The first parameter is the player's display name, and the second one is the message.
+</td>
+<td> 3.3.0
+</td></tr>
+<tr>
+<th > player_command
+</th>
+<td> This event is fired off when a player runs any command at all. This actually fires before normal CommandHelper aliases, allowing you to insert control before defined aliases, even.
+</td>
+<td> <b>command</b>: String Match The entire command the player ran<br /><b>prefix</b>: String Match Just the first part of the command, i.e. '/cmd' in '/cmd blah blah'<br /><b>player</b>: Macro The player using the command
+</td>
+<td> <b>command</b>: The entire command<br /><b>prefix</b>: Just the prefix of the command
+</td>
+<td> <b>command</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_consume
+</th>
+<td> Fires as a player is finishing eating/drinking an item. Cancelling the event will cause any effects to not be applied and the item to not be taken from the player.
+</td>
+<td> <b>item</b>: Item Match
+</td>
+<td> <b>player</b>: the player consuming<br /><b>item</b>: the item being consumed
+</td>
+<td> <b>item</b>:&#160;: A different item to be consumed, changing this will cause the original item to remain in the inventory
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_death
+</th>
+<td> Fired when a player dies.
+</td>
+<td> <b>player</b>: Macro
+</td>
+<td> <b>player</b>: The player that died<br /><b>drops</b>: An array of the items that will be dropped, or null<br /><b>xp</b>: The amount of experience that will be dropped<br /><b>cause</b>: The cause of death<br /><b>death_message</b>: The death message, or null if absent<br /><b>keep_inventory</b>: If the player will keep their inventory<br /><b>keep_level</b>: If the player will keep their experience and their level<br /><b>new_exp</b>: The player's experience when they will respawn<br /><b>new_level</b>: The player's level when they will respawn<br /><b>new_total_exp</b>: The player's total experience when they will respawn<br /><b>killer</b>: The name of the killer if a player killed them, otherwise null
+</td>
+<td> <b>xp</b><br /><b>drops</b>:&#160;: The items will be replaced by the given items<br /><b>death_message</b><br /><b>keep_inventory</b><br /><b>keep_level</b><br /><b>new_exp</b><br /><b>new_level</b><br /><b>new_total_exp</b>
+</td>
+<td> 3.3.0
+</td></tr>
+<tr>
+<th > player_enter_bed
+</th>
+<td> Fires when a player tries to enter a bed.
+</td>
+<td> <b>location</b>: The location of the bed
+</td>
+<td> <b>location</b>: The location of the bed<br /><b>player</b>: The player associated with this event
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_fish
+</th>
+<td> Fires when a player casts or reels a fishing rod.
+</td>
+<td> <b>state</b>: Macro Can be one of CAUGHT_ENTITY, CAUGHT_FISH, FAILED_ATTEMPT, FISHING, IN_GROUND, or BITE<br /><b>player</b>: Macro The player who is fishing<br /><b>world</b>: String Match
+</td>
+<td> <b>player </b>: <br /><b> world </b>: <br /><b> state </b>: <br /><b> chance </b>: <br /><b> xp </b>: <br /><b>hook</b>: the fishhook entity id<br /><b>caught</b>: the id of the snared entity, can be a fish item
+</td>
+<td> <b>chance</b>:&#160;: the chance of catching a fish from pulling the bobber at random<br /><b>xp</b>:&#160;: the exp the player will get from catching a fish
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_interact
+</th>
+<td> Fires when a player left or right clicks a block or the air
+</td>
+<td> <b>block</b>: Item Match If the block the player interacts with is this<br /><b>button</b>: String Match left or right. If they left or right clicked<br /><b>item</b>: Item Match The item they are holding when they interacted<br /><b>hand</b>: String Match The hand the player clicked with<br /><b>player</b>: String Match The player that triggered the event
+</td>
+<td> <b>action</b>: One of either: left_click_block, right_click_block, left_click_air, or right_click_air<br /><b>block</b>: The id of the block they clicked, or 0 if they clicked the air. If they clicked the air, neither facing or location will be present.<br /><b>player</b>: The player associated with this event<br /><b>facing</b>: The (lowercase) face of the block they clicked. (One of NORTH, EAST, SOUTH, WEST, UP, DOWN, NORTH_EAST, NORTH_WEST, SOUTH_EAST, SOUTH_WEST, WEST_NORTH_WEST, NORTH_NORTH_WEST, NORTH_NORTH_EAST, EAST_NORTH_EAST, EAST_SOUTH_EAST, SOUTH_SOUTH_EAST, SOUTH_SOUTH_WEST, WEST_SOUTH_WEST, or SELF)<br /><b>location</b>: The (x, y, z, world) location of the block they clicked<br /><b>hand</b>: The hand used to click with, can be either main_hand or off_hand
+</td>
+<td>
+</td>
+<td> 3.3.0
+</td></tr>
+<tr>
+<th > player_interact_at_entity
+</th>
+<td> Fires when a player right clicks an entity. This event is like player_interact_entity but also has the click position, and when cancelled only cancels interactions with Armor Stand entities.
+</td>
+<td> <b>clicked</b>: the type of entity being clicked<br /><b>x</b>: Expression offset of clicked location from entity location on the x axis.<br /><b>y</b>: Expression<br /><b>z</b>: Expression
+</td>
+<td> <b>player</b>: the player clicking<br /><b> clicked </b>: <br /><b>id</b>: the id of the entity<br /><b>data</b>: if a player is clicked, this will contain their name<br /><b>position</b>: offset of clicked location from entity location in an xyz array.
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_interact_entity
+</th>
+<td> Fires when a player right clicks an entity. Note, not all entities are clickable. Interactions with Armor Stands do not trigger this event.
+</td>
+<td> <b>clicked</b>: the type of entity being clicked
+</td>
+<td> <b>player</b>: the player clicking<br /><b> clicked </b>: <br /><b>id</b>: the id of the entity<br /><b>data</b>: if a player is clicked, this will contain their name
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_join
+</th>
+<td> This event is called when a player logs in. Setting join_message to null causes it to not be displayed at all. Cancelling the event does not prevent them from logging in. Instead, you should just pkick() them.
+</td>
+<td> <b>player</b>: String Match<br /><b>world</b>: String Match<br /><b>join_message</b>: Regex
+</td>
+<td> <b>player</b>: The player's name<br /><b> world </b>: <br /><b>join_message</b>: The default join message<br /><b>first_login</b>: True if this is the first time the player has logged in.
+</td>
+<td> <b>join_message</b>
+</td>
+<td> 3.3.0
+</td></tr>
+<tr>
+<th > player_kick
+</th>
+<td> Fired when a player is kicked from the game.
+</td>
+<td> <b>player</b>: Macro<br /><b>reason</b>: Macro
+</td>
+<td> <b>player</b>: the kicked player<br /><b>message</b>: the message shown to all online players<br /><b>reason</b>: the message shown to the player getting kicked
+</td>
+<td> <b>message</b><br /><b>reason</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_leave_bed
+</th>
+<td> Fires when a player leaves a bed.
+</td>
+<td> <b>location</b>: The location of the bed
+</td>
+<td> <b>location</b>: The location of the bed<br /><b>player</b>: The player associated with this event
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_login
+</th>
+<td> This event is called when a player is about to log in. This event cannot be cancelled. Instead, you can deny them by setting 'result' to KICK_BANNED, KICK_WHITELIST, KICK_OTHER, or KICK_FULL. The default for 'result' is ALLOWED. When setting 'result', you can specify the kick message by modifying 'kickmsg'.
+</td>
+<td> <b>player</b>: String Match
+</td>
+<td> <b>player</b>: The player's name<br /><b>uuid</b>: The player's unique id<br /><b>kickmsg</b>: The default kick message<br /><b>ip</b>: the player's IP address<br /><b>hostname</b>: The hostname used to reach the server<br /><b>result</b>: the default response to their logging in
+</td>
+<td> <b>kickmsg</b><br /><b>result</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_move
+</th>
+<td> This event is fired off after a player has moved a certain distance. Due to the high frequency of this event, prefilters are extremely important to use -- especially a threshold -- so that the script doesn't run every time.
+</td>
+<td> <b>player</b>: Macro The player that moved. Switching worlds does not trigger this event.<br /><b>world</b>: String Match The world the player moved in.<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is now in. This should be a location array as well.<br /><b>threshold</b>: &lt;custom&gt; The minimum distance the player must have travelled before the event will be triggered. This is based on the 3D distance, and is measured in block units.
+</td>
+<td> <b>player </b>: <br /><b> world </b>: <br /><b>from</b>: The location the player is coming from<br /><b>to</b>: The location the player is now in
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_portal_travel
+</th>
+<td> Fired when a player collides with portal.
+</td>
+<td> <b>player</b>: Macro<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is coming to. This should be a location array as well.<br /><b>type</b>: the type of portal occuring, one of: COMMAND, END_PORTAL, ENDER_PEARL, NETHER_PORTAL, PLUGIN, SPECTATE, END_GATEWAY, CHORUS_FRUIT, UNKNOWN
+</td>
+<td> <b>player</b>: The player that teleport<br /><b>from</b>: The location the player is coming from<br /><b>to</b>: The location the player is coming to. Returns null when using Nether portal and "allow-nether" in server.properties is set to false or when using Ender portal and "allow-end" in bukkit.yml is set to false.<br /><b>type</b>: the type of portal occuring<br /><b>creationradius</b>: Gets the maximum radius from the given location to create a portal.<br /><b>searchradius</b>: Gets the search radius value for finding an available portal.
+</td>
+<td> <b>to</b><br /><b>creationradius</b><br /><b>searchradius</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_prelogin
+</th>
+<td> This event is called when a player is about to be authed. This event only fires if your server is in online mode. This event cannot be cancelled. Instead, you can deny them by setting 'result' to KICK_BANNED, KICK_WHITELIST, KICK_OTHER, or KICK_FULL. The default for 'result' is ALLOWED. When setting 'result', you can specify the kick message by modifying 'kickmsg'.
+</td>
+<td> <b>player</b>: String Match
+</td>
+<td> <b>player</b>: The player's name<br /><b>kickmsg</b>: The default kick message<br /><b>ip</b>: the player's IP address<br /><b>result</b>: the default response to their logging in
+</td>
+<td> <b>kickmsg</b><br /><b>result</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_quit
+</th>
+<td> Fired when any player quits.
+</td>
+<td> <b>player</b>: Macro
+</td>
+<td> <b>message</b>: The message to be sent
+</td>
+<td> <b>message</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_spawn
+</th>
+<td> Fires when a player respawns. Technically during this time, the player is not considered to be 'online'. This can cause problems if you try to run an external command with run() or something. CommandHelper takes into account the fact that the player is offline, and works around this, so all CH functions should respond correctly, as if the player was online, however other plugins or plain text commands that are run may not.
+</td>
+<td> <b>x</b>: Expression<br /><b>y</b>: Expression<br /><b>z</b>: Expression<br /><b>world</b>: String Match<br /><b>player</b>: Macro
+</td>
+<td> <b>player</b>: The player that is respawning<br /><b>location</b>: The location they are going to respawn at<br /><b>bed_spawn</b>: True if the respawn location is the player's bed
+</td>
+<td> <b>location</b>
+</td>
+<td> 3.3.0
+</td></tr>
+<tr>
+<th > player_teleport
+</th>
+<td>
+</td>
+<td> <b>player</b>: Macro The player that teleport. Switching worlds will trigger this event, but world_changed is called after, only if this isn't cancelled first.<br /><b>from</b>: Location Match This should be a location array (x, y, z, world).<br /><b>to</b>: Location Match The location the player is now in. This should be a location array as well.
+</td>
+<td> <b>player </b>: <br /><b>from</b>: The location the player is coming from<br /><b>to</b>: The location the player is now in<br /><b>type</b>: the type of teleport occuring, one of: COMMAND, END_PORTAL, ENDER_PEARL, NETHER_PORTAL, PLUGIN, SPECTATE, END_GATEWAY, CHORUS_FRUIT, UNKNOWN
+</td>
+<td> <b>to</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_toggle_flight
+</th>
+<td> Called when a player toggles their flying state.
+</td>
+<td> <b>player</b>: Macro The player who toggled their flying state<br /><b>flying</b>: Boolean Match Whether or not the player is trying to start or stop flying<br /><b>world</b>: Macro
+</td>
+<td> <b>player</b>: The player who toggled their flying state<br /><b>flying</b>: Whether or not the player is trying to start or stop flying<br /><b>location</b>: Where the player is
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_toggle_sneak
+</th>
+<td> Called when a player toggles their sneaking state.
+</td>
+<td> <b>player</b>: Macro The player who toggled their sneaking state<br /><b>sneaking</b>: Boolean Match Whether or not the player is now sneaking<br /><b>world</b>: Macro
+</td>
+<td> <b>player</b>: The player who toggled their sneaking state<br /><b>sneaking</b>: Whether or not the player is now sneaking<br /><b>location</b>: Where the player is
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > player_toggle_sprint
+</th>
+<td> Called when a player toggles their sprinting state.
+</td>
+<td> <b>player</b>: Macro The player who toggled their sprinting state<br /><b>sprinting</b>: Boolean Match Whether or not the player is now sprinting<br /><b>world</b>: Macro
+</td>
+<td> <b>player</b>: The player who toggled their sprinting state<br /><b>sprinting</b>: Whether or not the player is now sprinting<br /><b>location</b>: Where the player is
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > plugin_message_received
+</th>
+<td> Fires when a player's client sends a plugin message.
+</td>
+<td> <b>channel</b>: String Match
+</td>
+<td> <b>player</b>: the player<br /><b>channel</b>: the channel used<br /><b>bytes</b>: byte array of the data sent
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > pressure_plate_activated
+</th>
+<td> Fires when a player steps on a pressure plate
+</td>
+<td> <b>location</b>: Location Match The location of the pressure plate<br /><b>activated</b>: Boolean Match If true, only will trigger when the plate is stepped on. Currently, this will only be true, since the event is only triggered on activations, not deactivations, but is reserved for future use.
+</td>
+<td> <b>location</b>: The location of the pressure plate<br /><b>activated</b>: If true, then the player has stepped on the plate, if false, they have gotten off of it. Currently, this will always be true, because the event is only triggered for activations, not deactivations, but is reserved for future use.<br /><b>player</b>: The player associated with this event
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > projectile_hit
+</th>
+<td> Fires when a projectile collides with something.
+</td>
+<td> <b>id</b>: Macro The entityID<br /><b>type</b>: Macro the entity type of the projectile
+</td>
+<td> <b>type </b>: <br /><b>id</b>: the entityID of the projectile<br /><b>location</b>: where it makes contact<br /><b> shooter</b>:
+</td>
+<td> <b>shooter</b>:&#160;: the entityID of the mob/player that fired the projectile, or null if it is from a dispenser
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > projectile_launch
+</th>
+<td> This event is called when a projectile is launched. Cancelling the event will only cancel the launching of the projectile. For instance when a player shoots an arrow with a bow, if the event is cancelled the bow will still take damage from use.
+</td>
+<td> <b>type</b>: Macro The entity type of the projectile<br /><b>world</b>: Macro<br /><b>shootertype</b>: Macro The entity type of the shooter, or 'block', or 'null'
+</td>
+<td> <b>id</b>: The entityID of the projectile<br /><b>type</b>: The entity type of the projectile<br /><b>shooter</b>: The entityID of the shooter (null if the projectile is launched by a dispenser)<br /><b>shootertype</b>: The entity type of the shooter (null if the projectile is launched by a dispenser)<br /><b>player</b>: the player which has launched the projectile (null if the shooter is not a player)<br /><b>location</b>: from where the projectile is launched<br /><b>velocity</b>: the velocity of the projectile
+</td>
+<td> <b>velocity</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > redstone_changed
+</th>
+<td> Fired when a redstone activatable block is toggled, either on or off, AND the block has been set to be monitored with the monitor_redstone function.
+</td>
+<td> <b>location</b>: Location Match
+</td>
+<td> <b>location</b>: The location of the block<br /><b>active</b>: Whether or not the block is now active, or disabled.
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > server_ping
+</th>
+<td> Fired when a user who has saved this server looks at their serverlist.
+</td>
+<td> <b>players</b>: Math Match<br /><b>maxplayers</b>: Math Match
+</td>
+<td> <b>ip</b>: The address the ping is coming from<br /><b>players</b>: The number of players online<br /><b>maxplayers</b>: The number of slots on the server<br /><b>motd</b>: The message a player is shown on the serverlist<br /><b>list</b>: The list of connected players
+</td>
+<td> <b>motd</b><br /><b>maxplayers</b><br /><b>list</b>:&#160;: It is only possible to remove players, the added players will be ignored. This will also change the player count.
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > shutdown
+</th>
+<td> Fired the process is being shut down. This is not guaranteed to run, because some cases may cause the process to die unexpectedly. Code within the event handler should take as little time as possible, as the process may force an exit if the handler takes too long.
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > sign_changed
+</th>
+<td> This event is called when a player changes a sign. Cancelling the event cancels any edits completely.
+</td>
+<td> <b>player</b>: String Match<br /><b>1</b>: Macro<br /><b>2</b>: Macro<br /><b>3</b>: Macro<br /><b>4</b>: Macro
+</td>
+<td> <b>player</b>: The player's name<br /><b>location</b>: an array usable as a locationArray while also compatible with X,Y,Z,world indices<br /><b>text</b>: An array with keys 0 thru 3 defining every line on the sign
+</td>
+<td> <b>1</b><br /><b>2</b><br /><b>3</b><br /><b>4</b><br /><b>text</b>:&#160;: An array with keys 0 thru 3 defining every line on the sign
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > tab_complete_chat
+</th>
+<td> Fires when a player asks for a list of completions to the current word in their chat message. Setting the completions to an empty array is this event's equivalent of cancel().
+</td>
+<td> <b>player</b>: Macro
+</td>
+<td> <b>player</b>: the player asking for completion<br /><b>message</b>: the full message they have typed<br /><b>last</b>: the partial word completion is asked for<br /><b> completions</b>:
+</td>
+<td> <b>completions</b>:&#160;: the list of completions to send, default is player names containing the last text
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > tab_complete_command
+</th>
+<td> This will fire if a tab completer has not been set for a command registered with register_command(), or if the set tab completer doesn't return an array. If completions are not modified, registered commands will tab complete online player names.
+</td>
+<td>
+</td>
+<td> <b>command</b>: The command name that was registered.<br /><b>alias</b>: The alias the player entered to run the command.<br /><b>args</b>: The given arguments after the alias.<br /><b>completions</b>: The available completions for the last argument.<br /><b>sender</b>: The player that ran the command.
+</td>
+<td> <b>completions</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > target_player
+</th>
+<td> This event is called when a player is targeted by another entity.
+</td>
+<td> <b>player</b>: String Match<br /><b>mobtype</b>: Macro
+</td>
+<td> <b>player</b>: The player's name<br /><b>mobtype</b>: The type of mob targeting the player (this will be all capitals!)<br /><b>id</b>: The EntityID of the mob
+</td>
+<td> <b>player</b>:&#160;: target a different player, or null to make the mob re-look for targets
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > thunder_change
+</th>
+<td> Fires when thunder begins or ends.
+</td>
+<td> <b>world</b>: String Match the world<br /><b>has_thunder</b>: Boolean Match if it is thundering
+</td>
+<td> <b>world</b>: the name of the world in which thunder is changing<br /><b>has_thunder</b>: if the world is thundering
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > tree_grow
+</th>
+<td> Fires when a tree grows.
+</td>
+<td> <b>world</b>: Macro<br /><b>player</b>: Macro<br /><b>type</b>: Macro<br /><b>bonemeal</b>: Boolean Match
+</td>
+<td> <b>world</b>: The world where the tree grown.<br /><b>type</b>: The tree type, can be one of TREE, BIG_TREE, REDWOOD, TALL_REDWOOD, BIRCH, JUNGLE, SMALL_JUNGLE, JUNGLE_BUSH, RED_MUSHROOM, BROWN_MUSHROOM, SWAMP, ACACIA, DARK_OAK, COCOA_TREE, MEGA_REDWOOD, or TALL_BIRCH<br /><b>bonemeal</b>: If the tree grown due to a bonemeal or not.<br /><b>player</b>: The player who used the bonemeal, or null.
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > vehicle_collide
+</th>
+<td> Fires when a vehicle runs into something. If it ran into a block, event data will contain block info. If it ran into an entity, event data will contain info and options relevant to hitting an entity.
+</td>
+<td> <b>type</b>: Macro The entitytype of the vehicle<br /><b>collisiontype</b>: Macro One of BLOCK or ENTITY<br /><b>hittype</b>: Macro Matches an entitytype in an enitity collision<br /><b>hittype</b>: Item Match Matches a block in a block collision
+</td>
+<td> <b>type </b>: <br /><b>id</b>: The entityID of the vehicle<br /><b>entity</b>: the entityID of the entity that was hit<br /><b>block</b>: the location of the block that was hit<br /><b> collisiontype </b>: <br /><b> collide </b>: <br /><b> pickup</b>:
+</td>
+<td> <b>collide</b>:&#160;: whether the vehicle hits the entity or passes through it<br /><b>pickup</b>:&#160;: whether or not the vehicle pick up the entity<br /><b>both fields can only be modified for entity collisions</b>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > vehicle_destroy
+</th>
+<td> Fires when a vehicle is destroyed.
+</td>
+<td> <b>vehicletype</b>: Macro the entitytype of the vehicle
+</td>
+<td> <b>vehicletype </b>: <br /><b>vehicle</b>: entityID<br /><b>passenger</b>: entityID<br /><b>damager</b>: If the source of damage is a player this will contain their name, otherwise it will be the entityID of the damager (only available when an entity causes damage)<br /><b>shooter</b>: The name of the player who shot, otherwise the entityID (only available when damager is a projectile)
+</td>
+<td>
+</td>
+<td> 3.3.2
+</td></tr>
+<tr>
+<th > vehicle_enter
+</th>
+<td> Fires when an entity enters a vehicle.
+</td>
+<td> <b>vehicletype</b>: Macro the entitytype of the vehicle<br /><b>passengertype</b>: Macro the enitytype of the passenger
+</td>
+<td> <b>vehicletype </b>: <br /><b> passengertype </b>: <br /><b>vehicle</b>: entityID<br /><b>passenger</b>: entityID<br /><b>player</b>: player name if passenger is a player, null otherwise
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > vehicle_leave
+</th>
+<td> Fires when an entity leaves a vehicle.
+</td>
+<td> <b>vehicletype</b>: Macro the entitytype of the vehicle<br /><b>passengertype</b>: Macro the enitytype of the passenger
+</td>
+<td> <b>vehicletype </b>: <br /><b> passengertype </b>: <br /><b>vehicle</b>: entityID<br /><b>passenger</b>: entityID<br /><b>player</b>: player name if passenger is a player, null otherwise
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > vehicle_move
+</th>
+<td> Fires when a vehicle is moving. Due to the high frequency of this event, prefilters are extremely important to use -- especially threshold.
+</td>
+<td> <b>vehicletype</b>: Macro the entitytype of the vehicle<br /><b>passengertype</b>: Macro the enitytype of the passenger<br /><b>world</b>: &lt;string&gt; the world the vehicle is in
+</td>
+<td> <b>world </b>: <br /><b>from</b>: Get the previous position<br /><b>to</b>: Get the next position<br /><b> vehicletype </b>: <br /><b> passengertype </b>: <br /><b>id</b>: entityID<br /><b>passenger</b>: entityID<br /><b>player</b>: player name if passenger is a player, null otherwise
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > weather_change
+</th>
+<td> Fires when rain starts or stops.
+</td>
+<td> <b>world</b>: String Match the world<br /><b>has_rain</b>: Boolean Match if it is raining
+</td>
+<td> <b>world</b>: the name of the world in which the weather changed<br /><b>has_rain</b>: if it is raining
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > world_changed
+</th>
+<td> This event is fired off when a player changes worlds. This event is not cancellable, so to prevent it, the player_teleport event must be checked.
+</td>
+<td> <b>player</b>: Macro The player that switched worlds<br /><b>from</b>: String Match The world the player is coming from<br /><b>to</b>: String Match The world the player is now in
+</td>
+<td> <b>player </b>: <br /><b>from</b>: The world the player is coming from<br /><b>to</b>: The world the player is now in
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > world_load
+</th>
+<td> Fires when a world is loaded.
+</td>
+<td> <b>world</b>: Macro
+</td>
+<td> <b>world</b>: The loaded world.
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > world_save
+</th>
+<td> Fires when a world is saved.
+</td>
+<td> <b>world</b>: Macro
+</td>
+<td> <b>world</b>: The saved world.
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr>
+<tr>
+<th > world_unload
+</th>
+<td> Fires when a world is unloaded.
+</td>
+<td> <b>world</b>: Macro
+</td>
+<td> <b>world</b>: The unloaded world.
+</td>
+<td>
+</td>
+<td> 3.3.1
+</td></tr></table>
+<h3>Errors in documentation</h3>
+<p><i>Please note that this documentation is generated automatically, if you notice an error in the documentation, please file a bug report for the plugin itself!</i> For information on undocumented functions, see this page
+</p><p><br /><br />
+</p>
+
+
+</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="copyright">
+						<li>&copy; 2017-2018 TEAM STEAK.</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a>.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
