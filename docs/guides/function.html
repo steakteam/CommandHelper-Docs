@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>초보자 가이드/대문 - MethodScript Korean Docs</title>
+		<title>초보자 가이드/펑션 - MethodScript Korean Docs</title>
 		<base href="../" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,7 +52,7 @@
 					<li><a href="./guides/index.html">대문</a></li>
 					<li><a href="./guides/start.html">시작하기</a></li>
 					<li><a href="./guides/setup.html">환경 설정</a></li>
-					<li><a href="./guides/alias.html">단축 명령어</a></li>
+					<li><a href="./guides/aliases.html">단축 명령어</a></li>
 					<li><a href="./guides/variable.html">변수</a></li>
 					<li><a href="./guides/function.html">펑션</a></li>
 					<li><a href="./guides/classtype.html">자료형</a></li>
@@ -87,14 +87,98 @@
 		<!-- Main -->
 			<section id="main" class="wrapper">
 				<div class="container">
-					<h2>대문</h2>
-					<p>커맨드헬퍼 초보자 가이드에 오신 것을 환영합니다.</p>
-
-					<p>해당 문서에는 공식 문서에서 설명하거나 설명하지 않는 부분을 다르게 정리하여 설명합니다.</p>
-
-					<p>오른쪽 메뉴에서 보고 싶은 문서를 찾아보세요.</p>
-
-					<p><a href="https://steakteam.github.io/CommandHelper-Docs/">메인 페이지로 돌아가기</a></p>
+					<header class="major special">
+						<h1>대문</h1>
+					</header>
+					<h1 id="-">펑션이란?</h1>
+<p>펑션(Function) 은 커맨드헬퍼가 단순히 명령어를 단축시켜주는 역할이 아닌 다른 일을 할 수 있도록 만들어진 것입니다.
+모든 펑션은 <code>펑션_이름(인수1,인수2,인수3)</code> 와 같은 형식으로 되어 있으며, 특정 인수의 경우 <code>{}</code> 으로 나눠서 표시할 수도 있습니다.
+(<code>펑션_이름(인수1,인수2) { 인수3 }</code>)</p>
+<p>즉, 펑션은 커맨드헬퍼의 기능을 확장시켜주고, 커맨드헬퍼가 더욱 여러가지 일들을 할 수 있게 해주는 커맨드헬퍼의 핵심입니다.
+아래부터는 지금까지 배운 지식을 바탕으로 펑션을 사용하는 방법을 배웁니다.</p>
+<h1 id="-">기본 펑션들</h1>
+<p>커맨드헬퍼에서 사용할 수 있는 펑션들의 종류는 약 600가지에 달합니다. 이러한 수많은 펑션들 중에, 여기서는 몇가지의 간단하고
+필수적인 펑션들을 다루며 기본적인 펑션의 사용법을 배워 보겠습니다.</p>
+<p>그리고 앞으로는 전체 펑션의 목록을 쉽게 확인하기 위해 <a href="https://steakteam.github.io/CommandHelper-Docs/API.html">이곳</a> 을 <strong>즐겨찾기 해두는 것을 추천</strong>합니다.</p>
+<h2 id="-msg-"><code>msg()</code></h2>
+<p><code>msg()</code> 펑션은 해당 명령어를 실행한 플레이어에게 메시지를 보내는 펑션입니다.</p>
+<p>이 펑션을 통해 우리는 <code>/hello</code> 명령어를 실행한 플레이어에게 <code>Hello World!</code> 라는 메시지를 보내려고 합니다.</p>
+<h3 id="-1-">예제 1.</h3>
+<pre><code class="lang-coffeescript">/hello = msg(&#39;Hello World!&#39;)
+</code></pre>
+<blockquote>
+<p><code>/hello</code> 명령어를 실행하면 <code>Hello World!</code> 라는 메시지가 출력됨.</p>
+</blockquote>
+<p>기본적인 펑션의 사용 방법은 단축 명령어와 비슷합니다. 원래 단축 명령어의 오른쪽 부분에 실행할 명령어 대신 실행할 펑션을 입력하면 됩니다.</p>
+<p>이외에도 글자를 보내려고 할 때에는 <strong>반드시 &#39;</strong>(따옴표) 를 양 옆에 입력해야 오류가 생기지 않습니다.</p>
+<h3 id="-2-">예제 2.</h3>
+<pre><code class="lang-coffeescript">/hello = &gt;&gt;&gt;
+<span class="hljs-function"><span class="hljs-title">msg</span><span class="hljs-params">(<span class="hljs-string">'Hello'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">msg</span><span class="hljs-params">(<span class="hljs-string">'World!'</span>)</span></span>
+&lt;&lt;&lt;
+</code></pre>
+<pre><code class="lang-coffeescript">/hello = &gt;&gt;&gt;
+<span class="hljs-function"><span class="hljs-title">msg</span><span class="hljs-params">(<span class="hljs-string">'Hello'</span>)</span><span class="hljs-title">msg</span><span class="hljs-params">(<span class="hljs-string">'World!'</span>)</span></span>
+&lt;&lt;&lt;
+</code></pre>
+<pre><code class="lang-coffeescript">/hello = msg(&#39;Hello&#39;)msg(&#39;World!&#39;)
+</code></pre>
+<blockquote>
+<p><code>/hello</code> 명령어를 실행하면 <code>Hello(줄 넘기기)World!</code> 라는 메시지가 출력됨.</p>
+</blockquote>
+<p>단축 명령어에서 여러 줄을 사용하려 할 때나 여러 펑션들을 한번에 사용할 때에는 기존의 명령어처럼 <code>\</code> 을 입력할 필요 없이,
+단순히 사용할 수 있습니다. 펑션의 입력 값은 괄호 안으로 한정되어 있기 때문에, 괄호를 닫으면 그 안이 그 펑션이 받는 값으로만 인정됩니다.</p>
+<h3 id="-3-">예제 3.</h3>
+<pre><code class="lang-coffeescript">/hello = msg(<span class="hljs-string">'Hello'</span>
+</code></pre>
+<blockquote>
+<p><strong>컴파일 에러</strong> 괄호가 일치하지 않습니다.</p>
+</blockquote>
+<p>괄호를 닫지 않으면 에러가 발생합니다.</p>
+<pre><code class="lang-coffeescript">/hello = msg(<span class="hljs-symbol">'Hello</span>
+</code></pre>
+<blockquote>
+<p><strong>컴파일 에러</strong> 문자열이 닫히지 않았습니다.</p>
+</blockquote>
+<p>동일하게 <code>&#39;</code>(따옴표) 로 문장을 닫지 않아도 에러가 발생합니다.</p>
+<pre><code class="lang-coffeescript">/hello = &gt;&gt;&gt;
+msg('Hello)
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>컴파일 에러</strong> 문자열이 닫히지 않았습니다.</p>
+</blockquote>
+<p><code>&#39;</code>(따옴표) 로 문장을 닫지 않으면 그 닫지 않은 문장 속에 있는 괄호와 <code>&lt;&lt;&lt;</code>(여러줄 단축 명령어를 닫는 기호) 는 인식되지 않습니다.</p>
+<h2 id="-tmsg-"><code>tmsg()</code></h2>
+<p><code>tmsg()</code> 펑션은 기본적으로 <code>msg()</code> 펑션과 같지만, 해당 명령어를 실행한 사람이 아닌, 지정한 사람에게 메시지를 보낼 수 있습니다.</p>
+<h3 id="-1-">예제 1.</h3>
+<pre><code class="lang-coffeescript">/messageto $player = tmsg($player, <span class="hljs-string">'안녕하세요!'</span>)
+</code></pre>
+<blockquote>
+<p>/messageto 플레이어<em>이름 을 입력하면 입력한 플레이어</em>이름에게 메시지를 보냅니다.(플레이어_이름 이 온라인일 때만)</p>
+</blockquote>
+<p>두가지 이상의 값(<code>tmsg()</code> 의 경우 플레이어 이름과 메시지) 을 요구하는 펑션의 경우는 <strong>,</strong>(쉼표) 를 이용하여 값의 종류를 구분합니다. 펑션이 어떠한 값을 요구하는지는 상단에 링크해둔 API 문서의 <strong>인수</strong> 항목에 있습니다. <code>tmsg()</code> 의 경우는 플레이어 이름과 메시지 두가지를 요구하는데, 이를 순서대로 적어주시면 됩니다.</p>
+<h3 id="-2-">예제 2.</h3>
+<pre><code class="lang-coffeescript">/messagetosteak = tmsg(<span class="hljs-string">'ITSTAKE,'</span><span class="hljs-string">'안녕하세요'</span>)
+</code></pre>
+<blockquote>
+<p><strong>컴파일 에러</strong> <code>tmsg()</code> 는 두가지의 인수를 가지고 있어야 합니다.</p>
+</blockquote>
+<p><strong>&#39;</strong>(따옴표) 내부에 있는 <strong>,</strong>(쉼표) 는 인식하지 않습니다.</p>
+<h3 id="-3-">예제 3.</h3>
+<pre><code class="lang-coffeescript">/messageto $player = <span class="hljs-meta">&gt;&gt;&gt;
+</span>tmsg($player,
+<span class="hljs-string">'안녕하세요'</span>)
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p>/messageto 플레이어<em>이름 을 입력하면 입력한 플레이어</em>이름에게 메시지를 보냅니다.(플레이어_이름 이 온라인일 때만)</p>
+</blockquote>
+<p>펑션 내부에 새 줄이나 띄어쓰기는 전부 무시합니다.(<strong>&#39;</strong>(따옴표) 안에 있을 때는 무시하지 않음)</p>
+<p>이러한 펑션의 규칙(따옴표 밖의 새 줄이나 띄어쓰기는 항상 무시, 쉼표로 인수끼리 구분) 은 어떠한 펑션에서도 적용됩니다.</p>
+<p>다음 강좌에서는 변수의 형식을 알아볼 것입니다.</p>
+<h1 id="-">다음 추천 강좌</h1>
+<p>[[자료형(Class Type)]]</p>
 				</div>
 			</section>
 
