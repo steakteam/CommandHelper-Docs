@@ -1669,6 +1669,11 @@
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 			text-decoration: none;
 		}
+	
+	h1 {
+		font-size: 1.7em;
+		lien-height: 1.5em;
+	}
 
 	h2 {
 		font-size: 1.5em;

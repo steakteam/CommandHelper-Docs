@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<!--
+	Retrospect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>초보자 가이드/시작하기 - MethodScript Korean Docs</title>
+		<base href="../" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+		<link rel="manifest" href="images/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="index.html">MethodScript Korean Docs</a></h1>
+				<a href="#nav">메뉴</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html"><i class="fa fa-arrow-left"></i> 메인으로 돌아가기</a></li>
+				</ul>
+				<h2>초보자 가이드</h2>
+				<ul class="links">
+					<li><a href="./guides/index.html">대문</a></li>
+					<li><a href="./guides/start.html">시작하기</a></li>
+					<li><a href="./guides/setup.html">환경 설정</a></li>
+					<li><a href="./guides/aliases.html">단축 명령어</a></li>
+					<li><a href="./guides/variable.html">변수</a></li>
+					<li><a href="./guides/function.html">펑션</a></li>
+					<li><a href="./guides/classtype.html">자료형</a></li>
+				</ul>
+				<h4>고급 펑션 및 변수</h4>
+				<ul class="links">
+					<li><a href="./guides/advfunction.html">고급 펑션</a></li>
+					<li><a href="./guides/ivariable.html">i변수</a></li>
+					<li><a href="./guides/opsyntax.html">연산자 구문</a></li>
+					<li><a href="./guides/condition.html">조건문</a></li>
+					<li><a href="./guides/loop.html">반복문</a></li>
+				</ul>
+				<h2>고급 가이드</h2>
+				<ul class="links">
+					<li><a href="./guides/exception.html">예외</a></li>
+					<li><a href="./guides/array.html">배열</a></li>
+					<li><a href="./guides/event.html">이벤트</a></li>
+					<li><a href="./guides/closure.html">클로저</a></li>
+					<li><a href="./guides/procedure.html">프로시저</a></li>
+					<li><a href="./guides/permission.html">권한</a></li>
+					<li><a href="./guides/extensions.html">확장기능</a></li>
+					<li><a href="./guides/localpackages.html">로컬 패키지</a></li>
+					<li><a href="./guides/persistence.html">영구 변수</a></li>
+					<li><a href="./guides/advsetup.html">고급 설정</a></li>
+				</ul>
+				<h2>예제</h2>
+				<ul class="links">
+					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">예제 위키</a></li>
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+<h2 id="-">커맨드헬퍼 시작하기</h2>
+<p>CommandHelper 는 Minecraft 를 위한 최고의 스크립팅 언어로, 간단한 구조와 변경을 재시작 없이 곧바로 서버에 적용할 수 있으며, 고급 프로그래밍 언어와 비슷한 기능을 지원하는 장점이 있는 스크립팅 플러그인입니다.</p>
+<h1 id="-">설치</h1>
+<p><a href="https://steakteam.github.io/CommandHelper-Docs/#download">이곳</a> 에서 버전에 알맞은 커맨드헬퍼 플러그인을 다운로드 받으시고(최신 버전을 다운로드 받을 경우엔 full 버전으로 다운로드 받으세요.),
+플러그인 폴더에 넣고 서버를 구동하세요.</p>
+<p><img src="https://i.imgur.com/xJYNVi4.png" alt=""></p>
+<p>위와 같은 아스키 아트가 서버에 뜨고, 밑에</p>
+<p><code>[CommandHelper]: MethodScript files processed</code></p>
+<p><code>[CommandHelper]: X alias(es) defined</code></p>
+<p>라고 떴다면 커맨드헬퍼 설치가 완료된 것입니다.
+(설치가 되어도 버전에 따라 특정 기능이 구동되지 않는 경우도 있으므로 오류가 발생한다면 버전을 업데이트 하시거나
+{커맨드 헬퍼는 항상 최신 버전을 완벽히 지원하므로 최신 버전을 사용하시는 것이 좋습니다.} 커맨드 헬퍼의 버전을 다운그레이드 하시는게 좋습니다.)</p>
+<h1 id="-">환경 설정하기</h1>
+<p>커맨드헬퍼는 CommandHelper 안의 <code>.msa</code> 나 <code>.ms</code> 확장자를 가진 파일을 수정하여 스크립트를 만들 수 있습니다.(Skript 의 .sk 와 유사)</p>
+<p>이 <code>.msa</code> 나 <code>.ms</code> 파일의 수정은 일반적인 편집기를 통해 가능합니다.(메모장, Notepad++, Atom 등) 하지만 Notepad++ 편집기를 이용하면 구문 강조(Syntax Highlighter), 자동 완성 등등의 기능을 이용할 수 있습니다.</p>
+<p>자세한 내용은 [[환경 설정(Setting up environment)]] 문서에서 설정한 후 이 문서로 돌아오세요.</p>
+<h1 id="-">폴더 살펴보기</h1>
+<p>커맨드헬퍼가 처음 실행되면 (플러그인 폴더)/CommandHelper 에 실행에 필요한 폴더와 파일들을 생성합니다.
+이 문단에서는 생성되는 폴더와 파일에 대해 간단히 알아봅니다.</p>
+<h2 id="-">파일</h2>
+<h3 id="aliases-msa">aliases.msa</h3>
+<p>[[단축 명령어|단축 명령어(Alias)]] 를 생성해주는 파일입니다.</p>
+<p>이 파일은 일반 메모장과 동일하게 열 수 있습니다.</p>
+<h3 id="main-ms">main.ms</h3>
+<p>서버가 시작될 때(혹은 커맨드헬퍼를 리로드할 때) 자동으로 실행되는 스크립트를 입력하는 파일입니다.</p>
+<p>서버가 시작될 때부터 자동으로 실행되는 특징으로 인해 [[이벤트|이벤트(Event)]] 처리에 많이 쓰입니다.</p>
+<p>[[펑션|펑션(Function)]] 에 대한 기본적인 이해가 있어야 하므로 초보자 분들은 사용할 일이 거의 없습니다.</p>
+<h3 id="auto_include-ms">auto_include.ms</h3>
+<p>자동으로 커맨드헬퍼 상의 어느 파일에서도 include 할 수 있는 [[프로시저|프로시저(Procedure)]] 를 만들 수 있는 파일입니다.</p>
+<p>[[펑션|펑션(Function)]] 과 [[프로시저|프로시저(Procedure)]] 에 대한 기본적인 이해가 있어야 합니다.</p>
+<p>즉 초보자 분들은 main.ms 보다 더더욱 사용할 일이 없습니다.</p>
+<h3 id="persistence-db">persistence.db</h3>
+<p>영구 저장소 네트워크를 사용할 때 데이터가 저장되는 곳입니다.</p>
+<p>커맨드헬퍼 명령줄 실행을 통해 내부를 볼 수 있습니다.</p>
+<p>사용자가 굳이 건들 필요는 없는 파일입니다.</p>
+<h2 id="-">폴더</h2>
+<h3 id="-cache">.cache</h3>
+<p>캐시 폴더입니다. 건들 필요는 없고 용량이 너무 커진다 싶으면 삭제해 주시는 것도 좋습니다.</p>
+<p>다만 삭제할 시 성능에 문제가 생길 수 있으므로 유의해 주세요.</p>
+<h3 id="extensions">extensions</h3>
+<p>[[확장 기능|확장 기능(Extension)]] 을 넣는 폴더입니다.</p>
+<h3 id="includes">includes</h3>
+<p>자동으로 include 되지 않는 [[프로시저|프로시저(Procedure)]] 를 쉽게 분류하여 저장하라고 만들어진 폴더입니다.</p>
+<p>[[프로시저|프로시저(Procedure)]] 에 대한 이해가 없으면 사용할 일은 없습니다.</p>
+<h3 id="localpackages">LocalPackages</h3>
+<p>커맨드헬퍼 언어로 이루어진 로컬 패키지<em>(플러그인의 개념과 비슷함)</em> 을 넣는 장소입니다.
+해당 폴더 안에 임의의 폴더를 만들거나, 이미 만들어진 mslp 파일을 넣어서 서버에 적용할 수 있습니다.</p>
+<p>자세한 정보는 [[로컬 패키지(Local Package)]] 를 확인하세요.</p>
+<h3 id="logs">logs</h3>
+<p>로그가 저장되는 폴더입니다.</p>
+<h3 id="prefs">prefs</h3>
+<p>설정 파일이 저장되는 폴더입니다.</p>
+<p>자세한 정보는 [[고급 설정(Advenced Setting)]] 을 확인하세요.</p>
+<h1 id="-">첫번째 단축 명령어 만들기</h1>
+<p>[[단축 명령어|단축 명령어(Alias)]] 란 어떠한 명령어를 다른 임의의 명령어를 입력했을 때 실행시키는 것입니다.</p>
+<p>즉 만약 내가 <code>/a</code> 라는 명령어를 입력하면 <code>/b</code> 라는 명령어를 실행시키고 싶을 때, 단축 명령어 기능을 이용하는 것이죠.</p>
+<p>단축 명령어 기능은 커헬에서 가장 기본적으로 지원하는 기능입니다.</p>
+<p>단축 명령어를 만드려면, 앞에서 언급된 aliases.msa 파일을 통해 만들 수 있습니다.</p>
+<p>aliases.msa 파일을 열고, 안에 적힌 모든 내용<em>(예제이므로 필요가 없습니다)</em> 을 지우고 파일에</p>
+<pre><code class="lang-coffeescript">/<span class="hljs-keyword">test</span> = /say <span class="hljs-keyword">Test</span>
+</code></pre>
+<p>라고 입력한 후 저장하세요.</p>
+<p>저장한 후 서버 내(콘솔 혹은 OP 권한을 가진 마인크래프트 플레이어) 에서 <code>/reloadalias</code> 명령어를 입력하면</p>
+<pre><code class="lang-coffeescript">[<span class="hljs-symbol">CommandHelper</span>] <span class="hljs-symbol">MethodScript</span> file processed.
+[<span class="hljs-symbol">CommandHelper</span>] <span class="hljs-number">1</span> alias(es) defined.
+</code></pre>
+<p>라는 메시지가 표시됩니다.
+(해당 메시지가 표시되지 않고 오류 메시지 혹은 아무것도 뜨지 않는다면 [[문제 해결|문제 해결(Trobleshooting)]] 문서에서 해결법을 찾아 보세요.)</p>
+<p>그리고 <code>/test</code> 라는 명령어를 입력하면 일반 마인크래프트의 <code>/say Test</code> 명령어를 실행한 것처럼 동작할 것입니다.</p>
+<h1 id="-">다음 추천 문서</h1>
+<p>이 과정까지 완료하였다면 커맨드헬퍼를 사용할 준비가 완료된 것입니다. 오른쪽의 초보자 가이드 목차에서 배우고 싶은 부분을 선택하여 배우거나, 아래에 있는 다음 추천 문서 링크를 따라가서 커맨드헬퍼를 배워 나가세요.</p>
+<p>[[단축 명령어(Alias)]]</p>
+</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="copyright">
+						<li>&copy; 2017-2018 TEAM STEAK.</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a>.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+	</body>
+</html>

@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>초보자 가이드/대문 - MethodScript Korean Docs</title>
+		<title>초보자 가이드/환경 설정 - MethodScript Korean Docs</title>
 		<base href="../" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -87,14 +87,40 @@
 		<!-- Main -->
 			<section id="main" class="wrapper">
 				<div class="container">
-					<h2>대문</h2>
-					<p>커맨드헬퍼 초보자 가이드에 오신 것을 환영합니다.</p>
+<h2>환경 설정</h2>
+<p>커맨드헬퍼를 사용할 때, 필수는 아니지만 할 경우 앞으로 도움이 될 것들을 이곳에서 다룹니다.</p>
 
-					<p>해당 문서에는 공식 문서에서 설명하거나 설명하지 않는 부분을 다르게 정리하여 설명합니다.</p>
+<p>이 가이드를 처음부터 끝까지 따라하시면, 좀 더 편하게 커맨드헬퍼 사용을 시작하실 수 있을 것입니다.</p>
 
-					<p>오른쪽 메뉴에서 보고 싶은 문서를 찾아보세요.</p>
+<h1 id="npp">Notepad++ 용 Syntax Highlighter 와 Auto Complete Templete</h1>
 
-					<p><a href="https://steakteam.github.io/CommandHelper-Docs/">메인 페이지로 돌아가기</a></p>
+<p>윈도우용 Notepad++(<a href="https://notepad-plus-plus.org">이 곳</a> 에서 다운로드 받으실 수 있습니다.) 를 사용하면 커맨드헬퍼의 에디팅을 좀 더 편리하게 할 수 있습니다.</p>
+
+<h2 id="acg">AutoCompleteGenerator 다운로드 받기</h2>
+
+<p><a href="https://steakteam.github.io/CommandHelper-Docs/files/AutoCompleteGenerator.zip">이곳</a> 에서 파일을 다운로드 받고 압축을 푼 뒤, <code>run_ko.bat</code> 파일을 실행하고 명령 프롬포트를 따라하시면 두개의 파일(methodscript.xml 과 ch.xml) 이 생성됩니다.</p>
+
+<h2 id="sh">Syntax Highlighter 적용</h2>
+
+<p>Notepad++ 에서 위쪽 바에 있는 <code>언어&gt;언어 정의...</code> 를 클릭하고 <code>가져오기</code> 를 클릭합니다.</p>
+
+<p>이후 뜨는 파일 선택 창에서 이전 단계에서 생성된 <code>ch.xml</code> 을 선택한 다음 확인을 누르고, <code>import sucessful</code> 이라는 메시지가 뜨면 Notepad++ 을 재시작합니다.</p>
+
+<h2 id="act">Auto Complete Templete 적용</h2>
+
+<p>생성된 methodscript.xml 파일을 <code>(Notepad++ 설치 경로)\plugins\APIs</code>(기본적으로 <code>C:\Program Files (x86)\Notepad++\plugins\APIs</code>) 에 붙여넣고 Notepad++ 을 재시작합니다.</p>
+
+<h2 id="use">적용된 파일 사용</h2>
+
+<p>이제부터 Notepad++ 에서 <code>.ms</code> 혹은 <code>.msa</code> 파일을 열면 자동으로 코드에 색상이 적용되고 코드를 입력할 시 자동완성이 표시됩니다.</p>
+
+<h1 id="encoding">한글 사용을 위한 인코딩 설정</h1>
+
+<p>커맨드헬퍼의 파일 인코딩은 불완전하기 때문에, 한글을 사용하려면 인코딩을 미리 설정해주어야 합니다.</p>
+
+<p><code>aliases.msa</code>, <code>main.ms</code> 이 두 파일은 Notepad++ 기준으로 <code>ASCII</code> 인코딩으로 변환을 누르시고 한글을 작성하셔야 하며,</p>
+
+<p><code>auto_include.ms</code> 등등의 <code>include()</code> 펑션을 통해 가져와지는 <code>.ms</code> 파일들은 <code>UTF-8 (BOM 없음)</code> 인코딩으로 한글을 작성하셔야 합니다.</p>
 				</div>
 			</section>
 
