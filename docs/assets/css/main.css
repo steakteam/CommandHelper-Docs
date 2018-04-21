@@ -3866,6 +3866,10 @@
 			box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.2);
 			visibility: visible;
 		}
+		
+		#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
+			color: #888;
+		}
 
 		@media screen and (max-width: 736px) {
 
