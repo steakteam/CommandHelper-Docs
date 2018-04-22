@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>초보자 가이드/대문 - MethodScript Korean Docs</title>
+		<title>초보자 가이드/고급 펑션 - MethodScript Korean Docs</title>
 		<base href="../" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,61 +43,86 @@
 			</header>
 
 		<!-- Nav -->
-			<nav id="nav">
-				<ul class="links">
-					<li><a href="index.html"><i class="fa fa-arrow-left"></i> 메인으로 돌아가기</a></li>
-				</ul>
-				<h2>초보자 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/index.html">대문</a></li>
-					<li><a href="./guides/start.html">시작하기</a></li>
-					<li><a href="./guides/setup.html">환경 설정</a></li>
-					<li><a href="./guides/aliases.html">단축 명령어</a></li>
-					<li><a href="./guides/variable.html">변수</a></li>
-					<li><a href="./guides/function.html">펑션</a></li>
-					<li><a href="./guides/classtype.html">자료형</a></li>
-				</ul>
-				<h4>고급 펑션 및 변수</h4>
-				<ul class="links">
-					<li><a href="./guides/advfunction.html">고급 펑션</a></li>
-					<li><a href="./guides/ivariable.html">i변수</a></li>
-					<li><a href="./guides/opsyntax.html">연산자 구문</a></li>
-					<li><a href="./guides/condition.html">조건문</a></li>
-					<li><a href="./guides/loop.html">반복문</a></li>
-				</ul>
-				<h2>고급 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/exception.html">예외</a></li>
-					<li><a href="./guides/array.html">배열</a></li>
-					<li><a href="./guides/event.html">이벤트</a></li>
-					<li><a href="./guides/closure.html">클로저</a></li>
-					<li><a href="./guides/procedure.html">프로시저</a></li>
-					<li><a href="./guides/permission.html">권한</a></li>
-					<li><a href="./guides/extensions.html">확장기능</a></li>
-					<li><a href="./guides/localpackages.html">로컬 패키지</a></li>
-					<li><a href="./guides/persistence.html">영구 변수</a></li>
-					<li><a href="./guides/advsetup.html">고급 설정</a></li>
-				</ul>
-				<h2>예제</h2>
-				<ul class="links">
-					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">예제 위키</a></li>
-				</ul>
+			<nav id="nav" w3-include-html="guides/nav.html">
 			</nav>
 
 		<!-- Main -->
 			<section id="main" class="wrapper">
 				<div class="container">
 					<header class="major special">
-						<h1>대문</h1>
+						<h1>고급 펑션(Advanced Function)</h1>
 					</header>
-					<p>커맨드헬퍼 초보자 가이드에 오신 것을 환영합니다.</p>
+					<h1 id="-">고급 펑션</h1>
+<p>이 강좌에서는 펑션의 더 자세한 사용 방법을 배웁니다. 이전 강좌에서 배운 변수의 자료형의 지식이 필요하며,</p>
+<p>반환값이 있는 펑션, 펑션과 변수를 같이 활용하는 방법을 알아봅니다.</p>
+<h1 id="-">펑션의 반환값</h1>
+<p>펑션에는 반환값(return) 이라는 개념이 있습니다. 펑션은 어떠한 작업을 실행하는 것 뿐만 아니라,</p>
+<p>어떠한 정보를 가져와서 펑션 그 자체를 값으로 바꿔줄 수 있습니다.(트리거의 플레이스홀더와 비슷함)</p>
+<p>즉, 펑션을 특정한 곳에 넣으면 그 자리가 펑션의 반환값으로 대체되는 것입니다.</p>
+<p>몇가지 반환값이 존재하는 펑션들을 예로 들어보겠습니다.</p>
+<h2 id="-player-"><code>player()</code></h2>
+<p><code>player()</code> 펑션은 현재 명령어를 실행한 플레이어의 이름을 반환합니다.</p>
+<p>인수는 없으며, 반환값의 자료형은 문자열 입니다.</p>
+<h3 id="-1-">예제 1.</h3>
+<pre><code class="lang-coffeescript">/test = msg(<span class="hljs-name">player</span>()'테스트')
+</code></pre>
+<blockquote>
+<p><code>/test</code> 를 입력하면 입력한 플레이어에게 &quot;(입력한 플레이어 이름) 테스트&quot; 라는 메시지가 전송됩니다.
+(즉, ITSTAKE 라는 플레이어가 <code>/test</code> 를 입력하면 &quot;ITSTAKE 테스트&quot; 라는 메시지가 전송됨)</p>
+</blockquote>
+<pre><code class="lang-coffeescript">/test = msg(<span class="hljs-name">player</span>()    '테스트')
+</code></pre>
+<blockquote>
+<p><code>/test</code> 를 입력하면 입력한 플레이어에게 &quot;(입력한 플레이어 이름) 테스트&quot; 라는 메시지가 전송됩니다.(플레이어 이름과 테스트 사이에 띄어쓰기는 하나임)</p>
+</blockquote>
+<pre><code class="lang-coffeescript">/test = msg(&#39;player()테스트&#39;)
+</code></pre>
+<blockquote>
+<p><code>/test</code> 를 입력하면 입력한 플레이어에게 &quot;player()테스트&quot; 라는 메시지가 전송됩니다.
+(ITSTAKE 라는 플레이어가 <code>/test</code> 를 입력해도 &quot;player()테스트&quot; 라는 메시지가 그대로 전송됨)</p>
+</blockquote>
+<p>위 두 예제를 보면, 펑션을 <strong>&#39;</strong>(따옴표) 안에 넣는다면 펑션이 반환값으로 대체되지 않고 그대로 표시된다는 것을 알 수 있습니다.</p>
+<p>이는 <code>player()</code> 펑션 뿐만 아니라, 어떠한 펑션이라도 <strong>&#39;</strong>(따옴표) 안에 넣으면 작동하지 않을 뿐더러, 반환값이 표시되지도 않습니다.</p>
+<p>또한 펑션 바로 옆에 <strong>&#39;</strong>(따옴표) 를 통해 메시지를 적어 넣으면 그 펑션의 반환값과 따옴표로 적은 메시지 사이에는 띄어쓰기가 무조건 하나 생깁니다.(이를 없애는 방법은 [[연산자 구문(Operator syntax)]] 에서 다룹니다.)</p>
+<h3 id="-2-">예제 2.</h3>
+<pre><code class="lang-coffeescript">/test = tmsg(<span class="hljs-name">player</span>(), player())
+</code></pre>
+<blockquote>
+<p><code>/test</code> 를 입력하면 입력한 플레이어에게 &quot;(입력한 플레이어 이름)&quot; 이라는 메시지가 전송됩니다.</p>
+</blockquote>
+<p>반환값이 있는 펑션은 옆에 메시지 등이 없어도 단독으로 쓰일 수 있습니다.</p>
+<h2 id="-colorize-"><code>colorize()</code></h2>
+<p><code>colorize()</code> 펑션은 원래 컬러 코드(&amp;a 같은 것) 을 사용해도 색상이 적용되지 않는 메시지에 색상을 적용시켜 주는 펑션입니다.</p>
+<p>색상 코드가 적힌 메시지(문자열)를 값으로 받고, 색상이 적용된 메시지(문자열)가 반환값이 됩니다.</p>
+<h3 id="-1-">예제 1.</h3>
+<pre><code class="lang-coffeescript">/testcolor = msg(<span class="hljs-name">colorize</span>('&amp;a초록색'))
+</code></pre>
+<blockquote>
+<p><code>/testcolor</code> 를 실행한 플레이어에게 초록색으로 &quot;초록색&quot; 이라는 메시지가 표시됩니다.</p>
+</blockquote>
+<p>위 예제에서 보듯 인수가 있는 펑션도 반환값이 있다면 사용할 수 있습니다.</p>
+<h2 id="-">번외. 반환값이 비어있는 펑션을 넣으면?</h2>
+<p>API 문서의 <strong>반환</strong> 항목을 보면 반환값의 자료형을 알 수 있는데,
+특정한 기능을 하는 펑션 중(<code>msg()</code> 와 같이) 반환값이 비어있는 펑션들이 있습니다.</p>
+<p>이런 펑션을 넣으면 어떻게 되는지 알아보도록 하겠습니다.</p>
+<pre><code class="lang-coffeescript">/testmsg = msg(<span class="hljs-name">msg</span>('Test'))
+</code></pre>
+<blockquote>
+<p><code>/testmsg</code> 를 입력하면 플레이어에게 &quot;Test&quot; 라는 메시지가 전송된 후, &quot;&quot; 라는 빈 메시지가 전송된다.</p>
+</blockquote>
+<p>반환값이 비어있고 특정한 기능을 하는 펑션을 입력하게 되면 그 입력된 펑션의 기능이 실행이 되고 반환값이 비어있기 때문에
+빈 값이 반환됩니다.</p>
+<p>즉, 펑션을 펑션 안에 넣어서 반환값을 얻는 것은 <strong>해당 펑션을 실행하고 그 결과를 얻는 것</strong> 을 의미합니다.</p>
+<p>반환값이 어떠한 값이든 비어있든 간에 반환값이 나온다는 뜻은 그 펑션이 이미 실행되었다는 뜻이기 때문입니다.</p>
+<p>지금 다룬 펑션들 말고도 어떠한 작업을 실행함과 동시에 특정한 반환값을 반환하는 펑션들이 아주 많습니다.
+이러한 펑션들은 그 펑션의 기능을 수행하고 기눙의 결과를 반환값으로 반환하는 경우가 대부분입니다.</p>
+<p>또한 <code>pinfo()</code> 처럼 인수가 무엇인가에 따라서 반환값이 정수, 문자열, 배열 등등이 되는 경우가 있기 때문에</p>
+<p>API 문서를 잘 살펴보고 펑션을 사용하는 것이 좋습니다.</p>
+<h1 id="-">다음 추천 강좌</h1>
+<p>다음 추천 강좌에서는 변수를 이용하여 코드의 작성을 편리하게 하는 방법을 알아봅니다.</p>
+<p>[[i변수(IVariable)]]</p>
 
-					<p>해당 문서에는 공식 문서에서 설명하거나 설명하지 않는 부분을 다르게 정리하여 설명합니다.</p>
-
-					<p>오른쪽 메뉴에서 보고 싶은 문서를 찾아보세요.</p>
-
-					<p><a href="https://steakteam.github.io/CommandHelper-Docs/">메인 페이지로 돌아가기</a></p>
-				</div>
+			</div>
 			</section>
 
 		<!-- Footer -->
@@ -117,6 +142,7 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+			<script>includeHTML();</script> 
 
 	</body>
 </html>

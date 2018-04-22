@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>초보자 가이드/대문 - MethodScript Korean Docs</title>
+		<title>초보자 가이드/연산자 구문 - MethodScript Korean Docs</title>
 		<base href="../" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,60 +43,115 @@
 			</header>
 
 		<!-- Nav -->
-			<nav id="nav">
-				<ul class="links">
-					<li><a href="index.html"><i class="fa fa-arrow-left"></i> 메인으로 돌아가기</a></li>
-				</ul>
-				<h2>초보자 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/index.html">대문</a></li>
-					<li><a href="./guides/start.html">시작하기</a></li>
-					<li><a href="./guides/setup.html">환경 설정</a></li>
-					<li><a href="./guides/aliases.html">단축 명령어</a></li>
-					<li><a href="./guides/variable.html">변수</a></li>
-					<li><a href="./guides/function.html">펑션</a></li>
-					<li><a href="./guides/classtype.html">자료형</a></li>
-				</ul>
-				<h4>고급 펑션 및 변수</h4>
-				<ul class="links">
-					<li><a href="./guides/advfunction.html">고급 펑션</a></li>
-					<li><a href="./guides/ivariable.html">i변수</a></li>
-					<li><a href="./guides/opsyntax.html">연산자 구문</a></li>
-					<li><a href="./guides/condition.html">조건문</a></li>
-					<li><a href="./guides/loop.html">반복문</a></li>
-				</ul>
-				<h2>고급 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/exception.html">예외</a></li>
-					<li><a href="./guides/array.html">배열</a></li>
-					<li><a href="./guides/event.html">이벤트</a></li>
-					<li><a href="./guides/closure.html">클로저</a></li>
-					<li><a href="./guides/procedure.html">프로시저</a></li>
-					<li><a href="./guides/permission.html">권한</a></li>
-					<li><a href="./guides/extensions.html">확장기능</a></li>
-					<li><a href="./guides/localpackages.html">로컬 패키지</a></li>
-					<li><a href="./guides/persistence.html">영구 변수</a></li>
-					<li><a href="./guides/advsetup.html">고급 설정</a></li>
-				</ul>
-				<h2>예제</h2>
-				<ul class="links">
-					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">예제 위키</a></li>
-				</ul>
+			<nav id="nav" w3-include-html="guides/nav.html">
 			</nav>
 
 		<!-- Main -->
 			<section id="main" class="wrapper">
 				<div class="container">
 					<header class="major special">
-						<h1>대문</h1>
+						<h1>연산자 구문(Operator syntax)</h1>
 					</header>
-					<p>커맨드헬퍼 초보자 가이드에 오신 것을 환영합니다.</p>
-
-					<p>해당 문서에는 공식 문서에서 설명하거나 설명하지 않는 부분을 다르게 정리하여 설명합니다.</p>
-
-					<p>오른쪽 메뉴에서 보고 싶은 문서를 찾아보세요.</p>
-
-					<p><a href="https://steakteam.github.io/CommandHelper-Docs/">메인 페이지로 돌아가기</a></p>
+					<h1 id="-">연산자 구문</h1>
+<p>연산자 구문은 커맨드헬퍼의 특정 펑션을 다른 방법으로 사용하는 것입니다.</p>
+<p>예를 들어 <code>add()</code>(두 수를 인수로 받고 두 수를 더한 것을 반환함) 펑션의 연산자 구문은 <code>인수1 + 인수2</code> 입니다.</p>
+<p>즉 몇가지 펑션들을 일반적으로 사람들이 사용하는 형식으로 바꾸어서 쓰기 편하게 만듭니다.</p>
+<p>이 문서에서는 몇가지 대표적인 연산자 구문들을 살펴보도록 하겠습니다.</p>
+<h2 id="-">예제.</h2>
+<pre><code class="lang-coffeescript"><span class="hljs-selector-tag">if</span>(and(equals(<span class="hljs-variable">@var</span>, <span class="hljs-number">3</span>), lte(<span class="hljs-number">2</span>, <span class="hljs-variable">@var2</span>))) {
+    <span class="hljs-selector-tag">msg</span>(<span class="hljs-string">'Something'</span>)
+}
+</code></pre>
+<p>만약 위와 같은 구문이 있다면,</p>
+<p>이는 아래와 같은 구문으로 바꿔쓸 수 있습니다.</p>
+<pre><code class="lang-coffeescript"><span class="hljs-selector-tag">if</span>(<span class="hljs-variable">@var</span> == <span class="hljs-number">3</span> &amp;&amp; <span class="hljs-number">2</span> &lt;= <span class="hljs-variable">@var2</span>){
+    <span class="hljs-selector-tag">msg</span>(<span class="hljs-string">'Something'</span>);
+}
+</code></pre>
+<p>또한 사용된 연산자 구문이 너무 복잡하다면 아래와 같이 괄호를 넣어서 구분지을 수 있습니다.(수학 식에서의 괄호와 비슷함)</p>
+<pre><code class="lang-coffeescript"><span class="hljs-selector-tag">if</span>((<span class="hljs-variable">@var</span> == <span class="hljs-number">3</span>) &amp;&amp; (<span class="hljs-number">2</span> &lt;= <span class="hljs-variable">@var2</span>)){
+    <span class="hljs-selector-tag">msg</span>(<span class="hljs-string">'Something'</span>);
+}
+</code></pre>
+<h1 id="-">연산자 구문의 목록</h1>
+<table>
+<thead>
+<tr>
+<th>종류</th>
+<th>연산자 구문</th>
+<th>펑션 형태</th>
+<th>추가 설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>후위 연산자</td>
+<td><code>++</code> / <code>--</code></td>
+<td><code>postinc()</code> / <code>postdec()</code></td>
+<td><code>@i++</code> 처럼 변수 뒤에서 붙여 사용합니다. ++ 연산자는 1 더하기, -- 연산자는 - 빼기 연산을 수행합니다.</td>
+</tr>
+<tr>
+<td>단항 연산자</td>
+<td><code>!</code> / <code>++</code> / <code>--</code></td>
+<td><code>not()</code> / <code>inc()</code> / <code>dec()</code></td>
+<td><code>!true</code> 처럼 단항 연산자는 하나의 값만 받습니다.</td>
+</tr>
+<tr>
+<td>제곱 연산자</td>
+<td><code>**</code></td>
+<td><code>pow()</code></td>
+<td>연산자 왼쪽의 수를 오른쪽의 수만큼 제곱합니다. (<code>2**10</code> 은 <code>1024</code> 와 같음)</td>
+</tr>
+<tr>
+<td>곱셈 연산자</td>
+<td><code>*</code> / <code>/</code> / <code>%</code></td>
+<td><code>multiply()</code> / <code>divide()</code> / <code>mod()</code></td>
+<td><code>*</code> 은 곱셈, <code>/</code> 은 나눗셈 <code>%</code> 은 나머지 연산입니다.</td>
+</tr>
+<tr>
+<td>덧셈 연산자</td>
+<td><code>+</code> / <code>-</code> / <code>.</code></td>
+<td><code>add()</code> / <code>subtract()</code> / <code>concat()</code></td>
+<td>앞의 두 기호는 기호와 같은 역할, <code>.</code> 은 여러 변수를 동시에 출력할 때, 그 사이를 붙여주는 역할을 합니다. 만약 +- 가 숫자 앞에 붙어 있다면, 조금 다르게 처리됩니다.</td>
+</tr>
+<tr>
+<td>관계 연산자(부등식)</td>
+<td><code>&lt;</code> / <code>&gt;</code> / <code>&lt;=</code> / <code>&gt;=</code></td>
+<td><code>lt()</code> / <code>gt()</code> / <code>lte()</code> / <code>gte()</code></td>
+<td></td>
+</tr>
+<tr>
+<td>등호 연산자</td>
+<td><code>==</code> / <code>!=</code> / <code>===</code> / <code>!==</code></td>
+<td><code>equals()</code> / <code>nequals()</code> / <code>sequals()</code> / <code>snequals()</code></td>
+<td><code>equals_ic()</code> 에 대한 연산자 구문은 존재하지 않습니다.</td>
+</tr>
+<tr>
+<td>논리 AND 연산자</td>
+<td><code>&amp;&amp;</code></td>
+<td><code>and()</code></td>
+<td></td>
+</tr>
+<tr>
+<td>논리 OR 연산자</td>
+<td><code>||</code></td>
+<td><code>or()</code></td>
+<td></td>
+</tr>
+<tr>
+<td>선언 연산자</td>
+<td><code>=</code> / <code>+=</code> / <code>-=</code> / <code>*=</code> / <code>/=</code> / <code>.=</code></td>
+<td><code>assign()</code></td>
+<td><code>=</code> 을 제외하고는 다른 연산자의 펑션 형태는 존재하지 않습니다. 예를 들어 <code>@var += 1</code> 은 <code>assign(@var, add(@var, 1))</code> 과 같습니다. 다른 연산자는 <code>add</code> 부분만 달라집니다. <code>-=</code> 는 <code>subtract()</code> 펑션을 사용하고, <code>*=</code> 는 <code>multiply</code>, <code>/=</code> 는 <code>divide()</code>, <code>.=</code> 은 <code>concat()</code> 을 사용합니다.</td>
+</tr>
+<tr>
+<td>배열 값 연산자</td>
+<td><code>[]</code></td>
+<td><code>array_get()</code> / <code>array_set()</code> / <code>array_push()</code></td>
+<td><code>[]</code> 을 이용하여 배열 내부의 값에 접근할 수 있습니다. 이와 함께 = 기호를 사용하면, 배열 내부의 값을 지정할 수 있으며, 배열 값을 지정할 때 대괄호 안에 숫자가 없다면 <code>array_push()</code> 처럼 사용합니다. 이에 대한 자세한 내용은 [[배열(Array)]] 문서를 참고하세요.</td>
+</tr>
+</tbody>
+</table>
 				</div>
 			</section>
 
@@ -117,6 +172,7 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+			<script>includeHTML();</script> 
 
 	</body>
 </html>

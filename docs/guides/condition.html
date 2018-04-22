@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>초보자 가이드/대문 - MethodScript Korean Docs</title>
+		<title>초보자 가이드/조건문 - MethodScript Korean Docs</title>
 		<base href="../" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,60 +43,188 @@
 			</header>
 
 		<!-- Nav -->
-			<nav id="nav">
-				<ul class="links">
-					<li><a href="index.html"><i class="fa fa-arrow-left"></i> 메인으로 돌아가기</a></li>
-				</ul>
-				<h2>초보자 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/index.html">대문</a></li>
-					<li><a href="./guides/start.html">시작하기</a></li>
-					<li><a href="./guides/setup.html">환경 설정</a></li>
-					<li><a href="./guides/aliases.html">단축 명령어</a></li>
-					<li><a href="./guides/variable.html">변수</a></li>
-					<li><a href="./guides/function.html">펑션</a></li>
-					<li><a href="./guides/classtype.html">자료형</a></li>
-				</ul>
-				<h4>고급 펑션 및 변수</h4>
-				<ul class="links">
-					<li><a href="./guides/advfunction.html">고급 펑션</a></li>
-					<li><a href="./guides/ivariable.html">i변수</a></li>
-					<li><a href="./guides/opsyntax.html">연산자 구문</a></li>
-					<li><a href="./guides/condition.html">조건문</a></li>
-					<li><a href="./guides/loop.html">반복문</a></li>
-				</ul>
-				<h2>고급 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/exception.html">예외</a></li>
-					<li><a href="./guides/array.html">배열</a></li>
-					<li><a href="./guides/event.html">이벤트</a></li>
-					<li><a href="./guides/closure.html">클로저</a></li>
-					<li><a href="./guides/procedure.html">프로시저</a></li>
-					<li><a href="./guides/permission.html">권한</a></li>
-					<li><a href="./guides/extensions.html">확장기능</a></li>
-					<li><a href="./guides/localpackages.html">로컬 패키지</a></li>
-					<li><a href="./guides/persistence.html">영구 변수</a></li>
-					<li><a href="./guides/advsetup.html">고급 설정</a></li>
-				</ul>
-				<h2>예제</h2>
-				<ul class="links">
-					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">예제 위키</a></li>
-				</ul>
+			<nav id="nav" w3-include-html="guides/nav.html">
 			</nav>
 
 		<!-- Main -->
 			<section id="main" class="wrapper">
 				<div class="container">
 					<header class="major special">
-						<h1>대문</h1>
+						<h1>조건문(Condition)</h1>
 					</header>
-					<p>커맨드헬퍼 초보자 가이드에 오신 것을 환영합니다.</p>
+					<h1 id="-">논리 구문</h1>
+<p>논리 구문은 조건문, 반복문 등과 같이 수학적인 원리를 적용하는 프로그램을 만들때 꼭 필요한 기본중의 기본이라고 할 수 있습니다.</p>
+<p>이 파트에서는 논리 구문 중 주요 조건문을 알아보고, 이를 커맨드헬퍼에서 어떻게 사용하는지 알아보는 것이 주 목표입니다.</p>
+<h2 id="-condition-">조건문(Condition)</h2>
+<p>조건문은 만약 어떠한 코드가 특정 조건을 만족하면 특정 코드를 실행하도록 하는 것입니다.</p>
+<p>예를 들어, 변수 <code>@a</code> 와 <code>@b</code> 의 값이 같으면 <code>msg(&#39;hello&#39;)</code> 를 실행하고, 같지 않으면 <code>msg(&#39;world&#39;)</code> 을 실행할 수 있도록 하는 것이 조건문입니다.</p>
+<h3 id="-if-"><code>if()</code></h3>
+<p><code>if()</code> 구문은 조건문의 대표적인 펑션입니다. 인수로는 <code>조건,코드[, 불일치 코드]</code> 가 있습니다.</p>
+<p>예제를 통해 <code>if()</code> 구문의 사용 방법을 알아보겠습니다.</p>
+<h4 id="-1-">예제 1.</h4>
+<pre><code class="lang-coffeescript">/iftest <span class="hljs-variable">$v</span> = &gt;&gt;&gt;
+<span class="hljs-function"><span class="hljs-title">if</span><span class="hljs-params">(<span class="hljs-variable">$v</span> == <span class="hljs-string">'hello'</span>, msg(<span class="hljs-string">'world'</span>)</span></span>)
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>/iftest hello</code> 를 입력하면 <code>world</code> 라는 메시지가 출력되고, 그 외의 인수(<code>/iftest 1</code>, <code>/iftest asdf</code>) 를 입력하면 아무일도 일어나지 않음.</p>
+</blockquote>
+<p>if 문의 첫번째 인수(<code>조건</code> 부분) 이 참일 경우에 두번째 인수(<code>코드</code> 부분) 의 코드를 실행합니다.</p>
+<pre><code class="lang-coffeescript">/iftest <span class="hljs-variable">$v</span> = &gt;&gt;&gt;
+<span class="hljs-function"><span class="hljs-title">if</span><span class="hljs-params">(<span class="hljs-variable">$v</span> == <span class="hljs-string">'hello'</span>, msg(<span class="hljs-string">'world'</span>)</span></span>, msg(<span class="hljs-string">'bye'</span>))
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>/iftest hello</code> 를 입력하면 <code>world</code> 라는 메시지가 출력되고, 그 외의 인수를 입력하면 <code>bye</code> 라는 메시지가 출력됨.</p>
+</blockquote>
+<p>if 문의 첫번째 인수 부분이 거짓이면 두번째 인수(<code>코드</code> 부분) 을 실행하지 않고 세번째 인수(<code>불일치 코드</code> 부분) 이 실행됩니다.</p>
+<h4 id="-2-">예제 2.</h4>
+<pre><code class="lang-coffeescript">/iftest $v = <span class="hljs-meta">&gt;&gt;&gt;
+    </span>if($v == <span class="hljs-string">'hello'</span>) {
+        msg(<span class="hljs-string">'world'</span>)
+    }
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>/iftest hello</code> 를 입력하면 <code>world</code> 라는 메시지가 출력되고, 그 외의 인수(<code>/iftest 1</code>, <code>/iftest asdf</code>) 를 입력하면 아무일도 일어나지 않음.</p>
+</blockquote>
+<p>모든 펑션의 끝 부분 인수는 따로 떼어서 <code>{}</code> 로 묶어서 사용할 수도 있습니다.
+(예: <code>tmsg(player()) { &#39;메시지&#39; }</code>)</p>
+<pre><code class="lang-coffeescript">/iftest $v = &gt;&gt;&gt;
+    <span class="hljs-keyword">if</span>($v == <span class="hljs-string">'hello'</span>) {
+        msg(<span class="hljs-string">'world'</span>)
+    } <span class="hljs-keyword">else</span> {
+        msg(<span class="hljs-string">'bye'</span>)
+    }
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>/iftest hello</code> 를 입력하면 <code>world</code> 라는 메시지가 출력되고, 그 외의 인수를 입력하면 <code>bye</code> 라는 메시지가 출력됨.</p>
+</blockquote>
+<p>불일치 코드를 쓰고 싶다면 if 문의 두번째 인수(<code>코드</code> 부분) 이 끝난 이후에 <code>else</code> 를 붙이고 또 <code>{}</code> 안에 코드를 쓰면 됩니다.
+(이러한 구문 형태는 <code>if</code>문만 지원합니다.)</p>
+<h4 id="-3-">예제 3.</h4>
+<pre><code class="lang-coffeescript">/iftest $v $v2 = &gt;&gt;&gt;
+    <span class="hljs-keyword">if</span>($v == <span class="hljs-string">'hello'</span>) {
+        if($v2 == <span class="hljs-string">'world'</span>) {
+            msg(<span class="hljs-string">'hello world'</span>)
+        } else {
+            msg(<span class="hljs-string">'hello bye'</span>)
+        }
+    }
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>/iftest hello world</code> 입력시 <code>hello world</code> 출력, <code>/iftest hello asdf</code> 입력시 <code>hello bye</code> 출력, <code>/iftest asdf asdf</code> 입력시 아무것도 출력하지 않음</p>
+</blockquote>
+<p>if 구문 안에 if 문을 넣어도 당연히 동작합니다.(이론상으론 무한개)</p>
+<pre><code class="lang-coffeescript">/iftest $v = &gt;&gt;&gt;
+    <span class="hljs-keyword">if</span>($v == <span class="hljs-string">'hello'</span>) {
+        msg(<span class="hljs-string">'hello'</span>)
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>($v ==<span class="hljs-string">'world'</span>) {
+        msg(<span class="hljs-string">'world'</span>)
+    } <span class="hljs-keyword">else</span> {
+        msg(<span class="hljs-string">'bye'</span>)
+    }
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>/iftest hello</code> 입력시 <code>hello</code> 출력, <code>/iftest world</code> 입력시 <code>world</code> 출력, <code>/iftest asdf</code> 입력시 <code>bye</code> 출력</p>
+</blockquote>
+<p><code>else</code> 옆에 <code>if()</code> 를 또 붙여서 첫번째 조건이 일치하지 않지만 두번째 조건이 일치할 때와 같이 만들 수 있습니다.</p>
+<pre><code class="lang-coffeescript">/iftest $v = &gt;&gt;&gt;
+    <span class="hljs-keyword">if</span>($v == <span class="hljs-string">'hello'</span>) {
+        msg(<span class="hljs-string">'hello'</span>)
+    } <span class="hljs-keyword">else</span> {
+        msg(<span class="hljs-string">'world'</span>)
+    } <span class="hljs-keyword">else</span> {
+        msg(<span class="hljs-string">'bye'</span>)
+    }
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>컴파일 에러:</strong> <code>else</code> 가 두 개 있습니다.</p>
+</blockquote>
+<p><code>else</code> 는 단 한개만 존재할 수 있습니다.</p>
+<pre><code class="lang-coffeescript">/iftest $v = &gt;&gt;&gt;
+    <span class="hljs-keyword">if</span>($v == <span class="hljs-string">'hello'</span>) {
+        msg(<span class="hljs-string">'hello'</span>)
+    } <span class="hljs-keyword">else</span> {
+        msg(<span class="hljs-string">'world'</span>)
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>($v ==<span class="hljs-string">'world'</span>) {
+        msg(<span class="hljs-string">'bye'</span>)
+    }
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>컴파일 에러:</strong> <code>else</code> 가 <code>else if</code> 앞에 있습니다.</p>
+</blockquote>
+<p><code>else if</code> 와 <code>else</code> 가 동시에 존재할 경우 <code>else</code> 는 항상 맨 뒤에 있어야 합니다.</p>
+<h3 id="-switch-"><code>switch()</code></h3>
+<p><code>switch()</code> 펑션은 같은 변수를 값에 따라 각각 다른 작업을 실행해야 할 때 유용합니다.</p>
+<p><code>switch()</code> 구문은 다른 펑션들과는 달리 약간 특이한 문법을 사용합니다.</p>
+<p>이 구문에 대해 예제를 통해 좀 더 알아보도록 하겠습니다.</p>
+<h4 id="-1-">예제 1.</h4>
+<pre><code class="lang-coffeescript">/switchtest $ = <span class="hljs-meta">&gt;&gt;&gt;
+    </span>switch($) {
+        case <span class="hljs-string">'a'</span>:
+            msg(<span class="hljs-string">'Hello'</span>)
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'b'</span>:
+            msg(<span class="hljs-string">'World!'</span>)
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-symbol">default:</span>
+            msg(<span class="hljs-string">'Bye!'</span>)
+            <span class="hljs-keyword">break</span>;
+    }
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> &#39;a&#39; 입력시 메시지 &quot;Hello&quot; 출력, &#39;b&#39; 입력시 메시지 &quot;World!&quot; 출력, 그 이외 입력시 &quot;Bye!&quot; 출력</p>
+</blockquote>
+<p>Switch 구문은 다른 구문과 다르게 문법이 상당히 다릅니다.
+맨 위의 <code>switch(변수)</code> 를 통해 조건을 설정하고, 해당 변수의 결과를 <code>{}</code> 안에 <code>case &#39;값&#39;:</code> 과 같은 형태로 지정하고,</p>
+<p><code>case &#39;값&#39;:</code> 아래에 들여쓰기를 하여 코드를 적고, 마지막에 <code>break;</code> 구문을 통해서 구문을 끝마칩니다.</p>
+<p>아직도 이해가 안되신다면 위 예제 <code>switch()</code> 구문을 <code>if()</code> 구문의 형태로 바꿔보도록 하겠습니다.</p>
+<h5 id="-if-"><code>if()</code> 구문의 형태</h5>
+<pre><code class="lang-coffeescript">/switchtesttoif $ = <span class="hljs-meta">&gt;&gt;&gt;
+    </span>if($ == <span class="hljs-string">'a'</span>) {
+        msg(<span class="hljs-string">'Hello'</span>)
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>($ == <span class="hljs-string">'b'</span>) {
+        msg(<span class="hljs-string">'World!'</span>)
+    } <span class="hljs-keyword">else</span> {
+        msg(<span class="hljs-string">'Bye!'</span>)
+    }
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> 위 <code>switch()</code> 구문의 결과와 동일</p>
+</blockquote>
+<p>쉽게 말해서 <code>switch(변수)</code> 구문에서의 <code>case &quot;값&quot;:</code> 은 <code>if()</code> 구문에서의 <code>if(변수 == 값)</code> 과 같다고 볼 수 있고,</p>
+<p>여러 <code>case</code> 들의 존재는 <code>else if()</code> 와 비슷하다고 볼 수 있으며, <code>default:</code> 는 <code>else</code> 와 같다고 볼 수 있습니다.</p>
+<h4 id="-2-">예제 2.</h4>
+<pre><code class="lang-coffeescript">/switchtest $ = <span class="hljs-meta">&gt;&gt;&gt;
+    </span>switch($) {
+        case <span class="hljs-string">'a'</span>:
+            msg(<span class="hljs-string">'Hello'</span>)
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'b'</span>:
+            msg(<span class="hljs-string">'World!'</span>)
+        <span class="hljs-symbol">default:</span>
+            msg(<span class="hljs-string">'Bye!'</span>)
+    }
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> &#39;a&#39; 입력시 메시지 &quot;Hello&quot;, &quot;World!&quot;, &quot;Bye!&quot; 출력, &#39;b&#39; 입력시 메시지 &quot;World!&quot;, &quot;Bye!&quot; 출력, 그 이외 입력시 &quot;Bye!&quot; 출력</p>
+</blockquote>
+<p><code>switch()</code> 구문이 <code>if()</code> 구문과 또 다른 점은 바로 <code>break;</code> 가 각 <code>case</code> 끝에 존재한다는 점입니다.</p>
+<p>그렇다면 <code>break;</code> 가 존재하지 않는다면 어떨까요?</p>
+<p>바로 다음 <code>case</code> 의 조건을 무시하고 실행시켜 버립니다.</p>
+<p>즉 어떤 <code>case</code> 의 끝에 <code>break</code> 가 끝나지 않았다면 그 다음 <code>case</code> 의 구문도 실행하고, <code>break;</code> 가 나올 때까지 모든 조건을 무시하고 실행한다는 것이죠.</p>
+<p>이것이 유용하게 쓰일 때도 있지만, 대부분 <code>if()</code> 구문을 간단하게 사용하기 위해 사용하기 때문에 <code>break;</code> 는 습관적으로 붙여 주시는 것이 필요합니다.</p>
+<h1 id="-">다음 추천 강좌</h1>
+<p>[[반복문(Loop)]]</p>
 
-					<p>해당 문서에는 공식 문서에서 설명하거나 설명하지 않는 부분을 다르게 정리하여 설명합니다.</p>
-
-					<p>오른쪽 메뉴에서 보고 싶은 문서를 찾아보세요.</p>
-
-					<p><a href="https://steakteam.github.io/CommandHelper-Docs/">메인 페이지로 돌아가기</a></p>
 				</div>
 			</section>
 
@@ -117,6 +245,7 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+			<script>includeHTML();</script> 
 
 	</body>
 </html>

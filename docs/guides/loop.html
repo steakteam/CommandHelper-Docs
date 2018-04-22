@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>초보자 가이드/대문 - MethodScript Korean Docs</title>
+		<title>초보자 가이드/반복문 - MethodScript Korean Docs</title>
 		<base href="../" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,60 +43,90 @@
 			</header>
 
 		<!-- Nav -->
-			<nav id="nav">
-				<ul class="links">
-					<li><a href="index.html"><i class="fa fa-arrow-left"></i> 메인으로 돌아가기</a></li>
-				</ul>
-				<h2>초보자 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/index.html">대문</a></li>
-					<li><a href="./guides/start.html">시작하기</a></li>
-					<li><a href="./guides/setup.html">환경 설정</a></li>
-					<li><a href="./guides/aliases.html">단축 명령어</a></li>
-					<li><a href="./guides/variable.html">변수</a></li>
-					<li><a href="./guides/function.html">펑션</a></li>
-					<li><a href="./guides/classtype.html">자료형</a></li>
-				</ul>
-				<h4>고급 펑션 및 변수</h4>
-				<ul class="links">
-					<li><a href="./guides/advfunction.html">고급 펑션</a></li>
-					<li><a href="./guides/ivariable.html">i변수</a></li>
-					<li><a href="./guides/opsyntax.html">연산자 구문</a></li>
-					<li><a href="./guides/condition.html">조건문</a></li>
-					<li><a href="./guides/loop.html">반복문</a></li>
-				</ul>
-				<h2>고급 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/exception.html">예외</a></li>
-					<li><a href="./guides/array.html">배열</a></li>
-					<li><a href="./guides/event.html">이벤트</a></li>
-					<li><a href="./guides/closure.html">클로저</a></li>
-					<li><a href="./guides/procedure.html">프로시저</a></li>
-					<li><a href="./guides/permission.html">권한</a></li>
-					<li><a href="./guides/extensions.html">확장기능</a></li>
-					<li><a href="./guides/localpackages.html">로컬 패키지</a></li>
-					<li><a href="./guides/persistence.html">영구 변수</a></li>
-					<li><a href="./guides/advsetup.html">고급 설정</a></li>
-				</ul>
-				<h2>예제</h2>
-				<ul class="links">
-					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">예제 위키</a></li>
-				</ul>
+			<nav id="nav" w3-include-html="guides/nav.html">
 			</nav>
 
 		<!-- Main -->
 			<section id="main" class="wrapper">
 				<div class="container">
 					<header class="major special">
-						<h1>대문</h1>
+						<h1>반복문(Loop)</h1>
 					</header>
-					<p>커맨드헬퍼 초보자 가이드에 오신 것을 환영합니다.</p>
-
-					<p>해당 문서에는 공식 문서에서 설명하거나 설명하지 않는 부분을 다르게 정리하여 설명합니다.</p>
-
-					<p>오른쪽 메뉴에서 보고 싶은 문서를 찾아보세요.</p>
-
-					<p><a href="https://steakteam.github.io/CommandHelper-Docs/">메인 페이지로 돌아가기</a></p>
+					<h1 id="-">반복문이란?</h1>
+<p>반복문은 특정한 작업을 반복하고 싶을 때 유용합니다.
+예를 들어 모든 플레이어에게 메시지를 보내고 싶다거나, 비슷한 작업을 여러번 하고 싶을 때 유용하죠.</p>
+<p>대표적인 반복문으론 <code>for()</code> , <code>foreach()</code> , <code>while()</code> 문이 있습니다.</p>
+<h2 id="-for-"><code>for()</code> 구문</h2>
+<p><code>for()</code> 문은 가장 일반적인 반복문의 형식 중 하나입니다.</p>
+<p>작동 방식은 변수 선언, 변수 조건 확인, 구문 실행, 변수 연산으로 이루어집니다.</p>
+<p>쉽게 말해서, 어떠한 변수를 만들고 값을 지정한 뒤, 그 값이 미리 정한 조건과 맞으면 구문을 실행한 뒤 변수의 값을 바꿉니다.
+그리고 그 바뀐 값이 조건에 맞는다면 구문 실행 후 변수의 값을 바꾸는 과정을 하고, 이를 변수의 값이 조건과 맞지 않을 때까지 반복하는 것입니다.</p>
+<p>간단한 예제와 함께 위에서 말한 <code>for()</code> 구문의 동작 방식을 알아보도록 하겠습니다.</p>
+<h3 id="-1-">예제 1.</h3>
+<pre><code class="lang-coffeescript">/fortest = <span class="hljs-meta">&gt;&gt;&gt;
+    </span>for(@i=<span class="hljs-number">1</span>, @i&lt;=<span class="hljs-number">10</span>, @i++) {
+        msg(@i<span class="hljs-string">'번째 실행'</span>)
+    }
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> &quot;1 번째 실행&quot;, &quot;2 번째 실행&quot;.... &quot;10 번째 실행&quot; 이라는 메시지가 출력됨.</p>
+</blockquote>
+<p>위의 예제에서는 <code>@i</code> 라는 변수를 선언하고 변수의 초기 값을 <code>1</code> 로 지정하였습니다.</p>
+<p>그리고 조건은 @i 변수가 10보다 작거나 같아야 한다(<code>@i &lt;= 10</code>)고 지정하였고, 변수 연산은 <code>@i</code> 변수의 값에 1씩 더한다(<code>@i++</code>) 으로 지정하였습니다.</p>
+<p>마지막으로 실행할 구문은 <code>msg(@i&#39;번째 실행&#39;)</code> 이 됩니다.</p>
+<p>위의 <code>for()</code> 구문의 기본 구조에 따르면, 먼저 구문을 시작하면 <code>1</code> 이라는 값을 가진 <code>@i</code> 변수를 생성한 후, <code>@i</code> 변수가 <code>10</code> 이하인지 확인합니다(<code>@i&lt;=10</code>). 그리고 이 조건의 결과가 <code>참</code> 이기 때문에 구문(<code>msg(@i&#39;번째 실행&#39;)</code>) 을 실행하고 변수 연산(<code>@i++</code>) 을 실행합니다.</p>
+<p>변수 확인부터 변수 연산까지가 <code>for()</code> 구문의 한 반복이며, 변수 연산이 완료되면 다시 변수를 확인하고, 그 결과가 참이라면 해당 구문과 연산을 한번 더 실행하며, 거짓이라면 구문을 즉시 종료하게 됩니다.</p>
+<h2 id="-while-"><code>while()</code> 구문</h2>
+<p><code>while()</code> 구문은 <code>for()</code> 구문에서 <code>조건 확인</code> 부분만 존재하는 구문이라고 생각하시면 됩니다.</p>
+<p><code>while()</code> 문의 인수는 조건, 구문 두가지로 구성되어 있으며, 구문이 시작되면 <code>조건</code> 부분을 확인하고 참이면 구문을 실행 후 조건 확인, 거짓이면 구문을 끝냅니다.</p>
+<h3 id="-1-">예제 1.</h3>
+<pre><code class="lang-coffeescript">/whiletest = <span class="hljs-meta">&gt;&gt;&gt;
+    </span>@testvalue = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span>(@testvalue &lt; <span class="hljs-number">10</span>) {
+        msg(<span class="hljs-string">'while 테스트'</span>)
+        @testvalue++
+    }
+    msg(@testvalue)
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> &quot;while 테스트&quot; 라는 구문이 10번 반복되고, &quot;10&quot; 이라는 메시지가 출력된다.</p>
+</blockquote>
+<h2 id="-foreach-"><code>foreach()</code> 구문</h2>
+<blockquote>
+<p><strong>주의:</strong> 해당 문단은 [[배열(Array)]] 문서를 미리 읽고 이해할 필요가 있습니다.</p>
+</blockquote>
+<p><code>foreach()</code> 구문은 <code>for()</code> 구문에서 배열 처리를 더욱 간결하게 하기 위해 만들어진 구문입니다.</p>
+<p><code>foreach()</code> 구문은 배열의 변수, 배열의 값이 들어갈 변수, 배열의 키가 들어갈 변수(필요할 경우) 와 실행할 구문을 요구하며,</p>
+<p>배열 속의 각 값마다 반복하며, 각 값을 변수에 넣고 지정한 구문을 실행하는 방식입니다.</p>
+<p>이 구문 또한 예제를 통해 알아보도록 하겠습니다.</p>
+<h3 id="-1-">예제 1.</h3>
+<pre><code class="lang-coffeescript">/foreachtest = <span class="hljs-meta">&gt;&gt;&gt;
+    </span>@array = array(<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>, <span class="hljs-string">'d'</span>)
+    foreach(@array, @value) {
+        msg(<span class="hljs-string">'배열의 값:'</span>@value)
+    }
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> &quot;배열의 값: a&quot;, &quot;배열의 값: b&quot;, &quot;배열의 값: c&quot;, &quot;배열의 값: d&quot; 라는 메시지가 차례로 출력된다.</p>
+</blockquote>
+<p>위의 예제에서 보듯이, 배열의 크기만큼 구문을 반복하며, 반복할 때마다 <code>@value</code> 라는 변수에 배열 내부의 각각 다른 값이 들어가 있는 것을 볼 수 있습니다.</p>
+<h3 id="-2-">예제 2.</h3>
+<pre><code class="lang-coffeescript">/foreachtest = <span class="hljs-meta">&gt;&gt;&gt;
+    </span>@array = array(<span class="hljs-string">'A'</span>: <span class="hljs-string">'a'</span>, <span class="hljs-string">'B'</span>: <span class="hljs-string">'b'</span>, <span class="hljs-string">'C'</span>: <span class="hljs-string">'c'</span>, <span class="hljs-string">'D'</span>: <span class="hljs-string">'d'</span>)
+    foreach(@array, @key, @value) {
+        msg(<span class="hljs-string">'배열의 키:'</span>@key.<span class="hljs-string">', 배열의 값:'</span>@value)
+    }
+&lt;&lt;&lt;
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> &quot;배열의 키: A, 배열의 값: a&quot;, &quot;배열의 키: B, 배열의 값: b&quot;, &quot;배열의 키: C, 배열의 값: c&quot;, &quot;배열의 키: D, 배열의 값: d&quot; 라는 메시지가 차례로 출력된다.</p>
+</blockquote>
+<p><code>foreach()</code> 구문에서 인수가 세개(배열, 키, 값) 일 경우 두번째로 선언된 변수에 키 이름이 들어가고, 세번째로 선언된 변수에 값이 들어가서 구문이 반복된다는 것을 볼 수 있습니다.</p>
+<h1 id="-">다음 추천 강좌</h1>
+<p>[[배열(Array)]]</p>
 				</div>
 			</section>
 
@@ -117,6 +147,7 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+			<script>includeHTML();</script> 
 
 	</body>
 </html>

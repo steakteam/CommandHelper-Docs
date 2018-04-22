@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>초보자 가이드/대문 - MethodScript Korean Docs</title>
+		<title>초보자 가이드/배열 - MethodScript Korean Docs</title>
 		<base href="../" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,60 +43,194 @@
 			</header>
 
 		<!-- Nav -->
-			<nav id="nav">
-				<ul class="links">
-					<li><a href="index.html"><i class="fa fa-arrow-left"></i> 메인으로 돌아가기</a></li>
-				</ul>
-				<h2>초보자 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/index.html">대문</a></li>
-					<li><a href="./guides/start.html">시작하기</a></li>
-					<li><a href="./guides/setup.html">환경 설정</a></li>
-					<li><a href="./guides/aliases.html">단축 명령어</a></li>
-					<li><a href="./guides/variable.html">변수</a></li>
-					<li><a href="./guides/function.html">펑션</a></li>
-					<li><a href="./guides/classtype.html">자료형</a></li>
-				</ul>
-				<h4>고급 펑션 및 변수</h4>
-				<ul class="links">
-					<li><a href="./guides/advfunction.html">고급 펑션</a></li>
-					<li><a href="./guides/ivariable.html">i변수</a></li>
-					<li><a href="./guides/opsyntax.html">연산자 구문</a></li>
-					<li><a href="./guides/condition.html">조건문</a></li>
-					<li><a href="./guides/loop.html">반복문</a></li>
-				</ul>
-				<h2>고급 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/exception.html">예외</a></li>
-					<li><a href="./guides/array.html">배열</a></li>
-					<li><a href="./guides/event.html">이벤트</a></li>
-					<li><a href="./guides/closure.html">클로저</a></li>
-					<li><a href="./guides/procedure.html">프로시저</a></li>
-					<li><a href="./guides/permission.html">권한</a></li>
-					<li><a href="./guides/extensions.html">확장기능</a></li>
-					<li><a href="./guides/localpackages.html">로컬 패키지</a></li>
-					<li><a href="./guides/persistence.html">영구 변수</a></li>
-					<li><a href="./guides/advsetup.html">고급 설정</a></li>
-				</ul>
-				<h2>예제</h2>
-				<ul class="links">
-					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">예제 위키</a></li>
-				</ul>
+			<nav id="nav" w3-include-html="guides/nav.html">
 			</nav>
 
 		<!-- Main -->
 			<section id="main" class="wrapper">
 				<div class="container">
 					<header class="major special">
-						<h1>대문</h1>
+						<h1>배열</h1>
 					</header>
-					<p>커맨드헬퍼 초보자 가이드에 오신 것을 환영합니다.</p>
+					<h1 id="-array-">배열(Array) 란?</h1>
+<p>배열은 어떠한 정보들을 나열한 것을 뜻합니다. 예를 들면 서버에 접속한 모든 플레이어들의 목록은 하나의 배열이라고 할 수 있습니다.</p>
+<p>또한, 1부터 5까지의 숫자를 나열한 것도 배열이라고 할 수 있습니다.</p>
+<pre><code class="lang-coffeescript">{'Player1', 'Player2', 'Player3'} <span class="hljs-comment">// 배열</span>
 
-					<p>해당 문서에는 공식 문서에서 설명하거나 설명하지 않는 부분을 다르게 정리하여 설명합니다.</p>
-
-					<p>오른쪽 메뉴에서 보고 싶은 문서를 찾아보세요.</p>
-
-					<p><a href="https://steakteam.github.io/CommandHelper-Docs/">메인 페이지로 돌아가기</a></p>
+{<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>} <span class="hljs-comment">// 배열</span>
+</code></pre>
+<p>이 배열에 값을 추가하고, 제거하고, 순서를 바꾸는 등의 작업을 통해서 작업을 더욱 효율적으로 할 수 있습니다.</p>
+<p>커맨드헬퍼에서는 배열을 이용하여 다양한 값(위치, 이벤트) 등을 처리하기 때문에, 몇가지 고급 펑션들을 이용하시려면 알아야 하는 것이 바로 배열입니다.</p>
+<h2 id="-">배열 만들기</h2>
+<p>커맨드헬퍼에서는 <code>array()</code> 라는 펑션을 통해서 배열을 만들 수 있습니다.</p>
+<pre><code class="lang-coffeescript">msg(array(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>))
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> {1, 2, 3, 4, 5}</p>
+</blockquote>
+<p>배열을 메시지로 출력하면 <code>{1, 2, 3, 4, 5}</code> 의 형태로 나오게 됩니다.</p>
+<p>물론 이는 배열을 문자열로 변환한 것으로 <strong><code>{1, 2, 3, 4, 5}</code> 가 배열이라는 뜻은 아닙니다!</strong></p>
+<h2 id="-">배열의 값 가져오기</h2>
+<pre><code class="lang-coffeescript">msg(<span class="hljs-name">array</span>('a', 'b', 'c', 'd', 'e')[<span class="hljs-number">1</span>])
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> b</p>
+</blockquote>
+<p>배열 옆에 <code>[가져올 값의 위치]</code> 를 적으면 배열 속의 해당 값을 반환하게 됩니다.</p>
+<p>여기서 <code>가져올 값의 위치</code> 부분을 <strong>인덱스</strong> 혹은 <strong>키</strong> 라고 부릅니다.</p>
+<p>또한 위치의 번호는 <strong>0부터 시작한다는 점</strong> 을 잊지 마세요.</p>
+<h2 id="-">배열 수정하기</h2>
+<p>배열의 장점은 이미 배열이 선언된 이후에도 그 배열 속의 값을 추가/제거/수정/재배열 등이 가능하다는 점입니다.</p>
+<p>그 외에도 배열을 이용하면 다양한 작업들을 할 수 있습니다. 커맨드헬퍼에서 배열을 통해 할 수 있는 모든 것은
+<a href="https://steakteam.github.io/CommandHelper-Docs/API.html#ArrayHandling">API 문서 - 배열 관리</a> 에서 확인하실 수 있습니다.</p>
+<h3 id="-">배열의 값 수정하기</h3>
+<p>배열 안의 어떠한 값을 수정하는 방법은 <code>array_set()</code> 을 이용하는 방법이 있습니다.</p>
+<p>또한 이 <code>array_set()</code> 은 <code>@array[인덱스] = &#39;값&#39;</code> 형태의 연산자 구문으로도 이용할 수 있습니다.</p>
+<p>이 <code>array_set()</code> 펑션을 이용하여 인덱스를 배열의 크기보다 크게 하여 배열에 새로운 값을 추가할 수도 있지만, 기본적으로 뒤에서 언급할 키가 정해진 배열이 아닌 경우에는 <code>array_push()</code> 를 더 자주 이용합니다.</p>
+<h4 id="-1-">예제 1.</h4>
+<pre><code class="lang-coffeescript"><span class="hljs-variable">@array</span> = array(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+msg(<span class="hljs-variable">@array</span>)
+<span class="hljs-variable">@array</span>[<span class="hljs-number">0</span>] = <span class="hljs-number">999</span>
+msg(<span class="hljs-variable">@array</span>)
+</code></pre>
+<pre><code class="lang-coffeescript"><span class="hljs-variable">@array</span> = array(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+msg(<span class="hljs-variable">@array</span>)
+array_set(<span class="hljs-variable">@array</span>, <span class="hljs-number">0</span>, <span class="hljs-number">999</span>)
+msg(<span class="hljs-variable">@array</span>)
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> 두 예제 모두 <code>{1, 2, 3, 4}</code> 라는 메시지가 출력된 후, <code>{999, 2, 3, 4}</code> 라는 메시지가 출력됩니다.</p>
+</blockquote>
+<h3 id="-">배열에 값 추가하기</h3>
+<p>일반적인 배열에 값을 추가하고 싶다면 <code>array_push()</code> 라는 펑션을 이용하면 됩니다.</p>
+<p><code>array_push()</code> 펑션 또한 <code>@array[] = &#39;값&#39;</code> 이란 연산자 구문을 이용할 수 있습니다.</p>
+<pre><code class="lang-coffeescript"><span class="hljs-variable">@array</span> = array(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+msg(<span class="hljs-variable">@array</span>)
+<span class="hljs-variable">@array</span>[] = <span class="hljs-number">5</span>
+msg(<span class="hljs-variable">@array</span>)
+</code></pre>
+<pre><code class="lang-coffeescript"><span class="hljs-variable">@array</span> = array(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+msg(<span class="hljs-variable">@array</span>)
+array_push(<span class="hljs-variable">@array</span>, <span class="hljs-number">5</span>)
+msg(<span class="hljs-variable">@array</span>)
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> 두 예제 모두 <code>{1, 2, 3, 4}</code> 가 출력된 뒤 <code>{1, 2, 3, 4, 5}</code> 가 출력됨.</p>
+</blockquote>
+<h3 id="-">배열의 값 삭제하기</h3>
+<p>배열의 값을 삭제하려면 <code>array_remove()</code> 라는 펑션과 <code>array_remove_values()</code> 라는 펑션 두가지를 사용할 수 있습니다.</p>
+<p>두 펑션의 차이점은 <code>array_remove()</code> 라는 펑션은 배열의 인덱스를 가지고 배열의 값을 제거할 수 있는 펑션이고,
+<code>array_remove_value()</code> 라는 펑션은 배열의 값을 가지고 배열의 값을 제거할 수 있는 펑션입니다.</p>
+<p>일반적인 배열의 경우 배열의 중간에 있는 값(예를 들어 3번째(인덱스가 2인) 값) 을 없앨 경우 다음 인덱스의 값이
+없어진 인덱스가 있는 곳으로 한칸씩 당겨진다고 생각하시면 됩니다.</p>
+<h4 id="-1-array_remove-">예제 1.(<code>array_remove()</code>)</h4>
+<pre><code class="lang-coffeescript"><span class="hljs-variable">@array</span> = array(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+msg(<span class="hljs-variable">@array</span>)
+msg(<span class="hljs-variable">@array</span>[<span class="hljs-number">2</span>])
+array_remove(<span class="hljs-variable">@array</span>, <span class="hljs-number">2</span>)
+msg(<span class="hljs-variable">@array</span>)
+msg(<span class="hljs-variable">@array</span>[<span class="hljs-number">2</span>])
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>{1, 2, 3, 4, 5}</code>, <code>3</code> 이 출력된 후 <code>{1, 2, 4, 5}</code>, <code>4</code> 가 출력됨</p>
+</blockquote>
+<h4 id="-2-array_remove_values-">예제 2.(<code>array_remove_values</code>)</h4>
+<pre><code class="lang-coffeescript"><span class="hljs-variable">@array</span> = array(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
+msg(<span class="hljs-variable">@array</span>)
+array_remove_values(<span class="hljs-variable">@array</span>, <span class="hljs-number">1</span>)
+msg(<span class="hljs-variable">@array</span>)
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>{2, 3, 4, 5, 1, 1}</code> 이 출력된 후 <code>{2, 3, 4, 5}</code> 가 출력됨</p>
+</blockquote>
+<h2 id="-">배열의 정보 가져오기</h2>
+<p>만약 서버에 접속한 모든 플레이어의 닉네임이 적혀 있는 배열이 있다고 가정합시다.</p>
+<p>그렇다면 이 배열을 이용하여 서버에 접속한 사람 수를 구하거나, ITSTAKE 라는 플레이어가 접속해 있는지 확인하고 싶다면 어떻게 해야 할까요?</p>
+<p>커맨드헬퍼에서는 다양한 펑션을 활용하여 이러한 문제를 해결할 수 있게 해 줍니다.</p>
+<p>이 문단에서는 여러 펑션을 사용하여 배열, 배열 내부의 정보를 확인하는 방법을 알아봅니다.</p>
+<h3 id="-">배열의 크기 가져오기</h3>
+<p>배열의 크기를 가져오는 방법은 정말 간단합니다.</p>
+<p><code>array_size(@array)</code> 를 실행하게 되면 배열의 크기를 얻어올 수 있습니다.</p>
+<blockquote>
+<p><strong>참고</strong> 일반 배열의 경우 배열의 크기는 (배열의 마지막 인덱스 + 1) 입니다.</p>
+</blockquote>
+<h4 id="-1-">예제 1.</h4>
+<pre><code class="lang-coffeescript"><span class="hljs-variable">@array</span> = array(<span class="hljs-string">'Player1'</span>, <span class="hljs-string">'Player2'</span>, <span class="hljs-string">'Player3'</span>, <span class="hljs-string">'Player4'</span>)
+msg(array_size(<span class="hljs-variable">@array</span>))
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>4</code> 가 출력됨.</p>
+</blockquote>
+<h3 id="-">배열에서 어떠한 값이 존재하는지 확인하기</h3>
+<p><code>array_contains()</code> 펑션은 배열에서 인수로 주어진 값이 존재하는지 확인합니다.</p>
+<p>몇 개가 있든 존재하기만 하면 참을 반환하게 됩니다.</p>
+<h4 id="-1-">예제 1.</h4>
+<pre><code class="lang-coffeescript"><span class="hljs-variable">@array</span> = array(<span class="hljs-string">'Player1'</span>, <span class="hljs-string">'Player2'</span>, <span class="hljs-string">'Player3'</span>, <span class="hljs-string">'Player4'</span>)
+msg(array_contains(<span class="hljs-variable">@array</span>, <span class="hljs-string">'ITSTAKE'</span>))
+msg(array_contains(<span class="hljs-variable">@array</span>, <span class="hljs-string">'Player4'</span>))
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>false</code> 가 출력된 후 <code>true</code> 가 출력됩니다.</p>
+</blockquote>
+<h1 id="-">키가 주어진 배열(키가 있는 배열)</h1>
+<p>커맨드헬퍼에서는 위에서 배운 배열 말고도 또 다른 형식의 배열을 지원합니다. 바로 키가 주어진 배열(Associative Array)입니다.</p>
+<p>일반 배열의 경우 <code>{1, 2, 3, 4}</code> 처럼 인덱스가 따로 주어지지 않고 그 값의 인덱스는 그 값이 있는 순서인 반면에,</p>
+<p>키가 주어진 배열은 <code>{&#39;one&#39;: 1, &#39;two&#39;: 2, &#39;three&#39;: 3, &#39;four&#39;: 4}</code> 처럼 인덱스를 값과 함께 설정하는 배열입니다.</p>
+<p>키가 주어진 배열의 장점은 인덱스에 그 인덱스에 해당하는 값의 설명 등을 할 수 있으며, 배열 중간의 값을 삭제해도 인덱스가 바뀌지 않는다는 장점을 가지고 있습니다. 즉, 어떠한 인덱스를 가진 값을 직접 수정하지 않는 한 그 값의 인덱스는 절대 바뀌지 않는 것입니다.</p>
+<h2 id="-">키가 주어진 배열 만들기</h2>
+<p>키가 주어진 배열을 만드는 것은 간단합니다. 일반 <code>array()</code> 펑션을 이용해서 만들되, 만들 때 인덱스를 같이 지정해 주면 됩니다.</p>
+<pre><code class="lang-coffeescript"><span class="hljs-variable">@array</span> = array(<span class="hljs-string">'one'</span>: <span class="hljs-number">1</span>, <span class="hljs-string">'two'</span>: <span class="hljs-number">2</span>)
+msg(<span class="hljs-variable">@array</span>)
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>{one: 1, two: 2}</code> 가 출력됨.</p>
+</blockquote>
+<p>위 예제를 통해 키가 있는 배열을 만들고 싶을 땐 <code>인덱스: 값, 인덱스: 값...</code> 의 형태로 배열 안에 써 주면 된다는 것을 알 수 있습니다.</p>
+<p>하지만 빈 배열을 <code>array()</code> 펑션을 통해서 만들면 일반 배열이 생성되기 때문에, 이 경우에만 <code>associative_array()</code> 펑션을 통해 따로 키가 주어진 배열을 만들 수도 있습니다.</p>
+<pre><code class="lang-coffeescript"><span class="hljs-variable">@array</span> = array()
+msg(is_associative(<span class="hljs-variable">@array</span>)) # 주어진 값이 키가 있는 배열인지 확인하는 함수
+<span class="hljs-variable">@aarray</span> = associative_array()
+msg(is_associative(<span class="hljs-variable">@aarray</span>))
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>false</code>, <code>true</code> 가 출력됨.</p>
+</blockquote>
+<h2 id="-">키가 주어진 배열 수정하기</h2>
+<p>키가 주어진 배열을 수정하는 것은 일반 배열과 비슷합니다.</p>
+<p>다른 점은 인덱스가 숫자 뿐만 아니라 문자열도 가능하며, 배열의 순서가 없어지기 때문에 <code>array_push()</code> 의 사용이 불가능합니다.</p>
+<pre><code class="lang-coffeescript"><span class="hljs-variable">@array</span> = array(<span class="hljs-string">'one'</span>: <span class="hljs-number">1</span>, <span class="hljs-string">'two'</span>: <span class="hljs-number">2</span>, <span class="hljs-number">3</span>: <span class="hljs-string">'three'</span>, <span class="hljs-number">4</span>: <span class="hljs-string">'four'</span>) # 인덱스는 숫자 또는 문자열만 가능
+msg(<span class="hljs-variable">@array</span>[<span class="hljs-string">'one'</span>]) # array_get(<span class="hljs-variable">@array</span>, <span class="hljs-string">'one'</span>) 와 동일
+<span class="hljs-variable">@array</span>[<span class="hljs-string">'two'</span>] = <span class="hljs-string">'two'</span> # array_set(<span class="hljs-variable">@array</span>, <span class="hljs-string">'two'</span>, <span class="hljs-string">'two'</span>) 와 동일
+<span class="hljs-variable">@array</span>[<span class="hljs-string">'9'</span>] = <span class="hljs-string">'nine'</span>
+# 배열에 순서가 없어졌기 때문에 배열의 크기보다 훨씬 큰 인덱스도 array_set 으로 지정 및 추가 가능
+msg(<span class="hljs-variable">@array</span>)
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>1</code> 이 출력되고 <code>{one: 1, two: two, 3: three, 4: four, 9: nine}</code> 이 출력됨.</p>
+</blockquote>
+<p>뿐만 아니라 <code>array_size()</code> 등등 일반 배열 전용을 제외한 모든 배열 관련 펑션들을 사용할 수 있습니다.</p>
+<h1 id="-">주의점</h1>
+<ul>
+<li><p>배열의 값은 어느 자료형이든 넣을 수 있습니다.</p>
+</li>
+<li><p>배열의 인덱스는 <strong>숫자, 문자(키가 있는 배열의 경우)</strong> 만 가능합니다!</p>
+</li>
+</ul>
+<h1 id="-">다차원 배열</h1>
+<p>만약 배열 안에 배열을 넣게 된다면 어떻게 될까요?</p>
+<p>물론 그 경우도 처리 가능합니다.</p>
+<p>예제를 통해 배열 안의 배열을 처리하는 방법을 알아보겠습니다.</p>
+<pre><code class="lang-coffeescript"><span class="hljs-variable">@array</span> = array(array(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>), array(<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>), array(<span class="hljs-string">'one'</span>: <span class="hljs-number">1</span>, <span class="hljs-string">'two'</span>: <span class="hljs-number">2</span>, <span class="hljs-string">'three'</span>: <span class="hljs-number">3</span>))
+msg(<span class="hljs-variable">@array</span>[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]) # array_get(array_get(<span class="hljs-variable">@array</span>, <span class="hljs-number">0</span>), <span class="hljs-number">0</span>) 과 같음
+<span class="hljs-variable">@array</span>[<span class="hljs-number">2</span>][<span class="hljs-string">'one'</span>] = <span class="hljs-string">'one'</span> # array_set(<span class="hljs-variable">@array</span>[<span class="hljs-number">2</span>], <span class="hljs-string">'one'</span>, 'one) 과 같음
+<span class="hljs-variable">@array</span>[<span class="hljs-number">1</span>][] = <span class="hljs-string">'d'</span> # array_push(<span class="hljs-variable">@array</span>[<span class="hljs-number">1</span>], <span class="hljs-string">'d'</span>) 와 같음
+msg(<span class="hljs-variable">@array</span>)
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> <code>1</code> 출력 후 <code>{{1, 2, 3}, {a, b, c, d}, {one: one, two: 2, three: 3}}</code> 가 출력됨.</p>
+</blockquote>
+<p>물론 배열 안에 배열, 그 배열 안의 또 배열 이러한 식으로 배열 안에 배열을 무한대로 넣을 수 있습니다.</p>
+<p>물론 그렇게 배열의 차원이 높아질 수록 코드도 복잡해 지기 때문에 처리에 유의하시는 것이 좋습니다.</p>
 				</div>
 			</section>
 
@@ -117,6 +251,7 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+			<script>includeHTML();</script> 
 
 	</body>
 </html>

@@ -40,14 +40,7 @@
 			</header>
 
 		<!-- Nav -->
-			<nav id="nav">
-				<ul class="links">
-					<li><a href="index.html">메인</a></li>
-					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">초보자 가이드</a></li>
-					<li><a href="API.html">API</a></li>
-					<li><a href="EventAPI.html">이벤트 API</a></li>
-					<li><a href="extensions.html">확장기능</a></li>
-				</ul>
+			<nav id="nav" w3-include-html="nav.html">
 			</nav>
 
 		<!-- Banner -->
@@ -129,6 +122,6 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+			<script>includeHTML();</script> 
 	</body>
 </html>

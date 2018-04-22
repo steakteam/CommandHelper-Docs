@@ -43,60 +43,24 @@
 			</header>
 
 		<!-- Nav -->
-			<nav id="nav">
-				<ul class="links">
-					<li><a href="index.html"><i class="fa fa-arrow-left"></i> 메인으로 돌아가기</a></li>
-				</ul>
-				<h2>초보자 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/index.html">대문</a></li>
-					<li><a href="./guides/start.html">시작하기</a></li>
-					<li><a href="./guides/setup.html">환경 설정</a></li>
-					<li><a href="./guides/aliases.html">단축 명령어</a></li>
-					<li><a href="./guides/variable.html">변수</a></li>
-					<li><a href="./guides/function.html">펑션</a></li>
-					<li><a href="./guides/classtype.html">자료형</a></li>
-				</ul>
-				<h4>고급 펑션 및 변수</h4>
-				<ul class="links">
-					<li><a href="./guides/advfunction.html">고급 펑션</a></li>
-					<li><a href="./guides/ivariable.html">i변수</a></li>
-					<li><a href="./guides/opsyntax.html">연산자 구문</a></li>
-					<li><a href="./guides/condition.html">조건문</a></li>
-					<li><a href="./guides/loop.html">반복문</a></li>
-				</ul>
-				<h2>고급 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/exception.html">예외</a></li>
-					<li><a href="./guides/array.html">배열</a></li>
-					<li><a href="./guides/event.html">이벤트</a></li>
-					<li><a href="./guides/closure.html">클로저</a></li>
-					<li><a href="./guides/procedure.html">프로시저</a></li>
-					<li><a href="./guides/permission.html">권한</a></li>
-					<li><a href="./guides/extensions.html">확장기능</a></li>
-					<li><a href="./guides/localpackages.html">로컬 패키지</a></li>
-					<li><a href="./guides/persistence.html">영구 변수</a></li>
-					<li><a href="./guides/advsetup.html">고급 설정</a></li>
-				</ul>
-				<h2>예제</h2>
-				<ul class="links">
-					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">예제 위키</a></li>
-				</ul>
+			<nav id="nav" w3-include-html="guides/nav.html">
 			</nav>
 
 		<!-- Main -->
 			<section id="main" class="wrapper">
 				<div class="container">
 					<header class="major special">
-						<h1>대문</h1>
+						<h1>확장기능(Extensions)</h1>
 					</header>
-					<p>커맨드헬퍼 초보자 가이드에 오신 것을 환영합니다.</p>
-
-					<p>해당 문서에는 공식 문서에서 설명하거나 설명하지 않는 부분을 다르게 정리하여 설명합니다.</p>
-
-					<p>오른쪽 메뉴에서 보고 싶은 문서를 찾아보세요.</p>
-
-					<p><a href="https://steakteam.github.io/CommandHelper-Docs/">메인 페이지로 돌아가기</a></p>
+					<h1 id="-">확장기능이란?</h1>
+<p>확장기능은 커맨드헬퍼의 [[펑션|펑션(Function)]] 이나 [[이벤트|이벤트(Event)]] 를 추가해 주는 파일입니다.</p>
+<p>마인크래프트 플러그인과 같이 <code>.jar</code> 확장자의 파일이며, <code>(플러그인 폴더)/CommandHelper/extensions</code> 에 넣으면 사용할 수 있습니다.</p>
+<p>확장기능의 적용은 <strong>무조건 서버를 재시작</strong> 하여야 하며, 커맨드헬퍼의 자체 리로드 기능으로는 로드할 수 없습니다.</p>
+<h1 id="-">확장기능의 사용</h1>
+<p><a href="https://steakteam.github.io/CommandHelper-Docs/extensions.html">확장기능 인덱스</a> 에서 원하는 확장기능을 다운로드 받아,</p>
+<p><code>extensions</code> 폴더에 넣고 서버를 재시작합니다. 그리고 커맨드헬퍼의 스크립트 상에서 확장기능의 문서를 참고하여 확장기능의 펑션이나 이벤트를 사용할 수 있습니다.</p>
+<h1 id="-">확장기능의 제작</h1>
+<p>오른쪽 목차의 확장기능 제작 분류를 참고하세요.</p>
 				</div>
 			</section>
 
@@ -117,6 +81,7 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+			<script>includeHTML();</script> 
 
 	</body>
 </html>

@@ -43,45 +43,7 @@
 			</header>
 
 		<!-- Nav -->
-			<nav id="nav">
-				<ul class="links">
-					<li><a href="index.html"><i class="fa fa-arrow-left"></i> 메인으로 돌아가기</a></li>
-				</ul>
-				<h2>초보자 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/index.html">대문</a></li>
-					<li><a href="./guides/start.html">시작하기</a></li>
-					<li><a href="./guides/setup.html">환경 설정</a></li>
-					<li><a href="./guides/aliases.html">단축 명령어</a></li>
-					<li><a href="./guides/variable.html">변수</a></li>
-					<li><a href="./guides/function.html">펑션</a></li>
-					<li><a href="./guides/classtype.html">자료형</a></li>
-				</ul>
-				<h4>고급 펑션 및 변수</h4>
-				<ul class="links">
-					<li><a href="./guides/advfunction.html">고급 펑션</a></li>
-					<li><a href="./guides/ivariable.html">i변수</a></li>
-					<li><a href="./guides/opsyntax.html">연산자 구문</a></li>
-					<li><a href="./guides/condition.html">조건문</a></li>
-					<li><a href="./guides/loop.html">반복문</a></li>
-				</ul>
-				<h2>고급 가이드</h2>
-				<ul class="links">
-					<li><a href="./guides/exception.html">예외</a></li>
-					<li><a href="./guides/array.html">배열</a></li>
-					<li><a href="./guides/event.html">이벤트</a></li>
-					<li><a href="./guides/closure.html">클로저</a></li>
-					<li><a href="./guides/procedure.html">프로시저</a></li>
-					<li><a href="./guides/permission.html">권한</a></li>
-					<li><a href="./guides/extensions.html">확장기능</a></li>
-					<li><a href="./guides/localpackages.html">로컬 패키지</a></li>
-					<li><a href="./guides/persistence.html">영구 변수</a></li>
-					<li><a href="./guides/advsetup.html">고급 설정</a></li>
-				</ul>
-				<h2>예제</h2>
-				<ul class="links">
-					<li><a href="https://github.com/steakteam/CommandHelper-Docs/wiki">예제 위키</a></li>
-				</ul>
+			<nav id="nav" w3-include-html="guides/nav.html">
 			</nav>
 
 		<!-- Main -->
@@ -90,117 +52,88 @@
 					<header class="major special">
 						<h1>자료형(Class Type)</h1>
 					</header>
-					# 변수의 자료형
-변수에는 **자료형**이라는 것이 있습니다. 이는 펑션에서의 인수, 반환값(고급 펑션 문서에서 다룸)에도 동일하게 적용되는 개념인데요.
+					<h1 id="-">변수의 자료형</h1>
+<p>변수에는 <strong>자료형</strong>이라는 것이 있습니다. 이는 펑션에서의 인수, 반환값(고급 펑션 문서에서 다룸)에도 동일하게 적용되는 개념인데요.</p>
+<p>자료형을 통해서 변수의 값의 종류나 펑션이 요구하는 값의 종류를 구별할 수 있습니다.</p>
+<p>예를 들어 지금까지 펑션에서 써왔던 <strong>&#39;</strong>(따옴표) 가 붙어있는 메시지들은 이 메시지들이 <strong>문자열 자료형</strong>(String) 이라는 것을 나타내기 위한 표시입니다.</p>
+<p>이 문단에서는 변수의 기본적인 자료형들을 간단히 알아봅니다.</p>
+<h2 id="-">문자열</h2>
+<p>코드에서 가장 많이 쓰는 자료형입니다. 문자로 이루어지며, <strong>&#39;</strong>(따옴표) 안에 있는 경우 무조건 문자열이라고 간주합니다.
+또한 펑션과 문자열이 붙어있는 경우(<code>펑션()&#39;문자열&#39;</code> 같이) 펑션의 반환값 또한 문자열이 됩니다.</p>
+<p>그리고 클로저를 제외한 모든 변수는 문자열로 동일하게 변환할 수 있습니다.(클로저는 문자열로 완벽하게 변환하진 못합니다.)</p>
+<h2 id="-int-">정수(int)</h2>
+<p>여러분이 잘 아는 정수(숫자) 입니다.</p>
+<p>코드에서 쓸 때에는 따옴표 없이 그냥 숫자만 있을 경우 정수 자료형으로 간주되지만, 문자열이 숫자로만 이루어져 있을 때(따옴표 안에 숫자만 있을 때)에도 정수 자료형처럼 쓰일 수 있습니다.</p>
+<h2 id="-double-">소수(double)</h2>
+<p>정수를 더 쪼갠 형태입니다. 여기서 소수란 1.1 처럼 소숫점이 있는 수들을 말합니다.</p>
+<p>정수처럼 쓰지만 뒤에 소숫점과 숫자가 붙어있다는 것이 다릅니다.</p>
+<h2 id="-array-">배열(Array)</h2>
+<p>어떠한 값들을 나열하여 묶은 것을 배열이라고 합니다.
+<code>array()</code> 펑션으로 생성할 수 있으며, 문자열로 변환되면 <code>{값1, 값2, 값3}</code> 처럼 표시됩니다.
+자세한 내용은 [[배열(Array)]] 파트에서 다룹니다.</p>
+<h2 id="boolean">boolean</h2>
+<p>true(참), false(거짓) 으로 이루어져 있으며,</p>
+<p>값이 true 일 경우 주어진 조건 혹은 주어진 작업의 결과가 참이라는 뜻이고,</p>
+<p>값이 false 일 경우 그 반대입니다.</p>
+<h2 id="null">null</h2>
+<p>null 은 하나의 자료형으로 분류되지만 가지고 있는 값은 null 단 하나입니다.
+자료형 자체의 값이 없다는 뜻이며, 대개 오류가 날 때 이 null 값을 반환하는 경우가 많습니다.</p>
+<h2 id="-closure-">클로저(Closure)</h2>
+<p>실행할 수 있는 코드가 담긴 객체입니다. 자세한 내용은 [[클로저(Closure)]] 파트에서 다룹니다.</p>
+<h2 id="-">하위 자료형</h2>
+<p>자료형은 대개 위의 종류들로 다 표현될 수 있지만(바이트배열 등 언급되지 않은 자료형도 있음), API 문서 상으로는</p>
+<p>자료형은 같은데에도 불구하고 그 값의 종류(자료형과 상관 없이) 에 따라 표기를 다르게 한 경우도 있습니다.</p>
+<p>이는 다양한 표기가 있지만 그 표기를 보고 자료형을 유추하기가 어렵지 않으므로 해당 값의 기능을 좀 더 쉽게 표기하기 위해 사용하였다고 생각하시면 됩니다.</p>
+<blockquote>
+<p><strong>예:</strong> 엔디티 ID(int 자료형) -&gt; 엔디티의 식별 ID 이며, 정수로 표현되지만 문서상으론 엔디티 ID 라고 표기되어 있음.</p>
+</blockquote>
+<h1 id="-">자료형의 식별 및 변환</h1>
+<p>커맨드헬퍼는 자료형을 엄격하게 구별하는 프로그래밍 언어라고 볼 순 없습니다.
+하지만 특정한 자료형이 특정한 상황에 필요할 때가 있기 때문에, 자료형의 식별 및 변환을 할 수 있는 펑션들이 있습니다.</p>
+<h2 id="-">자료형의 식별</h2>
+<h3 id="-typeof-"><code>typeof()</code></h3>
+<p><code>typeof()</code> 는 자료형을 식별할 때 사용하는 펑션입니다.</p>
+<p>인수로 자료형을 알고 싶은 값을 입력하면, 자료형의 이름이 문자열으로 반환됩니다.</p>
+<h4 id="-">예제.</h4>
+<pre><code class="lang-coffeescript">/typeoftest = msg(<span class="hljs-name">typeof</span>('문자열')','typeof(<span class="hljs-number">1</span>)','typeof(<span class="hljs-number">1.0</span>)','typeof(<span class="hljs-name">array</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>))
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> 플레이어에게 &quot;string , int , double , array&quot; 라는 메시지가 전송됩니다.</p>
+</blockquote>
+<p>인수의 자료형을 인수의 값과 상관없이 알려주는 것을 알 수 있습니다.</p>
+<h3 id="-is_-"><code>is_자료형()</code></h3>
+<p><code>is_자료형()</code> 은 하나의 펑션이 아닌 자료형을 구별할 수 있는 펑션들의 총칭을 의미합니다.</p>
+<p>자료형 별로 이것이 해당 자료형인지 알려주는 펑션이 바로 이 펑션이며, 결과로 boolean 을 반환합니다.
+(주어진 값이 해당 자료형과 일치하면 참(true), 일치하지 않으면 거짓(false))</p>
+<h4 id="-">예제.</h4>
+<pre><code class="lang-coffeescript">/isstring = msg(<span class="hljs-name">is_string</span>('문자열'))
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> 플레이어에게 &quot;true&quot; 라는 메시지가 전송됩니다.</p>
+</blockquote>
+<h2 id="-">자료형의 변환</h2>
+<p>자료형의 변환하는 방법은 여러가지가 있지만 여기선 기본적인 방법들을 알아보도록 합니다.</p>
+<h3 id="-"><code>자료형()</code></h3>
+<p><code>자료형()</code> 은 <code>is_자료형()</code> 처럼 자료형을 변환할 수 있는 펑션들의 총칭을 의미합니다.
+<code>자료형()</code> 펑션에 변환하고 싶은 값을 넣으면 해당하는 자료형으로 변환되지만, 자료형의 변환이 불가능한 경우는 변환되지 않습니다.</p>
+<h4 id="-1-">예제 1.</h4>
+<pre><code class="lang-coffeescript">/tostring = msg(<span class="hljs-name">typeof</span>(<span class="hljs-name">string</span>(<span class="hljs-number">1</span>)))
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> 플레이어에게 &quot;string&quot; 이라는 메시지가 전송됩니다.</p>
+</blockquote>
+<p>원래 자료형이 int 인 1 이라는 값을 <code>string()</code> 펑션에 넣어 변환시켰더니 <code>string</code> 이 되었습니다.</p>
+<h4 id="-2-">예제 2.</h4>
+<pre><code class="lang-coffeescript">/toint = msg(<span class="hljs-name">typeof</span>(<span class="hljs-name">int</span>('문자열')))
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> 정수가 아닌 문자열은 변환할 수 없다는 예외가 발생합니다.</p>
+</blockquote>
+<p>문자열은 숫자로만 이루어져 있지 않을 경우 정수로 변환될 수 없기 때문에 오류가 발생합니다.</p>
+<h1 id="-">다음 강좌</h1>
+<p>이제 자료형의 기본을 배웠으니 펑션의 더 자세한 사용법을 알 차례입니다.</p>
+<p>[[고급 펑션(Advanced function)]]</p>
 
-자료형을 통해서 변수의 값의 종류나 펑션이 요구하는 값의 종류를 구별할 수 있습니다.
-
-예를 들어 지금까지 펑션에서 써왔던 **'**(따옴표) 가 붙어있는 메시지들은 이 메시지들이 **문자열 자료형**(String) 이라는 것을 나타내기 위한 표시입니다.
-
-이 문단에서는 변수의 기본적인 자료형들을 간단히 알아봅니다.
-
-## 문자열
-코드에서 가장 많이 쓰는 자료형입니다. 문자로 이루어지며, **'**(따옴표) 안에 있는 경우 무조건 문자열이라고 간주합니다.
-또한 펑션과 문자열이 붙어있는 경우(`펑션()'문자열'` 같이) 펑션의 반환값 또한 문자열이 됩니다.
-
-그리고 클로저를 제외한 모든 변수는 문자열로 동일하게 변환할 수 있습니다.(클로저는 문자열로 완벽하게 변환하진 못합니다.)
-
-## 정수(int)
-여러분이 잘 아는 정수(숫자) 입니다.
-
-코드에서 쓸 때에는 따옴표 없이 그냥 숫자만 있을 경우 정수 자료형으로 간주되지만, 문자열이 숫자로만 이루어져 있을 때(따옴표 안에 숫자만 있을 때)에도 정수 자료형처럼 쓰일 수 있습니다.
-
-## 소수(double)
-정수를 더 쪼갠 형태입니다. 여기서 소수란 1.1 처럼 소숫점이 있는 수들을 말합니다.
-
-정수처럼 쓰지만 뒤에 소숫점과 숫자가 붙어있다는 것이 다릅니다.
-
-## 배열(Array)
-어떠한 값들을 나열하여 묶은 것을 배열이라고 합니다.
-`array()` 펑션으로 생성할 수 있으며, 문자열로 변환되면 `{값1, 값2, 값3}` 처럼 표시됩니다.
-자세한 내용은 [[배열(Array)]] 파트에서 다룹니다.
-
-## boolean
-true(참), false(거짓) 으로 이루어져 있으며,
-
-값이 true 일 경우 주어진 조건 혹은 주어진 작업의 결과가 참이라는 뜻이고,
-
-값이 false 일 경우 그 반대입니다.
-
-## null
-null 은 하나의 자료형으로 분류되지만 가지고 있는 값은 null 단 하나입니다.
-자료형 자체의 값이 없다는 뜻이며, 대개 오류가 날 때 이 null 값을 반환하는 경우가 많습니다.
-
-## 클로저(Closure)
-실행할 수 있는 코드가 담긴 객체입니다. 자세한 내용은 [[클로저(Closure)]] 파트에서 다룹니다.
-
-## 하위 자료형
-자료형은 대개 위의 종류들로 다 표현될 수 있지만(바이트배열 등 언급되지 않은 자료형도 있음), API 문서 상으로는
-
-자료형은 같은데에도 불구하고 그 값의 종류(자료형과 상관 없이) 에 따라 표기를 다르게 한 경우도 있습니다.
-
-이는 다양한 표기가 있지만 그 표기를 보고 자료형을 유추하기가 어렵지 않으므로 해당 값의 기능을 좀 더 쉽게 표기하기 위해 사용하였다고 생각하시면 됩니다.
->**예:** 엔디티 ID(int 자료형) -> 엔디티의 식별 ID 이며, 정수로 표현되지만 문서상으론 엔디티 ID 라고 표기되어 있음.
-
-# 자료형의 식별 및 변환
-
-커맨드헬퍼는 자료형을 엄격하게 구별하는 프로그래밍 언어라고 볼 순 없습니다.
-하지만 특정한 자료형이 특정한 상황에 필요할 때가 있기 때문에, 자료형의 식별 및 변환을 할 수 있는 펑션들이 있습니다.
-
-## 자료형의 식별
-
-### `typeof()`
-`typeof()` 는 자료형을 식별할 때 사용하는 펑션입니다.
-
-인수로 자료형을 알고 싶은 값을 입력하면, 자료형의 이름이 문자열으로 반환됩니다.
-
-#### 예제.
-````coffeescript
-/typeoftest = msg(typeof('문자열')','typeof(1)','typeof(1.0)','typeof(array(1,2,3))
-````
->**결과:** 플레이어에게 "string , int , double , array" 라는 메시지가 전송됩니다.
-
-인수의 자료형을 인수의 값과 상관없이 알려주는 것을 알 수 있습니다.
-
-### `is_자료형()`
-`is_자료형()` 은 하나의 펑션이 아닌 자료형을 구별할 수 있는 펑션들의 총칭을 의미합니다.
-
-자료형 별로 이것이 해당 자료형인지 알려주는 펑션이 바로 이 펑션이며, 결과로 boolean 을 반환합니다.
-(주어진 값이 해당 자료형과 일치하면 참(true), 일치하지 않으면 거짓(false))
-
-#### 예제.
-````coffeescript
-/isstring = msg(is_string('문자열'))
-````
->**결과:** 플레이어에게 "true" 라는 메시지가 전송됩니다.
-
-## 자료형의 변환
-자료형의 변환하는 방법은 여러가지가 있지만 여기선 기본적인 방법들을 알아보도록 합니다.
-
-### `자료형()`
-`자료형()` 은 `is_자료형()` 처럼 자료형을 변환할 수 있는 펑션들의 총칭을 의미합니다.
-`자료형()` 펑션에 변환하고 싶은 값을 넣으면 해당하는 자료형으로 변환되지만, 자료형의 변환이 불가능한 경우는 변환되지 않습니다.
-
-#### 예제 1.
-````coffeescript
-/tostring = msg(typeof(string(1)))
-````
->**결과:** 플레이어에게 "string" 이라는 메시지가 전송됩니다.
-
-원래 자료형이 int 인 1 이라는 값을 `string()` 펑션에 넣어 변환시켰더니 `string` 이 되었습니다.
-
-#### 예제 2.
-````coffeescript
-/toint = msg(typeof(int('문자열')))
-````
->**결과:** 정수가 아닌 문자열은 변환할 수 없다는 예외가 발생합니다.
-
-문자열은 숫자로만 이루어져 있지 않을 경우 정수로 변환될 수 없기 때문에 오류가 발생합니다.
-
-# 다음 강좌
-이제 자료형의 기본을 배웠으니 펑션의 더 자세한 사용법을 알 차례입니다.
-
-[[고급 펑션(Advanced function)]]
 				</div>
 			</section>
 
@@ -221,6 +154,7 @@ null 은 하나의 자료형으로 분류되지만 가지고 있는 값은 null 
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+			<script>includeHTML();</script> 
 
 	</body>
 </html>
