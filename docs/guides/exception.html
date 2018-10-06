@@ -50,15 +50,166 @@
 			<section id="main" class="wrapper">
 				<div class="container">
 					<header class="major special">
-						<h1>대문</h1>
+						<h1>예외</h1>
 					</header>
-					<p>커맨드헬퍼 초보자 가이드에 오신 것을 환영합니다.</p>
-
-					<p>해당 문서에는 공식 문서에서 설명하거나 설명하지 않는 부분을 다르게 정리하여 설명합니다.</p>
-
-					<p>오른쪽 메뉴에서 보고 싶은 문서를 찾아보세요.</p>
-
-					<p><a href="https://steakteam.github.io/CommandHelper-Docs/">메인 페이지로 돌아가기</a></p>
+					<h1 id="-exception-">예외(Exception) 이란?</h1>
+<p>예외란 간단히 말해 <strong>오류 메시지</strong> 입니다. 코드를 작성하고 컴파일하거나 코드 실행 시 어떠한 문제가 발생했다면 예외가 발생하게 됩니다.</p>
+<p>예외 메시지는 일반적으로 다음과 같은 형태입니다.</p>
+<blockquote>
+<p><strong>예외 이름</strong>: 예외 설명<br>    코드 종류:코드 파일:코드 줄</p>
+</blockquote>
+<p>예를 들자면</p>
+<blockquote>
+<p><strong>BadEntityException</strong>: That entity (UUID 123450eab-ase2-50fa-3029-2739febf2013) does not exist.<br>    &lt;&lt;main code&gt;&gt;:main.ms:92</p>
+</blockquote>
+<p>와 같은 형식이죠.</p>
+<h1 id="try-catch-">try-catch 문</h1>
+<p>일반적으로 오류가 발생하면 스크립트가 중지되고 메시지가 표시됩니다. 그렇다면 오류가 발생했을 때 특정한 작업을 하게 하려면 어떻게 해야 할까요? try-catch 문을 사용하면 특정한 오류가 발생하면 특정한 코드를 실행하게 할 수 있습니다.</p>
+<h2 id="-1-">예제 1.</h2>
+<pre><code class="lang-coffeescript"><span class="hljs-selector-tag">try</span> {
+    <span class="hljs-selector-tag">pkill</span>(<span class="hljs-string">'EATSTEAK'</span>)
+} <span class="hljs-selector-tag">catch</span>(PlayerOfflineException <span class="hljs-variable">@e</span>) {
+    <span class="hljs-selector-tag">msg</span>(<span class="hljs-string">'오프라인입니다.'</span>)
+}
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> 만약 <code>EATSTEAK</code> 플레이어가 온라인이라면 그 플레이어를 죽이고, 오프라인이라면 <code>오프라인입니다</code> 라는 메시지를 표시합니다.</p>
+</blockquote>
+<p>만약 <code>try {}</code> 안에 있는 코드에서 예외가 발생한다면 이후의 <code>catch(예외종류 @예외변수) {}</code> 부분의 코드가 실행됩니다. 예외 종류에 맞는 예외의 경우에만 해당 코드가 실행되며, 코드 안에서는 주어진 예외변수에서 예외의 정보를 확인할 수 있습니다.</p>
+<p>예외 정보의 키 값은 다음과 같습니다.</p>
+<ul>
+<li>classType: 예외의 종류입니다.</li>
+<li>message: 예외 설명입니다.</li>
+<li>stackTrace: 예외의 자세한 오류 정보입니다.</li>
+<li>id: 예외가 일어난 펑션이나 클로저의 이름 등입니다.</li>
+<li>file: 예외가 일어난 파일입니다.</li>
+<li>line: 예외가 일어난 줄입니다.</li>
+</ul>
+<h2 id="-2-">예외 2.</h2>
+<pre><code class="lang-coffeescript"><span class="hljs-keyword">try</span> {
+    pkill(<span class="hljs-string">'EATSTEAK'</span>)
+    <span class="hljs-meta">@array</span> = array()
+    array_get(<span class="hljs-meta">@array</span>, <span class="hljs-number">10</span>)
+} <span class="hljs-keyword">catch</span>(PlayerOfflineException <span class="hljs-meta">@e</span>) {
+    msg(<span class="hljs-string">'오프라인입니다.'</span>)
+} <span class="hljs-keyword">catch</span>(IndexOverflowException <span class="hljs-meta">@e</span>2) {
+    msg(<span class="hljs-string">'인덱스 예외입니다.'</span>)
+}
+</code></pre>
+<blockquote>
+<p><strong>결과:</strong> 만약 <code>EATSTEAK</code> 플레이어가 온라인이라면 그 플레이어를 죽이고, 오프라인이라면 <code>오프라인입니다</code> 라는 메시지를 표시합니다. 오프라인이 아니라면 <code>인덱스 예외입니다.</code> 라는 메시지도 표시됩니다.</p>
+</blockquote>
+<p>여러 종류의 예외를 종류별로 감지할 수도 있습니다.</p>
+<h1 id="-">예외 종류</h1>
+<p>예외는 확장기능에 의해 추가될 수도 있습니다. 여기의 목록은 기본 예외에 대해 정리하였습니다.</p>
+<h2 id="bytearrayreadonlyexception">ByteArrayReadOnlyException</h2>
+<p>바이트 배열에서 복사한 배열에 무언가를 쓰려고 할 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="badentityexception">BadEntityException</h2>
+<p>주어진 엔디티 id 에 해당하는 엔디티가 존재하지 않을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="badentitytypeexception">BadEntityTypeException</h2>
+<p>주어진 엔디티 종류가 올바르지 않을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="bindexception">BindException</h2>
+<p>이벤트를 <code>bind()</code> 할 때나 이벤트 관련 오류에서 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="castexception">CastException</h2>
+<p>주어진 값이 원하는 값으로 변환될 수 없는 값일 경우 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="enchantmentexception">EnchantmentException</h2>
+<p>주어진 아이템에 주어진 인첸트를 사용할 수 없는 경우 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="error">Error</h2>
+<p>아주 중요한 오류가 발생했을 때 발생합니다. Error 예외를 catch 하는 것은 추천되지 않습니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="eventexception">EventException</h2>
+<p>이벤트 대상에 관한 오류가 발생하였을때 발생합니다. 이는 대부분 커맨드헬퍼의 오류라기 보다는 서버 자체의 오류일 경우가 있습니다.</p>
+<p>추가된 버전: 3.3.2</p>
+<h2 id="exception">Exception</h2>
+<p>일반적인 예외입니다. 모든 예외는 이 예외를 상속합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="formatexception">FormatException</h2>
+<p>펑션이 특정한 형식의 문자열을 요구했지만 그러한 값이 주어지지 않았을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="ioexception">IOException</h2>
+<p>파일이 읽거나 쓸 수 없을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="illegalargumentexception">IllegalArgumentException</h2>
+<p>주어진 인수가 올바르지 않을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="includeexception">IncludeException</h2>
+<p>include 에 오류가 있을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="indexoverflowexception">IndexOverflowException</h2>
+<p>이 예외는 주어진 인덱스가 대상 배열의 인덱스보다 클 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="insufficientargumentsexception">InsufficientArgumentsException</h2>
+<p>펑션이 요구하는 인수 개수와 주어진 인수 개수가 맞지 않을 경우 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="insufficientpermissionexception">InsufficientPermissionException</h2>
+<p>펑션을 사용하는 사용자가 해당 펑션을 사용할 권한이 없을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="invalidpluginexception">InvalidPluginException</h2>
+<p>외부 플러그인을 사용하는 펑션에서 대상 플러그인이 존재하지 않거나 로드되지 않으면 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="invalidprocedureexception">InvalidProcedureException</h2>
+<p>선언되지 않은 프로시저를 호출할 때나 프로시저 이름이 올바르지 않을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="invalidworldexception">InvalidWorldException</h2>
+<p>주어진 월드가 존재하지 않을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="lengthexception">LengthException</h2>
+<p>펑션에서 원하는 인수의 길이 조건을 만족하지 않을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="notfoundexception">NotFoundException</h2>
+<p>데이터를 요구했지만 존재하지 않을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="nullpointerexception">NullPointerException</h2>
+<p>요구한 값이 null 이 아니지만 null 이 주어졌을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="oauthexception">OAuthException</h2>
+<p>OAuth 시스템에 문제가 발생했을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.2</p>
+<h2 id="playerofflineexception">PlayerOfflineException</h2>
+<p>주어진 플레이어가 온라인이 아니거나 작업을 실행하는 실행자가 플레이어가 아닌데도 작업 실행자가 플레이어이길 요구하는 작업을 할 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="pluginchannelexception">PluginChannelException</h2>
+<p>이미 등록된 플러그인 채널을 등록하거나 등록되지 않은 플러그인 채널을 등록 해제할 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="plugininternalexception">PluginInternalException</h2>
+<p>플러그인이 로드되었지만 불러오는 데 실패했을 경우 발생합니다. 이는 대부분 플러그인 내부 문제입니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="rangeexception">RangeException</h2>
+<p>펑션이 주어진 범위의 숫자를 요구했지만 해당 범위에서 벗어났을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="readonlyexception">ReadOnlyException</h2>
+<p>필드가 읽기 전용이지만 쓰기 작업이 실행되었을때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="sqlexception">SQLException</h2>
+<p>SQL 관련 오류가 발생했을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="scoreboardexception">ScoreboardException</h2>
+<p>스코어보드 관련 오류가 발생했을 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="securityexception">SecurityException</h2>
+<p>스크립트가 쓰거나 읽는 위치가 시스템에서 허용되지 않은 위치일 때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="shellexception">ShellException</h2>
+<p>쉘 예외가 발생했을때 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="stackoverflowerror">StackOverflowError</h2>
+<p>스택 오버플로우 에러가 발생했을때 발생합니다. 이는 펑션을 너무 많이 사용했을때 발생할 수 있습니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="throwable">Throwable</h2>
+<p>모든 발생 가능한 것들은 이 클래스를 상속합니다. 아니라면 스크립트에서 발생할 수 없습니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="unageablemobexception">UnageableMobException</h2>
+<p>만약 나이 관련 펑션을 나이를 먹을 수 없는 엔디티에게 사용하면 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
+<h2 id="untameablemobexception">UntameableMobException</h2>
+<p>만약 길들이는 것에 관련된 펑션을 길들일 수 없는 엔디티에게 사용하면 발생합니다.</p>
+<p>추가된 버전: 3.3.1</p>
 				</div>
 			</section>
 
