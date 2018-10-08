@@ -82,7 +82,7 @@
 <p>결과: <code>/command 1 2</code> 를 입력하면 <code>/alias 1 1</code> 을 입력한 것으로 인식한다.</p>
 <p>결과: <code>/command 1</code> 을 입력하면 없는 명령어로 간주된다.</p>
 </blockquote>
-<p>같은 이름의 변수가 왼쪽에 여러개가 있다면 맨 앞자리에 있는 변수의 값이 됩니다.</p>
+<p>같은 이름의 변수가 오른쪽에 여러개가 있다면 맨 앞자리에 있는 변수의 값이 됩니다.</p>
 <pre><code class="lang-coffeescript">/<span class="hljs-built_in">command</span> <span class="hljs-variable">$1</span> <span class="hljs-variable">$2</span> = /<span class="hljs-built_in">alias</span> <span class="hljs-variable">$1</span> <span class="hljs-variable">$1</span> <span class="hljs-variable">$2</span>
 </code></pre>
 <blockquote>
