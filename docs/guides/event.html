@@ -103,7 +103,7 @@
 <p>그래서 주어진 변수 안에는 이벤트 데이터의 배열이 들어가게 되는 것입니다.</p>
 <h2 id="-2-">예제 2.</h2>
 <p><strong><em>main.ms</em></strong></p>
-<pre><code class="lang-coffeescript"><span class="hljs-selector-tag">bind</span>(player_join, null, null, <span class="hljs-variable">@event</span>) {
+<pre><code class="lang-coffeescript"><span class="hljs-selector-tag">bind</span>(player_join, null, null, <span class="hljs-variable">@e</span>) {
      <span class="hljs-selector-tag">broadcast</span>(<span class="hljs-variable">@e</span>[<span class="hljs-string">'player'</span>].<span class="hljs-string">'님이 서버에 접속하셨습니다!'</span>)
 }
 </code></pre>
